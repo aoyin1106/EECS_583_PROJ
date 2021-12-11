@@ -1,0 +1,176 @@
+--- |
+  ; ModuleID = '<stdin>'
+  source_filename = "test0.c"
+  target datalayout = "E-m:e-p:32:32-i64:64-f128:64-n32-S64"
+  target triple = "x86_64-unknown-linux-gnu"
+  
+  ; Function Attrs: noinline nounwind optnone uwtable
+  define dso_local void @test(i32* noalias %in, i32* noalias %out, i32 %cnt) #0 {
+  entry:
+    %in.addr = alloca i32*, align 8
+    %out.addr = alloca i32*, align 8
+    %cnt.addr = alloca i32, align 4
+    %i = alloca i32, align 4
+    store i32* %in, i32** %in.addr, align 8
+    store i32* %out, i32** %out.addr, align 8
+    store i32 %cnt, i32* %cnt.addr, align 4
+    store i32 0, i32* %i, align 4
+    br label %for.cond
+  
+  for.cond:                                         ; preds = %for.inc, %entry
+    %0 = load i32, i32* %i, align 4
+    %1 = load i32, i32* %cnt.addr, align 4
+    %cmp = icmp slt i32 %0, %1
+    br i1 %cmp, label %for.body, label %for.end
+  
+  for.body:                                         ; preds = %for.cond
+    %2 = load i32*, i32** %out.addr, align 8
+    %3 = load i32, i32* %2, align 4
+    %4 = load i32*, i32** %in.addr, align 8
+    store i32 %3, i32* %4, align 4
+    %5 = load i32*, i32** %in.addr, align 8
+    %incdec.ptr = getelementptr inbounds i32, i32* %5, i32 1
+    store i32* %incdec.ptr, i32** %in.addr, align 8
+    %6 = load i32*, i32** %out.addr, align 8
+    %incdec.ptr1 = getelementptr inbounds i32, i32* %6, i32 1
+    store i32* %incdec.ptr1, i32** %out.addr, align 8
+    br label %for.inc
+  
+  for.inc:                                          ; preds = %for.body
+    %7 = load i32, i32* %i, align 4
+    %inc = add nsw i32 %7, 1
+    store i32 %inc, i32* %i, align 4
+    br label %for.cond, !llvm.loop !4
+  
+  for.end:                                          ; preds = %for.cond
+    ret void
+  }
+  
+  attributes #0 = { noinline nounwind optnone uwtable "frame-pointer"="all" "min-legal-vector-width"="0" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+  
+  !llvm.module.flags = !{!0, !1, !2}
+  !llvm.ident = !{!3}
+  
+  !0 = !{i32 1, !"wchar_size", i32 4}
+  !1 = !{i32 7, !"uwtable", i32 1}
+  !2 = !{i32 7, !"frame-pointer", i32 2}
+  !3 = !{!"clang version 14.0.0 (https://github.com/llvm/llvm-project.git afa3c14e2ff95c6b4e1a2db4e197a7297c7f73ec)"}
+  !4 = distinct !{!4, !5, !6}
+  !5 = !{!"llvm.loop.mustprogress"}
+  !6 = !{!"llvm.loop.unroll.disable"}
+
+...
+---
+name:            test
+alignment:       4
+exposesReturnsTwice: false
+legalized:       false
+regBankSelected: false
+selected:        false
+failedISel:      false
+tracksRegLiveness: false
+hasWinCFI:       false
+failsVerification: false
+tracksDebugUserValues: true
+registers:       []
+liveins:
+  - { reg: '$i0', virtual-reg: '' }
+  - { reg: '$i1', virtual-reg: '' }
+  - { reg: '$i2', virtual-reg: '' }
+frameInfo:
+  isFrameAddressTaken: false
+  isReturnAddressTaken: false
+  hasStackMap:     false
+  hasPatchPoint:   false
+  stackSize:       120
+  offsetAdjustment: 0
+  maxAlignment:    8
+  adjustsStack:    false
+  hasCalls:        false
+  stackProtector:  ''
+  maxCallFrameSize: 0
+  cvBytesOfCalleeSavedRegisters: 0
+  hasOpaqueSPAdjustment: false
+  hasVAStart:      false
+  hasMustTailInVarArgFunc: false
+  hasTailCall:     false
+  localFrameSize:  0
+  savePoint:       ''
+  restorePoint:    ''
+fixedStack:      []
+stack:
+  - { id: 0, name: in.addr, type: default, offset: -8, size: 4, alignment: 8, 
+      stack-id: default, callee-saved-register: '', callee-saved-restored: true, 
+      debug-info-variable: '', debug-info-expression: '', debug-info-location: '' }
+  - { id: 1, name: out.addr, type: default, offset: -16, size: 4, alignment: 8, 
+      stack-id: default, callee-saved-register: '', callee-saved-restored: true, 
+      debug-info-variable: '', debug-info-expression: '', debug-info-location: '' }
+  - { id: 2, name: cnt.addr, type: default, offset: -20, size: 4, alignment: 4, 
+      stack-id: default, callee-saved-register: '', callee-saved-restored: true, 
+      debug-info-variable: '', debug-info-expression: '', debug-info-location: '' }
+  - { id: 3, name: i, type: default, offset: -24, size: 4, alignment: 4, 
+      stack-id: default, callee-saved-register: '', callee-saved-restored: true, 
+      debug-info-variable: '', debug-info-expression: '', debug-info-location: '' }
+callSites:       []
+debugValueSubstitutions: []
+constants:       []
+machineFunctionInfo: {}
+body:             |
+  bb.0.entry:
+    successors: %bb.1(0x80000000)
+  
+    $o6 = SAVEri $o6, -120
+    CFI_INSTRUCTION def_cfa_register $i6
+    CFI_INSTRUCTION window_save 
+    CFI_INSTRUCTION register $o7, $i7
+    STri $i6, -8, killed renamable $i0 :: (store (s32) into %ir.in.addr, align 8)
+    STri $i6, -16, killed renamable $i1 :: (store (s32) into %ir.out.addr, align 8)
+    STri $i6, -20, killed renamable $i2 :: (store (s32) into %ir.cnt.addr)
+    BA %bb.1 {
+      STri $i6, -24, $g0 :: (store (s32) into %ir.i)
+    }
+  
+  bb.1.for.cond:
+    successors: %bb.2(0x40000000), %bb.4(0x40000000)
+  
+    renamable $i0 = LDri $i6, -24 :: (dereferenceable load (s32) from %ir.i)
+    renamable $i1 = LDri $i6, -20 :: (dereferenceable load (s32) from %ir.cnt.addr)
+    CMPrr killed renamable $i0, killed renamable $i1, implicit-def $icc
+    BCOND %bb.4, 11, implicit killed $icc {
+      NOP
+    }
+    BA %bb.2 {
+      NOP
+    }
+  
+  bb.2.for.body:
+    successors: %bb.3(0x80000000)
+  
+    renamable $i0 = LDri $i6, -16 :: (dereferenceable load (s32) from %ir.out.addr, align 8)
+    renamable $i0 = LDrr killed renamable $i0, $g0 :: (load (s32) from %ir.2)
+    renamable $i1 = LDri $i6, -8 :: (dereferenceable load (s32) from %ir.in.addr, align 8)
+    STrr killed renamable $i1, $g0, killed renamable $i0 :: (store (s32) into %ir.4)
+    renamable $i0 = LDri $i6, -8 :: (dereferenceable load (s32) from %ir.in.addr, align 8)
+    renamable $i0 = nuw ADDri killed renamable $i0, 4
+    STri $i6, -8, killed renamable $i0 :: (store (s32) into %ir.in.addr, align 8)
+    renamable $i0 = LDri $i6, -16 :: (dereferenceable load (s32) from %ir.out.addr, align 8)
+    renamable $i0 = nuw ADDri killed renamable $i0, 4
+    BA %bb.3 {
+      STri $i6, -16, killed renamable $i0 :: (store (s32) into %ir.out.addr, align 8)
+    }
+  
+  bb.3.for.inc:
+    successors: %bb.1(0x80000000)
+  
+    renamable $i0 = LDri $i6, -24 :: (dereferenceable load (s32) from %ir.i)
+    renamable $i0 = nsw ADDri killed renamable $i0, 1
+    BA %bb.1 {
+      STri $i6, -24, killed renamable $i0 :: (store (s32) into %ir.i)
+    }
+  
+  bb.4.for.end:
+    RET 8 {
+      $g0 = RESTORErr $g0, $g0
+    }
+
+...
