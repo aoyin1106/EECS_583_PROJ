@@ -1,0 +1,203 @@
+SU(0):   %5:intregs = L2_loadri_io %10:intregs, 12 :: (dereferenceable load 4 from `i8** getelementptr inbounds (%s.0, %s.0* @g0, i32 0, i32 4)`)
+  # preds left       : 0
+  # succs left       : 4
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 0
+  Height             : 2
+  Successors:
+    SU(3): Data Latency=2 Reg=%5
+    SU(1): Data Latency=1 Reg=%5
+    SU(2): Ord  Latency=0 Memory
+    SU(3): Ord  Latency=0 Memory
+SU(1):   %6:intregs = A2_addi %5:intregs, -1
+  # preds left       : 1
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 0
+  Predecessors:
+    SU(0): Data Latency=1 Reg=%5
+  Successors:
+    SU(2): Data Latency=0 Reg=%6
+SU(2):   S2_storeri_io %10:intregs, 12, %6:intregs :: (store 4 into `i8** getelementptr inbounds (%s.0, %s.0* @g0, i32 0, i32 4)`)
+  # preds left       : 2
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 0
+  Predecessors:
+    SU(1): Data Latency=0 Reg=%6
+    SU(0): Ord  Latency=0 Memory
+  Successors:
+    SU(3): Ord  Latency=0 Memory
+SU(3):   S2_storerb_io %5:intregs, -1, %7:intregs :: (store 1 into %ir.cgep)
+  # preds left       : 3
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 2
+  Height             : 0
+  Predecessors:
+    SU(2): Ord  Latency=0 Memory
+    SU(0): Data Latency=2 Reg=%5
+    SU(0): Ord  Latency=0 Memory
+ExitSU:   ENDLOOP0 %bb.1, implicit-def $pc, implicit-def $lc0, implicit $sa0, implicit $lc0
+  # preds left       : 0
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 0
+calculateResMII:
+Trying to reserve resource for 1 cycles for 
+  %5:intregs = L2_loadri_io %10:intregs, 12 :: (dereferenceable load 4 from `i8** getelementptr inbounds (%s.0, %s.0* @g0, i32 0, i32 4)`)
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  S2_storeri_io %10:intregs, 12, %6:intregs :: (store 4 into `i8** getelementptr inbounds (%s.0, %s.0* @g0, i32 0, i32 4)`)
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  S2_storerb_io %5:intregs, -1, %7:intregs :: (store 1 into %ir.cgep)
+ReservedCycles:0, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %6:intregs = A2_addi %5:intregs, -1
+ReservedCycles:1, NumCycles:1
+Return Res MII:2
+MII = 3 MAX_II = 13 (rec=3, res=2)
+SU(0):   %5:intregs = L2_loadri_io %10:intregs, 12 :: (dereferenceable load 4 from `i8** getelementptr inbounds (%s.0, %s.0* @g0, i32 0, i32 4)`)
+SU(1):   %6:intregs = A2_addi %5:intregs, -1
+SU(2):   S2_storeri_io %10:intregs, 12, %6:intregs :: (store 4 into `i8** getelementptr inbounds (%s.0, %s.0* @g0, i32 0, i32 4)`)
+SU(3):   S2_storerb_io %5:intregs, -1, %7:intregs :: (store 1 into %ir.cgep)
+	Node 0:
+	   ASAP = 0
+	   ALAP = 0
+	   MOV  = 0
+	   D    = 0
+	   H    = 2
+	   ZLD  = 0
+	   ZLH  = 2
+	Node 1:
+	   ASAP = 1
+	   ALAP = 2
+	   MOV  = 1
+	   D    = 1
+	   H    = 0
+	   ZLD  = 0
+	   ZLH  = 2
+	Node 2:
+	   ASAP = 1
+	   ALAP = 2
+	   MOV  = 1
+	   D    = 1
+	   H    = 0
+	   ZLD  = 1
+	   ZLH  = 1
+	Node 3:
+	   ASAP = 2
+	   ALAP = 2
+	   MOV  = 0
+	   D    = 2
+	   H    = 0
+	   ZLD  = 2
+	   ZLH  = 0
+  Rec NodeSet Num nodes 4 rec 3 mov 1 depth 2 col 0
+   SU(0) %5:intregs = L2_loadri_io %10:intregs, 12 :: (dereferenceable load 4 from `i8** getelementptr inbounds (%s.0, %s.0* @g0, i32 0, i32 4)`)
+   SU(3) S2_storerb_io %5:intregs, -1, %7:intregs :: (store 1 into %ir.cgep)
+   SU(1) %6:intregs = A2_addi %5:intregs, -1
+   SU(2) S2_storeri_io %10:intregs, 12, %6:intregs :: (store 4 into `i8** getelementptr inbounds (%s.0, %s.0* @g0, i32 0, i32 4)`)
+
+  NodeSet Num nodes 4 rec 3 mov 1 depth 2 col 0
+   SU(0) %5:intregs = L2_loadri_io %10:intregs, 12 :: (dereferenceable load 4 from `i8** getelementptr inbounds (%s.0, %s.0* @g0, i32 0, i32 4)`)
+   SU(3) S2_storerb_io %5:intregs, -1, %7:intregs :: (store 1 into %ir.cgep)
+   SU(1) %6:intregs = A2_addi %5:intregs, -1
+   SU(2) S2_storeri_io %10:intregs, 12, %6:intregs :: (store 4 into `i8** getelementptr inbounds (%s.0, %s.0* @g0, i32 0, i32 4)`)
+
+NodeSet size 4
+  Bottom up (all) 3 2 1 0 
+   Switching order to top down 
+Done with Nodeset
+Node order:  3  2  1  0 
+Try to schedule with 3
+
+Inst (3)   S2_storerb_io %5:intregs, -1, %7:intregs :: (store 1 into %ir.cgep)
+
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 2 and 4 II: 3
+	insert at cycle 2   S2_storerb_io %5:intregs, -1, %7:intregs :: (store 1 into %ir.cgep)
+
+Inst (2)   S2_storeri_io %10:intregs, 12, %6:intregs :: (store 4 into `i8** getelementptr inbounds (%s.0, %s.0* @g0, i32 0, i32 4)`)
+
+	es: 80000000 ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between 2 and 0 II: 3
+	insert at cycle 2   S2_storeri_io %10:intregs, 12, %6:intregs :: (store 4 into `i8** getelementptr inbounds (%s.0, %s.0* @g0, i32 0, i32 4)`)
+
+Inst (1)   %6:intregs = A2_addi %5:intregs, -1
+
+	es: 80000000 ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between 2 and 0 II: 3
+	insert at cycle 2   %6:intregs = A2_addi %5:intregs, -1
+
+Inst (0)   %5:intregs = L2_loadri_io %10:intregs, 12 :: (dereferenceable load 4 from `i8** getelementptr inbounds (%s.0, %s.0* @g0, i32 0, i32 4)`)
+
+	es: 80000000 ls:        0 me: 7fffffff ms:        0
+Trying to insert node between 0 and 0 II: 3
+	insert at cycle 0   %5:intregs = L2_loadri_io %10:intregs, 12 :: (dereferenceable load 4 from `i8** getelementptr inbounds (%s.0, %s.0* @g0, i32 0, i32 4)`)
+Schedule Found? 1 (II=4)
+cycle 0 (0) (0) %5:intregs = L2_loadri_io %10:intregs, 12 :: (dereferenceable load 4 from `i8** getelementptr inbounds (%s.0, %s.0* @g0, i32 0, i32 4)`)
+
+cycle 2 (0) (1) %6:intregs = A2_addi %5:intregs, -1
+
+cycle 2 (0) (2) S2_storeri_io %10:intregs, 12, %6:intregs :: (store 4 into `i8** getelementptr inbounds (%s.0, %s.0* @g0, i32 0, i32 4)`)
+
+cycle 2 (0) (3) S2_storerb_io %5:intregs, -1, %7:intregs :: (store 1 into %ir.cgep)
+
+No schedule found, return
+	.text
+	.file	"<stdin>"
+	.globl	f0                              // -- Begin function f0
+	.p2align	4
+	.type	f0,@function
+f0:                                     // @f0
+// %bb.0:                               // %b0
+	{
+		if (p0) jumpr:nt r31
+	}
+.LBB0_1:
+	{
+		r0 = ##g0+8
+	}
+	{
+		r1 = memw(r0+#0)
+	}
+	{
+		r2 = asr(r1,#3)
+		r1 = #0
+	}
+	{
+		loop0(.LBB0_2,r2)
+	}
+	.p2align	4
+.Ltmp0:                                 // Block address taken
+.LBB0_2:                                // %b1
+                                        // =>This Inner Loop Header: Depth=1
+	{
+		r2 = memw(r0+#12)
+	}
+	{
+		r3 = add(r2,#-1)
+		memw(r0+#12) = r3.new
+	}
+	{
+		nop
+		memb(r2+#-1) = r1
+	} :endloop0
+// %bb.3:                               // %b2
+	{
+		jumpr r31
+	}
+.Lfunc_end0:
+	.size	f0, .Lfunc_end0-f0
+                                        // -- End function
+	.section	".note.GNU-stack","",@progbits

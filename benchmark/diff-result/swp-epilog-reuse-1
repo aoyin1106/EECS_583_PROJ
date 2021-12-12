@@ -1,0 +1,24 @@
+Unable to analyzeLoop, can NOT pipeline Loop		      <
+							      <
+!!! Can not pipeline loop.				      <
+	{						      <
+		r3 = #0					      <
+	}						      <
+                                        // implicit-def: $r2  <
+	.p2align	4				      <
+.LBB0_1:                                // %for.body6.us.prol <
+                                        // =>This Inner Loop  <
+	{						      <
+		r2 = r3					      <
+		r3 = add(r3,#1)				      <
+		r4 = memub(r1+r2<<#0)			      <
+	}						      <
+	{						      <
+		r4 = +mpyi(r4,#3)			      <
+		if (p0) jump:nt .LBB0_1			      <
+		memb(r0++#1) = r4.new			      <
+	}						      <
+// %bb.2:                               // %for.body6.us      <
+	{						      <
+		r27:26 = memd(##3134984174)		      <
+	}						      <

@@ -1,0 +1,278 @@
+SU(0):   %1:intregs = PHI %5:intregs, %bb.0, %4:intregs, %bb.1
+  # preds left       : 0
+  # succs left       : 4
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 2
+  Successors:
+    SU(5): Data Latency=0 Reg=%1
+    SU(4): Data Latency=0 Reg=%1
+    SU(1): Data Latency=0 Reg=%1
+    SU(5): Anti Latency=1
+SU(1):   %8:doubleregs = L2_loadrd_io %1:intregs, 0 :: (load 8 from %ir.lsr.iv12)
+  # preds left       : 1
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 0
+  Height             : 2
+  Predecessors:
+    SU(0): Data Latency=0 Reg=%1
+  Successors:
+    SU(3): Data Latency=1 Reg=%8
+    SU(4): Ord  Latency=0 Memory
+SU(2):   %14:doubleregs = REG_SEQUENCE %6:intregs, %subreg.isub_lo, %6:intregs, %subreg.isub_hi
+  # preds left       : 0
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 1
+  Successors:
+    SU(3): Data Latency=0 Reg=%14
+SU(3):   %9:doubleregs = nsw A2_addp %8:doubleregs, %14:doubleregs
+  # preds left       : 2
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 1
+  Predecessors:
+    SU(2): Data Latency=0 Reg=%14
+    SU(1): Data Latency=1 Reg=%8
+  Successors:
+    SU(4): Data Latency=1 Reg=%9
+SU(4):   S2_storerd_io %1:intregs, 0, %9:doubleregs :: (store 8 into %ir.lsr.iv12)
+  # preds left       : 3
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 2
+  Height             : 0
+  Predecessors:
+    SU(3): Data Latency=1 Reg=%9
+    SU(1): Ord  Latency=0 Memory
+    SU(0): Data Latency=0 Reg=%1
+SU(5):   %4:intregs = A2_addi %1:intregs, 104
+  # preds left       : 2
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 0
+  Predecessors:
+    SU(0): Data Latency=0 Reg=%1
+    SU(0): Anti Latency=1
+ExitSU:   ENDLOOP0 %bb.1, implicit-def $pc, implicit-def $lc0, implicit $sa0, implicit $lc0
+  # preds left       : 0
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 0
+calculateResMII:
+Trying to reserve resource for 1 cycles for 
+  %8:doubleregs = L2_loadrd_io %1:intregs, 0 :: (load 8 from %ir.lsr.iv12)
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %9:doubleregs = nsw A2_addp %8:doubleregs, %14:doubleregs
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  S2_storerd_io %1:intregs, 0, %9:doubleregs :: (store 8 into %ir.lsr.iv12)
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %4:intregs = A2_addi %1:intregs, 104
+ReservedCycles:1, NumCycles:1
+Return Res MII:1
+MII = 1 MAX_II = 11 (rec=1, res=1)
+SU(2):   %14:doubleregs = REG_SEQUENCE %6:intregs, %subreg.isub_lo, %6:intregs, %subreg.isub_hi
+SU(0):   %1:intregs = PHI %5:intregs, %bb.0, %4:intregs, %bb.1
+SU(1):   %8:doubleregs = L2_loadrd_io %1:intregs, 0 :: (load 8 from %ir.lsr.iv12)
+SU(3):   %9:doubleregs = nsw A2_addp %8:doubleregs, %14:doubleregs
+SU(4):   S2_storerd_io %1:intregs, 0, %9:doubleregs :: (store 8 into %ir.lsr.iv12)
+SU(5):   %4:intregs = A2_addi %1:intregs, 104
+	Node 0:
+	   ASAP = 0
+	   ALAP = 0
+	   MOV  = 0
+	   D    = 0
+	   H    = 2
+	   ZLD  = 0
+	   ZLH  = 2
+	Node 1:
+	   ASAP = 0
+	   ALAP = 0
+	   MOV  = 0
+	   D    = 0
+	   H    = 2
+	   ZLD  = 1
+	   ZLH  = 1
+	Node 2:
+	   ASAP = 0
+	   ALAP = 1
+	   MOV  = 1
+	   D    = 0
+	   H    = 1
+	   ZLD  = 0
+	   ZLH  = 1
+	Node 3:
+	   ASAP = 1
+	   ALAP = 1
+	   MOV  = 0
+	   D    = 1
+	   H    = 1
+	   ZLD  = 1
+	   ZLH  = 0
+	Node 4:
+	   ASAP = 2
+	   ALAP = 2
+	   MOV  = 0
+	   D    = 2
+	   H    = 0
+	   ZLD  = 2
+	   ZLH  = 0
+	Node 5:
+	   ASAP = 0
+	   ALAP = 2
+	   MOV  = 2
+	   D    = 1
+	   H    = 0
+	   ZLD  = 1
+	   ZLH  = 0
+  Rec NodeSet Num nodes 2 rec 1 mov 2 depth 1 col 0
+   SU(0) %1:intregs = PHI %5:intregs, %bb.0, %4:intregs, %bb.1
+   SU(5) %4:intregs = A2_addi %1:intregs, 104
+
+  NodeSet Num nodes 2 rec 1 mov 2 depth 1 col 0
+   SU(0) %1:intregs = PHI %5:intregs, %bb.0, %4:intregs, %bb.1
+   SU(5) %4:intregs = A2_addi %1:intregs, 104
+
+  NodeSet Num nodes 4 rec 0 mov 0 depth 0 col 0
+   SU(4) S2_storerd_io %1:intregs, 0, %9:doubleregs :: (store 8 into %ir.lsr.iv12)
+   SU(3) %9:doubleregs = nsw A2_addp %8:doubleregs, %14:doubleregs
+   SU(2) %14:doubleregs = REG_SEQUENCE %6:intregs, %subreg.isub_lo, %6:intregs, %subreg.isub_hi
+   SU(1) %8:doubleregs = L2_loadrd_io %1:intregs, 0 :: (load 8 from %ir.lsr.iv12)
+
+NodeSet size 2
+  Bottom up (default) 5 0 
+   Switching order to top down 
+Done with Nodeset
+NodeSet size 4
+  Top down (succs) 1 3 4 
+   Switching order to bottom up 2 
+   Switching order to top down 
+Done with Nodeset
+Node order:  5  0  1  3  4  2 
+Try to schedule with 1
+
+Inst (5)   %4:intregs = A2_addi %1:intregs, 104
+
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 0 and 0 II: 1
+	insert at cycle 0   %4:intregs = A2_addi %1:intregs, 104
+
+Inst (0)   %1:intregs = PHI %5:intregs, %bb.0, %4:intregs, %bb.1
+
+	es:        0 ls:        0 me: 7fffffff ms: 80000000
+Trying to insert node between 0 and 0 II: 1
+	insert at cycle 0   %1:intregs = PHI %5:intregs, %bb.0, %4:intregs, %bb.1
+
+Inst (1)   %8:doubleregs = L2_loadrd_io %1:intregs, 0 :: (load 8 from %ir.lsr.iv12)
+
+	es:        0 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 0 and 0 II: 1
+	insert at cycle 0   %8:doubleregs = L2_loadrd_io %1:intregs, 0 :: (load 8 from %ir.lsr.iv12)
+
+Inst (3)   %9:doubleregs = nsw A2_addp %8:doubleregs, %14:doubleregs
+
+	es:        1 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 1 and 1 II: 1
+	insert at cycle 1   %9:doubleregs = nsw A2_addp %8:doubleregs, %14:doubleregs
+
+Inst (4)   S2_storerd_io %1:intregs, 0, %9:doubleregs :: (store 8 into %ir.lsr.iv12)
+
+	es:        2 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 2 and 2 II: 1
+	insert at cycle 2   S2_storerd_io %1:intregs, 0, %9:doubleregs :: (store 8 into %ir.lsr.iv12)
+
+Inst (2)   %14:doubleregs = REG_SEQUENCE %6:intregs, %subreg.isub_lo, %6:intregs, %subreg.isub_hi
+
+	es: 80000000 ls:        1 me: 7fffffff ms: 80000000
+Trying to insert node between 1 and 1 II: 1
+	insert at cycle 1   %14:doubleregs = REG_SEQUENCE %6:intregs, %subreg.isub_lo, %6:intregs, %subreg.isub_hi
+Schedule Found? 1 (II=2)
+cycle 0 (0) (0) %1:intregs = PHI %5:intregs, %bb.0, %4:intregs, %bb.1
+
+cycle 0 (2) (4) S2_storerd_io %1:intregs, 0, %9:doubleregs :: (store 8 into %ir.lsr.iv12)
+
+cycle 0 (1) (2) %14:doubleregs = REG_SEQUENCE %6:intregs, %subreg.isub_lo, %6:intregs, %subreg.isub_hi
+
+cycle 0 (1) (3) %9:doubleregs = nsw A2_addp %8:doubleregs, %14:doubleregs
+
+cycle 0 (0) (1) %8:doubleregs = L2_loadrd_io %1:intregs, 0 :: (load 8 from %ir.lsr.iv12)
+
+cycle 0 (0) (5) %4:intregs = A2_addi %1:intregs, 104
+
+[stage 0 @0c] %1:intregs = PHI %5:intregs, %bb.0, %4:intregs, %bb.1
+[stage 2 @0c] S2_storerd_io %1:intregs, 0, %9:doubleregs :: (store 8 into %ir.lsr.iv12)
+[stage 1 @0c] %14:doubleregs = REG_SEQUENCE %6:intregs, %subreg.isub_lo, %6:intregs, %subreg.isub_hi
+[stage 1 @0c] %9:doubleregs = nsw A2_addp %8:doubleregs, %14:doubleregs
+[stage 0 @0c] %8:doubleregs = L2_loadrd_io %1:intregs, 0 :: (load 8 from %ir.lsr.iv12)
+[stage 0 @0c] %4:intregs = A2_addi %1:intregs, 104
+ -- padding defaults array from 1 to 3
+Static-true: TC > 2
+Static-true: TC > 1
+	.text
+	.file	"<stdin>"
+	.globl	f0                              // -- Begin function f0
+	.p2align	4
+	.type	f0,@function
+f0:                                     // @f0
+	.cfi_startproc
+// %bb.0:                               // %b0
+	{
+		loop0(.LBB0_1,#10)
+		r2 = r1
+		r1 = add(r0,#104)
+		r9:8 = memd(r0+#0)
+	}
+	{
+		r3 = r2
+		r6 = add(r1,#104)
+		r5:4 = memd(r1+#0)
+	}
+	{
+		r9:8 = add(r9:8,r3:2)
+	}
+	.p2align	4
+.Ltmp0:                                 // Block address taken
+.LBB0_1:                                // %b1
+                                        // =>This Inner Loop Header: Depth=1
+	{
+		r1:0 = combine(r6,r1)
+		r3 = r2
+		r6 = add(r6,#104)
+		memd(r0+#0) = r9:8
+	}
+	{
+		r9:8 = add(r5:4,r3:2)
+		r5:4 = memd(r1+#0)
+	} :endloop0
+// %bb.2:                               // %b1
+	{
+		r3 = r2
+		memd(r0+#0) = r9:8
+	}
+	{
+		r3:2 = add(r5:4,r3:2)
+	}
+	{
+		jumpr r31
+		memd(r1+#0) = r3:2
+	}
+.Lfunc_end0:
+	.size	f0, .Lfunc_end0-f0
+	.cfi_endproc
+                                        // -- End function
+	.section	".note.GNU-stack","",@progbits

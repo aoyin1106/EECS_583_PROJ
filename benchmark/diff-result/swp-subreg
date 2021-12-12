@@ -1,0 +1,73 @@
+	insert at cycle 1   %13:intregs = COPY %12.isub_hi:do |		insert at cycle 0   %13:intregs = COPY %12.isub_hi:do
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000   |		es: 80000000 ls: ffffffff me: 7fffffff ms: 80000000
+Trying to insert node between 0 and -11 II: 12		      |	Trying to insert node between -1 and -12 II: 12
+	insert at cycle 0   %12:doubleregs = M2_dpmpyuu_s0 %2 |		insert at cycle -2   %12:doubleregs = M2_dpmpyuu_s0 %
+	insert at cycle 1   %34:intregs = S2_asr_i_r %2:intre |		insert at cycle 0   %34:intregs = S2_asr_i_r %2:intre
+	es:        0 ls:        0 me: 7fffffff ms: 80000000   |		es:        0 ls: fffffffe me: 7fffffff ms: 80000000
+Trying to insert node between 0 and 0 II: 12		      |		Can't schedule
+	insert at cycle 0   %2:intregs = PHI %7:intregs, %bb. |	Try to schedule with 13
+							      >
+							      >	Inst (9)   %3:intregs = S2_asl_i_r %27.isub_lo:doubleregs, 4
+							      >
+							      >		es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+							      >	Trying to insert node between 11 and 23 II: 13
+							      >		insert at cycle 11   %3:intregs = S2_asl_i_r %27.isub
+							      >
+							      >	Inst (8)   %27:doubleregs = S2_extractup %26:doubleregs, 32, 
+							      >
+							      >		es: 80000000 ls:        9 me: 7fffffff ms: 80000000
+							      >	Trying to insert node between 9 and -3 II: 13
+							      >		insert at cycle 9   %27:doubleregs = S2_extractup %26
+							      >
+							      >	Inst (7)   %26:doubleregs = nsw M2_dpmpyss_s0 %22:intregs, %2
+							      >
+							      >		es: 80000000 ls:        7 me: 7fffffff ms: 80000000
+							      >	Trying to insert node between 7 and -5 II: 13
+							      >		insert at cycle 7   %26:doubleregs = nsw M2_dpmpyss_s
+							      >
+							      >	Inst (6)   %22:intregs = nsw A2_subri 536870912, %17:intregs
+							      >
+							      >		es: 80000000 ls:        5 me: 7fffffff ms: 80000000
+							      >	Trying to insert node between 5 and -7 II: 13
+							      >		insert at cycle 5   %22:intregs = nsw A2_subri 536870
+							      >
+							      >	Inst (5)   %17:intregs = M2_maci %15:intregs(tied-def 0), %5:
+							      >
+							      >		es: 80000000 ls:        3 me: 7fffffff ms: 80000000
+							      >	Trying to insert node between 3 and -9 II: 13
+							      >		insert at cycle 3   %17:intregs = M2_maci %15:intregs
+							      >
+							      >	Inst (4)   %15:intregs = M2_maci %13:intregs(tied-def 0), %2:
+							      >
+							      >		es: 80000000 ls:        1 me: 7fffffff ms: 80000000
+							      >	Trying to insert node between 1 and -11 II: 13
+							      >		insert at cycle 1   %15:intregs = M2_maci %13:intregs
+							      >
+							      >	Inst (3)   %13:intregs = COPY %12.isub_hi:doubleregs
+							      >
+							      >		es: 80000000 ls:        1 me: 7fffffff ms: 80000000
+							      >	Trying to insert node between 1 and -11 II: 13
+							      >		insert at cycle 0   %13:intregs = COPY %12.isub_hi:do
+							      >
+							      >	Inst (2)   %12:doubleregs = M2_dpmpyuu_s0 %2:intregs, %5:intr
+							      >
+							      >		es: 80000000 ls: ffffffff me: 7fffffff ms: 80000000
+							      >	Trying to insert node between -1 and -13 II: 13
+							      >		insert at cycle -1   %12:doubleregs = M2_dpmpyuu_s0 %
+							      >
+							      >	Inst (1)   %34:intregs = S2_asr_i_r %2:intregs, 31
+							      >
+							      >		es: 80000000 ls:        1 me: 7fffffff ms: 80000000
+							      >	Trying to insert node between 1 and -11 II: 13
+							      >		insert at cycle 0   %34:intregs = S2_asr_i_r %2:intre
+							      >
+							      >	Inst (0)   %2:intregs = PHI %7:intregs, %bb.0, %3:intregs, %b
+							      >
+							      >		es: ffffffff ls: ffffffff me: 7fffffff ms: 80000000
+							      >	Trying to insert node between -1 and -1 II: 13
+							      >		insert at cycle -1   %2:intregs = PHI %7:intregs, %bb
+cycle 0 (0) (0) %2:intregs = PHI %7:intregs, %bb.0, %3:intreg |	cycle -1 (0) (0) %2:intregs = PHI %7:intregs, %bb.0, %3:intre
+cycle 0 (0) (2) %12:doubleregs = M2_dpmpyuu_s0 %2:intregs, %5 |	cycle -1 (0) (2) %12:doubleregs = M2_dpmpyuu_s0 %2:intregs, %
+cycle 1 (0) (3) %13:intregs = COPY %12.isub_hi:doubleregs     |	cycle 0 (0) (3) %13:intregs = COPY %12.isub_hi:doubleregs
+cycle 1 (0) (4) %15:intregs = M2_maci %13:intregs(tied-def 0) |	cycle 0 (0) (1) %34:intregs = S2_asr_i_r %2:intregs, 31
+cycle 1 (0) (1) %34:intregs = S2_asr_i_r %2:intregs, 31	      |	cycle 1 (0) (4) %15:intregs = M2_maci %13:intregs(tied-def 0)

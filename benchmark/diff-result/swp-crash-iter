@@ -1,0 +1,59 @@
+	insert at cycle 0   %25:doubleregs = REG_SEQUENCE %1. |		insert at cycle -1   %25:doubleregs = REG_SEQUENCE %1
+	es:        0 ls:        0 me: 7fffffff ms: 80000000   |		es:        0 ls: ffffffff me: 7fffffff ms: 80000000
+Trying to insert node between 0 and 0 II: 2		      |		Can't schedule
+	insert at cycle 0   %1:doubleregs = PHI %9:doubleregs |	Try to schedule with 3
+Inst (1)   %2:doubleregs = PHI %9:doubleregs, %bb.0, %27:doub |	Inst (8)   %28:doubleregs = REG_SEQUENCE %14.isub_lo:doublere
+							      >
+							      >		es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+							      >	Trying to insert node between 1 and 3 II: 3
+							      >		insert at cycle 1   %28:doubleregs = REG_SEQUENCE %14
+							      >
+							      >	Inst (5)   %14:doubleregs = M2_cmacsc_s0 %25:doubleregs(tied-
+Trying to insert node between 0 and -1 II: 2		      |	Trying to insert node between 0 and -2 II: 3
+	insert at cycle 0   %2:doubleregs = PHI %9:doubleregs |		insert at cycle 0   %14:doubleregs = M2_cmacsc_s0 %25
+							      >
+							      >	Inst (4)   %25:doubleregs = REG_SEQUENCE %1.isub_lo:doublereg
+							      >
+							      >		es: 80000000 ls:        0 me: 7fffffff ms: 80000000
+							      >	Trying to insert node between 0 and -2 II: 3
+							      >		insert at cycle -1   %25:doubleregs = REG_SEQUENCE %1
+							      >
+							      >	Inst (0)   %1:doubleregs = PHI %9:doubleregs, %bb.0, %28:doub
+							      >
+							      >		es: ffffffff ls: ffffffff me: 7fffffff ms: 80000000
+							      >	Trying to insert node between -1 and -1 II: 3
+							      >		insert at cycle -1   %1:doubleregs = PHI %9:doublereg
+							      >
+							      >	Inst (1)   %2:doubleregs = PHI %9:doubleregs, %bb.0, %27:doub
+							      >
+							      >		es: 80000000 ls: ffffffff me: 7fffffff ms: 80000000
+							      >	Trying to insert node between -1 and -3 II: 3
+							      >		insert at cycle -1   %2:doubleregs = PHI %9:doublereg
+Trying to insert node between 1 and 1 II: 2		      |	Trying to insert node between 1 and 1 II: 3
+	es:        0 ls: 7fffffff me: 7fffffff ms: 80000000   |		es: ffffffff ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 0 and 1 II: 2		      |	Trying to insert node between -1 and 1 II: 3
+	insert at cycle 0   %26:doubleregs = REG_SEQUENCE %1. |		insert at cycle -1   %26:doubleregs = REG_SEQUENCE %1
+	es: ffffffff ls: 7fffffff me: 7fffffff ms: 80000000   |		es: fffffffd ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between -1 and 0 II: 2		      |	Trying to insert node between -3 and -1 II: 3
+	insert at cycle -1   %3:doubleregs = PHI %9:doublereg |		insert at cycle -2   %3:doubleregs = PHI %9:doublereg
+	es: ffffffff ls: ffffffff me: 7fffffff ms: 80000000   |		es: fffffffe ls: fffffffe me: 7fffffff ms: 80000000
+Trying to insert node between -1 and -1 II: 2		      |	Trying to insert node between -2 and -2 II: 3
+	insert at cycle -1   %10:doubleregs = M2_cmacsc_s0 %3 |		insert at cycle -2   %10:doubleregs = M2_cmacsc_s0 %3
+cycle -1 (0) (2) %3:doubleregs = PHI %9:doubleregs, %bb.0, %2 |	cycle -2 (0) (2) %3:doubleregs = PHI %9:doubleregs, %bb.0, %2
+cycle -1 (1) (8) %28:doubleregs = REG_SEQUENCE %14.isub_lo:do |	cycle -2 (1) (8) %28:doubleregs = REG_SEQUENCE %14.isub_lo:do
+cycle -1 (1) (7) %27:doubleregs = REG_SEQUENCE %1.isub_hi:dou |	cycle -2 (1) (7) %27:doubleregs = REG_SEQUENCE %1.isub_hi:dou
+cycle -1 (0) (3) %10:doubleregs = M2_cmacsc_s0 %3:doubleregs( |	cycle -2 (0) (3) %10:doubleregs = M2_cmacsc_s0 %3:doubleregs(
+cycle 0 (0) (0) %1:doubleregs = PHI %9:doubleregs, %bb.0, %28 |	cycle -1 (0) (0) %1:doubleregs = PHI %9:doubleregs, %bb.0, %2
+cycle 0 (0) (1) %2:doubleregs = PHI %9:doubleregs, %bb.0, %27 |	cycle -1 (0) (1) %2:doubleregs = PHI %9:doubleregs, %bb.0, %2
+cycle 0 (0) (4) %25:doubleregs = REG_SEQUENCE %1.isub_lo:doub |	cycle -1 (0) (4) %25:doubleregs = REG_SEQUENCE %1.isub_lo:dou
+cycle 0 (0) (5) %14:doubleregs = M2_cmacsc_s0 %25:doubleregs( |	cycle -1 (0) (6) %26:doubleregs = REG_SEQUENCE %1.isub_hi:dou
+cycle 0 (0) (6) %26:doubleregs = REG_SEQUENCE %1.isub_hi:doub |	cycle 0 (0) (5) %14:doubleregs = M2_cmacsc_s0 %25:doubleregs(
+[stage 0 @-1c] %3:doubleregs = PHI %9:doubleregs, %bb.0, %26: |	[stage 0 @-2c] %3:doubleregs = PHI %9:doubleregs, %bb.0, %26:
+[stage 1 @-1c] %28:doubleregs = REG_SEQUENCE %14.isub_lo:doub |	[stage 1 @-2c] %28:doubleregs = REG_SEQUENCE %14.isub_lo:doub
+[stage 1 @-1c] %27:doubleregs = REG_SEQUENCE %1.isub_hi:doubl |	[stage 1 @-2c] %27:doubleregs = REG_SEQUENCE %1.isub_hi:doubl
+[stage 0 @-1c] %10:doubleregs = M2_cmacsc_s0 %3:doubleregs(ti |	[stage 0 @-2c] %10:doubleregs = M2_cmacsc_s0 %3:doubleregs(ti
+[stage 0 @0c] %1:doubleregs = PHI %9:doubleregs, %bb.0, %28:d |	[stage 0 @-1c] %1:doubleregs = PHI %9:doubleregs, %bb.0, %28:
+[stage 0 @0c] %2:doubleregs = PHI %9:doubleregs, %bb.0, %27:d |	[stage 0 @-1c] %2:doubleregs = PHI %9:doubleregs, %bb.0, %27:
+[stage 0 @0c] %25:doubleregs = REG_SEQUENCE %1.isub_lo:double |	[stage 0 @-1c] %25:doubleregs = REG_SEQUENCE %1.isub_lo:doubl
+							      >	[stage 0 @-1c] %26:doubleregs = REG_SEQUENCE %1.isub_hi:doubl
+[stage 0 @0c] %26:doubleregs = REG_SEQUENCE %1.isub_hi:double <

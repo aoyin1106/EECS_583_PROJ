@@ -1,0 +1,9 @@
+SU(3):   S2_storerigp @g3, %8:intregs, implicit $gp :: (store |	SU(3):   S2_storerigp @g3, %8:intregs, implicit $gp :: (store
+  S2_storerigp @g3, %8:intregs, implicit $gp :: (store 4 into |	  S2_storerigp @g3, %8:intregs, implicit $gp :: (store (s32) 
+SU(3):   S2_storerigp @g3, %8:intregs, implicit $gp :: (store |	SU(3):   S2_storerigp @g3, %8:intregs, implicit $gp :: (store
+   SU(3) S2_storerigp @g3, %8:intregs, implicit $gp :: (store |	   SU(3) S2_storerigp @g3, %8:intregs, implicit $gp :: (store
+Inst (3)   S2_storerigp @g3, %8:intregs, implicit $gp :: (sto |	Inst (3)   S2_storerigp @g3, %8:intregs, implicit $gp :: (sto
+	insert at cycle 1   S2_storerigp @g3, %8:intregs, imp |		insert at cycle 1   S2_storerigp @g3, %8:intregs, imp
+Schedule Found? 1 (II=2)				      |	Schedule Found? 1 (II=1)
+cycle 0 (1) (3) S2_storerigp @g3, %8:intregs, implicit $gp :: |	cycle 0 (1) (3) S2_storerigp @g3, %8:intregs, implicit $gp ::
+[stage 1 @0c] S2_storerigp @g3, %8:intregs, implicit $gp :: ( |	[stage 1 @0c] S2_storerigp @g3, %8:intregs, implicit $gp :: (

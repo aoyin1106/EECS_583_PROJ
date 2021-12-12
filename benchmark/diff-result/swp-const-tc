@@ -1,0 +1,20 @@
+SU(2):   %11:intregs, %5:intregs = L2_loadri_pi %2:intregs(ti |	SU(2):   %11:intregs, %5:intregs = L2_loadri_pi %2:intregs(ti
+  %11:intregs, %5:intregs = L2_loadri_pi %2:intregs(tied-def  |	  %11:intregs, %5:intregs = L2_loadri_pi %2:intregs(tied-def 
+SU(2):   %11:intregs, %5:intregs = L2_loadri_pi %2:intregs(ti |	SU(2):   %11:intregs, %5:intregs = L2_loadri_pi %2:intregs(ti
+   SU(2) %11:intregs, %5:intregs = L2_loadri_pi %2:intregs(ti |	   SU(2) %11:intregs, %5:intregs = L2_loadri_pi %2:intregs(ti
+   SU(2) %11:intregs, %5:intregs = L2_loadri_pi %2:intregs(ti |	   SU(2) %11:intregs, %5:intregs = L2_loadri_pi %2:intregs(ti
+Inst (2)   %11:intregs, %5:intregs = L2_loadri_pi %2:intregs( |	Inst (2)   %11:intregs, %5:intregs = L2_loadri_pi %2:intregs(
+	insert at cycle 0   %11:intregs, %5:intregs = L2_load |		insert at cycle 0   %11:intregs, %5:intregs = L2_load
+Schedule Found? 1 (II=2)				      |	Schedule Found? 1 (II=1)
+cycle 0 (0) (2) %11:intregs, %5:intregs = L2_loadri_pi %2:int |	cycle 0 (0) (2) %11:intregs, %5:intregs = L2_loadri_pi %2:int
+[stage 0 @0c] %11:intregs, %5:intregs = L2_loadri_pi %2:intre |	[stage 0 @0c] %11:intregs, %5:intregs = L2_loadri_pi %2:intre
+SU(2):   %11:intregs, %5:intregs = L2_loadri_pi %2:intregs(ti |	SU(2):   %11:intregs, %5:intregs = L2_loadri_pi %2:intregs(ti
+  %11:intregs, %5:intregs = L2_loadri_pi %2:intregs(tied-def  |	  %11:intregs, %5:intregs = L2_loadri_pi %2:intregs(tied-def 
+SU(2):   %11:intregs, %5:intregs = L2_loadri_pi %2:intregs(ti |	SU(2):   %11:intregs, %5:intregs = L2_loadri_pi %2:intregs(ti
+   SU(2) %11:intregs, %5:intregs = L2_loadri_pi %2:intregs(ti |	   SU(2) %11:intregs, %5:intregs = L2_loadri_pi %2:intregs(ti
+   SU(2) %11:intregs, %5:intregs = L2_loadri_pi %2:intregs(ti |	   SU(2) %11:intregs, %5:intregs = L2_loadri_pi %2:intregs(ti
+Inst (2)   %11:intregs, %5:intregs = L2_loadri_pi %2:intregs( |	Inst (2)   %11:intregs, %5:intregs = L2_loadri_pi %2:intregs(
+	insert at cycle 0   %11:intregs, %5:intregs = L2_load |		insert at cycle 0   %11:intregs, %5:intregs = L2_load
+Schedule Found? 1 (II=2)				      |	Schedule Found? 1 (II=1)
+cycle 0 (0) (2) %11:intregs, %5:intregs = L2_loadri_pi %2:int |	cycle 0 (0) (2) %11:intregs, %5:intregs = L2_loadri_pi %2:int
+[stage 0 @0c] %11:intregs, %5:intregs = L2_loadri_pi %2:intre |	[stage 0 @0c] %11:intregs, %5:intregs = L2_loadri_pi %2:intre

@@ -1,0 +1,19 @@
+SU(3):   %12:doubleregs, %7:intregs = L2_loadrd_pi %0:intregs |	SU(3):   %12:doubleregs, %7:intregs = L2_loadrd_pi %0:intregs
+SU(4):   %13:doubleregs, %6:intregs = L2_loadrd_pi %1:intregs |	SU(4):   %13:doubleregs, %6:intregs = L2_loadrd_pi %1:intregs
+  %12:doubleregs, %7:intregs = L2_loadrd_pi %0:intregs(tied-d |	  %12:doubleregs, %7:intregs = L2_loadrd_pi %0:intregs(tied-d
+  %13:doubleregs, %6:intregs = L2_loadrd_pi %1:intregs(tied-d |	  %13:doubleregs, %6:intregs = L2_loadrd_pi %1:intregs(tied-d
+SU(4):   %13:doubleregs, %6:intregs = L2_loadrd_pi %1:intregs |	SU(4):   %13:doubleregs, %6:intregs = L2_loadrd_pi %1:intregs
+SU(3):   %12:doubleregs, %7:intregs = L2_loadrd_pi %0:intregs |	SU(3):   %12:doubleregs, %7:intregs = L2_loadrd_pi %0:intregs
+   SU(3) %12:doubleregs, %7:intregs = L2_loadrd_pi %0:intregs |	   SU(3) %12:doubleregs, %7:intregs = L2_loadrd_pi %0:intregs
+   SU(4) %13:doubleregs, %6:intregs = L2_loadrd_pi %1:intregs |	   SU(4) %13:doubleregs, %6:intregs = L2_loadrd_pi %1:intregs
+   SU(3) %12:doubleregs, %7:intregs = L2_loadrd_pi %0:intregs |	   SU(3) %12:doubleregs, %7:intregs = L2_loadrd_pi %0:intregs
+   SU(4) %13:doubleregs, %6:intregs = L2_loadrd_pi %1:intregs |	   SU(4) %13:doubleregs, %6:intregs = L2_loadrd_pi %1:intregs
+Inst (3)   %12:doubleregs, %7:intregs = L2_loadrd_pi %0:intre |	Inst (3)   %12:doubleregs, %7:intregs = L2_loadrd_pi %0:intre
+	insert at cycle 0   %12:doubleregs, %7:intregs = L2_l |		insert at cycle 0   %12:doubleregs, %7:intregs = L2_l
+Inst (4)   %13:doubleregs, %6:intregs = L2_loadrd_pi %1:intre |	Inst (4)   %13:doubleregs, %6:intregs = L2_loadrd_pi %1:intre
+	insert at cycle 0   %13:doubleregs, %6:intregs = L2_l |		insert at cycle 0   %13:doubleregs, %6:intregs = L2_l
+Schedule Found? 1 (II=2)				      |	Schedule Found? 1 (II=1)
+cycle 0 (0) (3) %12:doubleregs, %7:intregs = L2_loadrd_pi %0: |	cycle 0 (0) (3) %12:doubleregs, %7:intregs = L2_loadrd_pi %0:
+cycle 0 (0) (4) %13:doubleregs, %6:intregs = L2_loadrd_pi %1: |	cycle 0 (0) (4) %13:doubleregs, %6:intregs = L2_loadrd_pi %1:
+[stage 0 @0c] %12:doubleregs, %7:intregs = L2_loadrd_pi %0:in |	[stage 0 @0c] %12:doubleregs, %7:intregs = L2_loadrd_pi %0:in
+[stage 0 @0c] %13:doubleregs, %6:intregs = L2_loadrd_pi %1:in |	[stage 0 @0c] %13:doubleregs, %6:intregs = L2_loadrd_pi %1:in

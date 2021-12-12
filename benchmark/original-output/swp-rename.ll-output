@@ -1,0 +1,188 @@
+SU(0):   %1:intregs = PHI %9:intregs, %bb.0, %4:intregs, %bb.1
+  # preds left       : 0
+  # succs left       : 4
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 1
+  Successors:
+    SU(3): Data Latency=0 Reg=%1
+    SU(2): Data Latency=0 Reg=%1
+    SU(1): Data Latency=0 Reg=%1
+    SU(3): Anti Latency=1
+SU(1):   S4_storeirh_io %1:intregs, 0, 0 :: (store 2 into %ir.v1)
+  # preds left       : 1
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 0
+  Height             : 0
+  Predecessors:
+    SU(0): Data Latency=0 Reg=%1
+SU(2):   S4_storeirh_io %1:intregs, 2, 0 :: (store 2 into %ir.cgep)
+  # preds left       : 1
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 0
+  Height             : 0
+  Predecessors:
+    SU(0): Data Latency=0 Reg=%1
+SU(3):   %4:intregs = A2_addi %1:intregs, 4
+  # preds left       : 2
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 0
+  Predecessors:
+    SU(0): Data Latency=0 Reg=%1
+    SU(0): Anti Latency=1
+ExitSU:   ENDLOOP0 %bb.1, implicit-def $pc, implicit-def $lc0, implicit $sa0, implicit $lc0
+  # preds left       : 0
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 0
+calculateResMII:
+Trying to reserve resource for 1 cycles for 
+  S4_storeirh_io %1:intregs, 0, 0 :: (store 2 into %ir.v1)
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  S4_storeirh_io %1:intregs, 2, 0 :: (store 2 into %ir.cgep)
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %4:intregs = A2_addi %1:intregs, 4
+ReservedCycles:1, NumCycles:1
+Return Res MII:1
+MII = 1 MAX_II = 11 (rec=1, res=1)
+SU(0):   %1:intregs = PHI %9:intregs, %bb.0, %4:intregs, %bb.1
+SU(1):   S4_storeirh_io %1:intregs, 0, 0 :: (store 2 into %ir.v1)
+SU(2):   S4_storeirh_io %1:intregs, 2, 0 :: (store 2 into %ir.cgep)
+SU(3):   %4:intregs = A2_addi %1:intregs, 4
+	Node 0:
+	   ASAP = 0
+	   ALAP = 0
+	   MOV  = 0
+	   D    = 0
+	   H    = 1
+	   ZLD  = 0
+	   ZLH  = 1
+	Node 1:
+	   ASAP = 0
+	   ALAP = 0
+	   MOV  = 0
+	   D    = 0
+	   H    = 0
+	   ZLD  = 1
+	   ZLH  = 0
+	Node 2:
+	   ASAP = 0
+	   ALAP = 0
+	   MOV  = 0
+	   D    = 0
+	   H    = 0
+	   ZLD  = 1
+	   ZLH  = 0
+	Node 3:
+	   ASAP = 0
+	   ALAP = 0
+	   MOV  = 0
+	   D    = 1
+	   H    = 0
+	   ZLD  = 1
+	   ZLH  = 0
+  Rec NodeSet Num nodes 2 rec 1 mov 0 depth 1 col 0
+   SU(0) %1:intregs = PHI %9:intregs, %bb.0, %4:intregs, %bb.1
+   SU(3) %4:intregs = A2_addi %1:intregs, 4
+
+  NodeSet Num nodes 2 rec 1 mov 0 depth 1 col 0
+   SU(0) %1:intregs = PHI %9:intregs, %bb.0, %4:intregs, %bb.1
+   SU(3) %4:intregs = A2_addi %1:intregs, 4
+
+  NodeSet Num nodes 2 rec 0 mov 0 depth 0 col 0
+   SU(2) S4_storeirh_io %1:intregs, 2, 0 :: (store 2 into %ir.cgep)
+   SU(1) S4_storeirh_io %1:intregs, 0, 0 :: (store 2 into %ir.v1)
+
+NodeSet size 2
+  Bottom up (default) 3 0 
+   Switching order to top down 
+Done with Nodeset
+NodeSet size 2
+  Top down (succs) 2 1 
+   Switching order to bottom up 
+Done with Nodeset
+Node order:  3  0  2  1 
+Try to schedule with 1
+
+Inst (3)   %4:intregs = A2_addi %1:intregs, 4
+
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 0 and 0 II: 1
+	insert at cycle 0   %4:intregs = A2_addi %1:intregs, 4
+
+Inst (0)   %1:intregs = PHI %9:intregs, %bb.0, %4:intregs, %bb.1
+
+	es:        0 ls:        0 me: 7fffffff ms: 80000000
+Trying to insert node between 0 and 0 II: 1
+	insert at cycle 0   %1:intregs = PHI %9:intregs, %bb.0, %4:intregs, %bb.1
+
+Inst (2)   S4_storeirh_io %1:intregs, 2, 0 :: (store 2 into %ir.cgep)
+
+	es:        0 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 0 and 0 II: 1
+	insert at cycle 0   S4_storeirh_io %1:intregs, 2, 0 :: (store 2 into %ir.cgep)
+
+Inst (1)   S4_storeirh_io %1:intregs, 0, 0 :: (store 2 into %ir.v1)
+
+	es:        0 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 0 and 0 II: 1
+	insert at cycle 0   S4_storeirh_io %1:intregs, 0, 0 :: (store 2 into %ir.v1)
+Schedule Found? 1 (II=2)
+cycle 0 (0) (0) %1:intregs = PHI %9:intregs, %bb.0, %4:intregs, %bb.1
+
+cycle 0 (0) (1) S4_storeirh_io %1:intregs, 0, 0 :: (store 2 into %ir.v1)
+
+cycle 0 (0) (2) S4_storeirh_io %1:intregs, 2, 0 :: (store 2 into %ir.cgep)
+
+cycle 0 (0) (3) %4:intregs = A2_addi %1:intregs, 4
+
+No schedule found, return
+	.text
+	.file	"<stdin>"
+	.globl	f0                              // -- Begin function f0
+	.p2align	4
+	.type	f0,@function
+f0:                                     // @f0
+// %bb.0:                               // %b0
+	{
+		r0 = add(r0,#-4)
+	}
+	{
+		r0 = add(r0,#7)
+	}
+	{
+		r1 = lsr(r0,#3)
+		r0 = #0
+	}
+	{
+		loop0(.LBB0_1,r1)
+	}
+	.p2align	4
+.Ltmp0:                                 // Block address taken
+.LBB0_1:                                // %b1
+                                        // =>This Inner Loop Header: Depth=1
+	{
+		r0 = add(r0,#4)
+		memh(r0+#0) = #0
+		memh(r0+#2) = #0
+	} :endloop0
+// %bb.2:                               // %b2
+	{
+		jumpr r31
+	}
+.Lfunc_end0:
+	.size	f0, .Lfunc_end0-f0
+                                        // -- End function
+	.section	".note.GNU-stack","",@progbits

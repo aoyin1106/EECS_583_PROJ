@@ -1,0 +1,15 @@
+SU(1):   S4_storeirh_io %1:intregs, 0, 0 :: (store 2 into %ir |	SU(1):   S4_storeirh_io %1:intregs, 0, 0 :: (store (s16) into
+SU(2):   S4_storeirh_io %1:intregs, 2, 0 :: (store 2 into %ir |	SU(2):   S4_storeirh_io %1:intregs, 2, 0 :: (store (s16) into
+  S4_storeirh_io %1:intregs, 0, 0 :: (store 2 into %ir.v1)    |	  S4_storeirh_io %1:intregs, 0, 0 :: (store (s16) into %ir.v1
+  S4_storeirh_io %1:intregs, 2, 0 :: (store 2 into %ir.cgep)  |	  S4_storeirh_io %1:intregs, 2, 0 :: (store (s16) into %ir.cg
+SU(1):   S4_storeirh_io %1:intregs, 0, 0 :: (store 2 into %ir |	SU(1):   S4_storeirh_io %1:intregs, 0, 0 :: (store (s16) into
+SU(2):   S4_storeirh_io %1:intregs, 2, 0 :: (store 2 into %ir |	SU(2):   S4_storeirh_io %1:intregs, 2, 0 :: (store (s16) into
+   SU(2) S4_storeirh_io %1:intregs, 2, 0 :: (store 2 into %ir |	   SU(2) S4_storeirh_io %1:intregs, 2, 0 :: (store (s16) into
+   SU(1) S4_storeirh_io %1:intregs, 0, 0 :: (store 2 into %ir |	   SU(1) S4_storeirh_io %1:intregs, 0, 0 :: (store (s16) into
+Inst (2)   S4_storeirh_io %1:intregs, 2, 0 :: (store 2 into % |	Inst (2)   S4_storeirh_io %1:intregs, 2, 0 :: (store (s16) in
+	insert at cycle 0   S4_storeirh_io %1:intregs, 2, 0 : |		insert at cycle 0   S4_storeirh_io %1:intregs, 2, 0 :
+Inst (1)   S4_storeirh_io %1:intregs, 0, 0 :: (store 2 into % |	Inst (1)   S4_storeirh_io %1:intregs, 0, 0 :: (store (s16) in
+	insert at cycle 0   S4_storeirh_io %1:intregs, 0, 0 : |		insert at cycle 0   S4_storeirh_io %1:intregs, 0, 0 :
+Schedule Found? 1 (II=2)				      |	Schedule Found? 1 (II=1)
+cycle 0 (0) (1) S4_storeirh_io %1:intregs, 0, 0 :: (store 2 i |	cycle 0 (0) (1) S4_storeirh_io %1:intregs, 0, 0 :: (store (s1
+cycle 0 (0) (2) S4_storeirh_io %1:intregs, 2, 0 :: (store 2 i |	cycle 0 (0) (2) S4_storeirh_io %1:intregs, 2, 0 :: (store (s1

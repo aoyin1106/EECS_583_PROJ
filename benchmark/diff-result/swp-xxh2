@@ -1,0 +1,69 @@
+SU(2):   %11:intregs, %4:intregs = L2_loadri_pi %3:intregs(ti |	SU(2):   %11:intregs, %4:intregs = L2_loadri_pi %3:intregs(ti
+  %11:intregs, %4:intregs = L2_loadri_pi %3:intregs(tied-def  |	  %11:intregs, %4:intregs = L2_loadri_pi %3:intregs(tied-def 
+SU(2):   %11:intregs, %4:intregs = L2_loadri_pi %3:intregs(ti |	SU(2):   %11:intregs, %4:intregs = L2_loadri_pi %3:intregs(ti
+   SU(2) %11:intregs, %4:intregs = L2_loadri_pi %3:intregs(ti |	   SU(2) %11:intregs, %4:intregs = L2_loadri_pi %3:intregs(ti
+   SU(2) %11:intregs, %4:intregs = L2_loadri_pi %3:intregs(ti |	   SU(2) %11:intregs, %4:intregs = L2_loadri_pi %3:intregs(ti
+Inst (2)   %11:intregs, %4:intregs = L2_loadri_pi %3:intregs( |	Inst (2)   %11:intregs, %4:intregs = L2_loadri_pi %3:intregs(
+	insert at cycle 0   %11:intregs, %4:intregs = L2_load |		insert at cycle 0   %11:intregs, %4:intregs = L2_load
+Inst (2)   %11:intregs, %4:intregs = L2_loadri_pi %3:intregs( |	Inst (2)   %11:intregs, %4:intregs = L2_loadri_pi %3:intregs(
+	insert at cycle 0   %11:intregs, %4:intregs = L2_load |		insert at cycle 0   %11:intregs, %4:intregs = L2_load
+	insert at cycle 0   %3:intregs = PHI %10:intregs, %bb |		insert at cycle -1   %3:intregs = PHI %10:intregs, %b
+	insert at cycle 2   %12:doubleregs = S2_packhl %11:in |		insert at cycle 3   %12:doubleregs = S2_packhl %11:in
+	es:        4 ls: 7fffffff me: 7fffffff ms: 80000000   |		es:        5 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 4 and 5 II: 2		      |	Trying to insert node between 5 and 6 II: 2
+	insert at cycle 4   %5:doubleregs = M2_vdmacs_s0 %2:d |		insert at cycle 5   %5:doubleregs = M2_vdmacs_s0 %2:d
+	es:        3 ls:        4 me: 7fffffff ms: 80000000   |		es:        4 ls:        5 me: 7fffffff ms: 80000000
+Trying to insert node between 4 and 3 II: 2		      |	Trying to insert node between 5 and 4 II: 2
+Schedule Found? 1 (II=3)				      |	Schedule Found? 1 (II=2)
+cycle 0 (2) (0) %2:doubleregs = PHI %9:doubleregs, %bb.0, %5: |	cycle -1 (0) (1) %3:intregs = PHI %10:intregs, %bb.0, %4:intr
+cycle 0 (0) (1) %3:intregs = PHI %10:intregs, %bb.0, %4:intre |	cycle -1 (3) (4) %5:doubleregs = M2_vdmacs_s0 %2:doubleregs(t
+cycle 0 (2) (4) %5:doubleregs = M2_vdmacs_s0 %2:doubleregs(ti |	cycle -1 (2) (3) %12:doubleregs = S2_packhl %11:intregs, %13:
+cycle 0 (1) (3) %12:doubleregs = S2_packhl %11:intregs, %13:i |	cycle 0 (2) (0) %2:doubleregs = PHI %9:doubleregs, %bb.0, %5:
+cycle 0 (0) (2) %11:intregs, %4:intregs = L2_loadri_pi %3:int |	cycle 0 (0) (2) %11:intregs, %4:intregs = L2_loadri_pi %3:int
+							      >	[stage 0 @-1c] %3:intregs = PHI %10:intregs, %bb.0, %4:intreg
+							      >	[stage 3 @-1c] %5:doubleregs = M2_vdmacs_s0 %2:doubleregs(tie
+							      >	[stage 2 @-1c] %12:doubleregs = S2_packhl %11:intregs, %13:in
+[stage 0 @0c] %3:intregs = PHI %10:intregs, %bb.0, %4:intregs |	[stage 0 @0c] %11:intregs, %4:intregs = L2_loadri_pi %3:intre
+[stage 2 @0c] %5:doubleregs = M2_vdmacs_s0 %2:doubleregs(tied |	Dynamic: TC > 3
+[stage 1 @0c] %12:doubleregs = S2_packhl %11:intregs, %13:int <
+[stage 0 @0c] %11:intregs, %4:intregs = L2_loadri_pi %3:intre <
+		r0 = memw(r6++#-16)			      |			r0 = memw(r5++#-16)
+		r2 = add(r3,#-2)			      |			r2 = add(r3,#-3)
+		loop0(.LBB0_3,r2)			      |			p0 = cmp.gtu(r3,#2); if (!p0.new) jump:t .LBB
+		r5:4 = packhl(r0,r0)			      |			r4 = memw(r5++#-16)
+		p0 = cmp.gtu(r3,#2)			      |		}
+		r0 = memw(r6++#-16)			      |	// %bb.4:                               // %b1
+							      >		{
+							      >			r7:6 = packhl(r0,r0)
+							      >			p0 = cmp.gtu(r3,#3)
+							      >			r0 = r4
+							      >			r8 = memw(r5++#-16)
+							      >		}
+							      >		{
+							      >			loop0(.LBB0_5,r2)
+		if (!p0) jump:nt .LBB0_4		      |			if (!p0) jump:nt .LBB0_6
+.LBB0_3:                                // %b1		      |	.LBB0_5:                                // %b1
+		r3:2 += vdmpy(r1:0,r5:4):sat		      |			r0 = r8
+		r5:4 = packhl(r0,r0)			      |			r8 = memw(r5++#-16)
+		r0 = memw(r6++#-16)			      |		}
+							      >		{
+							      >			r3:2 += vdmpy(r1:0,r7:6):sat
+							      >			r7:6 = packhl(r4,r0)
+							      >			r4 = r0
+.LBB0_4:                                // %b1		      |	.LBB0_6:                                // %b1
+		r3:2 += vdmpy(r1:0,r5:4):sat		      |			r3:2 += vdmpy(r1:0,r7:6):sat
+		jump .LBB0_5				      |			jump .LBB0_7
+							      >			r4 = r8
+							      >		{
+							      >			jump .LBB0_8
+							      >		}
+							      >	.LBB0_3:
+.LBB0_5:                                // %b1		      |	.LBB0_7:                                // %b1
+							      >		{
+							      >			r7:6 = packhl(r0,r0)
+							      >			r0 = r4
+							      >		}
+							      >		{
+							      >			r3:2 += vdmpy(r1:0,r7:6):sat
+							      >		}
+							      >	.LBB0_8:                                // %b1

@@ -1,0 +1,1403 @@
+SU(0):   %2:intregs = PHI %16:intregs, %bb.4, %12:intregs, %b <
+  # preds left       : 0				      <
+  # succs left       : 3				      <
+  # rdefs left       : 0				      <
+  Latency            : 0				      <
+  Depth              : 0				      <
+  Height             : 1				      <
+  Successors:						      <
+    SU(14): Data Latency=0 Reg=%2			      <
+    SU(9): Data Latency=0 Reg=%2			      <
+    SU(15): Anti Latency=1				      <
+SU(1):   %3:doubleregs = PHI %17:doubleregs, %bb.4, %9:double <
+  # preds left       : 0				      <
+  # succs left       : 2				      <
+  # rdefs left       : 0				      <
+  Latency            : 0				      <
+  Depth              : 0				      <
+  Height             : 1				      <
+  Successors:						      <
+    SU(12): Data Latency=0 Reg=%3			      <
+    SU(12): Anti Latency=1				      <
+SU(2):   %4:doubleregs = PHI %17:doubleregs, %bb.4, %8:double <
+  # preds left       : 0				      <
+  # succs left       : 2				      <
+  # rdefs left       : 0				      <
+  Latency            : 0				      <
+  Depth              : 0				      <
+  Height             : 1				      <
+  Successors:						      <
+    SU(8): Data Latency=0 Reg=%4			      <
+    SU(8): Anti Latency=1				      <
+SU(3):   %5:intregs = PHI %16:intregs, %bb.4, %6:intregs, %bb <
+  # preds left       : 0				      <
+  # succs left       : 3				      <
+  # rdefs left       : 0				      <
+  Latency            : 0				      <
+  Depth              : 0				      <
+  Height             : 1				      <
+  Successors:						      <
+    SU(11): Data Latency=0 Reg=%5			      <
+    SU(6): Data Latency=0 Reg=%5			      <
+    SU(4): Ord  Latency=0 Barrier			      <
+SU(4):   %6:intregs = PHI %16:intregs, %bb.4, %11:intregs, %b <
+  # preds left       : 1				      <
+  # succs left       : 2				      <
+  # rdefs left       : 0				      <
+  Latency            : 0				      <
+  Depth              : 0				      <
+  Height             : 1				      <
+  Predecessors:						      <
+    SU(3): Ord  Latency=0 Barrier			      <
+  Successors:						      <
+    SU(6): Data Latency=0 Reg=%6			      <
+    SU(14): Anti Latency=1				      <
+SU(5):   %7:intregs = PHI %16:intregs, %bb.4, %14:intregs, %b <
+  # preds left       : 0				      <
+  # succs left       : 4				      <
+  # rdefs left       : 0				      <
+  Latency            : 0				      <
+  Depth              : 0				      <
+  Height             : 1				      <
+  Successors:						      <
+    SU(16): Data Latency=0 Reg=%7			      <
+    SU(15): Data Latency=0 Reg=%7			      <
+    SU(13): Data Latency=0 Reg=%7			      <
+    SU(16): Anti Latency=1				      <
+SU(6):   %19:intregs = A2_combine_lh %6:intregs, %5:intregs   <
+  # preds left       : 2				      <
+  # succs left       : 1				      <
+  # rdefs left       : 0				      <
+  Latency            : 1				      <
+  Depth              : 0				      <
+  Height             : 1				      <
+  Predecessors:						      <
+    SU(4): Data Latency=0 Reg=%6			      <
+    SU(3): Data Latency=0 Reg=%5			      <
+  Successors:						      <
+    SU(7): Data Latency=1 Reg=%19			      <
+SU(7):   %35:doubleregs = REG_SEQUENCE %21:intregs, %subreg.i <
+  # preds left       : 1				      <
+  # succs left       : 1				      <
+  # rdefs left       : 0				      <
+  Latency            : 0				      <
+  Depth              : 1				      <
+  Height             : 0				      <
+  Predecessors:						      <
+    SU(6): Data Latency=1 Reg=%19			      <
+  Successors:						      <
+    SU(8): Data Latency=0 Reg=%35			      <
+SU(8):   %8:doubleregs = M2_vdmacs_s0 %4:doubleregs(tied-def  <
+  # preds left       : 3				      <
+  # succs left       : 0				      <
+  # rdefs left       : 0				      <
+  Latency            : 1				      <
+  Depth              : 1				      <
+  Height             : 0				      <
+  Predecessors:						      <
+    SU(7): Data Latency=0 Reg=%35			      <
+    SU(2): Data Latency=0 Reg=%4			      <
+    SU(2): Anti Latency=1				      <
+SU(9):   %38:doubleregs = REG_SEQUENCE %23:intregs, %subreg.i <
+  # preds left       : 1				      <
+  # succs left       : 1				      <
+  # rdefs left       : 0				      <
+  Latency            : 0				      <
+  Depth              : 0				      <
+  Height             : 1				      <
+  Predecessors:						      <
+    SU(0): Data Latency=0 Reg=%2			      <
+  Successors:						      <
+    SU(10): Data Latency=0 Reg=%38			      <
+SU(10):   %26:doubleregs = S2_valignib %38:doubleregs, %27:do <
+  # preds left       : 1				      <
+  # succs left       : 1				      <
+  # rdefs left       : 0				      <
+  Latency            : 1				      <
+  Depth              : 0				      <
+  Height             : 1				      <
+  Predecessors:						      <
+    SU(9): Data Latency=0 Reg=%38			      <
+  Successors:						      <
+    SU(12): Data Latency=1 Reg=%26			      <
+SU(11):   %41:doubleregs = REG_SEQUENCE %5:intregs, %subreg.i <
+  # preds left       : 1				      <
+  # succs left       : 1				      <
+  # rdefs left       : 0				      <
+  Latency            : 0				      <
+  Depth              : 0				      <
+  Height             : 0				      <
+  Predecessors:						      <
+    SU(3): Data Latency=0 Reg=%5			      <
+  Successors:						      <
+    SU(12): Data Latency=0 Reg=%41			      <
+SU(12):   %9:doubleregs = M2_vdmacs_s0 %3:doubleregs(tied-def <
+  # preds left       : 4				      <
+  # succs left       : 0				      <
+  # rdefs left       : 0				      <
+  Latency            : 1				      <
+  Depth              : 1				      <
+  Height             : 0				      <
+  Predecessors:						      <
+    SU(11): Data Latency=0 Reg=%41			      <
+    SU(10): Data Latency=1 Reg=%26			      <
+    SU(1): Data Latency=0 Reg=%3			      <
+    SU(1): Anti Latency=1				      <
+SU(13):   %28:intregs = L2_loadrh_io %7:intregs, 0 :: (load 2 <
+  # preds left       : 1				      <
+  # succs left       : 1				      <
+  # rdefs left       : 0				      <
+  Latency            : 1				      <
+  Depth              : 0				      <
+  Height             : 1				      <
+  Predecessors:						      <
+    SU(5): Data Latency=0 Reg=%7			      <
+  Successors:						      <
+    SU(14): Data Latency=1 Reg=%28			      <
+SU(14):   %11:intregs = A2_combine_ll %28:intregs, %2:intregs <
+  # preds left       : 3				      <
+  # succs left       : 0				      <
+  # rdefs left       : 0				      <
+  Latency            : 1				      <
+  Depth              : 1				      <
+  Height             : 0				      <
+  Predecessors:						      <
+    SU(13): Data Latency=1 Reg=%28			      <
+    SU(0): Data Latency=0 Reg=%2			      <
+    SU(4): Anti Latency=1				      <
+SU(15):   %12:intregs = L2_loadrh_io %7:intregs, -8 :: (load  <
+  # preds left       : 2				      <
+  # succs left       : 0				      <
+  # rdefs left       : 0				      <
+  Latency            : 1				      <
+  Depth              : 1				      <
+  Height             : 0				      <
+  Predecessors:						      <
+    SU(5): Data Latency=0 Reg=%7			      <
+    SU(0): Anti Latency=1				      <
+SU(16):   %14:intregs = A2_addi %7:intregs, -16		      <
+  # preds left       : 2				      <
+  # succs left       : 0				      <
+  # rdefs left       : 0				      <
+  Latency            : 1				      <
+  Depth              : 1				      <
+  Height             : 0				      <
+  Predecessors:						      <
+    SU(5): Data Latency=0 Reg=%7			      <
+    SU(5): Anti Latency=1				      <
+ExitSU:   ENDLOOP0 %bb.1, implicit-def $pc, implicit-def $lc0 <
+  # preds left       : 0				      <
+  # succs left       : 0				      <
+  # rdefs left       : 0				      <
+  Latency            : 0				      <
+  Depth              : 0				      <
+  Height             : 0				      <
+calculateResMII:					      <
+Trying to reserve resource for 1 cycles for 		      <
+  %8:doubleregs = M2_vdmacs_s0 %4:doubleregs(tied-def 0), %35 <
+ReservedCycles:1, NumCycles:1				      <
+Trying to reserve resource for 1 cycles for 		      <
+  %9:doubleregs = M2_vdmacs_s0 %3:doubleregs(tied-def 0), %41 <
+ReservedCycles:1, NumCycles:1				      <
+Trying to reserve resource for 1 cycles for 		      <
+  %26:doubleregs = S2_valignib %38:doubleregs, %27:doubleregs <
+ReservedCycles:0, NumCycles:1				      <
+Trying to reserve resource for 1 cycles for 		      <
+  %12:intregs = L2_loadrh_io %7:intregs, -8 :: (load 2 from % <
+ReservedCycles:1, NumCycles:1				      <
+Trying to reserve resource for 1 cycles for 		      <
+  %28:intregs = L2_loadrh_io %7:intregs, 0 :: (load 2 from %i <
+ReservedCycles:1, NumCycles:1				      <
+Trying to reserve resource for 1 cycles for 		      <
+  %19:intregs = A2_combine_lh %6:intregs, %5:intregs	      <
+ReservedCycles:1, NumCycles:1				      <
+Trying to reserve resource for 1 cycles for 		      <
+  %14:intregs = A2_addi %7:intregs, -16			      <
+ReservedCycles:1, NumCycles:1				      <
+Trying to reserve resource for 1 cycles for 		      <
+  %11:intregs = A2_combine_ll %28:intregs, %2:intregs	      <
+ReservedCycles:1, NumCycles:1				      <
+Return Res MII:2					      <
+MII = 2 MAX_II = 12 (rec=1, res=2)			      <
+SU(3):   %5:intregs = PHI %16:intregs, %bb.4, %6:intregs, %bb <
+SU(4):   %6:intregs = PHI %16:intregs, %bb.4, %11:intregs, %b <
+SU(6):   %19:intregs = A2_combine_lh %6:intregs, %5:intregs   <
+SU(7):   %35:doubleregs = REG_SEQUENCE %21:intregs, %subreg.i <
+SU(2):   %4:doubleregs = PHI %17:doubleregs, %bb.4, %8:double <
+SU(8):   %8:doubleregs = M2_vdmacs_s0 %4:doubleregs(tied-def  <
+SU(11):   %41:doubleregs = REG_SEQUENCE %5:intregs, %subreg.i <
+SU(0):   %2:intregs = PHI %16:intregs, %bb.4, %12:intregs, %b <
+SU(9):   %38:doubleregs = REG_SEQUENCE %23:intregs, %subreg.i <
+SU(10):   %26:doubleregs = S2_valignib %38:doubleregs, %27:do <
+SU(1):   %3:doubleregs = PHI %17:doubleregs, %bb.4, %9:double <
+SU(12):   %9:doubleregs = M2_vdmacs_s0 %3:doubleregs(tied-def <
+SU(5):   %7:intregs = PHI %16:intregs, %bb.4, %14:intregs, %b <
+SU(13):   %28:intregs = L2_loadrh_io %7:intregs, 0 :: (load 2 <
+SU(14):   %11:intregs = A2_combine_ll %28:intregs, %2:intregs <
+SU(15):   %12:intregs = L2_loadrh_io %7:intregs, -8 :: (load  <
+SU(16):   %14:intregs = A2_addi %7:intregs, -16		      <
+	Node 0:						      <
+	   ASAP = 0					      <
+	   ALAP = 0					      <
+	   MOV  = 0					      <
+	   D    = 0					      <
+	   H    = 1					      <
+	   ZLD  = 0					      <
+	   ZLH  = 2					      <
+	Node 1:						      <
+	   ASAP = 0					      <
+	   ALAP = 1					      <
+	   MOV  = 1					      <
+	   D    = 0					      <
+	   H    = 1					      <
+	   ZLD  = 0					      <
+	   ZLH  = 1					      <
+	Node 2:						      <
+	   ASAP = 0					      <
+	   ALAP = 1					      <
+	   MOV  = 1					      <
+	   D    = 0					      <
+	   H    = 1					      <
+	   ZLD  = 0					      <
+	   ZLH  = 1					      <
+	Node 3:						      <
+	   ASAP = 0					      <
+	   ALAP = 0					      <
+	   MOV  = 0					      <
+	   D    = 0					      <
+	   H    = 1					      <
+	   ZLD  = 0					      <
+	   ZLH  = 2					      <
+	Node 4:						      <
+	   ASAP = 0					      <
+	   ALAP = 0					      <
+	   MOV  = 0					      <
+	   D    = 0					      <
+	   H    = 1					      <
+	   ZLD  = 1					      <
+	   ZLH  = 1					      <
+	Node 5:						      <
+	   ASAP = 0					      <
+	   ALAP = 0					      <
+	   MOV  = 0					      <
+	   D    = 0					      <
+	   H    = 1					      <
+	   ZLD  = 0					      <
+	   ZLH  = 1					      <
+	Node 6:						      <
+	   ASAP = 0					      <
+	   ALAP = 0					      <
+	   MOV  = 0					      <
+	   D    = 0					      <
+	   H    = 1					      <
+	   ZLD  = 2					      <
+	   ZLH  = 0					      <
+	Node 7:						      <
+	   ASAP = 1					      <
+	   ALAP = 1					      <
+	   MOV  = 0					      <
+	   D    = 1					      <
+	   H    = 0					      <
+	   ZLD  = 0					      <
+	   ZLH  = 1					      <
+	Node 8:						      <
+	   ASAP = 1					      <
+	   ALAP = 1					      <
+	   MOV  = 0					      <
+	   D    = 1					      <
+	   H    = 0					      <
+	   ZLD  = 1					      <
+	   ZLH  = 0					      <
+	Node 9:						      <
+	   ASAP = 0					      <
+	   ALAP = 0					      <
+	   MOV  = 0					      <
+	   D    = 0					      <
+	   H    = 1					      <
+	   ZLD  = 1					      <
+	   ZLH  = 1					      <
+	Node 10:					      <
+	   ASAP = 0					      <
+	   ALAP = 0					      <
+	   MOV  = 0					      <
+	   D    = 0					      <
+	   H    = 1					      <
+	   ZLD  = 2					      <
+	   ZLH  = 0					      <
+	Node 11:					      <
+	   ASAP = 0					      <
+	   ALAP = 1					      <
+	   MOV  = 1					      <
+	   D    = 0					      <
+	   H    = 0					      <
+	   ZLD  = 1					      <
+	   ZLH  = 1					      <
+	Node 12:					      <
+	   ASAP = 1					      <
+	   ALAP = 1					      <
+	   MOV  = 0					      <
+	   D    = 1					      <
+	   H    = 0					      <
+	   ZLD  = 2					      <
+	   ZLH  = 0					      <
+	Node 13:					      <
+	   ASAP = 0					      <
+	   ALAP = 0					      <
+	   MOV  = 0					      <
+	   D    = 0					      <
+	   H    = 1					      <
+	   ZLD  = 1					      <
+	   ZLH  = 0					      <
+	Node 14:					      <
+	   ASAP = 1					      <
+	   ALAP = 1					      <
+	   MOV  = 0					      <
+	   D    = 1					      <
+	   H    = 0					      <
+	   ZLD  = 1					      <
+	   ZLH  = 0					      <
+	Node 15:					      <
+	   ASAP = 0					      <
+	   ALAP = 1					      <
+	   MOV  = 1					      <
+	   D    = 1					      <
+	   H    = 0					      <
+	   ZLD  = 1					      <
+	   ZLH  = 0					      <
+	Node 16:					      <
+	   ASAP = 0					      <
+	   ALAP = 1					      <
+	   MOV  = 1					      <
+	   D    = 1					      <
+	   H    = 0					      <
+	   ZLD  = 1					      <
+	   ZLH  = 0					      <
+  Rec NodeSet Num nodes 2 rec 1 mov 1 depth 1 col 0	      <
+   SU(1) %3:doubleregs = PHI %17:doubleregs, %bb.4, %9:double <
+   SU(12) %9:doubleregs = M2_vdmacs_s0 %3:doubleregs(tied-def <
+							      <
+  Rec NodeSet Num nodes 2 rec 1 mov 1 depth 1 col 0	      <
+   SU(2) %4:doubleregs = PHI %17:doubleregs, %bb.4, %8:double <
+   SU(8) %8:doubleregs = M2_vdmacs_s0 %4:doubleregs(tied-def  <
+							      <
+  Rec NodeSet Num nodes 2 rec 1 mov 1 depth 1 col 0	      <
+   SU(5) %7:intregs = PHI %16:intregs, %bb.4, %14:intregs, %b <
+   SU(16) %14:intregs = A2_addi %7:intregs, -16		      <
+							      <
+  NodeSet Num nodes 2 rec 1 mov 1 depth 1 col 0		      <
+   SU(1) %3:doubleregs = PHI %17:doubleregs, %bb.4, %9:double <
+   SU(12) %9:doubleregs = M2_vdmacs_s0 %3:doubleregs(tied-def <
+							      <
+  NodeSet Num nodes 2 rec 1 mov 1 depth 1 col 0		      <
+   SU(2) %4:doubleregs = PHI %17:doubleregs, %bb.4, %8:double <
+   SU(8) %8:doubleregs = M2_vdmacs_s0 %4:doubleregs(tied-def  <
+							      <
+  NodeSet Num nodes 11 rec 1 mov 1 depth 1 col 0	      <
+   SU(5) %7:intregs = PHI %16:intregs, %bb.4, %14:intregs, %b <
+   SU(16) %14:intregs = A2_addi %7:intregs, -16		      <
+   SU(7) %35:doubleregs = REG_SEQUENCE %21:intregs, %subreg.i <
+   SU(6) %19:intregs = A2_combine_lh %6:intregs, %5:intregs   <
+   SU(4) %6:intregs = PHI %16:intregs, %bb.4, %11:intregs, %b <
+   SU(14) %11:intregs = A2_combine_ll %28:intregs, %2:intregs <
+   SU(10) %26:doubleregs = S2_valignib %38:doubleregs, %27:do <
+   SU(9) %38:doubleregs = REG_SEQUENCE %23:intregs, %subreg.i <
+   SU(0) %2:intregs = PHI %16:intregs, %bb.4, %12:intregs, %b <
+   SU(15) %12:intregs = L2_loadrh_io %7:intregs, -8 :: (load  <
+   SU(13) %28:intregs = L2_loadrh_io %7:intregs, 0 :: (load 2 <
+							      <
+  NodeSet Num nodes 2 rec 0 mov 0 depth 0 col 0		      <
+   SU(11) %41:doubleregs = REG_SEQUENCE %5:intregs, %subreg.i <
+   SU(3) %5:intregs = PHI %16:intregs, %bb.4, %6:intregs, %bb <
+							      <
+NodeSet size 2						      <
+  Bottom up (default) 12 1 				      <
+   Switching order to top down 				      <
+Done with Nodeset					      <
+NodeSet size 2						      <
+  Bottom up (default) 8 2 				      <
+   Switching order to top down 				      <
+Done with Nodeset					      <
+NodeSet size 11						      <
+  Bottom up (default) 14 13 4 0 15 5 16 		      <
+   Switching order to top down 9 6 10 7 		      <
+   Switching order to bottom up 			      <
+Done with Nodeset					      <
+NodeSet size 2						      <
+  Bottom up (preds) 11 3 				      <
+   Switching order to top down 				      <
+Done with Nodeset					      <
+Node order:  12  1  8  2  14  13  4  0  15  5  16  9  6  10   <
+Predecessor 9 and successor 12 are scheduled before node 10   <
+Predecessor 6 and successor 8 are scheduled before node 7     <
+Invalid node order found!				      <
+Try to schedule with 2					      <
+							      <
+Inst (12)   %9:doubleregs = M2_vdmacs_s0 %3:doubleregs(tied-d <
+							      <
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 2 II: 2		      <
+	insert at cycle 1   %9:doubleregs = M2_vdmacs_s0 %3:d <
+							      <
+Inst (1)   %3:doubleregs = PHI %17:doubleregs, %bb.4, %9:doub <
+							      <
+	es:        0 ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 0 II: 2		      <
+	insert at cycle 1   %3:doubleregs = PHI %17:doublereg <
+							      <
+Inst (8)   %8:doubleregs = M2_vdmacs_s0 %4:doubleregs(tied-de <
+							      <
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 2 II: 2		      <
+	insert at cycle 1   %8:doubleregs = M2_vdmacs_s0 %4:d <
+							      <
+Inst (2)   %4:doubleregs = PHI %17:doubleregs, %bb.4, %8:doub <
+							      <
+	es:        0 ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 0 II: 2		      <
+	insert at cycle 1   %4:doubleregs = PHI %17:doublereg <
+							      <
+Inst (14)   %11:intregs = A2_combine_ll %28:intregs, %2:intre <
+							      <
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 2 II: 2		      <
+	insert at cycle 1   %11:intregs = A2_combine_ll %28:i <
+							      <
+Inst (13)   %28:intregs = L2_loadrh_io %7:intregs, 0 :: (load <
+							      <
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000   <
+Trying to insert node between 0 and -1 II: 2		      <
+	insert at cycle 0   %28:intregs = L2_loadrh_io %7:int <
+							      <
+Inst (4)   %6:intregs = PHI %16:intregs, %bb.4, %11:intregs,  <
+							      <
+	es:        0 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 0 and 1 II: 2		      <
+	insert at cycle 0   %6:intregs = PHI %16:intregs, %bb <
+							      <
+Inst (0)   %2:intregs = PHI %16:intregs, %bb.4, %12:intregs,  <
+							      <
+	es: 80000000 ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 0 II: 2		      <
+	insert at cycle 1   %2:intregs = PHI %16:intregs, %bb <
+							      <
+Inst (15)   %12:intregs = L2_loadrh_io %7:intregs, -8 :: (loa <
+							      <
+	es: 80000000 ls:        2 me: 7fffffff ms: 80000000   <
+Trying to insert node between 2 and 1 II: 2		      <
+	insert at cycle 2   %12:intregs = L2_loadrh_io %7:int <
+							      <
+Inst (5)   %7:intregs = PHI %16:intregs, %bb.4, %14:intregs,  <
+							      <
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000   <
+Trying to insert node between 0 and -1 II: 2		      <
+	insert at cycle 0   %7:intregs = PHI %16:intregs, %bb <
+							      <
+Inst (16)   %14:intregs = A2_addi %7:intregs, -16	      <
+							      <
+	es:        0 ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 0 and 1 II: 2		      <
+	insert at cycle 0   %14:intregs = A2_addi %7:intregs, <
+							      <
+Inst (9)   %38:doubleregs = REG_SEQUENCE %23:intregs, %subreg <
+							      <
+	es:        1 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 2 II: 2		      <
+	insert at cycle 1   %38:doubleregs = REG_SEQUENCE %23 <
+							      <
+Inst (6)   %19:intregs = A2_combine_lh %6:intregs, %5:intregs <
+							      <
+	es:        0 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 0 and 1 II: 2		      <
+	insert at cycle 0   %19:intregs = A2_combine_lh %6:in <
+							      <
+Inst (10)   %26:doubleregs = S2_valignib %38:doubleregs, %27: <
+							      <
+	es:        1 ls:        0 me: 7fffffff ms: 80000000   <
+	Can't schedule					      <
+Try to schedule with 3					      <
+							      <
+Inst (12)   %9:doubleregs = M2_vdmacs_s0 %3:doubleregs(tied-d <
+							      <
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 3 II: 3		      <
+	insert at cycle 1   %9:doubleregs = M2_vdmacs_s0 %3:d <
+							      <
+Inst (1)   %3:doubleregs = PHI %17:doubleregs, %bb.4, %9:doub <
+							      <
+	es: ffffffff ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and -1 II: 3		      <
+	insert at cycle 1   %3:doubleregs = PHI %17:doublereg <
+							      <
+Inst (8)   %8:doubleregs = M2_vdmacs_s0 %4:doubleregs(tied-de <
+							      <
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 3 II: 3		      <
+	insert at cycle 1   %8:doubleregs = M2_vdmacs_s0 %4:d <
+							      <
+Inst (2)   %4:doubleregs = PHI %17:doubleregs, %bb.4, %8:doub <
+							      <
+	es: ffffffff ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and -1 II: 3		      <
+	insert at cycle 1   %4:doubleregs = PHI %17:doublereg <
+							      <
+Inst (14)   %11:intregs = A2_combine_ll %28:intregs, %2:intre <
+							      <
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 3 II: 3		      <
+	insert at cycle 1   %11:intregs = A2_combine_ll %28:i <
+							      <
+Inst (13)   %28:intregs = L2_loadrh_io %7:intregs, 0 :: (load <
+							      <
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000   <
+Trying to insert node between 0 and -2 II: 3		      <
+	insert at cycle 0   %28:intregs = L2_loadrh_io %7:int <
+							      <
+Inst (4)   %6:intregs = PHI %16:intregs, %bb.4, %11:intregs,  <
+							      <
+	es: ffffffff ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -1 and 1 II: 3		      <
+	insert at cycle -1   %6:intregs = PHI %16:intregs, %b <
+							      <
+Inst (0)   %2:intregs = PHI %16:intregs, %bb.4, %12:intregs,  <
+							      <
+	es: 80000000 ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and -1 II: 3		      <
+	insert at cycle 1   %2:intregs = PHI %16:intregs, %bb <
+							      <
+Inst (15)   %12:intregs = L2_loadrh_io %7:intregs, -8 :: (loa <
+							      <
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between 3 and 1 II: 3		      <
+	insert at cycle 3   %12:intregs = L2_loadrh_io %7:int <
+							      <
+Inst (5)   %7:intregs = PHI %16:intregs, %bb.4, %14:intregs,  <
+							      <
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000   <
+Trying to insert node between 0 and -2 II: 3		      <
+	insert at cycle 0   %7:intregs = PHI %16:intregs, %bb <
+							      <
+Inst (16)   %14:intregs = A2_addi %7:intregs, -16	      <
+							      <
+	es:        0 ls:        2 me: 7fffffff ms: 80000000   <
+Trying to insert node between 0 and 2 II: 3		      <
+	insert at cycle 0   %14:intregs = A2_addi %7:intregs, <
+							      <
+Inst (9)   %38:doubleregs = REG_SEQUENCE %23:intregs, %subreg <
+							      <
+	es:        1 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 3 II: 3		      <
+	insert at cycle 1   %38:doubleregs = REG_SEQUENCE %23 <
+							      <
+Inst (6)   %19:intregs = A2_combine_lh %6:intregs, %5:intregs <
+							      <
+	es: ffffffff ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -1 and 1 II: 3		      <
+	insert at cycle -1   %19:intregs = A2_combine_lh %6:i <
+							      <
+Inst (10)   %26:doubleregs = S2_valignib %38:doubleregs, %27: <
+							      <
+	es:        1 ls:        0 me: 7fffffff ms: 80000000   <
+	Can't schedule					      <
+Try to schedule with 4					      <
+							      <
+Inst (12)   %9:doubleregs = M2_vdmacs_s0 %3:doubleregs(tied-d <
+							      <
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 4 II: 4		      <
+	insert at cycle 1   %9:doubleregs = M2_vdmacs_s0 %3:d <
+							      <
+Inst (1)   %3:doubleregs = PHI %17:doubleregs, %bb.4, %9:doub <
+							      <
+	es: fffffffe ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and -2 II: 4		      <
+	insert at cycle 1   %3:doubleregs = PHI %17:doublereg <
+							      <
+Inst (8)   %8:doubleregs = M2_vdmacs_s0 %4:doubleregs(tied-de <
+							      <
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 4 II: 4		      <
+	insert at cycle 1   %8:doubleregs = M2_vdmacs_s0 %4:d <
+							      <
+Inst (2)   %4:doubleregs = PHI %17:doubleregs, %bb.4, %8:doub <
+							      <
+	es: fffffffe ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and -2 II: 4		      <
+	insert at cycle 1   %4:doubleregs = PHI %17:doublereg <
+							      <
+Inst (14)   %11:intregs = A2_combine_ll %28:intregs, %2:intre <
+							      <
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 4 II: 4		      <
+	insert at cycle 1   %11:intregs = A2_combine_ll %28:i <
+							      <
+Inst (13)   %28:intregs = L2_loadrh_io %7:intregs, 0 :: (load <
+							      <
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000   <
+Trying to insert node between 0 and -3 II: 4		      <
+	insert at cycle 0   %28:intregs = L2_loadrh_io %7:int <
+							      <
+Inst (4)   %6:intregs = PHI %16:intregs, %bb.4, %11:intregs,  <
+							      <
+	es: fffffffe ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -2 and 1 II: 4		      <
+	insert at cycle -2   %6:intregs = PHI %16:intregs, %b <
+							      <
+Inst (0)   %2:intregs = PHI %16:intregs, %bb.4, %12:intregs,  <
+							      <
+	es: 80000000 ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and -2 II: 4		      <
+	insert at cycle 1   %2:intregs = PHI %16:intregs, %bb <
+							      <
+Inst (15)   %12:intregs = L2_loadrh_io %7:intregs, -8 :: (loa <
+							      <
+	es: 80000000 ls:        4 me: 7fffffff ms: 80000000   <
+Trying to insert node between 4 and 1 II: 4		      <
+	insert at cycle 4   %12:intregs = L2_loadrh_io %7:int <
+							      <
+Inst (5)   %7:intregs = PHI %16:intregs, %bb.4, %14:intregs,  <
+							      <
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000   <
+Trying to insert node between 0 and -3 II: 4		      <
+	insert at cycle 0   %7:intregs = PHI %16:intregs, %bb <
+							      <
+Inst (16)   %14:intregs = A2_addi %7:intregs, -16	      <
+							      <
+	es:        0 ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between 0 and 3 II: 4		      <
+	insert at cycle 0   %14:intregs = A2_addi %7:intregs, <
+							      <
+Inst (9)   %38:doubleregs = REG_SEQUENCE %23:intregs, %subreg <
+							      <
+	es:        1 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 4 II: 4		      <
+	insert at cycle 1   %38:doubleregs = REG_SEQUENCE %23 <
+							      <
+Inst (6)   %19:intregs = A2_combine_lh %6:intregs, %5:intregs <
+							      <
+	es: fffffffe ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -2 and 1 II: 4		      <
+	insert at cycle -2   %19:intregs = A2_combine_lh %6:i <
+							      <
+Inst (10)   %26:doubleregs = S2_valignib %38:doubleregs, %27: <
+							      <
+	es:        1 ls:        0 me: 7fffffff ms: 80000000   <
+	Can't schedule					      <
+Try to schedule with 5					      <
+							      <
+Inst (12)   %9:doubleregs = M2_vdmacs_s0 %3:doubleregs(tied-d <
+							      <
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 5 II: 5		      <
+	insert at cycle 1   %9:doubleregs = M2_vdmacs_s0 %3:d <
+							      <
+Inst (1)   %3:doubleregs = PHI %17:doubleregs, %bb.4, %9:doub <
+							      <
+	es: fffffffd ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and -3 II: 5		      <
+	insert at cycle 1   %3:doubleregs = PHI %17:doublereg <
+							      <
+Inst (8)   %8:doubleregs = M2_vdmacs_s0 %4:doubleregs(tied-de <
+							      <
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 5 II: 5		      <
+	insert at cycle 1   %8:doubleregs = M2_vdmacs_s0 %4:d <
+							      <
+Inst (2)   %4:doubleregs = PHI %17:doubleregs, %bb.4, %8:doub <
+							      <
+	es: fffffffd ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and -3 II: 5		      <
+	insert at cycle 1   %4:doubleregs = PHI %17:doublereg <
+							      <
+Inst (14)   %11:intregs = A2_combine_ll %28:intregs, %2:intre <
+							      <
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 5 II: 5		      <
+	insert at cycle 1   %11:intregs = A2_combine_ll %28:i <
+							      <
+Inst (13)   %28:intregs = L2_loadrh_io %7:intregs, 0 :: (load <
+							      <
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000   <
+Trying to insert node between 0 and -4 II: 5		      <
+	insert at cycle 0   %28:intregs = L2_loadrh_io %7:int <
+							      <
+Inst (4)   %6:intregs = PHI %16:intregs, %bb.4, %11:intregs,  <
+							      <
+	es: fffffffd ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -3 and 1 II: 5		      <
+	insert at cycle -3   %6:intregs = PHI %16:intregs, %b <
+							      <
+Inst (0)   %2:intregs = PHI %16:intregs, %bb.4, %12:intregs,  <
+							      <
+	es: 80000000 ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and -3 II: 5		      <
+	insert at cycle 1   %2:intregs = PHI %16:intregs, %bb <
+							      <
+Inst (15)   %12:intregs = L2_loadrh_io %7:intregs, -8 :: (loa <
+							      <
+	es: 80000000 ls:        5 me: 7fffffff ms: 80000000   <
+Trying to insert node between 5 and 1 II: 5		      <
+	insert at cycle 5   %12:intregs = L2_loadrh_io %7:int <
+							      <
+Inst (5)   %7:intregs = PHI %16:intregs, %bb.4, %14:intregs,  <
+							      <
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000   <
+Trying to insert node between 0 and -4 II: 5		      <
+	insert at cycle 0   %7:intregs = PHI %16:intregs, %bb <
+							      <
+Inst (16)   %14:intregs = A2_addi %7:intregs, -16	      <
+							      <
+	es:        0 ls:        4 me: 7fffffff ms: 80000000   <
+Trying to insert node between 0 and 4 II: 5		      <
+	insert at cycle 0   %14:intregs = A2_addi %7:intregs, <
+							      <
+Inst (9)   %38:doubleregs = REG_SEQUENCE %23:intregs, %subreg <
+							      <
+	es:        1 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 5 II: 5		      <
+	insert at cycle 1   %38:doubleregs = REG_SEQUENCE %23 <
+							      <
+Inst (6)   %19:intregs = A2_combine_lh %6:intregs, %5:intregs <
+							      <
+	es: fffffffd ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -3 and 1 II: 5		      <
+	insert at cycle -3   %19:intregs = A2_combine_lh %6:i <
+							      <
+Inst (10)   %26:doubleregs = S2_valignib %38:doubleregs, %27: <
+							      <
+	es:        1 ls:        0 me: 7fffffff ms: 80000000   <
+	Can't schedule					      <
+Try to schedule with 6					      <
+							      <
+Inst (12)   %9:doubleregs = M2_vdmacs_s0 %3:doubleregs(tied-d <
+							      <
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 6 II: 6		      <
+	insert at cycle 1   %9:doubleregs = M2_vdmacs_s0 %3:d <
+							      <
+Inst (1)   %3:doubleregs = PHI %17:doubleregs, %bb.4, %9:doub <
+							      <
+	es: fffffffc ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and -4 II: 6		      <
+	insert at cycle 1   %3:doubleregs = PHI %17:doublereg <
+							      <
+Inst (8)   %8:doubleregs = M2_vdmacs_s0 %4:doubleregs(tied-de <
+							      <
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 6 II: 6		      <
+	insert at cycle 1   %8:doubleregs = M2_vdmacs_s0 %4:d <
+							      <
+Inst (2)   %4:doubleregs = PHI %17:doubleregs, %bb.4, %8:doub <
+							      <
+	es: fffffffc ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and -4 II: 6		      <
+	insert at cycle 1   %4:doubleregs = PHI %17:doublereg <
+							      <
+Inst (14)   %11:intregs = A2_combine_ll %28:intregs, %2:intre <
+							      <
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 6 II: 6		      <
+	insert at cycle 1   %11:intregs = A2_combine_ll %28:i <
+							      <
+Inst (13)   %28:intregs = L2_loadrh_io %7:intregs, 0 :: (load <
+							      <
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000   <
+Trying to insert node between 0 and -5 II: 6		      <
+	insert at cycle 0   %28:intregs = L2_loadrh_io %7:int <
+							      <
+Inst (4)   %6:intregs = PHI %16:intregs, %bb.4, %11:intregs,  <
+							      <
+	es: fffffffc ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -4 and 1 II: 6		      <
+	insert at cycle -4   %6:intregs = PHI %16:intregs, %b <
+							      <
+Inst (0)   %2:intregs = PHI %16:intregs, %bb.4, %12:intregs,  <
+							      <
+	es: 80000000 ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and -4 II: 6		      <
+	insert at cycle 1   %2:intregs = PHI %16:intregs, %bb <
+							      <
+Inst (15)   %12:intregs = L2_loadrh_io %7:intregs, -8 :: (loa <
+							      <
+	es: 80000000 ls:        6 me: 7fffffff ms: 80000000   <
+Trying to insert node between 6 and 1 II: 6		      <
+	insert at cycle 6   %12:intregs = L2_loadrh_io %7:int <
+							      <
+Inst (5)   %7:intregs = PHI %16:intregs, %bb.4, %14:intregs,  <
+							      <
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000   <
+Trying to insert node between 0 and -5 II: 6		      <
+	insert at cycle 0   %7:intregs = PHI %16:intregs, %bb <
+							      <
+Inst (16)   %14:intregs = A2_addi %7:intregs, -16	      <
+							      <
+	es:        0 ls:        5 me: 7fffffff ms: 80000000   <
+Trying to insert node between 0 and 5 II: 6		      <
+	insert at cycle 0   %14:intregs = A2_addi %7:intregs, <
+							      <
+Inst (9)   %38:doubleregs = REG_SEQUENCE %23:intregs, %subreg <
+							      <
+	es:        1 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 6 II: 6		      <
+	insert at cycle 1   %38:doubleregs = REG_SEQUENCE %23 <
+							      <
+Inst (6)   %19:intregs = A2_combine_lh %6:intregs, %5:intregs <
+							      <
+	es: fffffffc ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -4 and 1 II: 6		      <
+	insert at cycle -4   %19:intregs = A2_combine_lh %6:i <
+							      <
+Inst (10)   %26:doubleregs = S2_valignib %38:doubleregs, %27: <
+							      <
+	es:        1 ls:        0 me: 7fffffff ms: 80000000   <
+	Can't schedule					      <
+Try to schedule with 7					      <
+							      <
+Inst (12)   %9:doubleregs = M2_vdmacs_s0 %3:doubleregs(tied-d <
+							      <
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 7 II: 7		      <
+	insert at cycle 1   %9:doubleregs = M2_vdmacs_s0 %3:d <
+							      <
+Inst (1)   %3:doubleregs = PHI %17:doubleregs, %bb.4, %9:doub <
+							      <
+	es: fffffffb ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and -5 II: 7		      <
+	insert at cycle 1   %3:doubleregs = PHI %17:doublereg <
+							      <
+Inst (8)   %8:doubleregs = M2_vdmacs_s0 %4:doubleregs(tied-de <
+							      <
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 7 II: 7		      <
+	insert at cycle 1   %8:doubleregs = M2_vdmacs_s0 %4:d <
+							      <
+Inst (2)   %4:doubleregs = PHI %17:doubleregs, %bb.4, %8:doub <
+							      <
+	es: fffffffb ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and -5 II: 7		      <
+	insert at cycle 1   %4:doubleregs = PHI %17:doublereg <
+							      <
+Inst (14)   %11:intregs = A2_combine_ll %28:intregs, %2:intre <
+							      <
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 7 II: 7		      <
+	insert at cycle 1   %11:intregs = A2_combine_ll %28:i <
+							      <
+Inst (13)   %28:intregs = L2_loadrh_io %7:intregs, 0 :: (load <
+							      <
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000   <
+Trying to insert node between 0 and -6 II: 7		      <
+	insert at cycle 0   %28:intregs = L2_loadrh_io %7:int <
+							      <
+Inst (4)   %6:intregs = PHI %16:intregs, %bb.4, %11:intregs,  <
+							      <
+	es: fffffffb ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -5 and 1 II: 7		      <
+	insert at cycle -5   %6:intregs = PHI %16:intregs, %b <
+							      <
+Inst (0)   %2:intregs = PHI %16:intregs, %bb.4, %12:intregs,  <
+							      <
+	es: 80000000 ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and -5 II: 7		      <
+	insert at cycle 1   %2:intregs = PHI %16:intregs, %bb <
+							      <
+Inst (15)   %12:intregs = L2_loadrh_io %7:intregs, -8 :: (loa <
+							      <
+	es: 80000000 ls:        7 me: 7fffffff ms: 80000000   <
+Trying to insert node between 7 and 1 II: 7		      <
+	insert at cycle 7   %12:intregs = L2_loadrh_io %7:int <
+							      <
+Inst (5)   %7:intregs = PHI %16:intregs, %bb.4, %14:intregs,  <
+							      <
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000   <
+Trying to insert node between 0 and -6 II: 7		      <
+	insert at cycle 0   %7:intregs = PHI %16:intregs, %bb <
+							      <
+Inst (16)   %14:intregs = A2_addi %7:intregs, -16	      <
+							      <
+	es:        0 ls:        6 me: 7fffffff ms: 80000000   <
+Trying to insert node between 0 and 6 II: 7		      <
+	insert at cycle 0   %14:intregs = A2_addi %7:intregs, <
+							      <
+Inst (9)   %38:doubleregs = REG_SEQUENCE %23:intregs, %subreg <
+							      <
+	es:        1 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 7 II: 7		      <
+	insert at cycle 1   %38:doubleregs = REG_SEQUENCE %23 <
+							      <
+Inst (6)   %19:intregs = A2_combine_lh %6:intregs, %5:intregs <
+							      <
+	es: fffffffb ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -5 and 1 II: 7		      <
+	insert at cycle -5   %19:intregs = A2_combine_lh %6:i <
+							      <
+Inst (10)   %26:doubleregs = S2_valignib %38:doubleregs, %27: <
+							      <
+	es:        1 ls:        0 me: 7fffffff ms: 80000000   <
+	Can't schedule					      <
+Try to schedule with 8					      <
+							      <
+Inst (12)   %9:doubleregs = M2_vdmacs_s0 %3:doubleregs(tied-d <
+							      <
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 8 II: 8		      <
+	insert at cycle 1   %9:doubleregs = M2_vdmacs_s0 %3:d <
+							      <
+Inst (1)   %3:doubleregs = PHI %17:doubleregs, %bb.4, %9:doub <
+							      <
+	es: fffffffa ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and -6 II: 8		      <
+	insert at cycle 1   %3:doubleregs = PHI %17:doublereg <
+							      <
+Inst (8)   %8:doubleregs = M2_vdmacs_s0 %4:doubleregs(tied-de <
+							      <
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 8 II: 8		      <
+	insert at cycle 1   %8:doubleregs = M2_vdmacs_s0 %4:d <
+							      <
+Inst (2)   %4:doubleregs = PHI %17:doubleregs, %bb.4, %8:doub <
+							      <
+	es: fffffffa ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and -6 II: 8		      <
+	insert at cycle 1   %4:doubleregs = PHI %17:doublereg <
+							      <
+Inst (14)   %11:intregs = A2_combine_ll %28:intregs, %2:intre <
+							      <
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 8 II: 8		      <
+	insert at cycle 1   %11:intregs = A2_combine_ll %28:i <
+							      <
+Inst (13)   %28:intregs = L2_loadrh_io %7:intregs, 0 :: (load <
+							      <
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000   <
+Trying to insert node between 0 and -7 II: 8		      <
+	insert at cycle 0   %28:intregs = L2_loadrh_io %7:int <
+							      <
+Inst (4)   %6:intregs = PHI %16:intregs, %bb.4, %11:intregs,  <
+							      <
+	es: fffffffa ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -6 and 1 II: 8		      <
+	insert at cycle -6   %6:intregs = PHI %16:intregs, %b <
+							      <
+Inst (0)   %2:intregs = PHI %16:intregs, %bb.4, %12:intregs,  <
+							      <
+	es: 80000000 ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and -6 II: 8		      <
+	insert at cycle 1   %2:intregs = PHI %16:intregs, %bb <
+							      <
+Inst (15)   %12:intregs = L2_loadrh_io %7:intregs, -8 :: (loa <
+							      <
+	es: 80000000 ls:        8 me: 7fffffff ms: 80000000   <
+Trying to insert node between 8 and 1 II: 8		      <
+	insert at cycle 8   %12:intregs = L2_loadrh_io %7:int <
+							      <
+Inst (5)   %7:intregs = PHI %16:intregs, %bb.4, %14:intregs,  <
+							      <
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000   <
+Trying to insert node between 0 and -7 II: 8		      <
+	insert at cycle 0   %7:intregs = PHI %16:intregs, %bb <
+							      <
+Inst (16)   %14:intregs = A2_addi %7:intregs, -16	      <
+							      <
+	es:        0 ls:        7 me: 7fffffff ms: 80000000   <
+Trying to insert node between 0 and 7 II: 8		      <
+	insert at cycle 0   %14:intregs = A2_addi %7:intregs, <
+							      <
+Inst (9)   %38:doubleregs = REG_SEQUENCE %23:intregs, %subreg <
+							      <
+	es:        1 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 8 II: 8		      <
+	insert at cycle 1   %38:doubleregs = REG_SEQUENCE %23 <
+							      <
+Inst (6)   %19:intregs = A2_combine_lh %6:intregs, %5:intregs <
+							      <
+	es: fffffffa ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -6 and 1 II: 8		      <
+	insert at cycle -6   %19:intregs = A2_combine_lh %6:i <
+							      <
+Inst (10)   %26:doubleregs = S2_valignib %38:doubleregs, %27: <
+							      <
+	es:        1 ls:        0 me: 7fffffff ms: 80000000   <
+	Can't schedule					      <
+Try to schedule with 9					      <
+							      <
+Inst (12)   %9:doubleregs = M2_vdmacs_s0 %3:doubleregs(tied-d <
+							      <
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 9 II: 9		      <
+	insert at cycle 1   %9:doubleregs = M2_vdmacs_s0 %3:d <
+							      <
+Inst (1)   %3:doubleregs = PHI %17:doubleregs, %bb.4, %9:doub <
+							      <
+	es: fffffff9 ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and -7 II: 9		      <
+	insert at cycle 1   %3:doubleregs = PHI %17:doublereg <
+							      <
+Inst (8)   %8:doubleregs = M2_vdmacs_s0 %4:doubleregs(tied-de <
+							      <
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 9 II: 9		      <
+	insert at cycle 1   %8:doubleregs = M2_vdmacs_s0 %4:d <
+							      <
+Inst (2)   %4:doubleregs = PHI %17:doubleregs, %bb.4, %8:doub <
+							      <
+	es: fffffff9 ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and -7 II: 9		      <
+	insert at cycle 1   %4:doubleregs = PHI %17:doublereg <
+							      <
+Inst (14)   %11:intregs = A2_combine_ll %28:intregs, %2:intre <
+							      <
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 9 II: 9		      <
+	insert at cycle 1   %11:intregs = A2_combine_ll %28:i <
+							      <
+Inst (13)   %28:intregs = L2_loadrh_io %7:intregs, 0 :: (load <
+							      <
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000   <
+Trying to insert node between 0 and -8 II: 9		      <
+	insert at cycle 0   %28:intregs = L2_loadrh_io %7:int <
+							      <
+Inst (4)   %6:intregs = PHI %16:intregs, %bb.4, %11:intregs,  <
+							      <
+	es: fffffff9 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -7 and 1 II: 9		      <
+	insert at cycle -7   %6:intregs = PHI %16:intregs, %b <
+							      <
+Inst (0)   %2:intregs = PHI %16:intregs, %bb.4, %12:intregs,  <
+							      <
+	es: 80000000 ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and -7 II: 9		      <
+	insert at cycle 1   %2:intregs = PHI %16:intregs, %bb <
+							      <
+Inst (15)   %12:intregs = L2_loadrh_io %7:intregs, -8 :: (loa <
+							      <
+	es: 80000000 ls:        9 me: 7fffffff ms: 80000000   <
+Trying to insert node between 9 and 1 II: 9		      <
+	insert at cycle 9   %12:intregs = L2_loadrh_io %7:int <
+							      <
+Inst (5)   %7:intregs = PHI %16:intregs, %bb.4, %14:intregs,  <
+							      <
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000   <
+Trying to insert node between 0 and -8 II: 9		      <
+	insert at cycle 0   %7:intregs = PHI %16:intregs, %bb <
+							      <
+Inst (16)   %14:intregs = A2_addi %7:intregs, -16	      <
+							      <
+	es:        0 ls:        8 me: 7fffffff ms: 80000000   <
+Trying to insert node between 0 and 8 II: 9		      <
+	insert at cycle 0   %14:intregs = A2_addi %7:intregs, <
+							      <
+Inst (9)   %38:doubleregs = REG_SEQUENCE %23:intregs, %subreg <
+							      <
+	es:        1 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 9 II: 9		      <
+	insert at cycle 1   %38:doubleregs = REG_SEQUENCE %23 <
+							      <
+Inst (6)   %19:intregs = A2_combine_lh %6:intregs, %5:intregs <
+							      <
+	es: fffffff9 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -7 and 1 II: 9		      <
+	insert at cycle -7   %19:intregs = A2_combine_lh %6:i <
+							      <
+Inst (10)   %26:doubleregs = S2_valignib %38:doubleregs, %27: <
+							      <
+	es:        1 ls:        0 me: 7fffffff ms: 80000000   <
+	Can't schedule					      <
+Try to schedule with 10					      <
+							      <
+Inst (12)   %9:doubleregs = M2_vdmacs_s0 %3:doubleregs(tied-d <
+							      <
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 10 II: 10		      <
+	insert at cycle 1   %9:doubleregs = M2_vdmacs_s0 %3:d <
+							      <
+Inst (1)   %3:doubleregs = PHI %17:doubleregs, %bb.4, %9:doub <
+							      <
+	es: fffffff8 ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and -8 II: 10		      <
+	insert at cycle 1   %3:doubleregs = PHI %17:doublereg <
+							      <
+Inst (8)   %8:doubleregs = M2_vdmacs_s0 %4:doubleregs(tied-de <
+							      <
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 10 II: 10		      <
+	insert at cycle 1   %8:doubleregs = M2_vdmacs_s0 %4:d <
+							      <
+Inst (2)   %4:doubleregs = PHI %17:doubleregs, %bb.4, %8:doub <
+							      <
+	es: fffffff8 ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and -8 II: 10		      <
+	insert at cycle 1   %4:doubleregs = PHI %17:doublereg <
+							      <
+Inst (14)   %11:intregs = A2_combine_ll %28:intregs, %2:intre <
+							      <
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 10 II: 10		      <
+	insert at cycle 1   %11:intregs = A2_combine_ll %28:i <
+							      <
+Inst (13)   %28:intregs = L2_loadrh_io %7:intregs, 0 :: (load <
+							      <
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000   <
+Trying to insert node between 0 and -9 II: 10		      <
+	insert at cycle 0   %28:intregs = L2_loadrh_io %7:int <
+							      <
+Inst (4)   %6:intregs = PHI %16:intregs, %bb.4, %11:intregs,  <
+							      <
+	es: fffffff8 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -8 and 1 II: 10		      <
+	insert at cycle -8   %6:intregs = PHI %16:intregs, %b <
+							      <
+Inst (0)   %2:intregs = PHI %16:intregs, %bb.4, %12:intregs,  <
+							      <
+	es: 80000000 ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and -8 II: 10		      <
+	insert at cycle 1   %2:intregs = PHI %16:intregs, %bb <
+							      <
+Inst (15)   %12:intregs = L2_loadrh_io %7:intregs, -8 :: (loa <
+							      <
+	es: 80000000 ls:        a me: 7fffffff ms: 80000000   <
+Trying to insert node between 10 and 1 II: 10		      <
+	insert at cycle 10   %12:intregs = L2_loadrh_io %7:in <
+							      <
+Inst (5)   %7:intregs = PHI %16:intregs, %bb.4, %14:intregs,  <
+							      <
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000   <
+Trying to insert node between 0 and -9 II: 10		      <
+	insert at cycle 0   %7:intregs = PHI %16:intregs, %bb <
+							      <
+Inst (16)   %14:intregs = A2_addi %7:intregs, -16	      <
+							      <
+	es:        0 ls:        9 me: 7fffffff ms: 80000000   <
+Trying to insert node between 0 and 9 II: 10		      <
+	insert at cycle 0   %14:intregs = A2_addi %7:intregs, <
+							      <
+Inst (9)   %38:doubleregs = REG_SEQUENCE %23:intregs, %subreg <
+							      <
+	es:        1 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 10 II: 10		      <
+	insert at cycle 1   %38:doubleregs = REG_SEQUENCE %23 <
+							      <
+Inst (6)   %19:intregs = A2_combine_lh %6:intregs, %5:intregs <
+							      <
+	es: fffffff8 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -8 and 1 II: 10		      <
+	insert at cycle -8   %19:intregs = A2_combine_lh %6:i <
+							      <
+Inst (10)   %26:doubleregs = S2_valignib %38:doubleregs, %27: <
+							      <
+	es:        1 ls:        0 me: 7fffffff ms: 80000000   <
+	Can't schedule					      <
+Try to schedule with 11					      <
+							      <
+Inst (12)   %9:doubleregs = M2_vdmacs_s0 %3:doubleregs(tied-d <
+							      <
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 11 II: 11		      <
+	insert at cycle 1   %9:doubleregs = M2_vdmacs_s0 %3:d <
+							      <
+Inst (1)   %3:doubleregs = PHI %17:doubleregs, %bb.4, %9:doub <
+							      <
+	es: fffffff7 ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and -9 II: 11		      <
+	insert at cycle 1   %3:doubleregs = PHI %17:doublereg <
+							      <
+Inst (8)   %8:doubleregs = M2_vdmacs_s0 %4:doubleregs(tied-de <
+							      <
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 11 II: 11		      <
+	insert at cycle 1   %8:doubleregs = M2_vdmacs_s0 %4:d <
+							      <
+Inst (2)   %4:doubleregs = PHI %17:doubleregs, %bb.4, %8:doub <
+							      <
+	es: fffffff7 ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and -9 II: 11		      <
+	insert at cycle 1   %4:doubleregs = PHI %17:doublereg <
+							      <
+Inst (14)   %11:intregs = A2_combine_ll %28:intregs, %2:intre <
+							      <
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 11 II: 11		      <
+	insert at cycle 1   %11:intregs = A2_combine_ll %28:i <
+							      <
+Inst (13)   %28:intregs = L2_loadrh_io %7:intregs, 0 :: (load <
+							      <
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000   <
+Trying to insert node between 0 and -10 II: 11		      <
+	insert at cycle 0   %28:intregs = L2_loadrh_io %7:int <
+							      <
+Inst (4)   %6:intregs = PHI %16:intregs, %bb.4, %11:intregs,  <
+							      <
+	es: fffffff7 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -9 and 1 II: 11		      <
+	insert at cycle -9   %6:intregs = PHI %16:intregs, %b <
+							      <
+Inst (0)   %2:intregs = PHI %16:intregs, %bb.4, %12:intregs,  <
+							      <
+	es: 80000000 ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and -9 II: 11		      <
+	insert at cycle 1   %2:intregs = PHI %16:intregs, %bb <
+							      <
+Inst (15)   %12:intregs = L2_loadrh_io %7:intregs, -8 :: (loa <
+							      <
+	es: 80000000 ls:        b me: 7fffffff ms: 80000000   <
+Trying to insert node between 11 and 1 II: 11		      <
+	insert at cycle 11   %12:intregs = L2_loadrh_io %7:in <
+							      <
+Inst (5)   %7:intregs = PHI %16:intregs, %bb.4, %14:intregs,  <
+							      <
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000   <
+Trying to insert node between 0 and -10 II: 11		      <
+	insert at cycle 0   %7:intregs = PHI %16:intregs, %bb <
+							      <
+Inst (16)   %14:intregs = A2_addi %7:intregs, -16	      <
+							      <
+	es:        0 ls:        a me: 7fffffff ms: 80000000   <
+Trying to insert node between 0 and 10 II: 11		      <
+	insert at cycle 0   %14:intregs = A2_addi %7:intregs, <
+							      <
+Inst (9)   %38:doubleregs = REG_SEQUENCE %23:intregs, %subreg <
+							      <
+	es:        1 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 11 II: 11		      <
+	insert at cycle 1   %38:doubleregs = REG_SEQUENCE %23 <
+							      <
+Inst (6)   %19:intregs = A2_combine_lh %6:intregs, %5:intregs <
+							      <
+	es: fffffff7 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -9 and 1 II: 11		      <
+	insert at cycle -9   %19:intregs = A2_combine_lh %6:i <
+							      <
+Inst (10)   %26:doubleregs = S2_valignib %38:doubleregs, %27: <
+							      <
+	es:        1 ls:        0 me: 7fffffff ms: 80000000   <
+	Can't schedule					      <
+Try to schedule with 12					      <
+							      <
+Inst (12)   %9:doubleregs = M2_vdmacs_s0 %3:doubleregs(tied-d <
+							      <
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 12 II: 12		      <
+	insert at cycle 1   %9:doubleregs = M2_vdmacs_s0 %3:d <
+							      <
+Inst (1)   %3:doubleregs = PHI %17:doubleregs, %bb.4, %9:doub <
+							      <
+	es: fffffff6 ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and -10 II: 12		      <
+	insert at cycle 1   %3:doubleregs = PHI %17:doublereg <
+							      <
+Inst (8)   %8:doubleregs = M2_vdmacs_s0 %4:doubleregs(tied-de <
+							      <
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 12 II: 12		      <
+	insert at cycle 1   %8:doubleregs = M2_vdmacs_s0 %4:d <
+							      <
+Inst (2)   %4:doubleregs = PHI %17:doubleregs, %bb.4, %8:doub <
+							      <
+	es: fffffff6 ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and -10 II: 12		      <
+	insert at cycle 1   %4:doubleregs = PHI %17:doublereg <
+							      <
+Inst (14)   %11:intregs = A2_combine_ll %28:intregs, %2:intre <
+							      <
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 12 II: 12		      <
+	insert at cycle 1   %11:intregs = A2_combine_ll %28:i <
+							      <
+Inst (13)   %28:intregs = L2_loadrh_io %7:intregs, 0 :: (load <
+							      <
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000   <
+Trying to insert node between 0 and -11 II: 12		      <
+	insert at cycle 0   %28:intregs = L2_loadrh_io %7:int <
+							      <
+Inst (4)   %6:intregs = PHI %16:intregs, %bb.4, %11:intregs,  <
+							      <
+	es: fffffff6 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -10 and 1 II: 12		      <
+	insert at cycle -10   %6:intregs = PHI %16:intregs, % <
+							      <
+Inst (0)   %2:intregs = PHI %16:intregs, %bb.4, %12:intregs,  <
+							      <
+	es: 80000000 ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and -10 II: 12		      <
+	insert at cycle 1   %2:intregs = PHI %16:intregs, %bb <
+							      <
+Inst (15)   %12:intregs = L2_loadrh_io %7:intregs, -8 :: (loa <
+							      <
+	es: 80000000 ls:        c me: 7fffffff ms: 80000000   <
+Trying to insert node between 12 and 1 II: 12		      <
+	insert at cycle 12   %12:intregs = L2_loadrh_io %7:in <
+							      <
+Inst (5)   %7:intregs = PHI %16:intregs, %bb.4, %14:intregs,  <
+							      <
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000   <
+Trying to insert node between 0 and -11 II: 12		      <
+	insert at cycle 0   %7:intregs = PHI %16:intregs, %bb <
+							      <
+Inst (16)   %14:intregs = A2_addi %7:intregs, -16	      <
+							      <
+	es:        0 ls:        b me: 7fffffff ms: 80000000   <
+Trying to insert node between 0 and 11 II: 12		      <
+	insert at cycle 0   %14:intregs = A2_addi %7:intregs, <
+							      <
+Inst (9)   %38:doubleregs = REG_SEQUENCE %23:intregs, %subreg <
+							      <
+	es:        1 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 12 II: 12		      <
+	insert at cycle 1   %38:doubleregs = REG_SEQUENCE %23 <
+							      <
+Inst (6)   %19:intregs = A2_combine_lh %6:intregs, %5:intregs <
+							      <
+	es: fffffff6 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -10 and 1 II: 12		      <
+	insert at cycle -10   %19:intregs = A2_combine_lh %6: <
+							      <
+Inst (10)   %26:doubleregs = S2_valignib %38:doubleregs, %27: <
+							      <
+	es:        1 ls:        0 me: 7fffffff ms: 80000000   <
+	Can't schedule					      <
+Schedule Found? 0 (II=13)				      <
+No schedule found, return				      <
+	{						      <
+		if (p0) jump:nt .LBB0_4			      <
+	}						      <
+// %bb.1:						      <
+	{						      <
+		r6 = asr(r0,#1)				      <
+		r1:0 = combine(#0,#0)			      <
+		r3:2 = combine(#0,#0)			      <
+		r5:4 = combine(#0,#0)			      <
+	}						      <
+                                        // implicit-def: $r13 <
+                                        // implicit-def: $r12 <
+	{						      <
+		loop0(.LBB0_2,r6)			      <
+	}						      <
+                                        // implicit-def: $r6  <
+	.p2align	4				      <
+.Ltmp0:                                 // Block address take <
+.LBB0_2:                                // %b1		      <
+                                        // =>This Inner Loop  <
+	{						      <
+		r11:10 = valignb(r13:12,r1:0,#2)	      <
+		r15 = combine(r7.l,r12.h)		      <
+		r9:8 = combine(r12,r12)			      <
+		r14 = memh(r6+#0)			      <
+	}						      <
+	{						      <
+		r5:4 += vdmpy(r15:14,r1:0):sat		      <
+		r14 = combine(r14.l,r13.l)		      <
+		r12 = r7				      <
+		r13 = memh(r6+#-8)			      <
+	}						      <
+	{						      <
+		r3:2 += vdmpy(r9:8,r11:10):sat		      <
+		r6 = add(r6,#-16)			      <
+		r7 = r14				      <
+	} :endloop0					      <
+// %bb.3:                               // %b2		      <
+	{						      <
+		r1:0 += vdmpy(r9:8,r1:0):sat		      <
+	}						      <
+.LBB0_4:                                // %b3		      <
+	{						      <
+		r27:26 = memd(##3134984174)		      <
+	}						      <

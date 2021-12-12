@@ -1,0 +1,106 @@
+SU(7):   %7:intregs = L2_loadri_io %15:intregs, 0 :: (load 4  |	SU(7):   %7:intregs = L2_loadri_io %15:intregs, 0 :: (load (s
+  %7:intregs = L2_loadri_io %15:intregs, 0 :: (load 4 from %i |	  %7:intregs = L2_loadri_io %15:intregs, 0 :: (load (s32) fro
+SU(7):   %7:intregs = L2_loadri_io %15:intregs, 0 :: (load 4  |	SU(7):   %7:intregs = L2_loadri_io %15:intregs, 0 :: (load (s
+   SU(7) %7:intregs = L2_loadri_io %15:intregs, 0 :: (load 4  |	   SU(7) %7:intregs = L2_loadri_io %15:intregs, 0 :: (load (s
+	insert at cycle 4   %1:doubleregs = PHI %17:doublereg |		insert at cycle 3   %1:doubleregs = PHI %17:doublereg
+	insert at cycle 2   %8:doubleregs = M2_vdmacs_s0 %2:d |		insert at cycle 3   %8:doubleregs = M2_vdmacs_s0 %2:d
+	es:        1 ls:        2 me: 7fffffff ms: 80000000   |		es:        2 ls:        3 me: 7fffffff ms: 80000000
+Trying to insert node between 2 and 1 II: 2		      |	Trying to insert node between 3 and 2 II: 2
+	insert at cycle 2   %2:doubleregs = PHI %17:doublereg |		insert at cycle 3   %2:doubleregs = PHI %17:doublereg
+	failed to insert at cycle 0   %6:doubleregs = M2_vdma |		insert at cycle 0   %6:doubleregs = M2_vdmacs_s0 %4:d
+	insert at cycle 1   %6:doubleregs = M2_vdmacs_s0 %4:d <
+	es:        0 ls:        1 me: 7fffffff ms: 80000000   |		es: ffffffff ls:        0 me: 7fffffff ms: 80000000
+Trying to insert node between 1 and 0 II: 2		      |	Trying to insert node between 0 and -1 II: 2
+	insert at cycle 1   %4:doubleregs = PHI %17:doublereg |		insert at cycle -1   %4:doubleregs = PHI %17:doublere
+	insert at cycle 2   %9:doubleregs = S2_packhl %7:intr |		insert at cycle 1   %9:doubleregs = S2_packhl %7:intr
+Inst (7)   %7:intregs = L2_loadri_io %15:intregs, 0 :: (load  |	Inst (7)   %7:intregs = L2_loadri_io %15:intregs, 0 :: (load 
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000   |		es: 80000000 ls: ffffffff me: 7fffffff ms: 80000000
+Trying to insert node between 0 and -1 II: 2		      |	Trying to insert node between -1 and -2 II: 2
+	insert at cycle 0   %7:intregs = L2_loadri_io %15:int |		insert at cycle -1   %7:intregs = L2_loadri_io %15:in
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000   |		es: 80000000 ls:        1 me: 7fffffff ms: 80000000
+Trying to insert node between 0 and -1 II: 2		      |	Trying to insert node between 1 and 0 II: 2
+	failed to insert at cycle 0   %19:doubleregs = S2_pac |		insert at cycle 0   %19:doubleregs = S2_packhl %20:in
+	insert at cycle -1   %19:doubleregs = S2_packhl %20:i <
+	es: ffffffff ls: ffffffff me: 7fffffff ms: 80000000   |		es: fffffffe ls:        0 me: 7fffffff ms: 80000000
+Trying to insert node between -1 and -1 II: 2		      |	Trying to insert node between -1 and -2 II: 2
+	es:        1 ls:        1 me: 7fffffff ms: 80000000   |		es:        0 ls:        0 me: 7fffffff ms: 80000000
+Trying to insert node between 1 and 1 II: 2		      |	Trying to insert node between 0 and 0 II: 2
+	insert at cycle 1   %5:doubleregs = PHI %17:doublereg |		insert at cycle 0   %5:doubleregs = PHI %17:doublereg
+Schedule Found? 1 (II=3)				      |	Schedule Found? 1 (II=2)
+cycle -1 (1) (3) %4:doubleregs = PHI %17:doubleregs, %bb.3, % |	cycle -1 (2) (0) %1:doubleregs = PHI %17:doubleregs, %bb.3, %
+cycle -1 (1) (4) %5:doubleregs = PHI %17:doubleregs, %bb.3, % |	cycle -1 (2) (1) %2:doubleregs = PHI %17:doubleregs, %bb.3, %
+							      >
+							      >	cycle -1 (0) (3) %4:doubleregs = PHI %17:doubleregs, %bb.3, %
+cycle -1 (1) (5) %6:doubleregs = M2_vdmacs_s0 %4:doubleregs(t |	cycle -1 (2) (8) %8:doubleregs = M2_vdmacs_s0 %2:doubleregs(t
+cycle -1 (0) (6) %19:doubleregs = S2_packhl %20:intregs, %3:i |	cycle -1 (1) (9) %9:doubleregs = S2_packhl %7:intregs, %21:in
+cycle 0 (2) (0) %1:doubleregs = PHI %17:doubleregs, %bb.3, %1 |	cycle -1 (0) (7) %7:intregs = L2_loadri_io %15:intregs, 0 :: 
+cycle 0 (1) (1) %2:doubleregs = PHI %17:doubleregs, %bb.3, %8 |	cycle 0 (0) (4) %5:doubleregs = PHI %17:doubleregs, %bb.3, %9
+cycle 0 (1) (8) %8:doubleregs = M2_vdmacs_s0 %2:doubleregs(ti |	cycle 0 (0) (5) %6:doubleregs = M2_vdmacs_s0 %4:doubleregs(ti
+							      <
+cycle 0 (1) (9) %9:doubleregs = S2_packhl %7:intregs, %21:int <
+cycle 0 (0) (7) %7:intregs = L2_loadri_io %15:intregs, 0 :: ( |	cycle 0 (0) (6) %19:doubleregs = S2_packhl %20:intregs, %3:in
+[stage 1 @-1c] %4:doubleregs = PHI %17:doubleregs, %bb.3, %6: |	[stage 2 @-1c] %1:doubleregs = PHI %17:doubleregs, %bb.3, %10
+[stage 1 @-1c] %5:doubleregs = PHI %17:doubleregs, %bb.3, %9: |	[stage 2 @-1c] %2:doubleregs = PHI %17:doubleregs, %bb.3, %8:
+							      >	[stage 0 @-1c] %4:doubleregs = PHI %17:doubleregs, %bb.3, %6:
+[stage 1 @-1c] %6:doubleregs = M2_vdmacs_s0 %4:doubleregs(tie |	[stage 2 @-1c] %8:doubleregs = M2_vdmacs_s0 %2:doubleregs(tie
+[stage 0 @-1c] %19:doubleregs = S2_packhl %20:intregs, %3:int |	[stage 1 @-1c] %9:doubleregs = S2_packhl %7:intregs, %21:intr
+[stage 2 @0c] %1:doubleregs = PHI %17:doubleregs, %bb.3, %10: |	[stage 0 @-1c] %7:intregs = L2_loadri_io %15:intregs, 0 :: (l
+[stage 1 @0c] %2:doubleregs = PHI %17:doubleregs, %bb.3, %8:d |	[stage 0 @0c] %5:doubleregs = PHI %17:doubleregs, %bb.3, %9:d
+[stage 1 @0c] %8:doubleregs = M2_vdmacs_s0 %2:doubleregs(tied |	[stage 0 @0c] %6:doubleregs = M2_vdmacs_s0 %4:doubleregs(tied
+[stage 1 @0c] %9:doubleregs = S2_packhl %7:intregs, %21:intre |	[stage 0 @0c] %19:doubleregs = S2_packhl %20:intregs, %3:intr
+[stage 0 @0c] %7:intregs = L2_loadri_io %15:intregs, 0 :: (lo |	 -- padding defaults array from 1 to 2
+		r29 = add(r29,#-8)			      |			r29 = add(r29,#-24)
+                                        // implicit-def: $d1  |	                                        // implicit-def: $d2
+							      >		{
+							      >			memd(r29+#16) = r17:16
+							      >			memd(r29+#8) = r19:18
+							      >		}                                       // 8-byte Fol
+		memd(r29+#0) = r17:16			      |			memd(r29+#0) = r21:20
+		r28 = add(r0,#-2)			      |			r20 = add(r0,#-2)
+		r13:12 = packhl(r0,r0)			      <
+							      >			r3:2 += vdmpy(r1:0,r1:0):sat
+							      >			r13:12 = packhl(r0,r0)
+		r3:2 += vdmpy(r1:0,r13:12):sat		      |			r7:6 = packhl(r0,r0)
+		r5:4 += vdmpy(r1:0,r1:0):sat		      <
+							      >			r28 = memw(r1+#0)
+                                        // implicit-def: $d3  |	                                        // implicit-def: $d2
+                                        // implicit-def: $d8  |	                                        // implicit-def: $d9
+							      >	                                        // implicit-def: $d4
+		loop0(.LBB0_4,r28)			      |			r3:2 += vdmpy(r7:6,r7:6):sat
+		r9:8 = packhl(r0,r0)			      |			r17:16 = combine(r13,r12)
+		r13:12 = combine(r15,r14)		      |			r0 = r28
+		r0 = memw(r1+#0)			      <
+							      >			loop0(.LBB0_4,r20)
+		r3:2 += vdmpy(r9:8,r15:14):sat		      |			r11:10 = combine(r7,r6)
+		r7:6 += vdmpy(r17:16,r9:8):sat		      |			r7:6 = packhl(r28,r0)
+		r13:12 = packhl(r0,r0)			      |			r17:16 = combine(r15,r14)
+		r11:10 = combine(r9,r8)			      |			r0 = memw(r1+#0)
+		r5:4 += vdmpy(r9:8,r9:8):sat		      |			r5:4 += vdmpy(r19:18,r13:12):sat
+		r9:8 = packhl(r0,r0)			      |			r13:12 = combine(r17,r16)
+		r17:16 = combine(r11,r10)		      <
+		r0 = memw(r1+#0)			      <
+		r15:14 = combine(r13,r12)		      |			r9:8 += vdmpy(r19:18,r11:10):sat
+							      >			r3:2 += vdmpy(r7:6,r7:6):sat
+							      >			r15:14 = packhl(r0,r28)
+							      >			r19:18 = combine(r11,r10)
+							      >		}
+							      >		{
+							      >			r28 = r0
+		r7:6 += vdmpy(r11:10,r9:8):sat		      |			r5:4 += vdmpy(r11:10,r17:16):sat
+							      >			r9:8 += vdmpy(r11:10,r7:6):sat
+							      >			r13:12 = combine(r15,r14)
+							      >		}
+							      >		{
+							      >	                                        // implicit-def: $d2
+                                        // implicit-def: $d2  <
+                                        // implicit-def: $d1  <
+		r3:2 += vdmpy(r9:8,r13:12):sat		      |			r5:4 += vdmpy(r7:6,r13:12):sat
+		r5:4 += vdmpy(r9:8,r9:8):sat		      <
+		r7:6 += vdmpy(r9:8,r1:0):sat		      |			r9:8 += vdmpy(r7:6,r1:0):sat
+		r1:0 = add(r3:2,r5:4)			      |			r1:0 = add(r5:4,r3:2)
+		r29 = add(r29,#8)			      |			r17:16 = memd(r29+#16)
+		r17:16 = memd(r29+#0)			      |			r19:18 = memd(r29+#8)
+							      >		}                                       // 8-byte Fol
+							      >		{
+							      >			r29 = add(r29,#24)
+							      >			r21:20 = memd(r29+#0)

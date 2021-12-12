@@ -1,0 +1,1980 @@
+SU(0):   %23:hvxvr = PHI %4:hvxvr, %bb.1, %24:hvxvr, %bb.2
+  # preds left       : 0
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 10
+  Successors:
+    SU(14): Data Latency=0 Reg=%23
+    SU(1): Ord  Latency=0 Barrier
+SU(1):   %24:hvxvr = PHI %5:hvxvr, %bb.1, %37:hvxvr, %bb.2
+  # preds left       : 1
+  # succs left       : 3
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 10
+  Predecessors:
+    SU(0): Ord  Latency=0 Barrier
+  Successors:
+    SU(22): Data Latency=0 Reg=%24
+    SU(14): Data Latency=0 Reg=%24
+    SU(18): Anti Latency=1
+SU(2):   %25:hvxvr = PHI %4:hvxvr, %bb.1, %26:hvxvr, %bb.2
+  # preds left       : 0
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 8
+  Successors:
+    SU(15): Data Latency=0 Reg=%25
+    SU(3): Ord  Latency=0 Barrier
+SU(3):   %26:hvxvr = PHI %6:hvxvr, %bb.1, %38:hvxvr, %bb.2
+  # preds left       : 1
+  # succs left       : 3
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 8
+  Predecessors:
+    SU(2): Ord  Latency=0 Barrier
+  Successors:
+    SU(23): Data Latency=0 Reg=%26
+    SU(15): Data Latency=0 Reg=%26
+    SU(19): Anti Latency=1
+SU(4):   %27:hvxvr = PHI %4:hvxvr, %bb.1, %28:hvxvr, %bb.2
+  # preds left       : 0
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 7
+  Successors:
+    SU(16): Data Latency=0 Reg=%27
+    SU(5): Ord  Latency=0 Barrier
+SU(5):   %28:hvxvr = PHI %7:hvxvr, %bb.1, %39:hvxvr, %bb.2
+  # preds left       : 1
+  # succs left       : 3
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 7
+  Predecessors:
+    SU(4): Ord  Latency=0 Barrier
+  Successors:
+    SU(24): Data Latency=0 Reg=%28
+    SU(16): Data Latency=0 Reg=%28
+    SU(20): Anti Latency=1
+SU(6):   %29:hvxvr = PHI %4:hvxvr, %bb.1, %30:hvxvr, %bb.2
+  # preds left       : 0
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 6
+  Successors:
+    SU(17): Data Latency=0 Reg=%29
+    SU(7): Ord  Latency=0 Barrier
+SU(7):   %30:hvxvr = PHI %8:hvxvr, %bb.1, %40:hvxvr, %bb.2
+  # preds left       : 1
+  # succs left       : 3
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 6
+  Predecessors:
+    SU(6): Ord  Latency=0 Barrier
+  Successors:
+    SU(25): Data Latency=0 Reg=%30
+    SU(17): Data Latency=0 Reg=%30
+    SU(21): Anti Latency=1
+SU(8):   %31:intregs = PHI %19:intregs, %bb.1, %42:intregs, %bb.2
+  # preds left       : 0
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 10
+  Successors:
+    SU(18): Data Latency=0 Reg=%31
+    SU(18): Anti Latency=1
+SU(9):   %32:intregs = PHI %18:intregs, %bb.1, %43:intregs, %bb.2
+  # preds left       : 0
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 8
+  Successors:
+    SU(19): Data Latency=0 Reg=%32
+    SU(19): Anti Latency=1
+SU(10):   %33:intregs = PHI %17:intregs, %bb.1, %44:intregs, %bb.2
+  # preds left       : 0
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 7
+  Successors:
+    SU(20): Data Latency=0 Reg=%33
+    SU(20): Anti Latency=1
+SU(11):   %34:intregs = PHI %16:intregs, %bb.1, %45:intregs, %bb.2
+  # preds left       : 0
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 6
+  Successors:
+    SU(21): Data Latency=0 Reg=%34
+    SU(21): Anti Latency=1
+SU(12):   %35:intregs = PHI %65:intregs, %bb.1, %46:intregs, %bb.2
+  # preds left       : 0
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 2
+  Successors:
+    SU(43): Data Latency=0 Reg=%35
+    SU(43): Anti Latency=1
+SU(13):   %36:intregs = PHI %3:intregs, %bb.1, %47:intregs, %bb.2
+  # preds left       : 0
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 1
+  Successors:
+    SU(45): Data Latency=0 Reg=%36
+    SU(45): Anti Latency=1
+SU(14):   %107:hvxvr = V6_vlalignbi %24:hvxvr, %23:hvxvr, 1
+  # preds left       : 2
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 0
+  Height             : 9
+  Predecessors:
+    SU(1): Data Latency=0 Reg=%24
+    SU(0): Data Latency=0 Reg=%23
+  Successors:
+    SU(26): Data Latency=2 Reg=%107
+SU(15):   %108:hvxvr = V6_vlalignbi %26:hvxvr, %25:hvxvr, 1
+  # preds left       : 2
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 0
+  Height             : 7
+  Predecessors:
+    SU(3): Data Latency=0 Reg=%26
+    SU(2): Data Latency=0 Reg=%25
+  Successors:
+    SU(27): Data Latency=1 Reg=%108
+SU(16):   %109:hvxvr = V6_vlalignbi %28:hvxvr, %27:hvxvr, 1
+  # preds left       : 2
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 0
+  Height             : 6
+  Predecessors:
+    SU(5): Data Latency=0 Reg=%28
+    SU(4): Data Latency=0 Reg=%27
+  Successors:
+    SU(30): Data Latency=1 Reg=%109
+SU(17):   %110:hvxvr = V6_vlalignbi %30:hvxvr, %29:hvxvr, 1
+  # preds left       : 2
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 0
+  Height             : 5
+  Predecessors:
+    SU(7): Data Latency=0 Reg=%30
+    SU(6): Data Latency=0 Reg=%29
+  Successors:
+    SU(37): Data Latency=2 Reg=%110
+SU(18):   %37:hvxvr, %42:intregs = V6_vL32b_pi %31:intregs(tied-def 1), 64 :: (load 64 from %ir.v107, !tbaa !0)
+  # preds left       : 3
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 9
+  Predecessors:
+    SU(8): Data Latency=0 Reg=%31
+    SU(1): Anti Latency=1
+    SU(8): Anti Latency=1
+  Successors:
+    SU(22): Data Latency=0 Reg=%37
+SU(19):   %38:hvxvr, %43:intregs = V6_vL32b_pi %32:intregs(tied-def 1), 64 :: (load 64 from %ir.v108, !tbaa !0)
+  # preds left       : 3
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 7
+  Predecessors:
+    SU(9): Data Latency=0 Reg=%32
+    SU(3): Anti Latency=1
+    SU(9): Anti Latency=1
+  Successors:
+    SU(23): Data Latency=0 Reg=%38
+SU(20):   %39:hvxvr, %44:intregs = V6_vL32b_pi %33:intregs(tied-def 1), 64 :: (load 64 from %ir.v109, !tbaa !0)
+  # preds left       : 3
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 6
+  Predecessors:
+    SU(10): Data Latency=0 Reg=%33
+    SU(5): Anti Latency=1
+    SU(10): Anti Latency=1
+  Successors:
+    SU(24): Data Latency=0 Reg=%39
+SU(21):   %40:hvxvr, %45:intregs = V6_vL32b_pi %34:intregs(tied-def 1), 64 :: (load 64 from %ir.v110, !tbaa !0)
+  # preds left       : 3
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 5
+  Predecessors:
+    SU(11): Data Latency=0 Reg=%34
+    SU(7): Anti Latency=1
+    SU(11): Anti Latency=1
+  Successors:
+    SU(25): Data Latency=0 Reg=%40
+SU(22):   %111:hvxvr = V6_valignbi %37:hvxvr, %24:hvxvr, 1
+  # preds left       : 2
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 9
+  Predecessors:
+    SU(18): Data Latency=0 Reg=%37
+    SU(1): Data Latency=0 Reg=%24
+  Successors:
+    SU(33): Data Latency=2 Reg=%111
+    SU(26): Data Latency=2 Reg=%111
+SU(23):   %112:hvxvr = V6_valignbi %38:hvxvr, %26:hvxvr, 1
+  # preds left       : 2
+  # succs left       : 3
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 7
+  Predecessors:
+    SU(19): Data Latency=0 Reg=%38
+    SU(3): Data Latency=0 Reg=%26
+  Successors:
+    SU(34): Data Latency=2 Reg=%112
+    SU(33): Data Latency=2 Reg=%112
+    SU(27): Data Latency=1 Reg=%112
+SU(24):   %113:hvxvr = V6_valignbi %39:hvxvr, %28:hvxvr, 1
+  # preds left       : 2
+  # succs left       : 3
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 6
+  Predecessors:
+    SU(20): Data Latency=0 Reg=%39
+    SU(5): Data Latency=0 Reg=%28
+  Successors:
+    SU(40): Data Latency=2 Reg=%113
+    SU(34): Data Latency=2 Reg=%113
+    SU(30): Data Latency=1 Reg=%113
+SU(25):   %114:hvxvr = V6_valignbi %40:hvxvr, %30:hvxvr, 1
+  # preds left       : 2
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 5
+  Predecessors:
+    SU(21): Data Latency=0 Reg=%40
+    SU(7): Data Latency=0 Reg=%30
+  Successors:
+    SU(41): Data Latency=2 Reg=%114
+    SU(37): Data Latency=2 Reg=%114
+SU(26):   %246:hvxwr = REG_SEQUENCE %107:hvxvr, %subreg.vsub_lo, %111:hvxvr, %subreg.vsub_hi
+  # preds left       : 2
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 3
+  Height             : 7
+  Predecessors:
+    SU(22): Data Latency=2 Reg=%111
+    SU(14): Data Latency=2 Reg=%107
+  Successors:
+    SU(28): Data Latency=0 Reg=%246
+SU(27):   %247:hvxwr = REG_SEQUENCE %108:hvxvr, %subreg.vsub_lo, %112:hvxvr, %subreg.vsub_hi
+  # preds left       : 2
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 2
+  Height             : 6
+  Predecessors:
+    SU(23): Data Latency=1 Reg=%112
+    SU(15): Data Latency=1 Reg=%108
+  Successors:
+    SU(31): Data Latency=0 Reg=%247
+    SU(29): Data Latency=0 Reg=%247
+SU(28):   %117:hvxwr = V6_vdmpybus_dv %246:hvxwr, %176:intregs
+  # preds left       : 1
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 3
+  Height             : 7
+  Predecessors:
+    SU(26): Data Latency=0 Reg=%246
+  Successors:
+    SU(31): Data Latency=1 Reg=%117
+SU(29):   %118:hvxwr = V6_vdmpybus_dv %247:hvxwr, %176:intregs
+  # preds left       : 1
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 2
+  Height             : 6
+  Predecessors:
+    SU(27): Data Latency=0 Reg=%247
+  Successors:
+    SU(32): Data Latency=1 Reg=%118
+SU(30):   %248:hvxwr = REG_SEQUENCE %109:hvxvr, %subreg.vsub_lo, %113:hvxvr, %subreg.vsub_hi
+  # preds left       : 2
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 2
+  Height             : 5
+  Predecessors:
+    SU(24): Data Latency=1 Reg=%113
+    SU(16): Data Latency=1 Reg=%109
+  Successors:
+    SU(38): Data Latency=0 Reg=%248
+    SU(32): Data Latency=0 Reg=%248
+SU(31):   %120:hvxwr = V6_vdmpybus_dv_acc %117:hvxwr(tied-def 0), %247:hvxwr, %192:intregs
+  # preds left       : 2
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 4
+  Height             : 6
+  Predecessors:
+    SU(28): Data Latency=1 Reg=%117
+    SU(27): Data Latency=0 Reg=%247
+  Successors:
+    SU(35): Data Latency=1 Reg=%120
+SU(32):   %121:hvxwr = V6_vdmpybus_dv_acc %118:hvxwr(tied-def 0), %248:hvxwr, %192:intregs
+  # preds left       : 2
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 3
+  Height             : 5
+  Predecessors:
+    SU(30): Data Latency=0 Reg=%248
+    SU(29): Data Latency=1 Reg=%118
+  Successors:
+    SU(36): Data Latency=1 Reg=%121
+SU(33):   %249:hvxwr = REG_SEQUENCE %112:hvxvr, %subreg.vsub_lo, %111:hvxvr, %subreg.vsub_hi
+  # preds left       : 2
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 3
+  Height             : 5
+  Predecessors:
+    SU(23): Data Latency=2 Reg=%112
+    SU(22): Data Latency=2 Reg=%111
+  Successors:
+    SU(35): Data Latency=0 Reg=%249
+SU(34):   %250:hvxwr = REG_SEQUENCE %113:hvxvr, %subreg.vsub_lo, %112:hvxvr, %subreg.vsub_hi
+  # preds left       : 2
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 3
+  Height             : 4
+  Predecessors:
+    SU(24): Data Latency=2 Reg=%113
+    SU(23): Data Latency=2 Reg=%112
+  Successors:
+    SU(36): Data Latency=0 Reg=%250
+SU(35):   %124:hvxwr = V6_vmpabus_acc %120:hvxwr(tied-def 0), %249:hvxwr, %224:intregs
+  # preds left       : 2
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 5
+  Height             : 5
+  Predecessors:
+    SU(33): Data Latency=0 Reg=%249
+    SU(31): Data Latency=1 Reg=%120
+  Successors:
+    SU(38): Data Latency=1 Reg=%124
+SU(36):   %125:hvxwr = V6_vmpabus_acc %121:hvxwr(tied-def 0), %250:hvxwr, %224:intregs
+  # preds left       : 2
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 4
+  Height             : 4
+  Predecessors:
+    SU(34): Data Latency=0 Reg=%250
+    SU(32): Data Latency=1 Reg=%121
+  Successors:
+    SU(39): Data Latency=1 Reg=%125
+SU(37):   %251:hvxwr = REG_SEQUENCE %110:hvxvr, %subreg.vsub_lo, %114:hvxvr, %subreg.vsub_hi
+  # preds left       : 2
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 3
+  Height             : 3
+  Predecessors:
+    SU(25): Data Latency=2 Reg=%114
+    SU(17): Data Latency=2 Reg=%110
+  Successors:
+    SU(39): Data Latency=0 Reg=%251
+SU(38):   %127:hvxwr = V6_vdmpybus_dv_acc %124:hvxwr(tied-def 0), %248:hvxwr, %208:intregs
+  # preds left       : 2
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 6
+  Height             : 4
+  Predecessors:
+    SU(35): Data Latency=1 Reg=%124
+    SU(30): Data Latency=0 Reg=%248
+  Successors:
+    SU(40): Data Latency=1 Reg=%127
+SU(39):   %128:hvxwr = V6_vdmpybus_dv_acc %125:hvxwr(tied-def 0), %251:hvxwr, %208:intregs
+  # preds left       : 2
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 5
+  Height             : 3
+  Predecessors:
+    SU(37): Data Latency=0 Reg=%251
+    SU(36): Data Latency=1 Reg=%125
+  Successors:
+    SU(41): Data Latency=1 Reg=%128
+SU(40):   %129:hvxwr = V6_vmpybus_acc %127:hvxwr(tied-def 0), %113:hvxvr, %238:intregs
+  # preds left       : 2
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 7
+  Height             : 3
+  Predecessors:
+    SU(38): Data Latency=1 Reg=%127
+    SU(24): Data Latency=2 Reg=%113
+  Successors:
+    SU(42): Data Latency=2 Reg=%129
+SU(41):   %130:hvxwr = V6_vmpybus_acc %128:hvxwr(tied-def 0), %114:hvxvr, %238:intregs
+  # preds left       : 2
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 6
+  Height             : 2
+  Predecessors:
+    SU(39): Data Latency=1 Reg=%128
+    SU(25): Data Latency=2 Reg=%114
+  Successors:
+    SU(44): Data Latency=2 Reg=%130
+SU(42):   %133:hvxvr = V6_vasrhubsat %129.vsub_hi:hvxwr, %129.vsub_lo:hvxwr, %64:intregslow8
+  # preds left       : 1
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 9
+  Height             : 1
+  Predecessors:
+    SU(40): Data Latency=2 Reg=%129
+  Successors:
+    SU(43): Data Latency=0 Reg=%133
+SU(43):   %46:intregs = V6_vS32b_pi %35:intregs(tied-def 0), 64, %133:hvxvr :: (store 64 into %ir.v111, !tbaa !0)
+  # preds left       : 3
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 9
+  Height             : 1
+  Predecessors:
+    SU(42): Data Latency=0 Reg=%133
+    SU(12): Data Latency=0 Reg=%35
+    SU(12): Anti Latency=1
+  Successors:
+    SU(45): Ord  Latency=1 Memory
+SU(44):   %136:hvxvr = V6_vasrhubsat %130.vsub_hi:hvxwr, %130.vsub_lo:hvxwr, %64:intregslow8
+  # preds left       : 1
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 8
+  Height             : 0
+  Predecessors:
+    SU(41): Data Latency=2 Reg=%130
+  Successors:
+    SU(45): Data Latency=0 Reg=%136
+SU(45):   %47:intregs = V6_vS32b_pi %36:intregs(tied-def 0), 64, %136:hvxvr :: (store 64 into %ir.v112, !tbaa !0)
+  # preds left       : 4
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 10
+  Height             : 0
+  Predecessors:
+    SU(44): Data Latency=0 Reg=%136
+    SU(43): Ord  Latency=1 Memory
+    SU(13): Data Latency=0 Reg=%36
+    SU(13): Anti Latency=1
+ExitSU:   ENDLOOP0 %bb.2, implicit-def $pc, implicit-def $lc0, implicit $sa0, implicit $lc0
+  # preds left       : 0
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 0
+calculateResMII:
+Trying to reserve resource for 1 cycles for 
+  %117:hvxwr = V6_vdmpybus_dv %246:hvxwr, %176:intregs
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %127:hvxwr = V6_vdmpybus_dv_acc %124:hvxwr(tied-def 0), %248:hvxwr, %208:intregs
+ReservedCycles:0, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %130:hvxwr = V6_vmpybus_acc %128:hvxwr(tied-def 0), %114:hvxvr, %238:intregs
+ReservedCycles:0, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %128:hvxwr = V6_vdmpybus_dv_acc %125:hvxwr(tied-def 0), %251:hvxwr, %208:intregs
+ReservedCycles:0, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %129:hvxwr = V6_vmpybus_acc %127:hvxwr(tied-def 0), %113:hvxvr, %238:intregs
+ReservedCycles:0, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %118:hvxwr = V6_vdmpybus_dv %247:hvxwr, %176:intregs
+ReservedCycles:0, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %124:hvxwr = V6_vmpabus_acc %120:hvxwr(tied-def 0), %249:hvxwr, %224:intregs
+ReservedCycles:0, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %125:hvxwr = V6_vmpabus_acc %121:hvxwr(tied-def 0), %250:hvxwr, %224:intregs
+ReservedCycles:0, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %120:hvxwr = V6_vdmpybus_dv_acc %117:hvxwr(tied-def 0), %247:hvxwr, %192:intregs
+ReservedCycles:0, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %121:hvxwr = V6_vdmpybus_dv_acc %118:hvxwr(tied-def 0), %248:hvxwr, %192:intregs
+ReservedCycles:0, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %109:hvxvr = V6_vlalignbi %28:hvxvr, %27:hvxvr, 1
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %107:hvxvr = V6_vlalignbi %24:hvxvr, %23:hvxvr, 1
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %114:hvxvr = V6_valignbi %40:hvxvr, %30:hvxvr, 1
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %112:hvxvr = V6_valignbi %38:hvxvr, %26:hvxvr, 1
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %113:hvxvr = V6_valignbi %39:hvxvr, %28:hvxvr, 1
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %108:hvxvr = V6_vlalignbi %26:hvxvr, %25:hvxvr, 1
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %111:hvxvr = V6_valignbi %37:hvxvr, %24:hvxvr, 1
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %110:hvxvr = V6_vlalignbi %30:hvxvr, %29:hvxvr, 1
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %39:hvxvr, %44:intregs = V6_vL32b_pi %33:intregs(tied-def 1), 64 :: (load 64 from %ir.v109, !tbaa !0)
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %37:hvxvr, %42:intregs = V6_vL32b_pi %31:intregs(tied-def 1), 64 :: (load 64 from %ir.v107, !tbaa !0)
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %38:hvxvr, %43:intregs = V6_vL32b_pi %32:intregs(tied-def 1), 64 :: (load 64 from %ir.v108, !tbaa !0)
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %40:hvxvr, %45:intregs = V6_vL32b_pi %34:intregs(tied-def 1), 64 :: (load 64 from %ir.v110, !tbaa !0)
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %47:intregs = V6_vS32b_pi %36:intregs(tied-def 0), 64, %136:hvxvr :: (store 64 into %ir.v112, !tbaa !0)
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %133:hvxvr = V6_vasrhubsat %129.vsub_hi:hvxwr, %129.vsub_lo:hvxwr, %64:intregslow8
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %136:hvxvr = V6_vasrhubsat %130.vsub_hi:hvxwr, %130.vsub_lo:hvxwr, %64:intregslow8
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %46:intregs = V6_vS32b_pi %35:intregs(tied-def 0), 64, %133:hvxvr :: (store 64 into %ir.v111, !tbaa !0)
+ReservedCycles:1, NumCycles:1
+Return Res MII:10
+MII = 10 MAX_II = 20 (rec=1, res=10)
+SU(6):   %29:hvxvr = PHI %4:hvxvr, %bb.1, %30:hvxvr, %bb.2
+SU(7):   %30:hvxvr = PHI %8:hvxvr, %bb.1, %40:hvxvr, %bb.2
+SU(11):   %34:intregs = PHI %16:intregs, %bb.1, %45:intregs, %bb.2
+SU(21):   %40:hvxvr, %45:intregs = V6_vL32b_pi %34:intregs(tied-def 1), 64 :: (load 64 from %ir.v110, !tbaa !0)
+SU(25):   %114:hvxvr = V6_valignbi %40:hvxvr, %30:hvxvr, 1
+SU(17):   %110:hvxvr = V6_vlalignbi %30:hvxvr, %29:hvxvr, 1
+SU(37):   %251:hvxwr = REG_SEQUENCE %110:hvxvr, %subreg.vsub_lo, %114:hvxvr, %subreg.vsub_hi
+SU(4):   %27:hvxvr = PHI %4:hvxvr, %bb.1, %28:hvxvr, %bb.2
+SU(5):   %28:hvxvr = PHI %7:hvxvr, %bb.1, %39:hvxvr, %bb.2
+SU(10):   %33:intregs = PHI %17:intregs, %bb.1, %44:intregs, %bb.2
+SU(20):   %39:hvxvr, %44:intregs = V6_vL32b_pi %33:intregs(tied-def 1), 64 :: (load 64 from %ir.v109, !tbaa !0)
+SU(24):   %113:hvxvr = V6_valignbi %39:hvxvr, %28:hvxvr, 1
+SU(2):   %25:hvxvr = PHI %4:hvxvr, %bb.1, %26:hvxvr, %bb.2
+SU(3):   %26:hvxvr = PHI %6:hvxvr, %bb.1, %38:hvxvr, %bb.2
+SU(9):   %32:intregs = PHI %18:intregs, %bb.1, %43:intregs, %bb.2
+SU(19):   %38:hvxvr, %43:intregs = V6_vL32b_pi %32:intregs(tied-def 1), 64 :: (load 64 from %ir.v108, !tbaa !0)
+SU(23):   %112:hvxvr = V6_valignbi %38:hvxvr, %26:hvxvr, 1
+SU(34):   %250:hvxwr = REG_SEQUENCE %113:hvxvr, %subreg.vsub_lo, %112:hvxvr, %subreg.vsub_hi
+SU(16):   %109:hvxvr = V6_vlalignbi %28:hvxvr, %27:hvxvr, 1
+SU(30):   %248:hvxwr = REG_SEQUENCE %109:hvxvr, %subreg.vsub_lo, %113:hvxvr, %subreg.vsub_hi
+SU(15):   %108:hvxvr = V6_vlalignbi %26:hvxvr, %25:hvxvr, 1
+SU(27):   %247:hvxwr = REG_SEQUENCE %108:hvxvr, %subreg.vsub_lo, %112:hvxvr, %subreg.vsub_hi
+SU(29):   %118:hvxwr = V6_vdmpybus_dv %247:hvxwr, %176:intregs
+SU(32):   %121:hvxwr = V6_vdmpybus_dv_acc %118:hvxwr(tied-def 0), %248:hvxwr, %192:intregs
+SU(36):   %125:hvxwr = V6_vmpabus_acc %121:hvxwr(tied-def 0), %250:hvxwr, %224:intregs
+SU(39):   %128:hvxwr = V6_vdmpybus_dv_acc %125:hvxwr(tied-def 0), %251:hvxwr, %208:intregs
+SU(41):   %130:hvxwr = V6_vmpybus_acc %128:hvxwr(tied-def 0), %114:hvxvr, %238:intregs
+SU(44):   %136:hvxvr = V6_vasrhubsat %130.vsub_hi:hvxwr, %130.vsub_lo:hvxwr, %64:intregslow8
+SU(0):   %23:hvxvr = PHI %4:hvxvr, %bb.1, %24:hvxvr, %bb.2
+SU(1):   %24:hvxvr = PHI %5:hvxvr, %bb.1, %37:hvxvr, %bb.2
+SU(8):   %31:intregs = PHI %19:intregs, %bb.1, %42:intregs, %bb.2
+SU(18):   %37:hvxvr, %42:intregs = V6_vL32b_pi %31:intregs(tied-def 1), 64 :: (load 64 from %ir.v107, !tbaa !0)
+SU(22):   %111:hvxvr = V6_valignbi %37:hvxvr, %24:hvxvr, 1
+SU(33):   %249:hvxwr = REG_SEQUENCE %112:hvxvr, %subreg.vsub_lo, %111:hvxvr, %subreg.vsub_hi
+SU(14):   %107:hvxvr = V6_vlalignbi %24:hvxvr, %23:hvxvr, 1
+SU(26):   %246:hvxwr = REG_SEQUENCE %107:hvxvr, %subreg.vsub_lo, %111:hvxvr, %subreg.vsub_hi
+SU(28):   %117:hvxwr = V6_vdmpybus_dv %246:hvxwr, %176:intregs
+SU(31):   %120:hvxwr = V6_vdmpybus_dv_acc %117:hvxwr(tied-def 0), %247:hvxwr, %192:intregs
+SU(35):   %124:hvxwr = V6_vmpabus_acc %120:hvxwr(tied-def 0), %249:hvxwr, %224:intregs
+SU(38):   %127:hvxwr = V6_vdmpybus_dv_acc %124:hvxwr(tied-def 0), %248:hvxwr, %208:intregs
+SU(40):   %129:hvxwr = V6_vmpybus_acc %127:hvxwr(tied-def 0), %113:hvxvr, %238:intregs
+SU(42):   %133:hvxvr = V6_vasrhubsat %129.vsub_hi:hvxwr, %129.vsub_lo:hvxwr, %64:intregslow8
+SU(12):   %35:intregs = PHI %65:intregs, %bb.1, %46:intregs, %bb.2
+SU(43):   %46:intregs = V6_vS32b_pi %35:intregs(tied-def 0), 64, %133:hvxvr :: (store 64 into %ir.v111, !tbaa !0)
+SU(13):   %36:intregs = PHI %3:intregs, %bb.1, %47:intregs, %bb.2
+SU(45):   %47:intregs = V6_vS32b_pi %36:intregs(tied-def 0), 64, %136:hvxvr :: (store 64 into %ir.v112, !tbaa !0)
+	Node 0:
+	   ASAP = 0
+	   ALAP = 0
+	   MOV  = 0
+	   D    = 0
+	   H    = 10
+	   ZLD  = 0
+	   ZLH  = 2
+	Node 1:
+	   ASAP = 0
+	   ALAP = 0
+	   MOV  = 0
+	   D    = 0
+	   H    = 10
+	   ZLD  = 1
+	   ZLH  = 1
+	Node 2:
+	   ASAP = 0
+	   ALAP = 2
+	   MOV  = 2
+	   D    = 0
+	   H    = 8
+	   ZLD  = 0
+	   ZLH  = 2
+	Node 3:
+	   ASAP = 0
+	   ALAP = 2
+	   MOV  = 2
+	   D    = 0
+	   H    = 8
+	   ZLD  = 1
+	   ZLH  = 1
+	Node 4:
+	   ASAP = 0
+	   ALAP = 3
+	   MOV  = 3
+	   D    = 0
+	   H    = 7
+	   ZLD  = 0
+	   ZLH  = 2
+	Node 5:
+	   ASAP = 0
+	   ALAP = 3
+	   MOV  = 3
+	   D    = 0
+	   H    = 7
+	   ZLD  = 1
+	   ZLH  = 1
+	Node 6:
+	   ASAP = 0
+	   ALAP = 4
+	   MOV  = 4
+	   D    = 0
+	   H    = 6
+	   ZLD  = 0
+	   ZLH  = 2
+	Node 7:
+	   ASAP = 0
+	   ALAP = 4
+	   MOV  = 4
+	   D    = 0
+	   H    = 6
+	   ZLD  = 1
+	   ZLH  = 1
+	Node 8:
+	   ASAP = 0
+	   ALAP = 0
+	   MOV  = 0
+	   D    = 0
+	   H    = 10
+	   ZLD  = 0
+	   ZLH  = 2
+	Node 9:
+	   ASAP = 0
+	   ALAP = 2
+	   MOV  = 2
+	   D    = 0
+	   H    = 8
+	   ZLD  = 0
+	   ZLH  = 2
+	Node 10:
+	   ASAP = 0
+	   ALAP = 3
+	   MOV  = 3
+	   D    = 0
+	   H    = 7
+	   ZLD  = 0
+	   ZLH  = 2
+	Node 11:
+	   ASAP = 0
+	   ALAP = 4
+	   MOV  = 4
+	   D    = 0
+	   H    = 6
+	   ZLD  = 0
+	   ZLH  = 2
+	Node 12:
+	   ASAP = 0
+	   ALAP = 8
+	   MOV  = 8
+	   D    = 0
+	   H    = 2
+	   ZLD  = 0
+	   ZLH  = 1
+	Node 13:
+	   ASAP = 0
+	   ALAP = 9
+	   MOV  = 9
+	   D    = 0
+	   H    = 1
+	   ZLD  = 0
+	   ZLH  = 1
+	Node 14:
+	   ASAP = 0
+	   ALAP = 0
+	   MOV  = 0
+	   D    = 0
+	   H    = 9
+	   ZLD  = 2
+	   ZLH  = 0
+	Node 15:
+	   ASAP = 0
+	   ALAP = 2
+	   MOV  = 2
+	   D    = 0
+	   H    = 7
+	   ZLD  = 2
+	   ZLH  = 0
+	Node 16:
+	   ASAP = 0
+	   ALAP = 3
+	   MOV  = 3
+	   D    = 0
+	   H    = 6
+	   ZLD  = 2
+	   ZLH  = 0
+	Node 17:
+	   ASAP = 0
+	   ALAP = 4
+	   MOV  = 4
+	   D    = 0
+	   H    = 5
+	   ZLD  = 2
+	   ZLH  = 0
+	Node 18:
+	   ASAP = 0
+	   ALAP = 0
+	   MOV  = 0
+	   D    = 1
+	   H    = 9
+	   ZLD  = 1
+	   ZLH  = 1
+	Node 19:
+	   ASAP = 0
+	   ALAP = 2
+	   MOV  = 2
+	   D    = 1
+	   H    = 7
+	   ZLD  = 1
+	   ZLH  = 1
+	Node 20:
+	   ASAP = 0
+	   ALAP = 3
+	   MOV  = 3
+	   D    = 1
+	   H    = 6
+	   ZLD  = 1
+	   ZLH  = 1
+	Node 21:
+	   ASAP = 0
+	   ALAP = 4
+	   MOV  = 4
+	   D    = 1
+	   H    = 5
+	   ZLD  = 1
+	   ZLH  = 1
+	Node 22:
+	   ASAP = 0
+	   ALAP = 0
+	   MOV  = 0
+	   D    = 1
+	   H    = 9
+	   ZLD  = 2
+	   ZLH  = 0
+	Node 23:
+	   ASAP = 0
+	   ALAP = 2
+	   MOV  = 2
+	   D    = 1
+	   H    = 7
+	   ZLD  = 2
+	   ZLH  = 0
+	Node 24:
+	   ASAP = 0
+	   ALAP = 3
+	   MOV  = 3
+	   D    = 1
+	   H    = 6
+	   ZLD  = 2
+	   ZLH  = 0
+	Node 25:
+	   ASAP = 0
+	   ALAP = 4
+	   MOV  = 4
+	   D    = 1
+	   H    = 5
+	   ZLD  = 2
+	   ZLH  = 0
+	Node 26:
+	   ASAP = 2
+	   ALAP = 2
+	   MOV  = 0
+	   D    = 3
+	   H    = 7
+	   ZLD  = 0
+	   ZLH  = 1
+	Node 27:
+	   ASAP = 1
+	   ALAP = 3
+	   MOV  = 2
+	   D    = 2
+	   H    = 6
+	   ZLD  = 0
+	   ZLH  = 1
+	Node 28:
+	   ASAP = 2
+	   ALAP = 2
+	   MOV  = 0
+	   D    = 3
+	   H    = 7
+	   ZLD  = 1
+	   ZLH  = 0
+	Node 29:
+	   ASAP = 1
+	   ALAP = 3
+	   MOV  = 2
+	   D    = 2
+	   H    = 6
+	   ZLD  = 1
+	   ZLH  = 0
+	Node 30:
+	   ASAP = 1
+	   ALAP = 4
+	   MOV  = 3
+	   D    = 2
+	   H    = 5
+	   ZLD  = 0
+	   ZLH  = 1
+	Node 31:
+	   ASAP = 3
+	   ALAP = 3
+	   MOV  = 0
+	   D    = 4
+	   H    = 6
+	   ZLD  = 1
+	   ZLH  = 0
+	Node 32:
+	   ASAP = 2
+	   ALAP = 4
+	   MOV  = 2
+	   D    = 3
+	   H    = 5
+	   ZLD  = 1
+	   ZLH  = 0
+	Node 33:
+	   ASAP = 2
+	   ALAP = 4
+	   MOV  = 2
+	   D    = 3
+	   H    = 5
+	   ZLD  = 0
+	   ZLH  = 1
+	Node 34:
+	   ASAP = 2
+	   ALAP = 5
+	   MOV  = 3
+	   D    = 3
+	   H    = 4
+	   ZLD  = 0
+	   ZLH  = 1
+	Node 35:
+	   ASAP = 4
+	   ALAP = 4
+	   MOV  = 0
+	   D    = 5
+	   H    = 5
+	   ZLD  = 1
+	   ZLH  = 0
+	Node 36:
+	   ASAP = 3
+	   ALAP = 5
+	   MOV  = 2
+	   D    = 4
+	   H    = 4
+	   ZLD  = 1
+	   ZLH  = 0
+	Node 37:
+	   ASAP = 2
+	   ALAP = 6
+	   MOV  = 4
+	   D    = 3
+	   H    = 3
+	   ZLD  = 0
+	   ZLH  = 1
+	Node 38:
+	   ASAP = 5
+	   ALAP = 5
+	   MOV  = 0
+	   D    = 6
+	   H    = 4
+	   ZLD  = 1
+	   ZLH  = 0
+	Node 39:
+	   ASAP = 4
+	   ALAP = 6
+	   MOV  = 2
+	   D    = 5
+	   H    = 3
+	   ZLD  = 1
+	   ZLH  = 0
+	Node 40:
+	   ASAP = 6
+	   ALAP = 6
+	   MOV  = 0
+	   D    = 7
+	   H    = 3
+	   ZLD  = 0
+	   ZLH  = 0
+	Node 41:
+	   ASAP = 5
+	   ALAP = 7
+	   MOV  = 2
+	   D    = 6
+	   H    = 2
+	   ZLD  = 0
+	   ZLH  = 0
+	Node 42:
+	   ASAP = 8
+	   ALAP = 8
+	   MOV  = 0
+	   D    = 9
+	   H    = 1
+	   ZLD  = 0
+	   ZLH  = 1
+	Node 43:
+	   ASAP = 8
+	   ALAP = 8
+	   MOV  = 0
+	   D    = 9
+	   H    = 1
+	   ZLD  = 1
+	   ZLH  = 0
+	Node 44:
+	   ASAP = 7
+	   ALAP = 9
+	   MOV  = 2
+	   D    = 8
+	   H    = 0
+	   ZLD  = 0
+	   ZLH  = 1
+	Node 45:
+	   ASAP = 9
+	   ALAP = 9
+	   MOV  = 0
+	   D    = 10
+	   H    = 0
+	   ZLD  = 1
+	   ZLH  = 0
+  Rec NodeSet Num nodes 2 rec 1 mov 0 depth 1 col 0
+   SU(8) %31:intregs = PHI %19:intregs, %bb.1, %42:intregs, %bb.2
+   SU(18) %37:hvxvr, %42:intregs = V6_vL32b_pi %31:intregs(tied-def 1), 64 :: (load 64 from %ir.v107, !tbaa !0)
+
+  Rec NodeSet Num nodes 2 rec 1 mov 2 depth 1 col 0
+   SU(9) %32:intregs = PHI %18:intregs, %bb.1, %43:intregs, %bb.2
+   SU(19) %38:hvxvr, %43:intregs = V6_vL32b_pi %32:intregs(tied-def 1), 64 :: (load 64 from %ir.v108, !tbaa !0)
+
+  Rec NodeSet Num nodes 2 rec 1 mov 3 depth 1 col 0
+   SU(10) %33:intregs = PHI %17:intregs, %bb.1, %44:intregs, %bb.2
+   SU(20) %39:hvxvr, %44:intregs = V6_vL32b_pi %33:intregs(tied-def 1), 64 :: (load 64 from %ir.v109, !tbaa !0)
+
+  Rec NodeSet Num nodes 2 rec 1 mov 4 depth 1 col 0
+   SU(11) %34:intregs = PHI %16:intregs, %bb.1, %45:intregs, %bb.2
+   SU(21) %40:hvxvr, %45:intregs = V6_vL32b_pi %34:intregs(tied-def 1), 64 :: (load 64 from %ir.v110, !tbaa !0)
+
+  Rec NodeSet Num nodes 2 rec 1 mov 8 depth 9 col 0
+   SU(12) %35:intregs = PHI %65:intregs, %bb.1, %46:intregs, %bb.2
+   SU(43) %46:intregs = V6_vS32b_pi %35:intregs(tied-def 0), 64, %133:hvxvr :: (store 64 into %ir.v111, !tbaa !0)
+
+  Rec NodeSet Num nodes 2 rec 1 mov 9 depth 10 col 0
+   SU(13) %36:intregs = PHI %3:intregs, %bb.1, %47:intregs, %bb.2
+   SU(45) %47:intregs = V6_vS32b_pi %36:intregs(tied-def 0), 64, %136:hvxvr :: (store 64 into %ir.v112, !tbaa !0)
+
+  NodeSet Num nodes 2 rec 1 mov 0 depth 1 col 0
+   SU(8) %31:intregs = PHI %19:intregs, %bb.1, %42:intregs, %bb.2
+   SU(18) %37:hvxvr, %42:intregs = V6_vL32b_pi %31:intregs(tied-def 1), 64 :: (load 64 from %ir.v107, !tbaa !0)
+
+  NodeSet Num nodes 2 rec 1 mov 2 depth 1 col 0
+   SU(9) %32:intregs = PHI %18:intregs, %bb.1, %43:intregs, %bb.2
+   SU(19) %38:hvxvr, %43:intregs = V6_vL32b_pi %32:intregs(tied-def 1), 64 :: (load 64 from %ir.v108, !tbaa !0)
+
+  NodeSet Num nodes 2 rec 1 mov 3 depth 1 col 0
+   SU(10) %33:intregs = PHI %17:intregs, %bb.1, %44:intregs, %bb.2
+   SU(20) %39:hvxvr, %44:intregs = V6_vL32b_pi %33:intregs(tied-def 1), 64 :: (load 64 from %ir.v109, !tbaa !0)
+
+  NodeSet Num nodes 2 rec 1 mov 4 depth 1 col 0
+   SU(11) %34:intregs = PHI %16:intregs, %bb.1, %45:intregs, %bb.2
+   SU(21) %40:hvxvr, %45:intregs = V6_vL32b_pi %34:intregs(tied-def 1), 64 :: (load 64 from %ir.v110, !tbaa !0)
+
+  NodeSet Num nodes 21 rec 1 mov 8 depth 9 col 0
+   SU(12) %35:intregs = PHI %65:intregs, %bb.1, %46:intregs, %bb.2
+   SU(43) %46:intregs = V6_vS32b_pi %35:intregs(tied-def 0), 64, %133:hvxvr :: (store 64 into %ir.v111, !tbaa !0)
+   SU(42) %133:hvxvr = V6_vasrhubsat %129.vsub_hi:hvxwr, %129.vsub_lo:hvxwr, %64:intregslow8
+   SU(40) %129:hvxwr = V6_vmpybus_acc %127:hvxwr(tied-def 0), %113:hvxvr, %238:intregs
+   SU(38) %127:hvxwr = V6_vdmpybus_dv_acc %124:hvxwr(tied-def 0), %248:hvxwr, %208:intregs
+   SU(35) %124:hvxwr = V6_vmpabus_acc %120:hvxwr(tied-def 0), %249:hvxwr, %224:intregs
+   SU(33) %249:hvxwr = REG_SEQUENCE %112:hvxvr, %subreg.vsub_lo, %111:hvxvr, %subreg.vsub_hi
+   SU(31) %120:hvxwr = V6_vdmpybus_dv_acc %117:hvxwr(tied-def 0), %247:hvxwr, %192:intregs
+   SU(28) %117:hvxwr = V6_vdmpybus_dv %246:hvxwr, %176:intregs
+   SU(26) %246:hvxwr = REG_SEQUENCE %107:hvxvr, %subreg.vsub_lo, %111:hvxvr, %subreg.vsub_hi
+   SU(22) %111:hvxvr = V6_valignbi %37:hvxvr, %24:hvxvr, 1
+   SU(14) %107:hvxvr = V6_vlalignbi %24:hvxvr, %23:hvxvr, 1
+   SU(1) %24:hvxvr = PHI %5:hvxvr, %bb.1, %37:hvxvr, %bb.2
+   SU(27) %247:hvxwr = REG_SEQUENCE %108:hvxvr, %subreg.vsub_lo, %112:hvxvr, %subreg.vsub_hi
+   SU(23) %112:hvxvr = V6_valignbi %38:hvxvr, %26:hvxvr, 1
+   SU(15) %108:hvxvr = V6_vlalignbi %26:hvxvr, %25:hvxvr, 1
+   SU(3) %26:hvxvr = PHI %6:hvxvr, %bb.1, %38:hvxvr, %bb.2
+   SU(30) %248:hvxwr = REG_SEQUENCE %109:hvxvr, %subreg.vsub_lo, %113:hvxvr, %subreg.vsub_hi
+   SU(24) %113:hvxvr = V6_valignbi %39:hvxvr, %28:hvxvr, 1
+   SU(16) %109:hvxvr = V6_vlalignbi %28:hvxvr, %27:hvxvr, 1
+   SU(5) %28:hvxvr = PHI %7:hvxvr, %bb.1, %39:hvxvr, %bb.2
+
+  NodeSet Num nodes 13 rec 1 mov 9 depth 10 col 0
+   SU(13) %36:intregs = PHI %3:intregs, %bb.1, %47:intregs, %bb.2
+   SU(45) %47:intregs = V6_vS32b_pi %36:intregs(tied-def 0), 64, %136:hvxvr :: (store 64 into %ir.v112, !tbaa !0)
+   SU(44) %136:hvxvr = V6_vasrhubsat %130.vsub_hi:hvxwr, %130.vsub_lo:hvxwr, %64:intregslow8
+   SU(41) %130:hvxwr = V6_vmpybus_acc %128:hvxwr(tied-def 0), %114:hvxvr, %238:intregs
+   SU(39) %128:hvxwr = V6_vdmpybus_dv_acc %125:hvxwr(tied-def 0), %251:hvxwr, %208:intregs
+   SU(37) %251:hvxwr = REG_SEQUENCE %110:hvxvr, %subreg.vsub_lo, %114:hvxvr, %subreg.vsub_hi
+   SU(25) %114:hvxvr = V6_valignbi %40:hvxvr, %30:hvxvr, 1
+   SU(17) %110:hvxvr = V6_vlalignbi %30:hvxvr, %29:hvxvr, 1
+   SU(7) %30:hvxvr = PHI %8:hvxvr, %bb.1, %40:hvxvr, %bb.2
+   SU(36) %125:hvxwr = V6_vmpabus_acc %121:hvxwr(tied-def 0), %250:hvxwr, %224:intregs
+   SU(32) %121:hvxwr = V6_vdmpybus_dv_acc %118:hvxwr(tied-def 0), %248:hvxwr, %192:intregs
+   SU(29) %118:hvxwr = V6_vdmpybus_dv %247:hvxwr, %176:intregs
+   SU(34) %250:hvxwr = REG_SEQUENCE %113:hvxvr, %subreg.vsub_lo, %112:hvxvr, %subreg.vsub_hi
+
+  NodeSet Num nodes 4 rec 0 mov 0 depth 0 col 0
+   SU(0) %23:hvxvr = PHI %4:hvxvr, %bb.1, %24:hvxvr, %bb.2
+   SU(2) %25:hvxvr = PHI %4:hvxvr, %bb.1, %26:hvxvr, %bb.2
+   SU(4) %27:hvxvr = PHI %4:hvxvr, %bb.1, %28:hvxvr, %bb.2
+   SU(6) %29:hvxvr = PHI %4:hvxvr, %bb.1, %30:hvxvr, %bb.2
+
+NodeSet size 2
+  Bottom up (default) 18 8 
+   Switching order to top down 
+Done with Nodeset
+NodeSet size 2
+  Bottom up (default) 19 9 
+   Switching order to top down 
+Done with Nodeset
+NodeSet size 2
+  Bottom up (default) 20 10 
+   Switching order to top down 
+Done with Nodeset
+NodeSet size 2
+  Bottom up (default) 21 11 
+   Switching order to top down 
+Done with Nodeset
+NodeSet size 21
+  Top down (intersect) 1 22 14 3 26 5 28 23 15 27 31 24 16 33 30 35 38 40 42 43 12 
+   Switching order to bottom up 
+Done with Nodeset
+NodeSet size 13
+  Top down (succs) 7 29 32 25 17 34 36 37 39 41 44 45 13 
+   Switching order to bottom up 
+Done with Nodeset
+NodeSet size 4
+  Bottom up (preds) 0 2 4 6 
+   Switching order to top down 
+Done with Nodeset
+Node order:  18  8  19  9  20  10  21  11  1  22  14  3  26  5  28  23  15  27  31  24  16  33  30  35  38  40  42  43  12  7  29  32  25  17  34  36  37  39  41  44  45  13  0  2  4  6 
+Try to schedule with 10
+
+Inst (18)   %37:hvxvr, %42:intregs = V6_vL32b_pi %31:intregs(tied-def 1), 64 :: (load 64 from %ir.v107, !tbaa !0)
+
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 0 and 9 II: 10
+	insert at cycle 0   %37:hvxvr, %42:intregs = V6_vL32b_pi %31:intregs(tied-def 1), 64 :: (load 64 from %ir.v107, !tbaa !0)
+
+Inst (8)   %31:intregs = PHI %19:intregs, %bb.1, %42:intregs, %bb.2
+
+	es: fffffff7 ls:        0 me: 7fffffff ms: 80000000
+Trying to insert node between 0 and -9 II: 10
+	insert at cycle 0   %31:intregs = PHI %19:intregs, %bb.1, %42:intregs, %bb.2
+
+Inst (19)   %38:hvxvr, %43:intregs = V6_vL32b_pi %32:intregs(tied-def 1), 64 :: (load 64 from %ir.v108, !tbaa !0)
+
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 0 and 9 II: 10
+	failed to insert at cycle 0   %38:hvxvr, %43:intregs = V6_vL32b_pi %32:intregs(tied-def 1), 64 :: (load 64 from %ir.v108, !tbaa !0)
+	insert at cycle 1   %38:hvxvr, %43:intregs = V6_vL32b_pi %32:intregs(tied-def 1), 64 :: (load 64 from %ir.v108, !tbaa !0)
+
+Inst (9)   %32:intregs = PHI %18:intregs, %bb.1, %43:intregs, %bb.2
+
+	es: fffffff8 ls:        1 me: 7fffffff ms: 80000000
+Trying to insert node between 1 and -8 II: 10
+	insert at cycle 1   %32:intregs = PHI %18:intregs, %bb.1, %43:intregs, %bb.2
+
+Inst (20)   %39:hvxvr, %44:intregs = V6_vL32b_pi %33:intregs(tied-def 1), 64 :: (load 64 from %ir.v109, !tbaa !0)
+
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 0 and 9 II: 10
+	failed to insert at cycle 0   %39:hvxvr, %44:intregs = V6_vL32b_pi %33:intregs(tied-def 1), 64 :: (load 64 from %ir.v109, !tbaa !0)
+	failed to insert at cycle 1   %39:hvxvr, %44:intregs = V6_vL32b_pi %33:intregs(tied-def 1), 64 :: (load 64 from %ir.v109, !tbaa !0)
+	insert at cycle 2   %39:hvxvr, %44:intregs = V6_vL32b_pi %33:intregs(tied-def 1), 64 :: (load 64 from %ir.v109, !tbaa !0)
+
+Inst (10)   %33:intregs = PHI %17:intregs, %bb.1, %44:intregs, %bb.2
+
+	es: fffffff9 ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between 2 and -7 II: 10
+	insert at cycle 2   %33:intregs = PHI %17:intregs, %bb.1, %44:intregs, %bb.2
+
+Inst (21)   %40:hvxvr, %45:intregs = V6_vL32b_pi %34:intregs(tied-def 1), 64 :: (load 64 from %ir.v110, !tbaa !0)
+
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 0 and 9 II: 10
+	failed to insert at cycle 0   %40:hvxvr, %45:intregs = V6_vL32b_pi %34:intregs(tied-def 1), 64 :: (load 64 from %ir.v110, !tbaa !0)
+	failed to insert at cycle 1   %40:hvxvr, %45:intregs = V6_vL32b_pi %34:intregs(tied-def 1), 64 :: (load 64 from %ir.v110, !tbaa !0)
+	failed to insert at cycle 2   %40:hvxvr, %45:intregs = V6_vL32b_pi %34:intregs(tied-def 1), 64 :: (load 64 from %ir.v110, !tbaa !0)
+	insert at cycle 3   %40:hvxvr, %45:intregs = V6_vL32b_pi %34:intregs(tied-def 1), 64 :: (load 64 from %ir.v110, !tbaa !0)
+
+Inst (11)   %34:intregs = PHI %16:intregs, %bb.1, %45:intregs, %bb.2
+
+	es: fffffffa ls:        3 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -6 II: 10
+	insert at cycle 3   %34:intregs = PHI %16:intregs, %bb.1, %45:intregs, %bb.2
+
+Inst (1)   %24:hvxvr = PHI %5:hvxvr, %bb.1, %37:hvxvr, %bb.2
+
+	es: fffffff7 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between -9 and 0 II: 10
+	insert at cycle -9   %24:hvxvr = PHI %5:hvxvr, %bb.1, %37:hvxvr, %bb.2
+
+Inst (22)   %111:hvxvr = V6_valignbi %37:hvxvr, %24:hvxvr, 1
+
+	es:        0 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 0 and 9 II: 10
+	insert at cycle 0   %111:hvxvr = V6_valignbi %37:hvxvr, %24:hvxvr, 1
+
+Inst (14)   %107:hvxvr = V6_vlalignbi %24:hvxvr, %23:hvxvr, 1
+
+	es: fffffff7 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between -9 and 0 II: 10
+	insert at cycle -9   %107:hvxvr = V6_vlalignbi %24:hvxvr, %23:hvxvr, 1
+
+Inst (3)   %26:hvxvr = PHI %6:hvxvr, %bb.1, %38:hvxvr, %bb.2
+
+	es: fffffff8 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between -8 and 1 II: 10
+	insert at cycle -8   %26:hvxvr = PHI %6:hvxvr, %bb.1, %38:hvxvr, %bb.2
+
+Inst (26)   %246:hvxwr = REG_SEQUENCE %107:hvxvr, %subreg.vsub_lo, %111:hvxvr, %subreg.vsub_hi
+
+	es:        2 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 2 and 11 II: 10
+	insert at cycle 2   %246:hvxwr = REG_SEQUENCE %107:hvxvr, %subreg.vsub_lo, %111:hvxvr, %subreg.vsub_hi
+
+Inst (5)   %28:hvxvr = PHI %7:hvxvr, %bb.1, %39:hvxvr, %bb.2
+
+	es: fffffff9 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between -7 and 2 II: 10
+	insert at cycle -7   %28:hvxvr = PHI %7:hvxvr, %bb.1, %39:hvxvr, %bb.2
+
+Inst (28)   %117:hvxwr = V6_vdmpybus_dv %246:hvxwr, %176:intregs
+
+	es:        2 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 2 and 11 II: 10
+	insert at cycle 2   %117:hvxwr = V6_vdmpybus_dv %246:hvxwr, %176:intregs
+
+Inst (23)   %112:hvxvr = V6_valignbi %38:hvxvr, %26:hvxvr, 1
+
+	es:        1 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 1 and 10 II: 10
+	failed to insert at cycle 1   %112:hvxvr = V6_valignbi %38:hvxvr, %26:hvxvr, 1
+	insert at cycle 2   %112:hvxvr = V6_valignbi %38:hvxvr, %26:hvxvr, 1
+
+Inst (15)   %108:hvxvr = V6_vlalignbi %26:hvxvr, %25:hvxvr, 1
+
+	es: fffffff8 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between -8 and 1 II: 10
+	failed to insert at cycle -8   %108:hvxvr = V6_vlalignbi %26:hvxvr, %25:hvxvr, 1
+	insert at cycle -7   %108:hvxvr = V6_vlalignbi %26:hvxvr, %25:hvxvr, 1
+
+Inst (27)   %247:hvxwr = REG_SEQUENCE %108:hvxvr, %subreg.vsub_lo, %112:hvxvr, %subreg.vsub_hi
+
+	es:        3 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 3 and 12 II: 10
+	insert at cycle 3   %247:hvxwr = REG_SEQUENCE %108:hvxvr, %subreg.vsub_lo, %112:hvxvr, %subreg.vsub_hi
+
+Inst (31)   %120:hvxwr = V6_vdmpybus_dv_acc %117:hvxwr(tied-def 0), %247:hvxwr, %192:intregs
+
+	es:        3 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 3 and 12 II: 10
+	insert at cycle 3   %120:hvxwr = V6_vdmpybus_dv_acc %117:hvxwr(tied-def 0), %247:hvxwr, %192:intregs
+
+Inst (24)   %113:hvxvr = V6_valignbi %39:hvxvr, %28:hvxvr, 1
+
+	es:        2 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 2 and 11 II: 10
+	failed to insert at cycle 2   %113:hvxvr = V6_valignbi %39:hvxvr, %28:hvxvr, 1
+	failed to insert at cycle 3   %113:hvxvr = V6_valignbi %39:hvxvr, %28:hvxvr, 1
+	insert at cycle 4   %113:hvxvr = V6_valignbi %39:hvxvr, %28:hvxvr, 1
+
+Inst (16)   %109:hvxvr = V6_vlalignbi %28:hvxvr, %27:hvxvr, 1
+
+	es: fffffff9 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between -7 and 2 II: 10
+	failed to insert at cycle -7   %109:hvxvr = V6_vlalignbi %28:hvxvr, %27:hvxvr, 1
+	failed to insert at cycle -6   %109:hvxvr = V6_vlalignbi %28:hvxvr, %27:hvxvr, 1
+	insert at cycle -5   %109:hvxvr = V6_vlalignbi %28:hvxvr, %27:hvxvr, 1
+
+Inst (33)   %249:hvxwr = REG_SEQUENCE %112:hvxvr, %subreg.vsub_lo, %111:hvxvr, %subreg.vsub_hi
+
+	es:        4 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 4 and 13 II: 10
+	insert at cycle 4   %249:hvxwr = REG_SEQUENCE %112:hvxvr, %subreg.vsub_lo, %111:hvxvr, %subreg.vsub_hi
+
+Inst (30)   %248:hvxwr = REG_SEQUENCE %109:hvxvr, %subreg.vsub_lo, %113:hvxvr, %subreg.vsub_hi
+
+	es:        5 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 5 and 14 II: 10
+	insert at cycle 5   %248:hvxwr = REG_SEQUENCE %109:hvxvr, %subreg.vsub_lo, %113:hvxvr, %subreg.vsub_hi
+
+Inst (35)   %124:hvxwr = V6_vmpabus_acc %120:hvxwr(tied-def 0), %249:hvxwr, %224:intregs
+
+	es:        4 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 4 and 13 II: 10
+	insert at cycle 4   %124:hvxwr = V6_vmpabus_acc %120:hvxwr(tied-def 0), %249:hvxwr, %224:intregs
+
+Inst (38)   %127:hvxwr = V6_vdmpybus_dv_acc %124:hvxwr(tied-def 0), %248:hvxwr, %208:intregs
+
+	es:        5 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 5 and 14 II: 10
+	insert at cycle 5   %127:hvxwr = V6_vdmpybus_dv_acc %124:hvxwr(tied-def 0), %248:hvxwr, %208:intregs
+
+Inst (40)   %129:hvxwr = V6_vmpybus_acc %127:hvxwr(tied-def 0), %113:hvxvr, %238:intregs
+
+	es:        6 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 6 and 15 II: 10
+	insert at cycle 6   %129:hvxwr = V6_vmpybus_acc %127:hvxwr(tied-def 0), %113:hvxvr, %238:intregs
+
+Inst (42)   %133:hvxvr = V6_vasrhubsat %129.vsub_hi:hvxwr, %129.vsub_lo:hvxwr, %64:intregslow8
+
+	es:        8 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 8 and 17 II: 10
+	insert at cycle 8   %133:hvxvr = V6_vasrhubsat %129.vsub_hi:hvxwr, %129.vsub_lo:hvxwr, %64:intregslow8
+
+Inst (43)   %46:intregs = V6_vS32b_pi %35:intregs(tied-def 0), 64, %133:hvxvr :: (store 64 into %ir.v111, !tbaa !0)
+
+	es:        8 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 8 and 17 II: 10
+	insert at cycle 8   %46:intregs = V6_vS32b_pi %35:intregs(tied-def 0), 64, %133:hvxvr :: (store 64 into %ir.v111, !tbaa !0)
+
+Inst (12)   %35:intregs = PHI %65:intregs, %bb.1, %46:intregs, %bb.2
+
+	es: ffffffff ls:        8 me: 7fffffff ms: 80000000
+Trying to insert node between 8 and -1 II: 10
+	insert at cycle 8   %35:intregs = PHI %65:intregs, %bb.1, %46:intregs, %bb.2
+
+Inst (7)   %30:hvxvr = PHI %8:hvxvr, %bb.1, %40:hvxvr, %bb.2
+
+	es: fffffffa ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between -6 and 3 II: 10
+	insert at cycle -6   %30:hvxvr = PHI %8:hvxvr, %bb.1, %40:hvxvr, %bb.2
+
+Inst (29)   %118:hvxwr = V6_vdmpybus_dv %247:hvxwr, %176:intregs
+
+	es:        3 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 3 and 12 II: 10
+	failed to insert at cycle 3   %118:hvxwr = V6_vdmpybus_dv %247:hvxwr, %176:intregs
+	failed to insert at cycle 4   %118:hvxwr = V6_vdmpybus_dv %247:hvxwr, %176:intregs
+	failed to insert at cycle 5   %118:hvxwr = V6_vdmpybus_dv %247:hvxwr, %176:intregs
+	failed to insert at cycle 6   %118:hvxwr = V6_vdmpybus_dv %247:hvxwr, %176:intregs
+	insert at cycle 7   %118:hvxwr = V6_vdmpybus_dv %247:hvxwr, %176:intregs
+
+Inst (32)   %121:hvxwr = V6_vdmpybus_dv_acc %118:hvxwr(tied-def 0), %248:hvxwr, %192:intregs
+
+	es:        8 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 8 and 17 II: 10
+	insert at cycle 8   %121:hvxwr = V6_vdmpybus_dv_acc %118:hvxwr(tied-def 0), %248:hvxwr, %192:intregs
+
+Inst (25)   %114:hvxvr = V6_valignbi %40:hvxvr, %30:hvxvr, 1
+
+	es:        3 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 3 and 12 II: 10
+	failed to insert at cycle 3   %114:hvxvr = V6_valignbi %40:hvxvr, %30:hvxvr, 1
+	failed to insert at cycle 4   %114:hvxvr = V6_valignbi %40:hvxvr, %30:hvxvr, 1
+	failed to insert at cycle 5   %114:hvxvr = V6_valignbi %40:hvxvr, %30:hvxvr, 1
+	insert at cycle 6   %114:hvxvr = V6_valignbi %40:hvxvr, %30:hvxvr, 1
+
+Inst (17)   %110:hvxvr = V6_vlalignbi %30:hvxvr, %29:hvxvr, 1
+
+	es: fffffffa ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between -6 and 3 II: 10
+	failed to insert at cycle -6   %110:hvxvr = V6_vlalignbi %30:hvxvr, %29:hvxvr, 1
+	failed to insert at cycle -5   %110:hvxvr = V6_vlalignbi %30:hvxvr, %29:hvxvr, 1
+	failed to insert at cycle -4   %110:hvxvr = V6_vlalignbi %30:hvxvr, %29:hvxvr, 1
+	insert at cycle -3   %110:hvxvr = V6_vlalignbi %30:hvxvr, %29:hvxvr, 1
+
+Inst (34)   %250:hvxwr = REG_SEQUENCE %113:hvxvr, %subreg.vsub_lo, %112:hvxvr, %subreg.vsub_hi
+
+	es:        6 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 6 and 15 II: 10
+	insert at cycle 6   %250:hvxwr = REG_SEQUENCE %113:hvxvr, %subreg.vsub_lo, %112:hvxvr, %subreg.vsub_hi
+
+Inst (36)   %125:hvxwr = V6_vmpabus_acc %121:hvxwr(tied-def 0), %250:hvxwr, %224:intregs
+
+	es:        9 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 9 and 18 II: 10
+	insert at cycle 9   %125:hvxwr = V6_vmpabus_acc %121:hvxwr(tied-def 0), %250:hvxwr, %224:intregs
+
+Inst (37)   %251:hvxwr = REG_SEQUENCE %110:hvxvr, %subreg.vsub_lo, %114:hvxvr, %subreg.vsub_hi
+
+	es:        8 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 8 and 17 II: 10
+	insert at cycle 8   %251:hvxwr = REG_SEQUENCE %110:hvxvr, %subreg.vsub_lo, %114:hvxvr, %subreg.vsub_hi
+
+Inst (39)   %128:hvxwr = V6_vdmpybus_dv_acc %125:hvxwr(tied-def 0), %251:hvxwr, %208:intregs
+
+	es:        a ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 10 and 19 II: 10
+	insert at cycle 10   %128:hvxwr = V6_vdmpybus_dv_acc %125:hvxwr(tied-def 0), %251:hvxwr, %208:intregs
+
+Inst (41)   %130:hvxwr = V6_vmpybus_acc %128:hvxwr(tied-def 0), %114:hvxvr, %238:intregs
+
+	es:        b ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 11 and 20 II: 10
+	insert at cycle 11   %130:hvxwr = V6_vmpybus_acc %128:hvxwr(tied-def 0), %114:hvxvr, %238:intregs
+
+Inst (44)   %136:hvxvr = V6_vasrhubsat %130.vsub_hi:hvxwr, %130.vsub_lo:hvxwr, %64:intregslow8
+
+	es:        d ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 13 and 22 II: 10
+	failed to insert at cycle 13   %136:hvxvr = V6_vasrhubsat %130.vsub_hi:hvxwr, %130.vsub_lo:hvxwr, %64:intregslow8
+	insert at cycle 14   %136:hvxvr = V6_vasrhubsat %130.vsub_hi:hvxwr, %130.vsub_lo:hvxwr, %64:intregslow8
+
+Inst (45)   %47:intregs = V6_vS32b_pi %36:intregs(tied-def 0), 64, %136:hvxvr :: (store 64 into %ir.v112, !tbaa !0)
+
+	es:        e ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 14 and 23 II: 10
+	failed to insert at cycle 14   %47:intregs = V6_vS32b_pi %36:intregs(tied-def 0), 64, %136:hvxvr :: (store 64 into %ir.v112, !tbaa !0)
+	insert at cycle 15   %47:intregs = V6_vS32b_pi %36:intregs(tied-def 0), 64, %136:hvxvr :: (store 64 into %ir.v112, !tbaa !0)
+
+Inst (13)   %36:intregs = PHI %3:intregs, %bb.1, %47:intregs, %bb.2
+
+	es:        6 ls:        f me: 7fffffff ms: 80000000
+Trying to insert node between 15 and 6 II: 10
+	insert at cycle 15   %36:intregs = PHI %3:intregs, %bb.1, %47:intregs, %bb.2
+
+Inst (0)   %23:hvxvr = PHI %4:hvxvr, %bb.1, %24:hvxvr, %bb.2
+
+	es: 80000000 ls: fffffff7 me: 7fffffff ms: 80000000
+Trying to insert node between -9 and -18 II: 10
+	insert at cycle -9   %23:hvxvr = PHI %4:hvxvr, %bb.1, %24:hvxvr, %bb.2
+
+Inst (2)   %25:hvxvr = PHI %4:hvxvr, %bb.1, %26:hvxvr, %bb.2
+
+	es: 80000000 ls: fffffff8 me: 7fffffff ms: 80000000
+Trying to insert node between -8 and -17 II: 10
+	insert at cycle -8   %25:hvxvr = PHI %4:hvxvr, %bb.1, %26:hvxvr, %bb.2
+
+Inst (4)   %27:hvxvr = PHI %4:hvxvr, %bb.1, %28:hvxvr, %bb.2
+
+	es: 80000000 ls: fffffff9 me: 7fffffff ms: 80000000
+Trying to insert node between -7 and -16 II: 10
+	insert at cycle -7   %27:hvxvr = PHI %4:hvxvr, %bb.1, %28:hvxvr, %bb.2
+
+Inst (6)   %29:hvxvr = PHI %4:hvxvr, %bb.1, %30:hvxvr, %bb.2
+
+	es: 80000000 ls: fffffffa me: 7fffffff ms: 80000000
+Trying to insert node between -6 and -15 II: 10
+	insert at cycle -6   %29:hvxvr = PHI %4:hvxvr, %bb.1, %30:hvxvr, %bb.2
+Schedule Found? 1 (II=11)
+cycle -9 (1) (9) %32:intregs = PHI %18:intregs, %bb.1, %43:intregs, %bb.2
+
+cycle -9 (0) (1) %24:hvxvr = PHI %5:hvxvr, %bb.1, %37:hvxvr, %bb.2
+
+cycle -9 (0) (0) %23:hvxvr = PHI %4:hvxvr, %bb.1, %24:hvxvr, %bb.2
+
+cycle -9 (2) (41) %130:hvxwr = V6_vmpybus_acc %128:hvxwr(tied-def 0), %114:hvxvr, %238:intregs
+
+cycle -9 (1) (19) %38:hvxvr, %43:intregs = V6_vL32b_pi %32:intregs(tied-def 1), 64 :: (load 64 from %ir.v108, !tbaa !0)
+
+cycle -9 (0) (14) %107:hvxvr = V6_vlalignbi %24:hvxvr, %23:hvxvr, 1
+
+cycle -8 (1) (10) %33:intregs = PHI %17:intregs, %bb.1, %44:intregs, %bb.2
+
+cycle -8 (0) (3) %26:hvxvr = PHI %6:hvxvr, %bb.1, %38:hvxvr, %bb.2
+
+cycle -8 (0) (2) %25:hvxvr = PHI %4:hvxvr, %bb.1, %26:hvxvr, %bb.2
+
+cycle -8 (1) (20) %39:hvxvr, %44:intregs = V6_vL32b_pi %33:intregs(tied-def 1), 64 :: (load 64 from %ir.v109, !tbaa !0)
+
+cycle -8 (1) (26) %246:hvxwr = REG_SEQUENCE %107:hvxvr, %subreg.vsub_lo, %111:hvxvr, %subreg.vsub_hi
+
+cycle -8 (1) (28) %117:hvxwr = V6_vdmpybus_dv %246:hvxwr, %176:intregs
+
+cycle -8 (1) (23) %112:hvxvr = V6_valignbi %38:hvxvr, %26:hvxvr, 1
+
+cycle -7 (1) (11) %34:intregs = PHI %16:intregs, %bb.1, %45:intregs, %bb.2
+
+cycle -7 (0) (5) %28:hvxvr = PHI %7:hvxvr, %bb.1, %39:hvxvr, %bb.2
+
+cycle -7 (0) (4) %27:hvxvr = PHI %4:hvxvr, %bb.1, %28:hvxvr, %bb.2
+
+cycle -7 (1) (21) %40:hvxvr, %45:intregs = V6_vL32b_pi %34:intregs(tied-def 1), 64 :: (load 64 from %ir.v110, !tbaa !0)
+
+cycle -7 (1) (27) %247:hvxwr = REG_SEQUENCE %108:hvxvr, %subreg.vsub_lo, %112:hvxvr, %subreg.vsub_hi
+
+cycle -7 (1) (31) %120:hvxwr = V6_vdmpybus_dv_acc %117:hvxwr(tied-def 0), %247:hvxwr, %192:intregs
+
+cycle -7 (0) (15) %108:hvxvr = V6_vlalignbi %26:hvxvr, %25:hvxvr, 1
+
+cycle -6 (0) (7) %30:hvxvr = PHI %8:hvxvr, %bb.1, %40:hvxvr, %bb.2
+
+cycle -6 (0) (6) %29:hvxvr = PHI %4:hvxvr, %bb.1, %30:hvxvr, %bb.2
+
+cycle -6 (2) (44) %136:hvxvr = V6_vasrhubsat %130.vsub_hi:hvxwr, %130.vsub_lo:hvxwr, %64:intregslow8
+
+cycle -6 (1) (24) %113:hvxvr = V6_valignbi %39:hvxvr, %28:hvxvr, 1
+
+cycle -6 (1) (33) %249:hvxwr = REG_SEQUENCE %112:hvxvr, %subreg.vsub_lo, %111:hvxvr, %subreg.vsub_hi
+
+cycle -6 (1) (35) %124:hvxwr = V6_vmpabus_acc %120:hvxwr(tied-def 0), %249:hvxwr, %224:intregs
+
+cycle -5 (2) (13) %36:intregs = PHI %3:intregs, %bb.1, %47:intregs, %bb.2
+
+cycle -5 (2) (45) %47:intregs = V6_vS32b_pi %36:intregs(tied-def 0), 64, %136:hvxvr :: (store 64 into %ir.v112, !tbaa !0)
+
+cycle -5 (1) (30) %248:hvxwr = REG_SEQUENCE %109:hvxvr, %subreg.vsub_lo, %113:hvxvr, %subreg.vsub_hi
+
+cycle -5 (1) (38) %127:hvxwr = V6_vdmpybus_dv_acc %124:hvxwr(tied-def 0), %248:hvxwr, %208:intregs
+
+cycle -5 (0) (16) %109:hvxvr = V6_vlalignbi %28:hvxvr, %27:hvxvr, 1
+
+cycle -4 (1) (40) %129:hvxwr = V6_vmpybus_acc %127:hvxwr(tied-def 0), %113:hvxvr, %238:intregs
+
+cycle -4 (1) (25) %114:hvxvr = V6_valignbi %40:hvxvr, %30:hvxvr, 1
+
+cycle -4 (1) (34) %250:hvxwr = REG_SEQUENCE %113:hvxvr, %subreg.vsub_lo, %112:hvxvr, %subreg.vsub_hi
+
+cycle -3 (1) (29) %118:hvxwr = V6_vdmpybus_dv %247:hvxwr, %176:intregs
+
+cycle -3 (0) (17) %110:hvxvr = V6_vlalignbi %30:hvxvr, %29:hvxvr, 1
+
+cycle -2 (1) (12) %35:intregs = PHI %65:intregs, %bb.1, %46:intregs, %bb.2
+
+cycle -2 (1) (42) %133:hvxvr = V6_vasrhubsat %129.vsub_hi:hvxwr, %129.vsub_lo:hvxwr, %64:intregslow8
+
+cycle -2 (1) (43) %46:intregs = V6_vS32b_pi %35:intregs(tied-def 0), 64, %133:hvxvr :: (store 64 into %ir.v111, !tbaa !0)
+
+cycle -2 (1) (32) %121:hvxwr = V6_vdmpybus_dv_acc %118:hvxwr(tied-def 0), %248:hvxwr, %192:intregs
+
+cycle -2 (1) (37) %251:hvxwr = REG_SEQUENCE %110:hvxvr, %subreg.vsub_lo, %114:hvxvr, %subreg.vsub_hi
+
+cycle -1 (1) (36) %125:hvxwr = V6_vmpabus_acc %121:hvxwr(tied-def 0), %250:hvxwr, %224:intregs
+
+cycle 0 (0) (8) %31:intregs = PHI %19:intregs, %bb.1, %42:intregs, %bb.2
+
+cycle 0 (1) (39) %128:hvxwr = V6_vdmpybus_dv_acc %125:hvxwr(tied-def 0), %251:hvxwr, %208:intregs
+
+cycle 0 (0) (18) %37:hvxvr, %42:intregs = V6_vL32b_pi %31:intregs(tied-def 1), 64 :: (load 64 from %ir.v107, !tbaa !0)
+
+cycle 0 (0) (22) %111:hvxvr = V6_valignbi %37:hvxvr, %24:hvxvr, 1
+
+[stage 1 @-9c] %32:intregs = PHI %18:intregs, %bb.1, %43:intregs, %bb.2
+[stage 0 @-9c] %24:hvxvr = PHI %5:hvxvr, %bb.1, %37:hvxvr, %bb.2
+[stage 0 @-9c] %23:hvxvr = PHI %4:hvxvr, %bb.1, %24:hvxvr, %bb.2
+[stage 2 @-9c] %130:hvxwr = V6_vmpybus_acc %128:hvxwr(tied-def 0), %114:hvxvr, %238:intregs
+[stage 1 @-9c] %38:hvxvr, %43:intregs = V6_vL32b_pi %32:intregs(tied-def 1), 64 :: (load 64 from %ir.v108, !tbaa !0)
+[stage 0 @-9c] %107:hvxvr = V6_vlalignbi %24:hvxvr, %23:hvxvr, 1
+[stage 1 @-8c] %33:intregs = PHI %17:intregs, %bb.1, %44:intregs, %bb.2
+[stage 0 @-8c] %26:hvxvr = PHI %6:hvxvr, %bb.1, %38:hvxvr, %bb.2
+[stage 0 @-8c] %25:hvxvr = PHI %4:hvxvr, %bb.1, %26:hvxvr, %bb.2
+[stage 1 @-8c] %39:hvxvr, %44:intregs = V6_vL32b_pi %33:intregs(tied-def 1), 64 :: (load 64 from %ir.v109, !tbaa !0)
+[stage 1 @-8c] %246:hvxwr = REG_SEQUENCE %107:hvxvr, %subreg.vsub_lo, %111:hvxvr, %subreg.vsub_hi
+[stage 1 @-8c] %117:hvxwr = V6_vdmpybus_dv %246:hvxwr, %176:intregs
+[stage 1 @-8c] %112:hvxvr = V6_valignbi %38:hvxvr, %26:hvxvr, 1
+[stage 1 @-7c] %34:intregs = PHI %16:intregs, %bb.1, %45:intregs, %bb.2
+[stage 0 @-7c] %28:hvxvr = PHI %7:hvxvr, %bb.1, %39:hvxvr, %bb.2
+[stage 0 @-7c] %27:hvxvr = PHI %4:hvxvr, %bb.1, %28:hvxvr, %bb.2
+[stage 1 @-7c] %40:hvxvr, %45:intregs = V6_vL32b_pi %34:intregs(tied-def 1), 64 :: (load 64 from %ir.v110, !tbaa !0)
+[stage 1 @-7c] %247:hvxwr = REG_SEQUENCE %108:hvxvr, %subreg.vsub_lo, %112:hvxvr, %subreg.vsub_hi
+[stage 1 @-7c] %120:hvxwr = V6_vdmpybus_dv_acc %117:hvxwr(tied-def 0), %247:hvxwr, %192:intregs
+[stage 0 @-7c] %108:hvxvr = V6_vlalignbi %26:hvxvr, %25:hvxvr, 1
+[stage 0 @-6c] %30:hvxvr = PHI %8:hvxvr, %bb.1, %40:hvxvr, %bb.2
+[stage 0 @-6c] %29:hvxvr = PHI %4:hvxvr, %bb.1, %30:hvxvr, %bb.2
+[stage 2 @-6c] %136:hvxvr = V6_vasrhubsat %130.vsub_hi:hvxwr, %130.vsub_lo:hvxwr, %64:intregslow8
+[stage 1 @-6c] %113:hvxvr = V6_valignbi %39:hvxvr, %28:hvxvr, 1
+[stage 1 @-6c] %249:hvxwr = REG_SEQUENCE %112:hvxvr, %subreg.vsub_lo, %111:hvxvr, %subreg.vsub_hi
+[stage 1 @-6c] %124:hvxwr = V6_vmpabus_acc %120:hvxwr(tied-def 0), %249:hvxwr, %224:intregs
+[stage 2 @-5c] %36:intregs = PHI %3:intregs, %bb.1, %47:intregs, %bb.2
+[stage 2 @-5c] %47:intregs = V6_vS32b_pi %36:intregs(tied-def 0), 64, %136:hvxvr :: (store 64 into %ir.v112, !tbaa !0)
+[stage 1 @-5c] %248:hvxwr = REG_SEQUENCE %109:hvxvr, %subreg.vsub_lo, %113:hvxvr, %subreg.vsub_hi
+[stage 1 @-5c] %127:hvxwr = V6_vdmpybus_dv_acc %124:hvxwr(tied-def 0), %248:hvxwr, %208:intregs
+[stage 0 @-5c] %109:hvxvr = V6_vlalignbi %28:hvxvr, %27:hvxvr, 1
+[stage 1 @-4c] %129:hvxwr = V6_vmpybus_acc %127:hvxwr(tied-def 0), %113:hvxvr, %238:intregs
+[stage 1 @-4c] %114:hvxvr = V6_valignbi %40:hvxvr, %30:hvxvr, 1
+[stage 1 @-4c] %250:hvxwr = REG_SEQUENCE %113:hvxvr, %subreg.vsub_lo, %112:hvxvr, %subreg.vsub_hi
+[stage 1 @-3c] %118:hvxwr = V6_vdmpybus_dv %247:hvxwr, %176:intregs
+[stage 0 @-3c] %110:hvxvr = V6_vlalignbi %30:hvxvr, %29:hvxvr, 1
+[stage 1 @-2c] %35:intregs = PHI %65:intregs, %bb.1, %46:intregs, %bb.2
+[stage 1 @-2c] %133:hvxvr = V6_vasrhubsat %129.vsub_hi:hvxwr, %129.vsub_lo:hvxwr, %64:intregslow8
+[stage 1 @-2c] %46:intregs = V6_vS32b_pi %35:intregs(tied-def 0), 64, %133:hvxvr :: (store 64 into %ir.v111, !tbaa !0)
+[stage 1 @-2c] %121:hvxwr = V6_vdmpybus_dv_acc %118:hvxwr(tied-def 0), %248:hvxwr, %192:intregs
+[stage 1 @-2c] %251:hvxwr = REG_SEQUENCE %110:hvxvr, %subreg.vsub_lo, %114:hvxvr, %subreg.vsub_hi
+[stage 1 @-1c] %125:hvxwr = V6_vmpabus_acc %121:hvxwr(tied-def 0), %250:hvxwr, %224:intregs
+[stage 0 @0c] %31:intregs = PHI %19:intregs, %bb.1, %42:intregs, %bb.2
+[stage 1 @0c] %128:hvxwr = V6_vdmpybus_dv_acc %125:hvxwr(tied-def 0), %251:hvxwr, %208:intregs
+[stage 0 @0c] %37:hvxvr, %42:intregs = V6_vL32b_pi %31:intregs(tied-def 1), 64 :: (load 64 from %ir.v107, !tbaa !0)
+[stage 0 @0c] %111:hvxvr = V6_valignbi %37:hvxvr, %24:hvxvr, 1
+Dynamic: TC > 2
+Dynamic: TC > 1
+	.text
+	.file	"<stdin>"
+	.globl	f0                              // -- Begin function f0
+	.p2align	4
+	.type	f0,@function
+f0:                                     // @f0
+// %bb.0:                               // %b0
+	{
+		r14 = addasl(r0,r1,#1)
+		r29 = add(r29,#-8)
+		r12 = sub(r0,r1)
+		r6 = memub(r3+#0)
+	}
+	{
+		r9 = combine(r6.l,r6.l)
+		r13 = add(r0,r1)
+		r7 = memub(r3+#1)
+		memd(r29+#0) = r17:16
+	}                                       // 8-byte Folded Spill
+	{
+		r9 |= asl(r7,#24)
+		p0 = cmp.gt(r2,#64)
+		r8 = memub(r3+#3)
+		r17 = memub(r3+#8)
+	}
+	{
+		r9 |= asl(r7,#8)
+		r6 = combine(r8.l,r8.l)
+		r15 = memub(r3+#4)
+		v6 = vmem(r12+#0)
+	}
+	{
+		r6 |= asl(r15,#24)
+		v4 = vxor(v4,v4)
+		r28 = memub(r3+#6)
+		v5 = vmem(r13+#0)
+	}
+	{
+		r6 |= asl(r15,#8)
+		r7 = combine(r28.l,r28.l)
+		r10 = memub(r3+#7)
+		v0 = vmem(r0+#0)
+	}
+	{
+		r7 |= asl(r10,#24)
+		r8 = memub(r3+#5)
+		v1 = vmem(r14+#0)
+	}
+	{
+		r7 |= asl(r10,#8)
+		r8 = combine(r8.l,r8.l)
+		r3 = combine(r17.l,r17.l)
+		r15 = memub(r3+#2)
+	}
+	{
+		r8 |= asl(r15,#24)
+		r3 |= asl(r17,#24)
+	}
+	{
+		r8 |= asl(r15,#8)
+		r3 |= asl(r17,#8)
+		r15 = memw(r29+#8)
+	}
+	{
+		if (!p0) jump:nt .LBB0_1
+		r12 = add(r5,r15)
+	}
+// %bb.2:                               // %b1
+	{
+		r28 = add(r0,sub(##64,r1))
+		r14 = add(r2,#-65)
+		r2 = add(r2,#-1)
+	}
+	{
+		r11 = asl(r1,#1)
+		r10 = lsr(r2,#6)
+		r16 = and(r14,#-64)
+	}
+	{
+		r13 = add(r1,add(r0,##64))
+		v10 = vlalign(v6,v4,#1)
+	}
+	{
+		r2 = add(r11,add(r0,##64))
+		r14 = add(r0,#64)
+		v4 = vmem(r28++#1)
+	}
+	{
+		r1 = add(r16,add(r15,##64))
+		r0 = add(r16,#64)
+		r11 = add(r10,#-2)
+	}
+	{
+		p0 = cmp.gtu(r10,#1)
+		v8 = vlalign(v0,v0,#1)
+	}
+	{
+		v12 = vlalign(v5,v5,#1)
+	}
+	{
+		v2 = vlalign(v1,v1,#1)
+	}
+	{
+		if (!p0) jump:nt .LBB0_3
+		v11 = valign(v4,v6,#1)
+	}
+// %bb.4:                               // %b2
+	{
+		v27:26.h = vdmpy(v11:10.ub,r9.b)
+		r15 = r5
+		v9 = valign(v7,v0,#1)
+		v7.cur = vmem(r14++#1)
+	}
+	{
+		p0 = cmp.gtu(r10,#2)
+		v13 = valign(v18,v5,#1)
+		v10 = v9
+		v18.cur = vmem(r13++#1)
+	}
+	{
+		loop0(.LBB0_6,r11)
+		v27:26.h += vdmpy(v9:8.ub,r6.b)
+		v3 = valign(v19,v1,#1)
+		v19.cur = vmem(r2++#1)
+	}
+	{
+		v27:26.h += vmpa(v11:10.ub,r8.b)
+		v16 = vlalign(v4,v6,#1)
+		v6 = vmem(r28++#1)
+	}
+	{
+		v15:14.h = vdmpy(v9:8.ub,r9.b)
+		v20 = vlalign(v18,v5,#1)
+		v8 = v13
+	}
+	{
+		v27:26.h += vdmpy(v13:12.ub,r7.b)
+		v24 = vlalign(v7,v0,#1)
+		v5 = v18
+	}
+	{
+		v15:14.h += vdmpy(v13:12.ub,r6.b)
+		v22 = vlalign(v19,v1,#1)
+		v10 = v16
+	}
+	{
+		v27:26.h += vmpy(v13.ub,r3.b)
+		v17 = valign(v6,v4,#1)
+		v12 = v20
+	}
+	{
+		v15:14.h += vmpa(v9:8.ub,r8.b)
+		v1:0 = vcombine(v19,v7)
+	}
+	{
+		v15:14.h += vdmpy(v3:2.ub,r7.b)
+		v9.ub = vasr(v27.h,v26.h,r4):sat
+		v8 = v24
+		vmem(r15++#1) = v9.new
+	}
+	{
+		if (!p0) jump:nt .LBB0_7
+	}
+// %bb.5:
+	{
+		v2 = v22
+	}
+	.p2align	4
+.Ltmp0:                                 // Block address taken
+.LBB0_6:                                // %b2
+                                        // =>This Inner Loop Header: Depth=1
+	{
+		v27:26.h = vdmpy(v17:16.ub,r9.b)
+		v25 = valign(v0,v7,#1)
+		v0.cur = vmem(r14++#1)
+	}
+	{
+		v21 = valign(v5,v18,#1)
+		v16 = v25
+		v9 = v6
+		v5.cur = vmem(r13++#1)
+	}
+	{
+		v27:26.h += vdmpy(v25:24.ub,r6.b)
+		v10 = vlalign(v6,v4,#1)
+		v1 = vmem(r2++#1)
+	}
+	{
+		v15:14.h += vmpy(v3.ub,r3.b)
+		v8 = vlalign(v0,v7,#1)
+		v4 = v9
+	}
+	{
+		v27:26.h += vmpa(v17:16.ub,r8.b)
+		v3 = valign(v1,v19,#1)
+		v7 = v0
+	}
+	{
+		v15:14.h = vdmpy(v25:24.ub,r9.b)
+		v6.ub = vasr(v15.h,v14.h,r4):sat
+		vmem(r12++#1) = v6.new
+	}
+	{
+		v27:26.h += vdmpy(v21:20.ub,r7.b)
+		v22 = vlalign(v1,v19,#1)
+		v24 = v21
+	}
+	{
+		v15:14.h += vdmpy(v21:20.ub,r6.b)
+		v12 = vlalign(v5,v18,#1)
+		v6 = vmem(r28++#1)
+	}
+	{
+		v27:26.h += vmpy(v21.ub,r3.b)
+		v17 = valign(v6,v9,#1)
+		v16 = v10
+	}
+	{
+		v15:14.h += vmpa(v25:24.ub,r8.b)
+		v19:18 = vcombine(v1,v5)
+	}
+	{
+		v15:14.h += vdmpy(v3:2.ub,r7.b)
+		v9.ub = vasr(v27.h,v26.h,r4):sat
+		v24 = v8
+		vmem(r15++#1) = v9.new
+	}
+	{
+		v20 = v12
+		v2 = v22
+	} :endloop0
+.LBB0_7:                                // %b2
+	{
+		v4 = v6
+		v11 = v17
+		v2 = v22
+	}
+	{
+		v15:14.h += vmpy(v3.ub,r3.b)
+	}
+	{
+		jump .LBB0_8
+		v3.ub = vasr(v15.h,v14.h,r4):sat
+		vmem(r12++#1) = v3.new
+	}
+.LBB0_1:
+	{
+		jump .LBB0_9
+		v14 = v4
+		v7 = v4
+		v8 = v4
+	}
+.LBB0_3:
+	{
+		r15 = r5
+		v6 = v4
+	}
+.LBB0_8:                                // %b2
+	{
+		v17:16.h = vdmpy(v11:10.ub,r9.b)
+		v9 = valign(v14,v0,#1)
+		v14.cur = vmem(r14+#0)
+	}
+	{
+		v13 = valign(v7,v5,#1)
+		v10 = v9
+		v7.cur = vmem(r13+#0)
+	}
+	{
+		v19:18.h = vdmpy(v9:8.ub,r9.b)
+		v5 = v7
+	}
+	{
+		v17:16.h += vdmpy(v9:8.ub,r6.b)
+		v8 = vmem(r2+#0)
+	}
+	{
+		v3 = valign(v8,v1,#1)
+		v1:0 = vcombine(v9,v13)
+	}
+	{
+		v17:16.h += vmpa(v11:10.ub,r8.b)
+	}
+	{
+		v19:18.h += vdmpy(v13:12.ub,r6.b)
+	}
+	{
+		v17:16.h += vdmpy(v13:12.ub,r7.b)
+	}
+	{
+		v19:18.h += vmpa(v1:0.ub,r8.b)
+	}
+	{
+		v17:16.h += vmpy(v13.ub,r3.b)
+	}
+	{
+		v19:18.h += vdmpy(v3:2.ub,r7.b)
+	}
+	{
+		v19:18.h += vmpy(v3.ub,r3.b)
+		v0.ub = vasr(v17.h,v16.h,r4):sat
+		vmem(r15++#1) = v0.new
+	}
+	{
+		v0.ub = vasr(v19.h,v18.h,r4):sat
+		vmem(r12++#1) = v0.new
+	}
+	{
+		r12 = add(r5,r1)
+		r5 = add(r5,r0)
+		v1:0 = vcombine(v8,v14)
+	}
+.LBB0_9:                                // %b4
+	{
+		r29 = add(r29,#8)
+		v2 = vlalign(v6,v4,#1)
+		r17:16 = memd(r29+#0)
+	}                                       // 8-byte Folded Reload
+	{
+		v3 = valign(v6,v6,#1)
+	}
+	{
+		v10 = vlalign(v0,v14,#1)
+	}
+	{
+		v13:12.h = vdmpy(v3:2.ub,r9.b)
+		v11 = valign(v0,v0,#1)
+	}
+	{
+		v4 = vlalign(v5,v7,#1)
+		v2 = v11
+	}
+	{
+		v29:28.h = vdmpy(v11:10.ub,r9.b)
+		v5 = valign(v5,v5,#1)
+	}
+	{
+		v13:12.h += vdmpy(v11:10.ub,r6.b)
+		v0 = vlalign(v1,v8,#1)
+		v10 = v5
+	}
+	{
+		v13:12.h += vmpa(v3:2.ub,r8.b)
+		v1 = valign(v1,v1,#1)
+	}
+	{
+		v29:28.h += vdmpy(v5:4.ub,r6.b)
+	}
+	{
+		v29:28.h += vmpa(v11:10.ub,r8.b)
+	}
+	{
+		v13:12.h += vdmpy(v5:4.ub,r7.b)
+	}
+	{
+		v29:28.h += vdmpy(v1:0.ub,r7.b)
+	}
+	{
+		v13:12.h += vmpy(v5.ub,r3.b)
+	}
+	{
+		v29:28.h += vmpy(v1.ub,r3.b)
+	}
+	{
+		v30.ub = vasr(v13.h,v12.h,r4):sat
+		vmem(r5+#0) = v30.new
+	}
+	{
+		v31.ub = vasr(v29.h,v28.h,r4):sat
+		vmem(r12+#0) = v31.new
+	}
+	{
+		jumpr r31
+	}
+.Lfunc_end0:
+	.size	f0, .Lfunc_end0-f0
+                                        // -- End function
+	.section	".note.GNU-stack","",@progbits

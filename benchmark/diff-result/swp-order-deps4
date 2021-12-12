@@ -1,0 +1,18 @@
+SU(3):   %5:intregs = S2_storeri_pi %0:intregs(tied-def 0), 4 |	SU(3):   %5:intregs = S2_storeri_pi %0:intregs(tied-def 0), 4
+SU(4):   S2_storeri_io %1:intregs, 0, %9:intregs :: (store 4  |	SU(4):   S2_storeri_io %1:intregs, 0, %9:intregs :: (store (s
+  %5:intregs = S2_storeri_pi %0:intregs(tied-def 0), 4, %9:in |	  %5:intregs = S2_storeri_pi %0:intregs(tied-def 0), 4, %9:in
+  S2_storeri_io %1:intregs, 0, %9:intregs :: (store 4 into %i |	  S2_storeri_io %1:intregs, 0, %9:intregs :: (store (s32) int
+SU(3):   %5:intregs = S2_storeri_pi %0:intregs(tied-def 0), 4 |	SU(3):   %5:intregs = S2_storeri_pi %0:intregs(tied-def 0), 4
+SU(4):   S2_storeri_io %1:intregs, 0, %9:intregs :: (store 4  |	SU(4):   S2_storeri_io %1:intregs, 0, %9:intregs :: (store (s
+   SU(3) %5:intregs = S2_storeri_pi %0:intregs(tied-def 0), 4 |	   SU(3) %5:intregs = S2_storeri_pi %0:intregs(tied-def 0), 4
+   SU(3) %5:intregs = S2_storeri_pi %0:intregs(tied-def 0), 4 |	   SU(3) %5:intregs = S2_storeri_pi %0:intregs(tied-def 0), 4
+   SU(4) S2_storeri_io %1:intregs, 0, %9:intregs :: (store 4  |	   SU(4) S2_storeri_io %1:intregs, 0, %9:intregs :: (store (s
+Inst (3)   %5:intregs = S2_storeri_pi %0:intregs(tied-def 0), |	Inst (3)   %5:intregs = S2_storeri_pi %0:intregs(tied-def 0),
+	insert at cycle 0   %5:intregs = S2_storeri_pi %0:int |		insert at cycle 0   %5:intregs = S2_storeri_pi %0:int
+Inst (4)   S2_storeri_io %1:intregs, 0, %9:intregs :: (store  |	Inst (4)   S2_storeri_io %1:intregs, 0, %9:intregs :: (store 
+	insert at cycle 1   S2_storeri_io %1:intregs, 0, %9:i |		insert at cycle 1   S2_storeri_io %1:intregs, 0, %9:i
+Schedule Found? 1 (II=2)				      |	Schedule Found? 1 (II=1)
+cycle 0 (1) (4) S2_storeri_io %1:intregs, 0, %9:intregs :: (s |	cycle 0 (1) (4) S2_storeri_io %1:intregs, 0, %9:intregs :: (s
+cycle 0 (0) (3) %5:intregs = S2_storeri_pi %0:intregs(tied-de |	cycle 0 (0) (3) %5:intregs = S2_storeri_pi %0:intregs(tied-de
+[stage 1 @0c] S2_storeri_io %1:intregs, 0, %9:intregs :: (sto |	[stage 1 @0c] S2_storeri_io %1:intregs, 0, %9:intregs :: (sto
+[stage 0 @0c] %5:intregs = S2_storeri_pi %0:intregs(tied-def  |	[stage 0 @0c] %5:intregs = S2_storeri_pi %0:intregs(tied-def 

@@ -1,0 +1,385 @@
+SU(0):   %3:intregs = PHI %1:intregs, %bb.1, %6:intregs, %bb.2
+  # preds left       : 0
+  # succs left       : 4
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 7
+  Successors:
+    SU(8): Data Latency=0 Reg=%3
+    SU(3): Data Latency=0 Reg=%3
+    SU(2): Data Latency=0 Reg=%3
+    SU(2): Anti Latency=1
+SU(1):   %5:intregs = PHI %2:intregs, %bb.1, %7:intregs, %bb.2
+  # preds left       : 0
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 8
+  Successors:
+    SU(7): Data Latency=0 Reg=%5
+    SU(3): Anti Latency=1
+SU(2):   %6:intregs = A2_addi %3:intregs, -4
+  # preds left       : 2
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 0
+  Predecessors:
+    SU(0): Data Latency=0 Reg=%3
+    SU(0): Anti Latency=1
+SU(3):   %7:intregs = L2_loadri_io %3:intregs, -4 :: (load 4 from %ir.cgep3, !tbaa !0)
+  # preds left       : 2
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 7
+  Predecessors:
+    SU(0): Data Latency=0 Reg=%3
+    SU(1): Anti Latency=1
+  Successors:
+    SU(4): Data Latency=3 Reg=%7
+    SU(8): Ord  Latency=1 Barrier
+SU(4):   %14:doubleregs = M2_dpmpyss_s0 %7:intregs, %13:intregs
+  # preds left       : 1
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 4
+  Height             : 4
+  Predecessors:
+    SU(3): Data Latency=3 Reg=%7
+  Successors:
+    SU(5): Data Latency=2 Reg=%14
+SU(5):   %16:doubleregs = S2_asl_r_p %14:doubleregs, %15:intregs
+  # preds left       : 1
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 6
+  Height             : 2
+  Predecessors:
+    SU(4): Data Latency=2 Reg=%14
+  Successors:
+    SU(6): Data Latency=1 Reg=%16
+SU(6):   %17:intregs = A2_sat %16:doubleregs, implicit-def dead $usr_ovf
+  # preds left       : 1
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 7
+  Height             : 1
+  Predecessors:
+    SU(5): Data Latency=1 Reg=%16
+  Successors:
+    SU(7): Data Latency=1 Reg=%17
+SU(7):   %18:intregs = A2_subsat %5:intregs, %17:intregs, implicit-def dead $usr_ovf
+  # preds left       : 2
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 8
+  Height             : 0
+  Predecessors:
+    SU(6): Data Latency=1 Reg=%17
+    SU(1): Data Latency=0 Reg=%5
+  Successors:
+    SU(8): Data Latency=0 Reg=%18
+SU(8):   S2_storeri_io %3:intregs, 0, %18:intregs :: (store 4 into %ir.lsr.iv, !tbaa !0)
+  # preds left       : 3
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 8
+  Height             : 0
+  Predecessors:
+    SU(7): Data Latency=0 Reg=%18
+    SU(0): Data Latency=0 Reg=%3
+    SU(3): Ord  Latency=1 Barrier
+ExitSU:   ENDLOOP0 %bb.2, implicit-def $pc, implicit-def $lc0, implicit $sa0, implicit $lc0
+  # preds left       : 0
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 0
+calculateResMII:
+Trying to reserve resource for 1 cycles for 
+  %7:intregs = L2_loadri_io %3:intregs, -4 :: (load 4 from %ir.cgep3, !tbaa !0)
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %14:doubleregs = M2_dpmpyss_s0 %7:intregs, %13:intregs
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  S2_storeri_io %3:intregs, 0, %18:intregs :: (store 4 into %ir.lsr.iv, !tbaa !0)
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %16:doubleregs = S2_asl_r_p %14:doubleregs, %15:intregs
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %17:intregs = A2_sat %16:doubleregs, implicit-def dead $usr_ovf
+ReservedCycles:0, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %6:intregs = A2_addi %3:intregs, -4
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %18:intregs = A2_subsat %5:intregs, %17:intregs, implicit-def dead $usr_ovf
+ReservedCycles:1, NumCycles:1
+Return Res MII:2
+MII = 8 MAX_II = 18 (rec=8, res=2)
+SU(0):   %3:intregs = PHI %1:intregs, %bb.1, %6:intregs, %bb.2
+SU(2):   %6:intregs = A2_addi %3:intregs, -4
+SU(1):   %5:intregs = PHI %2:intregs, %bb.1, %7:intregs, %bb.2
+SU(3):   %7:intregs = L2_loadri_io %3:intregs, -4 :: (load 4 from %ir.cgep3, !tbaa !0)
+SU(4):   %14:doubleregs = M2_dpmpyss_s0 %7:intregs, %13:intregs
+SU(5):   %16:doubleregs = S2_asl_r_p %14:doubleregs, %15:intregs
+SU(6):   %17:intregs = A2_sat %16:doubleregs, implicit-def dead $usr_ovf
+SU(7):   %18:intregs = A2_subsat %5:intregs, %17:intregs, implicit-def dead $usr_ovf
+SU(8):   S2_storeri_io %3:intregs, 0, %18:intregs :: (store 4 into %ir.lsr.iv, !tbaa !0)
+	Node 0:
+	   ASAP = 0
+	   ALAP = 0
+	   MOV  = 0
+	   D    = 0
+	   H    = 7
+	   ZLD  = 0
+	   ZLH  = 1
+	Node 1:
+	   ASAP = 0
+	   ALAP = 7
+	   MOV  = 7
+	   D    = 0
+	   H    = 8
+	   ZLD  = 0
+	   ZLH  = 2
+	Node 2:
+	   ASAP = 0
+	   ALAP = 7
+	   MOV  = 7
+	   D    = 1
+	   H    = 0
+	   ZLD  = 1
+	   ZLH  = 0
+	Node 3:
+	   ASAP = 0
+	   ALAP = 0
+	   MOV  = 0
+	   D    = 1
+	   H    = 7
+	   ZLD  = 1
+	   ZLH  = 0
+	Node 4:
+	   ASAP = 3
+	   ALAP = 3
+	   MOV  = 0
+	   D    = 4
+	   H    = 4
+	   ZLD  = 0
+	   ZLH  = 0
+	Node 5:
+	   ASAP = 5
+	   ALAP = 5
+	   MOV  = 0
+	   D    = 6
+	   H    = 2
+	   ZLD  = 0
+	   ZLH  = 0
+	Node 6:
+	   ASAP = 6
+	   ALAP = 6
+	   MOV  = 0
+	   D    = 7
+	   H    = 1
+	   ZLD  = 0
+	   ZLH  = 0
+	Node 7:
+	   ASAP = 7
+	   ALAP = 7
+	   MOV  = 0
+	   D    = 8
+	   H    = 0
+	   ZLD  = 1
+	   ZLH  = 1
+	Node 8:
+	   ASAP = 7
+	   ALAP = 7
+	   MOV  = 0
+	   D    = 8
+	   H    = 0
+	   ZLD  = 2
+	   ZLH  = 0
+  Rec NodeSet Num nodes 2 rec 1 mov 7 depth 1 col 0
+   SU(0) %3:intregs = PHI %1:intregs, %bb.1, %6:intregs, %bb.2
+   SU(2) %6:intregs = A2_addi %3:intregs, -4
+
+  Rec NodeSet Num nodes 6 rec 8 mov 0 depth 8 col 0
+   SU(3) %7:intregs = L2_loadri_io %3:intregs, -4 :: (load 4 from %ir.cgep3, !tbaa !0)
+   SU(4) %14:doubleregs = M2_dpmpyss_s0 %7:intregs, %13:intregs
+   SU(5) %16:doubleregs = S2_asl_r_p %14:doubleregs, %15:intregs
+   SU(6) %17:intregs = A2_sat %16:doubleregs, implicit-def dead $usr_ovf
+   SU(7) %18:intregs = A2_subsat %5:intregs, %17:intregs, implicit-def dead $usr_ovf
+   SU(8) S2_storeri_io %3:intregs, 0, %18:intregs :: (store 4 into %ir.lsr.iv, !tbaa !0)
+
+  NodeSet Num nodes 6 rec 8 mov 0 depth 8 col 0
+   SU(3) %7:intregs = L2_loadri_io %3:intregs, -4 :: (load 4 from %ir.cgep3, !tbaa !0)
+   SU(4) %14:doubleregs = M2_dpmpyss_s0 %7:intregs, %13:intregs
+   SU(5) %16:doubleregs = S2_asl_r_p %14:doubleregs, %15:intregs
+   SU(6) %17:intregs = A2_sat %16:doubleregs, implicit-def dead $usr_ovf
+   SU(7) %18:intregs = A2_subsat %5:intregs, %17:intregs, implicit-def dead $usr_ovf
+   SU(8) S2_storeri_io %3:intregs, 0, %18:intregs :: (store 4 into %ir.lsr.iv, !tbaa !0)
+
+  NodeSet Num nodes 2 rec 1 mov 7 depth 1 col 0
+   SU(0) %3:intregs = PHI %1:intregs, %bb.1, %6:intregs, %bb.2
+   SU(2) %6:intregs = A2_addi %3:intregs, -4
+
+  NodeSet Num nodes 1 rec 0 mov 0 depth 0 col 0
+   SU(1) %5:intregs = PHI %2:intregs, %bb.1, %7:intregs, %bb.2
+
+NodeSet size 6
+  Bottom up (default) 8 7 6 5 4 3 
+   Switching order to top down 
+Done with Nodeset
+NodeSet size 2
+  Bottom up (default) 2 0 
+   Switching order to top down 
+Done with Nodeset
+NodeSet size 1
+  Bottom up (preds) 1 
+   Switching order to top down 
+Done with Nodeset
+Node order:  8  7  6  5  4  3  2  0  1 
+Try to schedule with 8
+
+Inst (8)   S2_storeri_io %3:intregs, 0, %18:intregs :: (store 4 into %ir.lsr.iv, !tbaa !0)
+
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 7 and 14 II: 8
+	insert at cycle 7   S2_storeri_io %3:intregs, 0, %18:intregs :: (store 4 into %ir.lsr.iv, !tbaa !0)
+
+Inst (7)   %18:intregs = A2_subsat %5:intregs, %17:intregs, implicit-def dead $usr_ovf
+
+	es: 80000000 ls:        7 me: 7fffffff ms: 80000000
+Trying to insert node between 7 and 0 II: 8
+	insert at cycle 7   %18:intregs = A2_subsat %5:intregs, %17:intregs, implicit-def dead $usr_ovf
+
+Inst (6)   %17:intregs = A2_sat %16:doubleregs, implicit-def dead $usr_ovf
+
+	es: 80000000 ls:        6 me: 7fffffff ms: 80000000
+Trying to insert node between 6 and -1 II: 8
+	insert at cycle 6   %17:intregs = A2_sat %16:doubleregs, implicit-def dead $usr_ovf
+
+Inst (5)   %16:doubleregs = S2_asl_r_p %14:doubleregs, %15:intregs
+
+	es: 80000000 ls:        5 me: 7fffffff ms: 80000000
+Trying to insert node between 5 and -2 II: 8
+	insert at cycle 5   %16:doubleregs = S2_asl_r_p %14:doubleregs, %15:intregs
+
+Inst (4)   %14:doubleregs = M2_dpmpyss_s0 %7:intregs, %13:intregs
+
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -4 II: 8
+	insert at cycle 3   %14:doubleregs = M2_dpmpyss_s0 %7:intregs, %13:intregs
+
+Inst (3)   %7:intregs = L2_loadri_io %3:intregs, -4 :: (load 4 from %ir.cgep3, !tbaa !0)
+
+	es: 80000000 ls:        0 me: 7fffffff ms:        0
+Trying to insert node between 0 and 0 II: 8
+	insert at cycle 0   %7:intregs = L2_loadri_io %3:intregs, -4 :: (load 4 from %ir.cgep3, !tbaa !0)
+
+Inst (2)   %6:intregs = A2_addi %3:intregs, -4
+
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 0 and 7 II: 8
+	insert at cycle 0   %6:intregs = A2_addi %3:intregs, -4
+
+Inst (0)   %3:intregs = PHI %1:intregs, %bb.1, %6:intregs, %bb.2
+
+	es: fffffff9 ls:        0 me: 7fffffff ms: 80000000
+Trying to insert node between 0 and -7 II: 8
+	insert at cycle 0   %3:intregs = PHI %1:intregs, %bb.1, %6:intregs, %bb.2
+
+Inst (1)   %5:intregs = PHI %2:intregs, %bb.1, %7:intregs, %bb.2
+
+	es: fffffff9 ls:        7 me: 7fffffff ms: 80000000
+Trying to insert node between 0 and -7 II: 8
+	insert at cycle 0   %5:intregs = PHI %2:intregs, %bb.1, %7:intregs, %bb.2
+Schedule Found? 1 (II=9)
+cycle 0 (0) (0) %3:intregs = PHI %1:intregs, %bb.1, %6:intregs, %bb.2
+
+cycle 0 (0) (1) %5:intregs = PHI %2:intregs, %bb.1, %7:intregs, %bb.2
+
+cycle 0 (0) (3) %7:intregs = L2_loadri_io %3:intregs, -4 :: (load 4 from %ir.cgep3, !tbaa !0)
+
+cycle 0 (0) (2) %6:intregs = A2_addi %3:intregs, -4
+
+cycle 3 (0) (4) %14:doubleregs = M2_dpmpyss_s0 %7:intregs, %13:intregs
+
+cycle 5 (0) (5) %16:doubleregs = S2_asl_r_p %14:doubleregs, %15:intregs
+
+cycle 6 (0) (6) %17:intregs = A2_sat %16:doubleregs, implicit-def dead $usr_ovf
+
+cycle 7 (0) (7) %18:intregs = A2_subsat %5:intregs, %17:intregs, implicit-def dead $usr_ovf
+
+cycle 7 (0) (8) S2_storeri_io %3:intregs, 0, %18:intregs :: (store 4 into %ir.lsr.iv, !tbaa !0)
+
+No schedule found, return
+	.text
+	.file	"<stdin>"
+	.globl	f0                              // -- Begin function f0
+	.p2align	4
+	.type	f0,@function
+f0:                                     // @f0
+// %bb.0:                               // %b0
+	{
+		r4 = add(r1,#-1)
+	}
+	{
+		p0 = cmp.gt(r4,#0)
+		if (!p0.new) jumpr:nt r31
+	}
+.LBB0_1:                                // %b1
+	{
+		r1 = addasl(r0,r4,#2)
+		r0 = #7946
+		r2 = #-13
+		r3 = memw(r0+r4<<#2)
+	}
+	{
+		loop0(.LBB0_2,r4)
+	}
+	.p2align	4
+.Ltmp0:                                 // Block address taken
+.LBB0_2:                                // %b2
+                                        // =>This Inner Loop Header: Depth=1
+	{
+		r4 = memw(r1+#-4)
+	}
+	{
+		r7:6 = mpy(r4,r0)
+	}
+	{
+		r7:6 = asl(r7:6,r2)
+	}
+	{
+		r5 = sat(r7:6)
+	}
+	{
+		r3 = sub(r3,r5):sat
+		r1 = add(r1,#-4)
+		memw(r1+#0) = r3.new
+	}
+	{
+		r3 = r4
+		nop
+	} :endloop0
+// %bb.3:                               // %b4
+	{
+		jumpr r31
+	}
+.Lfunc_end0:
+	.size	f0, .Lfunc_end0-f0
+                                        // -- End function
+	.section	".note.GNU-stack","",@progbits

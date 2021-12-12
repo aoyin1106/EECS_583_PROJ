@@ -1,0 +1,21 @@
+SU(1):   %9:doubleregs = L2_loadrd_io %1:intregs, 0 :: (load  |	SU(1):   %9:doubleregs = L2_loadrd_io %1:intregs, 0 :: (load 
+SU(3):   %3:intregs = S2_storerd_pi %1:intregs(tied-def 0), 8 |	SU(3):   %3:intregs = S2_storerd_pi %1:intregs(tied-def 0), 8
+  %9:doubleregs = L2_loadrd_io %1:intregs, 0 :: (load 8 from  |	  %9:doubleregs = L2_loadrd_io %1:intregs, 0 :: (load (s64) f
+  %3:intregs = S2_storerd_pi %1:intregs(tied-def 0), 8, %10:d |	  %3:intregs = S2_storerd_pi %1:intregs(tied-def 0), 8, %10:d
+SU(1):   %9:doubleregs = L2_loadrd_io %1:intregs, 0 :: (load  |	SU(1):   %9:doubleregs = L2_loadrd_io %1:intregs, 0 :: (load 
+SU(3):   %3:intregs = S2_storerd_pi %1:intregs(tied-def 0), 8 |	SU(3):   %3:intregs = S2_storerd_pi %1:intregs(tied-def 0), 8
+   SU(3) %3:intregs = S2_storerd_pi %1:intregs(tied-def 0), 8 |	   SU(3) %3:intregs = S2_storerd_pi %1:intregs(tied-def 0), 8
+   SU(3) %3:intregs = S2_storerd_pi %1:intregs(tied-def 0), 8 |	   SU(3) %3:intregs = S2_storerd_pi %1:intregs(tied-def 0), 8
+   SU(1) %9:doubleregs = L2_loadrd_io %1:intregs, 0 :: (load  |	   SU(1) %9:doubleregs = L2_loadrd_io %1:intregs, 0 :: (load 
+Inst (3)   %3:intregs = S2_storerd_pi %1:intregs(tied-def 0), |	Inst (3)   %3:intregs = S2_storerd_pi %1:intregs(tied-def 0),
+	insert at cycle 3   %3:intregs = S2_storerd_pi %1:int |		insert at cycle 3   %3:intregs = S2_storerd_pi %1:int
+Inst (1)   %9:doubleregs = L2_loadrd_io %1:intregs, 0 :: (loa |	Inst (1)   %9:doubleregs = L2_loadrd_io %1:intregs, 0 :: (loa
+	insert at cycle 0   %9:doubleregs = L2_loadrd_io %1:i |		insert at cycle 0   %9:doubleregs = L2_loadrd_io %1:i
+Schedule Found? 1 (II=2)				      |	Schedule Found? 1 (II=1)
+cycle 0 (3) (3) %3:intregs = S2_storerd_pi %1:intregs(tied-de |	cycle 0 (3) (3) %3:intregs = S2_storerd_pi %1:intregs(tied-de
+cycle 0 (0) (1) %9 = UNKNOWN %3, 16 :: (load 8 from %ir.array |	cycle 0 (0) (1) %9 = UNKNOWN %3, 16 :: (load (s64) from %ir.a
+  %14:doubleregs = L2_loadrd_io %4:intregs, 0 :: (load 8 from |	  %14:doubleregs = L2_loadrd_io %4:intregs, 0 :: (load (s64) 
+  %15:doubleregs = L2_loadrd_io %4:intregs, 8 :: (load 8 from |	  %15:doubleregs = L2_loadrd_io %4:intregs, 8 :: (load (s64) 
+  %17:doubleregs = L2_loadrd_io %4:intregs, 16 :: (load 8 fro |	  %17:doubleregs = L2_loadrd_io %4:intregs, 16 :: (load (s64)
+  %18:intregs = S2_storerd_pi %21:intregs(tied-def 0), 8, %24 |	  %18:intregs = S2_storerd_pi %21:intregs(tied-def 0), 8, %24
+  %20:doubleregs = L2_loadrd_io %18:intregs, 16 :: (load 8 fr |	  %20:doubleregs = L2_loadrd_io %18:intregs, 16 :: (load (s64

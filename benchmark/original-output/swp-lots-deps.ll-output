@@ -1,0 +1,496 @@
+SU(0):   %1:doubleregs = PHI %17:doubleregs, %bb.3, %10:doubleregs, %bb.1
+  # preds left       : 0
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 1
+  Successors:
+    SU(10): Data Latency=0 Reg=%1
+    SU(10): Anti Latency=1
+SU(1):   %2:doubleregs = PHI %17:doubleregs, %bb.3, %8:doubleregs, %bb.1
+  # preds left       : 0
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 1
+  Successors:
+    SU(8): Data Latency=0 Reg=%2
+    SU(8): Anti Latency=1
+SU(2):   %3:intregs = PHI %16:intregs, %bb.3, %7:intregs, %bb.1
+  # preds left       : 0
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 5
+  Successors:
+    SU(6): Data Latency=0 Reg=%3
+    SU(7): Anti Latency=1
+SU(3):   %4:doubleregs = PHI %17:doubleregs, %bb.3, %6:doubleregs, %bb.1
+  # preds left       : 0
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 1
+  Successors:
+    SU(5): Data Latency=0 Reg=%4
+    SU(5): Anti Latency=1
+SU(4):   %5:doubleregs = PHI %17:doubleregs, %bb.3, %9:doubleregs, %bb.1
+  # preds left       : 0
+  # succs left       : 4
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 3
+  Successors:
+    SU(10): Data Latency=0 Reg=%5
+    SU(8): Data Latency=0 Reg=%5
+    SU(5): Data Latency=0 Reg=%5
+    SU(9): Anti Latency=1
+SU(5):   %6:doubleregs = M2_vdmacs_s0 %4:doubleregs(tied-def 0), %5:doubleregs, %5:doubleregs, implicit-def dead $usr_ovf
+  # preds left       : 3
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 0
+  Predecessors:
+    SU(4): Data Latency=0 Reg=%5
+    SU(3): Data Latency=0 Reg=%4
+    SU(3): Anti Latency=1
+SU(6):   %19:doubleregs = S2_packhl %20:intregs, %3:intregs
+  # preds left       : 1
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 0
+  Height             : 2
+  Predecessors:
+    SU(2): Data Latency=0 Reg=%3
+  Successors:
+    SU(8): Data Latency=2 Reg=%19
+SU(7):   %7:intregs = L2_loadri_io %15:intregs, 0 :: (load 4 from %ir.a1, !tbaa !0)
+  # preds left       : 1
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 4
+  Predecessors:
+    SU(2): Anti Latency=1
+  Successors:
+    SU(9): Data Latency=2 Reg=%7
+SU(8):   %8:doubleregs = M2_vdmacs_s0 %2:doubleregs(tied-def 0), %5:doubleregs, %19:doubleregs, implicit-def dead $usr_ovf
+  # preds left       : 4
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 2
+  Height             : 0
+  Predecessors:
+    SU(6): Data Latency=2 Reg=%19
+    SU(4): Data Latency=0 Reg=%5
+    SU(1): Data Latency=0 Reg=%2
+    SU(1): Anti Latency=1
+SU(9):   %9:doubleregs = S2_packhl %7:intregs, %21:intregs
+  # preds left       : 2
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 3
+  Height             : 2
+  Predecessors:
+    SU(7): Data Latency=2 Reg=%7
+    SU(4): Anti Latency=1
+  Successors:
+    SU(10): Data Latency=2 Reg=%9
+SU(10):   %10:doubleregs = M2_vdmacs_s0 %1:doubleregs(tied-def 0), %5:doubleregs, %9:doubleregs, implicit-def dead $usr_ovf
+  # preds left       : 4
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 5
+  Height             : 0
+  Predecessors:
+    SU(9): Data Latency=2 Reg=%9
+    SU(4): Data Latency=0 Reg=%5
+    SU(0): Data Latency=0 Reg=%1
+    SU(0): Anti Latency=1
+ExitSU:   ENDLOOP0 %bb.1, implicit-def $pc, implicit-def $lc0, implicit $sa0, implicit $lc0
+  # preds left       : 0
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 0
+calculateResMII:
+Trying to reserve resource for 1 cycles for 
+  %6:doubleregs = M2_vdmacs_s0 %4:doubleregs(tied-def 0), %5:doubleregs, %5:doubleregs, implicit-def dead $usr_ovf
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %7:intregs = L2_loadri_io %15:intregs, 0 :: (load 4 from %ir.a1, !tbaa !0)
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %10:doubleregs = M2_vdmacs_s0 %1:doubleregs(tied-def 0), %5:doubleregs, %9:doubleregs, implicit-def dead $usr_ovf
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %8:doubleregs = M2_vdmacs_s0 %2:doubleregs(tied-def 0), %5:doubleregs, %19:doubleregs, implicit-def dead $usr_ovf
+ReservedCycles:0, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %19:doubleregs = S2_packhl %20:intregs, %3:intregs
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %9:doubleregs = S2_packhl %7:intregs, %21:intregs
+ReservedCycles:1, NumCycles:1
+Return Res MII:2
+MII = 2 MAX_II = 12 (rec=1, res=2)
+SU(4):   %5:doubleregs = PHI %17:doubleregs, %bb.3, %9:doubleregs, %bb.1
+SU(3):   %4:doubleregs = PHI %17:doubleregs, %bb.3, %6:doubleregs, %bb.1
+SU(5):   %6:doubleregs = M2_vdmacs_s0 %4:doubleregs(tied-def 0), %5:doubleregs, %5:doubleregs, implicit-def dead $usr_ovf
+SU(2):   %3:intregs = PHI %16:intregs, %bb.3, %7:intregs, %bb.1
+SU(6):   %19:doubleregs = S2_packhl %20:intregs, %3:intregs
+SU(1):   %2:doubleregs = PHI %17:doubleregs, %bb.3, %8:doubleregs, %bb.1
+SU(8):   %8:doubleregs = M2_vdmacs_s0 %2:doubleregs(tied-def 0), %5:doubleregs, %19:doubleregs, implicit-def dead $usr_ovf
+SU(7):   %7:intregs = L2_loadri_io %15:intregs, 0 :: (load 4 from %ir.a1, !tbaa !0)
+SU(9):   %9:doubleregs = S2_packhl %7:intregs, %21:intregs
+SU(0):   %1:doubleregs = PHI %17:doubleregs, %bb.3, %10:doubleregs, %bb.1
+SU(10):   %10:doubleregs = M2_vdmacs_s0 %1:doubleregs(tied-def 0), %5:doubleregs, %9:doubleregs, implicit-def dead $usr_ovf
+	Node 0:
+	   ASAP = 0
+	   ALAP = 4
+	   MOV  = 4
+	   D    = 0
+	   H    = 1
+	   ZLD  = 0
+	   ZLH  = 1
+	Node 1:
+	   ASAP = 0
+	   ALAP = 4
+	   MOV  = 4
+	   D    = 0
+	   H    = 1
+	   ZLD  = 0
+	   ZLH  = 1
+	Node 2:
+	   ASAP = 0
+	   ALAP = 2
+	   MOV  = 2
+	   D    = 0
+	   H    = 5
+	   ZLD  = 0
+	   ZLH  = 1
+	Node 3:
+	   ASAP = 0
+	   ALAP = 4
+	   MOV  = 4
+	   D    = 0
+	   H    = 1
+	   ZLD  = 0
+	   ZLH  = 1
+	Node 4:
+	   ASAP = 0
+	   ALAP = 4
+	   MOV  = 4
+	   D    = 0
+	   H    = 3
+	   ZLD  = 0
+	   ZLH  = 1
+	Node 5:
+	   ASAP = 0
+	   ALAP = 4
+	   MOV  = 4
+	   D    = 1
+	   H    = 0
+	   ZLD  = 1
+	   ZLH  = 0
+	Node 6:
+	   ASAP = 0
+	   ALAP = 2
+	   MOV  = 2
+	   D    = 0
+	   H    = 2
+	   ZLD  = 1
+	   ZLH  = 0
+	Node 7:
+	   ASAP = 0
+	   ALAP = 0
+	   MOV  = 0
+	   D    = 1
+	   H    = 4
+	   ZLD  = 0
+	   ZLH  = 0
+	Node 8:
+	   ASAP = 2
+	   ALAP = 4
+	   MOV  = 2
+	   D    = 2
+	   H    = 0
+	   ZLD  = 1
+	   ZLH  = 0
+	Node 9:
+	   ASAP = 2
+	   ALAP = 2
+	   MOV  = 0
+	   D    = 3
+	   H    = 2
+	   ZLD  = 0
+	   ZLH  = 0
+	Node 10:
+	   ASAP = 4
+	   ALAP = 4
+	   MOV  = 0
+	   D    = 5
+	   H    = 0
+	   ZLD  = 1
+	   ZLH  = 0
+  Rec NodeSet Num nodes 2 rec 1 mov 4 depth 5 col 0
+   SU(0) %1:doubleregs = PHI %17:doubleregs, %bb.3, %10:doubleregs, %bb.1
+   SU(10) %10:doubleregs = M2_vdmacs_s0 %1:doubleregs(tied-def 0), %5:doubleregs, %9:doubleregs, implicit-def dead $usr_ovf
+
+  Rec NodeSet Num nodes 2 rec 1 mov 4 depth 2 col 0
+   SU(1) %2:doubleregs = PHI %17:doubleregs, %bb.3, %8:doubleregs, %bb.1
+   SU(8) %8:doubleregs = M2_vdmacs_s0 %2:doubleregs(tied-def 0), %5:doubleregs, %19:doubleregs, implicit-def dead $usr_ovf
+
+  Rec NodeSet Num nodes 2 rec 1 mov 4 depth 1 col 0
+   SU(3) %4:doubleregs = PHI %17:doubleregs, %bb.3, %6:doubleregs, %bb.1
+   SU(5) %6:doubleregs = M2_vdmacs_s0 %4:doubleregs(tied-def 0), %5:doubleregs, %5:doubleregs, implicit-def dead $usr_ovf
+
+  NodeSet Num nodes 2 rec 1 mov 4 depth 5 col 0
+   SU(0) %1:doubleregs = PHI %17:doubleregs, %bb.3, %10:doubleregs, %bb.1
+   SU(10) %10:doubleregs = M2_vdmacs_s0 %1:doubleregs(tied-def 0), %5:doubleregs, %9:doubleregs, implicit-def dead $usr_ovf
+
+  NodeSet Num nodes 2 rec 1 mov 4 depth 2 col 0
+   SU(1) %2:doubleregs = PHI %17:doubleregs, %bb.3, %8:doubleregs, %bb.1
+   SU(8) %8:doubleregs = M2_vdmacs_s0 %2:doubleregs(tied-def 0), %5:doubleregs, %19:doubleregs, implicit-def dead $usr_ovf
+
+  NodeSet Num nodes 2 rec 1 mov 4 depth 1 col 0
+   SU(3) %4:doubleregs = PHI %17:doubleregs, %bb.3, %6:doubleregs, %bb.1
+   SU(5) %6:doubleregs = M2_vdmacs_s0 %4:doubleregs(tied-def 0), %5:doubleregs, %5:doubleregs, implicit-def dead $usr_ovf
+
+  NodeSet Num nodes 5 rec 0 mov 0 depth 0 col 0
+   SU(9) %9:doubleregs = S2_packhl %7:intregs, %21:intregs
+   SU(7) %7:intregs = L2_loadri_io %15:intregs, 0 :: (load 4 from %ir.a1, !tbaa !0)
+   SU(2) %3:intregs = PHI %16:intregs, %bb.3, %7:intregs, %bb.1
+   SU(6) %19:doubleregs = S2_packhl %20:intregs, %3:intregs
+   SU(4) %5:doubleregs = PHI %17:doubleregs, %bb.3, %9:doubleregs, %bb.1
+
+NodeSet size 2
+  Bottom up (default) 10 0 
+   Switching order to top down 
+Done with Nodeset
+NodeSet size 2
+  Bottom up (default) 8 1 
+   Switching order to top down 
+Done with Nodeset
+NodeSet size 2
+  Bottom up (default) 5 3 
+   Switching order to top down 
+Done with Nodeset
+NodeSet size 5
+  Bottom up (preds) 9 7 6 2 4 
+   Switching order to top down 
+Done with Nodeset
+Node order:  10  0  8  1  5  3  9  7  6  2  4 
+Try to schedule with 2
+
+Inst (10)   %10:doubleregs = M2_vdmacs_s0 %1:doubleregs(tied-def 0), %5:doubleregs, %9:doubleregs, implicit-def dead $usr_ovf
+
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 4 and 5 II: 2
+	insert at cycle 4   %10:doubleregs = M2_vdmacs_s0 %1:doubleregs(tied-def 0), %5:doubleregs, %9:doubleregs, implicit-def dead $usr_ovf
+
+Inst (0)   %1:doubleregs = PHI %17:doubleregs, %bb.3, %10:doubleregs, %bb.1
+
+	es:        3 ls:        4 me: 7fffffff ms: 80000000
+Trying to insert node between 4 and 3 II: 2
+	insert at cycle 4   %1:doubleregs = PHI %17:doubleregs, %bb.3, %10:doubleregs, %bb.1
+
+Inst (8)   %8:doubleregs = M2_vdmacs_s0 %2:doubleregs(tied-def 0), %5:doubleregs, %19:doubleregs, implicit-def dead $usr_ovf
+
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 2 and 3 II: 2
+	insert at cycle 2   %8:doubleregs = M2_vdmacs_s0 %2:doubleregs(tied-def 0), %5:doubleregs, %19:doubleregs, implicit-def dead $usr_ovf
+
+Inst (1)   %2:doubleregs = PHI %17:doubleregs, %bb.3, %8:doubleregs, %bb.1
+
+	es:        1 ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between 2 and 1 II: 2
+	insert at cycle 2   %2:doubleregs = PHI %17:doubleregs, %bb.3, %8:doubleregs, %bb.1
+
+Inst (5)   %6:doubleregs = M2_vdmacs_s0 %4:doubleregs(tied-def 0), %5:doubleregs, %5:doubleregs, implicit-def dead $usr_ovf
+
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 0 and 1 II: 2
+	failed to insert at cycle 0   %6:doubleregs = M2_vdmacs_s0 %4:doubleregs(tied-def 0), %5:doubleregs, %5:doubleregs, implicit-def dead $usr_ovf
+	insert at cycle 1   %6:doubleregs = M2_vdmacs_s0 %4:doubleregs(tied-def 0), %5:doubleregs, %5:doubleregs, implicit-def dead $usr_ovf
+
+Inst (3)   %4:doubleregs = PHI %17:doubleregs, %bb.3, %6:doubleregs, %bb.1
+
+	es:        0 ls:        1 me: 7fffffff ms: 80000000
+Trying to insert node between 1 and 0 II: 2
+	insert at cycle 1   %4:doubleregs = PHI %17:doubleregs, %bb.3, %6:doubleregs, %bb.1
+
+Inst (9)   %9:doubleregs = S2_packhl %7:intregs, %21:intregs
+
+	es: 80000000 ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between 2 and 1 II: 2
+	insert at cycle 2   %9:doubleregs = S2_packhl %7:intregs, %21:intregs
+
+Inst (7)   %7:intregs = L2_loadri_io %15:intregs, 0 :: (load 4 from %ir.a1, !tbaa !0)
+
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000
+Trying to insert node between 0 and -1 II: 2
+	insert at cycle 0   %7:intregs = L2_loadri_io %15:intregs, 0 :: (load 4 from %ir.a1, !tbaa !0)
+
+Inst (6)   %19:doubleregs = S2_packhl %20:intregs, %3:intregs
+
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000
+Trying to insert node between 0 and -1 II: 2
+	failed to insert at cycle 0   %19:doubleregs = S2_packhl %20:intregs, %3:intregs
+	insert at cycle -1   %19:doubleregs = S2_packhl %20:intregs, %3:intregs
+
+Inst (2)   %3:intregs = PHI %16:intregs, %bb.3, %7:intregs, %bb.1
+
+	es: ffffffff ls: ffffffff me: 7fffffff ms: 80000000
+Trying to insert node between -1 and -1 II: 2
+	insert at cycle -1   %3:intregs = PHI %16:intregs, %bb.3, %7:intregs, %bb.1
+
+Inst (4)   %5:doubleregs = PHI %17:doubleregs, %bb.3, %9:doubleregs, %bb.1
+
+	es:        1 ls:        1 me: 7fffffff ms: 80000000
+Trying to insert node between 1 and 1 II: 2
+	insert at cycle 1   %5:doubleregs = PHI %17:doubleregs, %bb.3, %9:doubleregs, %bb.1
+Schedule Found? 1 (II=3)
+cycle -1 (1) (3) %4:doubleregs = PHI %17:doubleregs, %bb.3, %6:doubleregs, %bb.1
+
+cycle -1 (1) (4) %5:doubleregs = PHI %17:doubleregs, %bb.3, %9:doubleregs, %bb.1
+
+cycle -1 (0) (2) %3:intregs = PHI %16:intregs, %bb.3, %7:intregs, %bb.1
+
+cycle -1 (1) (5) %6:doubleregs = M2_vdmacs_s0 %4:doubleregs(tied-def 0), %5:doubleregs, %5:doubleregs, implicit-def dead $usr_ovf
+
+cycle -1 (0) (6) %19:doubleregs = S2_packhl %20:intregs, %3:intregs
+
+cycle 0 (2) (0) %1:doubleregs = PHI %17:doubleregs, %bb.3, %10:doubleregs, %bb.1
+
+cycle 0 (1) (1) %2:doubleregs = PHI %17:doubleregs, %bb.3, %8:doubleregs, %bb.1
+
+cycle 0 (2) (10) %10:doubleregs = M2_vdmacs_s0 %1:doubleregs(tied-def 0), %5:doubleregs, %9:doubleregs, implicit-def dead $usr_ovf
+
+cycle 0 (1) (8) %8:doubleregs = M2_vdmacs_s0 %2:doubleregs(tied-def 0), %5:doubleregs, %19:doubleregs, implicit-def dead $usr_ovf
+
+cycle 0 (1) (9) %9:doubleregs = S2_packhl %7:intregs, %21:intregs
+
+cycle 0 (0) (7) %7:intregs = L2_loadri_io %15:intregs, 0 :: (load 4 from %ir.a1, !tbaa !0)
+
+[stage 1 @-1c] %4:doubleregs = PHI %17:doubleregs, %bb.3, %6:doubleregs, %bb.1
+[stage 1 @-1c] %5:doubleregs = PHI %17:doubleregs, %bb.3, %9:doubleregs, %bb.1
+[stage 0 @-1c] %3:intregs = PHI %16:intregs, %bb.3, %7:intregs, %bb.1
+[stage 1 @-1c] %6:doubleregs = M2_vdmacs_s0 %4:doubleregs(tied-def 0), %5:doubleregs, %5:doubleregs, implicit-def dead $usr_ovf
+[stage 0 @-1c] %19:doubleregs = S2_packhl %20:intregs, %3:intregs
+[stage 2 @0c] %1:doubleregs = PHI %17:doubleregs, %bb.3, %10:doubleregs, %bb.1
+[stage 1 @0c] %2:doubleregs = PHI %17:doubleregs, %bb.3, %8:doubleregs, %bb.1
+[stage 2 @0c] %10:doubleregs = M2_vdmacs_s0 %1:doubleregs(tied-def 0), %5:doubleregs, %9:doubleregs, implicit-def dead $usr_ovf
+[stage 1 @0c] %8:doubleregs = M2_vdmacs_s0 %2:doubleregs(tied-def 0), %5:doubleregs, %19:doubleregs, implicit-def dead $usr_ovf
+[stage 1 @0c] %9:doubleregs = S2_packhl %7:intregs, %21:intregs
+[stage 0 @0c] %7:intregs = L2_loadri_io %15:intregs, 0 :: (load 4 from %ir.a1, !tbaa !0)
+ -- padding defaults array from 1 to 2
+Dynamic: TC > 2
+Dynamic: TC > 1
+	.text
+	.file	"<stdin>"
+	.globl	f0                              // -- Begin function f0
+	.p2align	4
+	.type	f0,@function
+f0:                                     // @f0
+// %bb.0:                               // %b0
+	{
+		p0 = cmp.gt(r0,##123468)
+		r29 = add(r29,#-8)
+	}
+                                        // implicit-def: $d1
+	{
+		if (p0) jump:nt .LBB0_7
+		memd(r29+#0) = r17:16
+	}                                       // 8-byte Folded Spill
+// %bb.1:
+	{
+		r28 = add(r0,#-2)
+		p0 = cmp.gtu(r0,#1)
+		r13:12 = packhl(r0,r0)
+		r0 = memw(r1+#0)
+	}
+	{
+		if (!p0) jump:nt .LBB0_2
+	}
+// %bb.3:                               // %b2
+	{
+		r3:2 += vdmpy(r1:0,r13:12):sat
+		r5:4 += vdmpy(r1:0,r1:0):sat
+		p0 = cmp.gtu(r0,#2)
+		r15:14 = packhl(r0,r0)
+	}
+                                        // implicit-def: $d3
+                                        // implicit-def: $d8
+	{
+		loop0(.LBB0_4,r28)
+		r9:8 = packhl(r0,r0)
+		r13:12 = combine(r15,r14)
+		r0 = memw(r1+#0)
+	}
+	{
+		if (!p0) jump:nt .LBB0_5
+	}
+	.p2align	4
+.Ltmp0:                                 // Block address taken
+.LBB0_4:                                // %b2
+                                        // =>This Inner Loop Header: Depth=1
+	{
+		r3:2 += vdmpy(r9:8,r15:14):sat
+		r7:6 += vdmpy(r17:16,r9:8):sat
+		r13:12 = packhl(r0,r0)
+		r11:10 = combine(r9,r8)
+	}
+	{
+		r5:4 += vdmpy(r9:8,r9:8):sat
+		r9:8 = packhl(r0,r0)
+		r17:16 = combine(r11,r10)
+		r0 = memw(r1+#0)
+	}
+	{
+		r15:14 = combine(r13,r12)
+		nop
+	} :endloop0
+.LBB0_5:                                // %b2
+	{
+		r7:6 += vdmpy(r11:10,r9:8):sat
+		jump .LBB0_6
+	}
+.LBB0_2:
+                                        // implicit-def: $d3
+                                        // implicit-def: $d4
+                                        // implicit-def: $d2
+                                        // implicit-def: $d1
+.LBB0_6:                                // %b2
+	{
+		r3:2 += vdmpy(r9:8,r13:12):sat
+		r5:4 += vdmpy(r9:8,r9:8):sat
+		r1:0 = packhl(r0,r0)
+	}
+	{
+		r7:6 += vdmpy(r9:8,r1:0):sat
+	}
+.LBB0_7:                                // %b4
+	{
+		r1:0 = add(r3:2,r5:4)
+		r29 = add(r29,#8)
+		r17:16 = memd(r29+#0)
+		jumpr r31
+	}                                       // 8-byte Folded Reload
+.Lfunc_end0:
+	.size	f0, .Lfunc_end0-f0
+                                        // -- End function
+	.section	".note.GNU-stack","",@progbits

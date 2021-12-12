@@ -1,0 +1,129 @@
+SU(3):   %7:intregs = L2_loadri_io %3:intregs, -4 :: (load 4  |	SU(3):   %7:intregs = L2_loadri_io %3:intregs, -4 :: (load (s
+SU(8):   S2_storeri_io %3:intregs, 0, %18:intregs :: (store 4 |	SU(8):   S2_storeri_io %3:intregs, 0, %18:intregs :: (store (
+  %7:intregs = L2_loadri_io %3:intregs, -4 :: (load 4 from %i |	  %7:intregs = L2_loadri_io %3:intregs, -4 :: (load (s32) fro
+  S2_storeri_io %3:intregs, 0, %18:intregs :: (store 4 into % |	  S2_storeri_io %3:intregs, 0, %18:intregs :: (store (s32) in
+SU(3):   %7:intregs = L2_loadri_io %3:intregs, -4 :: (load 4  |	SU(3):   %7:intregs = L2_loadri_io %3:intregs, -4 :: (load (s
+SU(8):   S2_storeri_io %3:intregs, 0, %18:intregs :: (store 4 |	SU(8):   S2_storeri_io %3:intregs, 0, %18:intregs :: (store (
+   SU(3) %7:intregs = L2_loadri_io %3:intregs, -4 :: (load 4  |	   SU(3) %7:intregs = L2_loadri_io %3:intregs, -4 :: (load (s
+   SU(8) S2_storeri_io %3:intregs, 0, %18:intregs :: (store 4 |	   SU(8) S2_storeri_io %3:intregs, 0, %18:intregs :: (store (
+   SU(3) %7:intregs = L2_loadri_io %3:intregs, -4 :: (load 4  |	   SU(3) %7:intregs = L2_loadri_io %3:intregs, -4 :: (load (s
+   SU(8) S2_storeri_io %3:intregs, 0, %18:intregs :: (store 4 |	   SU(8) S2_storeri_io %3:intregs, 0, %18:intregs :: (store (
+Inst (8)   S2_storeri_io %3:intregs, 0, %18:intregs :: (store |	Inst (8)   S2_storeri_io %3:intregs, 0, %18:intregs :: (store
+	insert at cycle 7   S2_storeri_io %3:intregs, 0, %18: |		insert at cycle 7   S2_storeri_io %3:intregs, 0, %18:
+	insert at cycle 7   %18:intregs = A2_subsat %5:intreg |		insert at cycle 6   %18:intregs = A2_subsat %5:intreg
+	es: 80000000 ls:        6 me: 7fffffff ms: 80000000   |		es: 80000000 ls:        5 me: 7fffffff ms: 80000000
+Trying to insert node between 6 and -1 II: 8		      |	Trying to insert node between 5 and -2 II: 8
+	insert at cycle 6   %17:intregs = A2_sat %16:doublere |		insert at cycle 5   %17:intregs = A2_sat %16:doublere
+							      >		es: 80000000 ls:        4 me: 7fffffff ms: 80000000
+							      >	Trying to insert node between 4 and -3 II: 8
+							      >		insert at cycle 4   %16:doubleregs = S2_asl_r_p %14:d
+							      >
+							      >	Inst (4)   %14:doubleregs = M2_dpmpyss_s0 %7:intregs, %13:int
+							      >
+							      >		es: 80000000 ls:        2 me: 7fffffff ms: 80000000
+							      >	Trying to insert node between 2 and -5 II: 8
+							      >		insert at cycle 2   %14:doubleregs = M2_dpmpyss_s0 %7
+							      >
+							      >	Inst (3)   %7:intregs = L2_loadri_io %3:intregs, -4 :: (load 
+							      >
+							      >		es: 80000000 ls: ffffffff me: 7fffffff ms:        0
+							      >		Can't schedule
+							      >	Try to schedule with 9
+							      >
+							      >	Inst (8)   S2_storeri_io %3:intregs, 0, %18:intregs :: (store
+							      >
+							      >		es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+							      >	Trying to insert node between 7 and 15 II: 9
+							      >		insert at cycle 7   S2_storeri_io %3:intregs, 0, %18:
+							      >
+							      >	Inst (7)   %18:intregs = A2_subsat %5:intregs, %17:intregs, i
+							      >
+							      >		es: 80000000 ls:        7 me: 7fffffff ms: 80000000
+							      >	Trying to insert node between 7 and -1 II: 9
+							      >		insert at cycle 6   %18:intregs = A2_subsat %5:intreg
+							      >
+							      >	Inst (6)   %17:intregs = A2_sat %16:doubleregs, implicit-def 
+							      >
+Trying to insert node between 5 and -2 II: 8		      |	Trying to insert node between 5 and -3 II: 9
+	insert at cycle 5   %16:doubleregs = S2_asl_r_p %14:d |		insert at cycle 5   %17:intregs = A2_sat %16:doublere
+							      >
+							      >	Inst (5)   %16:doubleregs = S2_asl_r_p %14:doubleregs, %15:in
+							      >
+							      >		es: 80000000 ls:        4 me: 7fffffff ms: 80000000
+							      >	Trying to insert node between 4 and -4 II: 9
+							      >		insert at cycle 4   %16:doubleregs = S2_asl_r_p %14:d
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000   |		es: 80000000 ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -4 II: 8		      |	Trying to insert node between 2 and -6 II: 9
+	insert at cycle 3   %14:doubleregs = M2_dpmpyss_s0 %7 |		insert at cycle 2   %14:doubleregs = M2_dpmpyss_s0 %7
+							      |
+Inst (3)   %7:intregs = L2_loadri_io %3:intregs, -4 :: (load  |	Inst (3)   %7:intregs = L2_loadri_io %3:intregs, -4 :: (load 
+							      |
+	es: 80000000 ls:        0 me: 7fffffff ms:        0   |		es: 80000000 ls: ffffffff me: 7fffffff ms: ffffffff
+Trying to insert node between 0 and 0 II: 8		      |	Trying to insert node between -1 and -1 II: 9
+	insert at cycle 0   %7:intregs = L2_loadri_io %3:intr |		insert at cycle -1   %7:intregs = L2_loadri_io %3:int
+Trying to insert node between 0 and 7 II: 8		      |	Trying to insert node between -1 and 7 II: 9
+	es: fffffff9 ls:        0 me: 7fffffff ms: 80000000   |		es: fffffff8 ls: ffffffff me: 7fffffff ms: 80000000
+Trying to insert node between 0 and -7 II: 8		      |	Trying to insert node between -1 and -8 II: 9
+	insert at cycle 0   %3:intregs = PHI %1:intregs, %bb. |		insert at cycle -6   %3:intregs = PHI %1:intregs, %bb
+	es: fffffff9 ls:        7 me: 7fffffff ms: 80000000   |		es: fffffff7 ls:        6 me: 7fffffff ms: 80000000
+Trying to insert node between 0 and -7 II: 8		      |	Trying to insert node between -1 and -9 II: 9
+	insert at cycle 0   %5:intregs = PHI %2:intregs, %bb. |		insert at cycle -6   %5:intregs = PHI %2:intregs, %bb
+cycle 0 (0) (0) %3:intregs = PHI %1:intregs, %bb.1, %6:intreg |	cycle -6 (0) (0) %3:intregs = PHI %1:intregs, %bb.1, %6:intre
+cycle 0 (0) (1) %5:intregs = PHI %2:intregs, %bb.1, %7:intreg |	cycle -6 (0) (1) %5:intregs = PHI %2:intregs, %bb.1, %7:intre
+cycle 0 (0) (3) %7:intregs = L2_loadri_io %3:intregs, -4 :: ( |	cycle -5 (1) (5) %16:doubleregs = S2_asl_r_p %14:doubleregs, 
+cycle 0 (0) (2) %6:intregs = A2_addi %3:intregs, -4	      |	cycle -4 (1) (6) %17:intregs = A2_sat %16:doubleregs, implici
+cycle 3 (0) (4) %14:doubleregs = M2_dpmpyss_s0 %7:intregs, %1 |	cycle -3 (1) (7) %18:intregs = A2_subsat %5:intregs, %17:intr
+cycle 5 (0) (5) %16:doubleregs = S2_asl_r_p %14:doubleregs, % |	cycle -2 (1) (8) S2_storeri_io %3:intregs, 0, %18:intregs :: 
+cycle 6 (0) (6) %17:intregs = A2_sat %16:doubleregs, implicit |	cycle -1 (0) (3) %7:intregs = L2_loadri_io %3:intregs, -4 :: 
+cycle 7 (0) (7) %18:intregs = A2_subsat %5:intregs, %17:intre |	cycle 0 (0) (2) %6:intregs = A2_addi %3:intregs, -4
+cycle 7 (0) (8) S2_storeri_io %3:intregs, 0, %18:intregs :: ( |	cycle 2 (0) (4) %14:doubleregs = M2_dpmpyss_s0 %7:intregs, %1
+No schedule found, return				      |	[stage 0 @-6c] %3:intregs = PHI %1:intregs, %bb.1, %6:intregs
+							      >	[stage 0 @-6c] %5:intregs = PHI %2:intregs, %bb.1, %7:intregs
+							      >	[stage 1 @-5c] %16:doubleregs = S2_asl_r_p %14:doubleregs, %1
+							      >	[stage 1 @-4c] %17:intregs = A2_sat %16:doubleregs, implicit-
+							      >	[stage 1 @-3c] %18:intregs = A2_subsat %5:intregs, %17:intreg
+							      >	[stage 1 @-2c] S2_storeri_io %3:intregs, 0, %18:intregs :: (s
+							      >	[stage 0 @-1c] %7:intregs = L2_loadri_io %3:intregs, -4 :: (l
+							      >	[stage 0 @0c] %6:intregs = A2_addi %3:intregs, -4
+							      >	[stage 0 @2c] %14:doubleregs = M2_dpmpyss_s0 %7:intregs, %13:
+							      >	 -- padding defaults array from 1 to 2
+							      >	 -- padding defaults array from 1 to 2
+							      >	Dynamic: TC > 1
+		r4 = add(r1,#-1)			      |			r5 = add(r1,#-1)
+		p0 = cmp.gt(r4,#0)			      |			p0 = cmp.gt(r5,#0)
+		r1 = addasl(r0,r4,#2)			      |			r3 = addasl(r0,r5,#2)
+		r0 = #7946				      |			r1:0 = combine(##7946,#-13)
+		r2 = #-13				      |			r2 = memw(r0+r5<<#2)
+		r3 = memw(r0+r4<<#2)			      |		}
+							      >		{
+							      >			r6 = add(r5,#-1)
+							      >			p0 = cmp.gtu(r5,#1)
+		loop0(.LBB0_2,r4)			      |			loop0(.LBB0_2,r6)
+							      >			r5 = add(r3,#-4)
+							      >			r7:6 = combine(r2,r3)
+							      >			r4 = memw(r3+#-4)
+							      >		}
+							      >		{
+							      >			r9:8 = mpy(r4,r1)
+							      >			if (!p0) jump:nt .LBB0_3
+		r4 = memw(r1+#-4)			      |			r9:8 = asl(r9:8,r0)
+							      >			r7:6 = combine(r4,r5)
+							      >			r5 = add(r5,#-4)
+							      >			r4 = memw(r5+#-4)
+		r7:6 = mpy(r4,r0)			      |			r8 = sat(r9:8)
+		r7:6 = asl(r7:6,r2)			      |			r9:8 = mpy(r4,r1)
+							      >			r2 = sub(r2,r8):sat
+							      >			memw(r3+#0) = r2.new
+		r5 = sat(r7:6)				      |			r3:2 = combine(r6,r7)
+	}						      |			nop
+							      >		} :endloop0
+							      >	.LBB0_3:                                // %b2
+		r3 = sub(r3,r5):sat			      |			r1:0 = asl(r9:8,r0)
+		r1 = add(r1,#-4)			      <
+		memw(r1+#0) = r3.new			      <
+		r3 = r4					      |			r0 = sat(r1:0)
+		nop					      |		}
+	} :endloop0					      <
+// %bb.3:                               // %b4		      <
+							      >			r0 = sub(r7,r0):sat
+							      >			memw(r6+#0) = r0.new

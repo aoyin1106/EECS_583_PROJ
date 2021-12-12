@@ -1,0 +1,13 @@
+Unable to analyzeLoop, can NOT pipeline Loop		      <
+							      <
+!!! Can not pipeline loop.				      <
+	.p2align	4				      <
+.LBB0_1:                                // %b1		      <
+                                        // =>This Inner Loop  <
+	{						      <
+		if (p0) jump:nt .LBB0_1			      <
+	}						      <
+// %bb.2:                               // %b4		      <
+	{						      <
+		r27:26 = memd(##3134984174)		      <
+	}						      <

@@ -1,0 +1,37 @@
+Unable to analyzeLoop, can NOT pipeline Loop
+
+!!! Can not pipeline loop.
+	.text
+	.file	"<stdin>"
+	.globl	test                            // -- Begin function test
+	.p2align	4
+	.type	test,@function
+test:                                   // @test
+	.cfi_startproc
+// %bb.0:                               // %entry
+	{
+		r3 = #0
+	}
+                                        // implicit-def: $r2
+	.p2align	4
+.LBB0_1:                                // %for.body6.us.prol
+                                        // =>This Inner Loop Header: Depth=1
+	{
+		r2 = r3
+		r3 = add(r3,#1)
+		r4 = memub(r1+r2<<#0)
+	}
+	{
+		r4 = +mpyi(r4,#3)
+		if (p0) jump:nt .LBB0_1
+		memb(r0++#1) = r4.new
+	}
+// %bb.2:                               // %for.body6.us
+	{
+		r27:26 = memd(##3134984174)
+	}
+.Lfunc_end0:
+	.size	test, .Lfunc_end0-test
+	.cfi_endproc
+                                        // -- End function
+	.section	".note.GNU-stack","",@progbits

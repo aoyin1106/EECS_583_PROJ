@@ -1,0 +1,231 @@
+SU(8):   %17:intregs, %22:intregs = L2_loadrub_pi %9:intregs( |	SU(8):   %17:intregs, %22:intregs = L2_loadrub_pi %9:intregs(
+SU(10):   %18:intregs, %21:intregs = L2_loadrub_pi %10:intreg |	SU(10):   %18:intregs, %21:intregs = L2_loadrub_pi %10:intreg
+SU(14):   %20:intregs = S2_storerb_pi %12:intregs(tied-def 0) |	SU(14):   %20:intregs = S2_storerb_pi %12:intregs(tied-def 0)
+  %17:intregs, %22:intregs = L2_loadrub_pi %9:intregs(tied-de |	  %17:intregs, %22:intregs = L2_loadrub_pi %9:intregs(tied-de
+  %18:intregs, %21:intregs = L2_loadrub_pi %10:intregs(tied-d |	  %18:intregs, %21:intregs = L2_loadrub_pi %10:intregs(tied-d
+  %20:intregs = S2_storerb_pi %12:intregs(tied-def 0), 1, %42 |	  %20:intregs = S2_storerb_pi %12:intregs(tied-def 0), 1, %42
+SU(10):   %18:intregs, %21:intregs = L2_loadrub_pi %10:intreg |	SU(10):   %18:intregs, %21:intregs = L2_loadrub_pi %10:intreg
+SU(8):   %17:intregs, %22:intregs = L2_loadrub_pi %9:intregs( |	SU(8):   %17:intregs, %22:intregs = L2_loadrub_pi %9:intregs(
+SU(14):   %20:intregs = S2_storerb_pi %12:intregs(tied-def 0) |	SU(14):   %20:intregs = S2_storerb_pi %12:intregs(tied-def 0)
+   SU(8) %17:intregs, %22:intregs = L2_loadrub_pi %9:intregs( |	   SU(8) %17:intregs, %22:intregs = L2_loadrub_pi %9:intregs(
+   SU(10) %18:intregs, %21:intregs = L2_loadrub_pi %10:intreg |	   SU(10) %18:intregs, %21:intregs = L2_loadrub_pi %10:intreg
+   SU(14) %20:intregs = S2_storerb_pi %12:intregs(tied-def 0) |	   SU(14) %20:intregs = S2_storerb_pi %12:intregs(tied-def 0)
+   SU(8) %17:intregs, %22:intregs = L2_loadrub_pi %9:intregs( |	   SU(8) %17:intregs, %22:intregs = L2_loadrub_pi %9:intregs(
+   SU(10) %18:intregs, %21:intregs = L2_loadrub_pi %10:intreg |	   SU(10) %18:intregs, %21:intregs = L2_loadrub_pi %10:intreg
+   SU(14) %20:intregs = S2_storerb_pi %12:intregs(tied-def 0) |	   SU(14) %20:intregs = S2_storerb_pi %12:intregs(tied-def 0)
+Inst (8)   %17:intregs, %22:intregs = L2_loadrub_pi %9:intreg |	Inst (8)   %17:intregs, %22:intregs = L2_loadrub_pi %9:intreg
+	insert at cycle 0   %17:intregs, %22:intregs = L2_loa |		insert at cycle 0   %17:intregs, %22:intregs = L2_loa
+	insert at cycle 0   %9:intregs = PHI %8:intregs, %bb. |		insert at cycle -1   %9:intregs = PHI %8:intregs, %bb
+Inst (10)   %18:intregs, %21:intregs = L2_loadrub_pi %10:intr |	Inst (10)   %18:intregs, %21:intregs = L2_loadrub_pi %10:intr
+Trying to insert node between 0 and 1 II: 2		      |	Trying to insert node between -1 and 0 II: 2
+	insert at cycle 0   %18:intregs, %21:intregs = L2_loa |		insert at cycle -1   %18:intregs, %21:intregs = L2_lo
+	es: ffffffff ls:        0 me: 7fffffff ms: 80000000   |		es: fffffffe ls: ffffffff me: 7fffffff ms: 80000000
+Trying to insert node between 0 and -1 II: 2		      |	Trying to insert node between -1 and -2 II: 2
+	insert at cycle 0   %10:intregs = PHI %7:intregs, %bb |		insert at cycle -1   %10:intregs = PHI %7:intregs, %b
+	es: ffffffff ls: 7fffffff me: 7fffffff ms: 80000000   |		es: fffffffe ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between -1 and 0 II: 2		      |	Trying to insert node between -2 and -1 II: 2
+	insert at cycle -1   %13:intregs = PHI %2:intregs, %b |		insert at cycle -2   %13:intregs = PHI %2:intregs, %b
+	es: ffffffff ls: 7fffffff me: 7fffffff ms: 80000000   |		es: fffffffe ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between -1 and 0 II: 2		      |	Trying to insert node between -2 and -1 II: 2
+	insert at cycle -1   %14:intregs = PHI %3:intregs, %b |		insert at cycle -2   %14:intregs = PHI %3:intregs, %b
+							      >		insert at cycle 2   %37:intregs = nsw M2_acci %14:int
+							      >
+							      >	Inst (11)   %39:intregs = nsw M2_acci %18:intregs(tied-def 0)
+							      >
+							      >		es:        3 ls: 7fffffff me: 7fffffff ms: 80000000
+							      >	Trying to insert node between 3 and 4 II: 2
+							      >		insert at cycle 3   %39:intregs = nsw M2_acci %18:int
+							      >
+							      >	Inst (12)   %41:intregs = nsw M4_mpyrr_addi 32768, %39:intreg
+							      >
+							      >		es:        4 ls: 7fffffff me: 7fffffff ms: 80000000
+							      >	Trying to insert node between 4 and 5 II: 2
+							      >		insert at cycle 4   %41:intregs = nsw M4_mpyrr_addi 3
+							      >
+							      >	Inst (13)   %42:intregs = S2_lsr_i_r %41:intregs, 16
+							      >
+							      >		es:        5 ls: 7fffffff me: 7fffffff ms: 80000000
+							      >	Trying to insert node between 5 and 6 II: 2
+							      >		insert at cycle 5   %42:intregs = S2_lsr_i_r %41:intr
+							      >
+							      >	Inst (14)   %20:intregs = S2_storerb_pi %12:intregs(tied-def 
+							      >
+							      >		es:        5 ls: 7fffffff me: 7fffffff ms: 80000000
+							      >	Trying to insert node between 5 and 6 II: 2
+							      >		insert at cycle 6   %20:intregs = S2_storerb_pi %12:i
+							      >		Can't schedule
+							      >	Try to schedule with 3
+							      >
+							      >	Inst (8)   %17:intregs, %22:intregs = L2_loadrub_pi %9:intreg
+							      >
+							      >		es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+							      >	Trying to insert node between 0 and 2 II: 3
+							      >		insert at cycle 0   %17:intregs, %22:intregs = L2_loa
+							      >
+							      >	Inst (0)   %9:intregs = PHI %8:intregs, %bb.1, %22:intregs, %
+							      >
+							      >		es: fffffffe ls:        0 me: 7fffffff ms: 80000000
+							      >	Trying to insert node between 0 and -2 II: 3
+							      >		insert at cycle -1   %9:intregs = PHI %8:intregs, %bb
+							      >
+							      >	Inst (10)   %18:intregs, %21:intregs = L2_loadrub_pi %10:intr
+							      >
+							      >		es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+							      >	Trying to insert node between -1 and 1 II: 3
+							      >		insert at cycle -1   %18:intregs, %21:intregs = L2_lo
+							      >
+							      >	Inst (1)   %10:intregs = PHI %7:intregs, %bb.1, %21:intregs, 
+							      >
+							      >		es: fffffffd ls: ffffffff me: 7fffffff ms: 80000000
+							      >	Trying to insert node between -1 and -3 II: 3
+							      >		insert at cycle -2   %10:intregs = PHI %7:intregs, %b
+							      >
+							      >	Inst (5)   %15:intregs = PHI %2:intregs, %bb.1, %17:intregs, 
+							      >
+							      >		es: fffffffe ls: 7fffffff me: 7fffffff ms: 80000000
+							      >	Trying to insert node between -2 and 0 II: 3
+							      >		insert at cycle -2   %15:intregs = PHI %2:intregs, %b
+							      >
+							      >	Inst (3)   %13:intregs = PHI %2:intregs, %bb.1, %18:intregs, 
+							      >
+							      >		es: fffffffd ls: 7fffffff me: 7fffffff ms: 80000000
+							      >	Trying to insert node between -3 and -1 II: 3
+							      >		insert at cycle -2   %13:intregs = PHI %2:intregs, %b
+							      >
+							      >	Inst (6)   %16:intregs = PHI %3:intregs, %bb.1, %15:intregs, 
+							      >
+							      >		es: fffffffe ls: 7fffffff me: 7fffffff ms: 80000000
+							      >	Trying to insert node between -2 and 0 II: 3
+							      >		insert at cycle -2   %16:intregs = PHI %3:intregs, %b
+							      >
+							      >	Inst (7)   %35:intregs = nsw A2_add %15:intregs, %16:intregs
+							      >
+							      >		es: fffffffe ls:        0 me: 7fffffff ms: 80000000
+							      >	Trying to insert node between -2 and 0 II: 3
+							      >		insert at cycle -2   %35:intregs = nsw A2_add %15:int
+							      >
+							      >	Inst (4)   %14:intregs = PHI %3:intregs, %bb.1, %13:intregs, 
+							      >
+							      >		es: fffffffe ls: 7fffffff me: 7fffffff ms: 80000000
+							      >	Trying to insert node between -2 and 0 II: 3
+							      >		insert at cycle -2   %14:intregs = PHI %3:intregs, %b
+							      >
+							      >	Inst (9)   %37:intregs = nsw M2_acci %14:intregs(tied-def 0),
+							      >
+							      >		es:        1 ls: 7fffffff me: 7fffffff ms: 80000000
+							      >	Trying to insert node between 1 and 3 II: 3
+Trying to insert node between 2 and 3 II: 2		      |	Trying to insert node between 2 and 4 II: 3
+Trying to insert node between 3 and 4 II: 2		      |	Trying to insert node between 3 and 5 II: 3
+Trying to insert node between 4 and 5 II: 2		      |	Trying to insert node between 4 and 6 II: 3
+Inst (14)   %20:intregs = S2_storerb_pi %12:intregs(tied-def  |	Inst (14)   %20:intregs = S2_storerb_pi %12:intregs(tied-def 
+Trying to insert node between 4 and 5 II: 2		      |	Trying to insert node between 4 and 6 II: 3
+	failed to insert at cycle 4   %20:intregs = S2_storer |		insert at cycle 5   %20:intregs = S2_storerb_pi %12:i
+	insert at cycle 5   %20:intregs = S2_storerb_pi %12:i <
+	es:        4 ls:        5 me: 7fffffff ms: 80000000   |		es:        3 ls:        5 me: 7fffffff ms: 80000000
+Trying to insert node between 5 and 4 II: 2		      |	Trying to insert node between 5 and 3 II: 3
+	insert at cycle 5   %12:intregs = PHI %6:intregs, %bb |		insert at cycle 3   %12:intregs = PHI %6:intregs, %bb
+cycle -1 (3) (2) %12:intregs = PHI %6:intregs, %bb.1, %20:int |	cycle -2 (0) (1) %10:intregs = PHI %7:intregs, %bb.1, %21:int
+cycle -1 (0) (5) %15:intregs = PHI %2:intregs, %bb.1, %17:int |	cycle -2 (0) (5) %15:intregs = PHI %2:intregs, %bb.1, %17:int
+cycle -1 (0) (3) %13:intregs = PHI %2:intregs, %bb.1, %18:int |	cycle -2 (0) (3) %13:intregs = PHI %2:intregs, %bb.1, %18:int
+cycle -1 (0) (6) %16:intregs = PHI %3:intregs, %bb.1, %15:int |	cycle -2 (0) (6) %16:intregs = PHI %3:intregs, %bb.1, %15:int
+cycle -1 (0) (4) %14:intregs = PHI %3:intregs, %bb.1, %13:int |	cycle -2 (0) (4) %14:intregs = PHI %3:intregs, %bb.1, %13:int
+cycle -1 (3) (14) %20:intregs = S2_storerb_pi %12:intregs(tie |	cycle -2 (2) (13) %42:intregs = S2_lsr_i_r %41:intregs, 16
+cycle -1 (2) (12) %41:intregs = nsw M4_mpyrr_addi 32768, %39: |	cycle -2 (1) (9) %37:intregs = nsw M2_acci %14:intregs(tied-d
+cycle -1 (1) (9) %37:intregs = nsw M2_acci %14:intregs(tied-d |	cycle -2 (0) (7) %35:intregs = nsw A2_add %15:intregs, %16:in
+cycle -1 (0) (7) %35:intregs = nsw A2_add %15:intregs, %16:in |	cycle -1 (0) (0) %9:intregs = PHI %8:intregs, %bb.1, %22:intr
+cycle 0 (0) (0) %9:intregs = PHI %8:intregs, %bb.1, %22:intre |	cycle -1 (2) (14) %20:intregs = S2_storerb_pi %12:intregs(tie
+cycle 0 (0) (1) %10:intregs = PHI %7:intregs, %bb.1, %21:intr |	cycle -1 (1) (11) %39:intregs = nsw M2_acci %18:intregs(tied-
+cycle 0 (2) (13) %42:intregs = S2_lsr_i_r %41:intregs, 16     |	cycle -1 (0) (10) %18:intregs, %21:intregs = L2_loadrub_pi %1
+cycle 0 (1) (11) %39:intregs = nsw M2_acci %18:intregs(tied-d |	cycle 0 (1) (2) %12:intregs = PHI %6:intregs, %bb.1, %20:intr
+cycle 0 (0) (8) %17:intregs, %22:intregs = L2_loadrub_pi %9:i |	cycle 0 (1) (12) %41:intregs = nsw M4_mpyrr_addi 32768, %39:i
+cycle 0 (0) (10) %18:intregs, %21:intregs = L2_loadrub_pi %10 |	cycle 0 (0) (8) %17:intregs, %22:intregs = L2_loadrub_pi %9:i
+[stage 3 @-1c] %12:intregs = PHI %6:intregs, %bb.1, %20:intre |	[stage 0 @-2c] %10:intregs = PHI %7:intregs, %bb.1, %21:intre
+[stage 0 @-1c] %15:intregs = PHI %2:intregs, %bb.1, %17:intre |	[stage 0 @-2c] %15:intregs = PHI %2:intregs, %bb.1, %17:intre
+[stage 0 @-1c] %13:intregs = PHI %2:intregs, %bb.1, %18:intre |	[stage 0 @-2c] %13:intregs = PHI %2:intregs, %bb.1, %18:intre
+[stage 0 @-1c] %16:intregs = PHI %3:intregs, %bb.1, %15:intre |	[stage 0 @-2c] %16:intregs = PHI %3:intregs, %bb.1, %15:intre
+[stage 0 @-1c] %14:intregs = PHI %3:intregs, %bb.1, %13:intre |	[stage 0 @-2c] %14:intregs = PHI %3:intregs, %bb.1, %13:intre
+[stage 3 @-1c] %20:intregs = S2_storerb_pi %12:intregs(tied-d |	[stage 2 @-2c] %42:intregs = S2_lsr_i_r %41:intregs, 16
+[stage 2 @-1c] %41:intregs = nsw M4_mpyrr_addi 32768, %39:int |	[stage 1 @-2c] %37:intregs = nsw M2_acci %14:intregs(tied-def
+[stage 1 @-1c] %37:intregs = nsw M2_acci %14:intregs(tied-def |	[stage 0 @-2c] %35:intregs = nsw A2_add %15:intregs, %16:intr
+[stage 0 @-1c] %35:intregs = nsw A2_add %15:intregs, %16:intr |	[stage 0 @-1c] %9:intregs = PHI %8:intregs, %bb.1, %22:intreg
+[stage 0 @0c] %9:intregs = PHI %8:intregs, %bb.1, %22:intregs |	[stage 2 @-1c] %20:intregs = S2_storerb_pi %12:intregs(tied-d
+[stage 0 @0c] %10:intregs = PHI %7:intregs, %bb.1, %21:intreg |	[stage 1 @-1c] %39:intregs = nsw M2_acci %18:intregs(tied-def
+[stage 2 @0c] %42:intregs = S2_lsr_i_r %41:intregs, 16	      |	[stage 0 @-1c] %18:intregs, %21:intregs = L2_loadrub_pi %10:i
+[stage 1 @0c] %39:intregs = nsw M2_acci %18:intregs(tied-def  |	[stage 1 @0c] %12:intregs = PHI %6:intregs, %bb.1, %20:intreg
+[stage 0 @0c] %17:intregs, %22:intregs = L2_loadrub_pi %9:int |	[stage 1 @0c] %41:intregs = nsw M4_mpyrr_addi 32768, %39:intr
+[stage 0 @0c] %18:intregs, %21:intregs = L2_loadrub_pi %10:in |	[stage 0 @0c] %17:intregs, %22:intregs = L2_loadrub_pi %9:int
+Dynamic: TC > 3						      <
+		r14 = add(r1,#-2)			      |			r8 = add(r1,#-2)
+		r8 = add(r0,#2)				      |			r5 = add(r0,#2)
+		r13 = add(r14,#-3)			      |			r12 = add(r8,#-2)
+		r7 = r2					      |			r4 = r2
+		r2 = memub(r2+#1)			      |			r3 = memub(r2+#1)
+		p0 = cmp.gtu(r14,#1)			      |			p0 = cmp.gtu(r8,#1)
+		r3 = memub(r7++#2)			      |			r2 = memub(r4++#2)
+		r12 = memub(r8++#1)			      |			r7 = memub(r5++#1)
+		r3 = add(r2,r3)				      |			r6 = add(r3,r2)
+		r4 = memub(r7++#1)			      |			r2 = memub(r4++#1)
+		r15 = r2				      |			loop0(.LBB0_4,r12)
+		r5 = r4					      |			r9 = r3
+		p0 = cmp.gtu(r14,#2)			      |			r13 = r2
+		r9 = memub(r8++#1)			      |			p0 = cmp.gtu(r8,#2)
+	}						      <
+	{						      <
+		r15 += add(r3,r12)			      <
+		r3 = add(r12,r2)			      <
+		r6 = memub(r7++#1)			      <
+	}						      <
+	{						      <
+		r5 += add(r15,r2)			      <
+		if (!p0) jump:nt .LBB0_7		      <
+	}						      <
+// %bb.4:                               // %for.body74	      <
+	{						      <
+		r15 = add(##32768,mpyi(r5,r0))		      <
+		r2 += add(r3,r9)			      <
+		r5 = r6					      <
+		loop0(.LBB0_5,r13)			      |			r9 += add(r6,r7)
+		r5 += add(r2,r4)			      |			r12 = r3
+		p0 = cmp.gtu(r14,#3)			      |			r6 = add(r7,r3)
+		r3 = add(r9,r12)			      |			r8 = memub(r4++#1)
+		r12 = lsr(r15,#16)			      |			r13 += add(r9,r3)
+		r2 = r4					      |			r9 = memub(r5++#1)
+		r13 = memub(r8++#1)			      <
+		r14 = memub(r7++#1)			      <
+		if (!p0) jump:nt .LBB0_6		      |			r13 = add(##32768,mpyi(r13,r0))
+							      >			if (!p0) jump:nt .LBB0_5
+.LBB0_5:                                // %for.body74	      |	.LBB0_4:                                // %for.body74
+		r15 = add(##32768,mpyi(r5,r0))		      |			r3 += add(r6,r9)
+		r4 += add(r3,r13)			      |			r12 = r2
+		r2 = r6					      |			r14 = r8
+							      >			r6 = add(r9,r7)
+		r5 = r14				      |			r14 += add(r3,r12)
+		r6 = r14				      |			r7 = lsr(r13,#16)
+		r3 = add(r13,r9)			      |			r2 = r8
+		memb(r1++#1) = r12			      |			memb(r1++#1) = r7.new
+		r5 += add(r4,r2)			      |			r7 = r9
+		r12 = lsr(r15,#16)			      |			r3 = r12
+		r9 = r13				      |			r8 = memub(r4++#1)
+		r13 = memub(r8++#1)			      |			r9 = memub(r5++#1)
+		r4 = r2					      |			r13 = add(##32768,mpyi(r14,r0))
+		r14 = memub(r7++#1)			      <
+.LBB0_6:                                // %for.body74	      |	.LBB0_5:                                // %for.body74
+	{						      <
+		r4 = r6					      <
+		r9 = r13				      <
+		r6 = r14				      <
+		memb(r1++#1) = r12			      <
+	}						      <
+.LBB0_7:                                // %for.body74	      <
+		r7 = add(##32768,mpyi(r5,r0))		      |			r2 = lsr(r13,#16)
+		r5:4 = combine(r4,r6)			      |			r4 = r2
+		r12 = r9				      |			r7 = r9
+							      >			memb(r1++#1) = r2.new
+		r6 = lsr(r7,#16)			      |			jump .LBB0_6
+		jump .LBB0_8				      |			r3:2 = combine(r12,r8)
+		memb(r1++#1) = r6.new			      <
+		r5 = r2					      |			r4 = r3
+.LBB0_8:                                // %for.body74	      |	.LBB0_6:                                // %for.body74
+		r2 += add(r3,r12)			      |			r3 += add(r6,r7)
+		r4 += add(r2,r5)			      |			r2 += add(r3,r4)
+		r0 = add(##32768,mpyi(r4,r0))		      |			r0 = add(##32768,mpyi(r2,r0))

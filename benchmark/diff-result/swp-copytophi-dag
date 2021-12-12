@@ -1,0 +1,305 @@
+SU(6):   S2_storerh_io %8:intregs, 0, %75:intregs :: (store 2 |	SU(6):   S2_storerh_io %8:intregs, 0, %75:intregs :: (store (
+SU(7):   S2_storerf_io %8:intregs, 2, %70:intregs :: (store 2 |	SU(7):   S2_storerf_io %8:intregs, 2, %70:intregs :: (store (
+SU(8):   S2_storerh_io %8:intregs, 4, %67:intregs :: (store 2 |	SU(8):   S2_storerh_io %8:intregs, 4, %67:intregs :: (store (
+SU(9):   S2_storerf_io %8:intregs, 6, %63:intregs :: (store 2 |	SU(9):   S2_storerf_io %8:intregs, 6, %63:intregs :: (store (
+SU(10):   %32:doubleregs, %19:intregs = L2_loadrd_pi %7:intre |	SU(10):   %32:doubleregs, %19:intregs = L2_loadrd_pi %7:intre
+  S2_storerh_io %8:intregs, 0, %75:intregs :: (store 2 into % |	  S2_storerh_io %8:intregs, 0, %75:intregs :: (store (s16) in
+  S2_storerh_io %8:intregs, 4, %67:intregs :: (store 2 into % |	  S2_storerh_io %8:intregs, 4, %67:intregs :: (store (s16) in
+  S2_storerf_io %8:intregs, 2, %70:intregs :: (store 2 into % |	  S2_storerf_io %8:intregs, 2, %70:intregs :: (store (s16) in
+  %32:doubleregs, %19:intregs = L2_loadrd_pi %7:intregs(tied- |	  %32:doubleregs, %19:intregs = L2_loadrd_pi %7:intregs(tied-
+  S2_storerf_io %8:intregs, 6, %63:intregs :: (store 2 into % |	  S2_storerf_io %8:intregs, 6, %63:intregs :: (store (s16) in
+SU(9):   S2_storerf_io %8:intregs, 6, %63:intregs :: (store 2 |	SU(9):   S2_storerf_io %8:intregs, 6, %63:intregs :: (store (
+SU(8):   S2_storerh_io %8:intregs, 4, %67:intregs :: (store 2 |	SU(8):   S2_storerh_io %8:intregs, 4, %67:intregs :: (store (
+SU(7):   S2_storerf_io %8:intregs, 2, %70:intregs :: (store 2 |	SU(7):   S2_storerf_io %8:intregs, 2, %70:intregs :: (store (
+SU(6):   S2_storerh_io %8:intregs, 0, %75:intregs :: (store 2 |	SU(6):   S2_storerh_io %8:intregs, 0, %75:intregs :: (store (
+SU(10):   %32:doubleregs, %19:intregs = L2_loadrd_pi %7:intre |	SU(10):   %32:doubleregs, %19:intregs = L2_loadrd_pi %7:intre
+   SU(10) %32:doubleregs, %19:intregs = L2_loadrd_pi %7:intre |	   SU(10) %32:doubleregs, %19:intregs = L2_loadrd_pi %7:intre
+   SU(9) S2_storerf_io %8:intregs, 6, %63:intregs :: (store 2 |	   SU(9) S2_storerf_io %8:intregs, 6, %63:intregs :: (store (
+   SU(10) %32:doubleregs, %19:intregs = L2_loadrd_pi %7:intre |	   SU(10) %32:doubleregs, %19:intregs = L2_loadrd_pi %7:intre
+   SU(8) S2_storerh_io %8:intregs, 4, %67:intregs :: (store 2 |	   SU(8) S2_storerh_io %8:intregs, 4, %67:intregs :: (store (
+   SU(10) %32:doubleregs, %19:intregs = L2_loadrd_pi %7:intre |	   SU(10) %32:doubleregs, %19:intregs = L2_loadrd_pi %7:intre
+   SU(7) S2_storerf_io %8:intregs, 2, %70:intregs :: (store 2 |	   SU(7) S2_storerf_io %8:intregs, 2, %70:intregs :: (store (
+   SU(10) %32:doubleregs, %19:intregs = L2_loadrd_pi %7:intre |	   SU(10) %32:doubleregs, %19:intregs = L2_loadrd_pi %7:intre
+   SU(6) S2_storerh_io %8:intregs, 0, %75:intregs :: (store 2 |	   SU(6) S2_storerh_io %8:intregs, 0, %75:intregs :: (store (
+   SU(10) %32:doubleregs, %19:intregs = L2_loadrd_pi %7:intre |	   SU(10) %32:doubleregs, %19:intregs = L2_loadrd_pi %7:intre
+   SU(9) S2_storerf_io %8:intregs, 6, %63:intregs :: (store 2 |	   SU(9) S2_storerf_io %8:intregs, 6, %63:intregs :: (store (
+   SU(10) %32:doubleregs, %19:intregs = L2_loadrd_pi %7:intre |	   SU(10) %32:doubleregs, %19:intregs = L2_loadrd_pi %7:intre
+   SU(8) S2_storerh_io %8:intregs, 4, %67:intregs :: (store 2 |	   SU(8) S2_storerh_io %8:intregs, 4, %67:intregs :: (store (
+   SU(7) S2_storerf_io %8:intregs, 2, %70:intregs :: (store 2 |	   SU(7) S2_storerf_io %8:intregs, 2, %70:intregs :: (store (
+   SU(6) S2_storerh_io %8:intregs, 0, %75:intregs :: (store 2 |	   SU(6) S2_storerh_io %8:intregs, 0, %75:intregs :: (store (
+Inst (10)   %32:doubleregs, %19:intregs = L2_loadrd_pi %7:int |	Inst (10)   %32:doubleregs, %19:intregs = L2_loadrd_pi %7:int
+	insert at cycle 1   %32:doubleregs, %19:intregs = L2_ |		insert at cycle 1   %32:doubleregs, %19:intregs = L2_
+Inst (9)   S2_storerf_io %8:intregs, 6, %63:intregs :: (store |	Inst (9)   S2_storerf_io %8:intregs, 6, %63:intregs :: (store
+	insert at cycle 0   S2_storerf_io %8:intregs, 6, %63: |		insert at cycle 0   S2_storerf_io %8:intregs, 6, %63:
+	insert at cycle 0   %63:intregs = PHI %81:intregs, %b |		insert at cycle -1   %63:intregs = PHI %81:intregs, %
+	insert at cycle 1   %84:intregs = COPY %32.isub_hi:do |		insert at cycle 2   %84:intregs = COPY %32.isub_hi:do
+							      >
+							      >	Inst (3)   %67:intregs = PHI %83:intregs, %bb.1, %84:intregs,
+							      >
+							      >		es:        0 ls: 7fffffff me: 7fffffff ms: 80000000
+							      >	Trying to insert node between 0 and 2 II: 3
+							      >		insert at cycle 2   %67:intregs = PHI %83:intregs, %b
+							      >
+							      >	Inst (8)   S2_storerh_io %8:intregs, 4, %67:intregs :: (store
+							      >
+							      >		es:        2 ls:        0 me: 7fffffff ms: 80000000
+							      >		Can't schedule
+							      >	Try to schedule with 4
+							      >
+							      >	Inst (12)   %82:intregs = COPY %32.isub_hi:doubleregs
+							      >
+							      >		es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+							      >	Trying to insert node between 1 and 4 II: 4
+							      >		insert at cycle 1   %82:intregs = COPY %32.isub_hi:do
+							      >
+							      >	Inst (10)   %32:doubleregs, %19:intregs = L2_loadrd_pi %7:int
+							      >
+							      >		es: 80000000 ls:        1 me: 7fffffff ms: 80000000
+							      >	Trying to insert node between 1 and -2 II: 4
+							      >		insert at cycle 1   %32:doubleregs, %19:intregs = L2_
+							      >
+							      >	Inst (9)   S2_storerf_io %8:intregs, 6, %63:intregs :: (store
+							      >
+							      >		es: 80000000 ls:        0 me: 7fffffff ms: 80000000
+							      >	Trying to insert node between 0 and -3 II: 4
+							      >		insert at cycle 0   S2_storerf_io %8:intregs, 6, %63:
+							      >
+							      >	Inst (2)   %63:intregs = PHI %81:intregs, %bb.1, %82:intregs,
+							      >
+							      >		es: fffffffe ls:        0 me: 7fffffff ms: 80000000
+							      >	Trying to insert node between 0 and -2 II: 4
+							      >		insert at cycle -1   %63:intregs = PHI %81:intregs, %
+							      >
+							      >	Inst (13)   %84:intregs = COPY %32.isub_hi:doubleregs
+							      >
+							      >		es:        1 ls: 7fffffff me: 7fffffff ms: 80000000
+							      >	Trying to insert node between 1 and 4 II: 4
+							      >		insert at cycle 2   %84:intregs = COPY %32.isub_hi:do
+Trying to insert node between -1 and 1 II: 3		      |	Trying to insert node between -1 and 2 II: 4
+Inst (8)   S2_storerh_io %8:intregs, 4, %67:intregs :: (store |	Inst (8)   S2_storerh_io %8:intregs, 4, %67:intregs :: (store
+Trying to insert node between -1 and 0 II: 3		      |	Trying to insert node between -1 and 0 II: 4
+	insert at cycle -1   S2_storerh_io %8:intregs, 4, %67 |		insert at cycle -1   S2_storerh_io %8:intregs, 4, %67
+Trying to insert node between 1 and 3 II: 3		      |	Trying to insert node between 1 and 4 II: 4
+	insert at cycle 1   %86:intregs = COPY %32.isub_lo:do |		insert at cycle 2   %86:intregs = COPY %32.isub_lo:do
+Trying to insert node between -1 and 1 II: 3		      |	Trying to insert node between -1 and 2 II: 4
+							      >		insert at cycle 2   %70:intregs = PHI %85:intregs, %b
+							      >
+							      >	Inst (7)   S2_storerf_io %8:intregs, 2, %70:intregs :: (store
+							      >
+							      >		es:        2 ls:        0 me: 7fffffff ms: 80000000
+							      >		Can't schedule
+							      >	Try to schedule with 5
+							      >
+							      >	Inst (12)   %82:intregs = COPY %32.isub_hi:doubleregs
+							      >
+							      >		es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+							      >	Trying to insert node between 1 and 5 II: 5
+							      >		insert at cycle 1   %82:intregs = COPY %32.isub_hi:do
+							      >
+							      >	Inst (10)   %32:doubleregs, %19:intregs = L2_loadrd_pi %7:int
+							      >
+							      >		es: 80000000 ls:        1 me: 7fffffff ms: 80000000
+							      >	Trying to insert node between 1 and -3 II: 5
+							      >		insert at cycle 1   %32:doubleregs, %19:intregs = L2_
+							      >
+							      >	Inst (9)   S2_storerf_io %8:intregs, 6, %63:intregs :: (store
+							      >
+							      >		es: 80000000 ls:        0 me: 7fffffff ms: 80000000
+							      >	Trying to insert node between 0 and -4 II: 5
+							      >		insert at cycle 0   S2_storerf_io %8:intregs, 6, %63:
+							      >
+							      >	Inst (2)   %63:intregs = PHI %81:intregs, %bb.1, %82:intregs,
+							      >
+							      >		es: fffffffd ls:        0 me: 7fffffff ms: 80000000
+							      >	Trying to insert node between 0 and -3 II: 5
+							      >		insert at cycle -1   %63:intregs = PHI %81:intregs, %
+							      >
+							      >	Inst (13)   %84:intregs = COPY %32.isub_hi:doubleregs
+							      >
+							      >		es:        1 ls: 7fffffff me: 7fffffff ms: 80000000
+							      >	Trying to insert node between 1 and 5 II: 5
+							      >		insert at cycle 2   %84:intregs = COPY %32.isub_hi:do
+							      >
+							      >	Inst (3)   %67:intregs = PHI %83:intregs, %bb.1, %84:intregs,
+							      >
+							      >		es: fffffffe ls: 7fffffff me: 7fffffff ms: 80000000
+							      >	Trying to insert node between -2 and 2 II: 5
+							      >		insert at cycle -2   %67:intregs = PHI %83:intregs, %
+							      >
+							      >	Inst (8)   S2_storerh_io %8:intregs, 4, %67:intregs :: (store
+							      >
+							      >		es: fffffffe ls:        0 me: 7fffffff ms: 80000000
+							      >	Trying to insert node between -2 and 0 II: 5
+							      >		insert at cycle -2   S2_storerh_io %8:intregs, 4, %67
+							      >
+							      >	Inst (14)   %86:intregs = COPY %32.isub_lo:doubleregs
+							      >
+							      >		es:        1 ls: 7fffffff me: 7fffffff ms: 80000000
+							      >	Trying to insert node between 1 and 5 II: 5
+							      >		insert at cycle 2   %86:intregs = COPY %32.isub_lo:do
+							      >
+							      >	Inst (4)   %70:intregs = PHI %85:intregs, %bb.1, %86:intregs,
+							      >
+							      >		es: fffffffe ls: 7fffffff me: 7fffffff ms: 80000000
+							      >	Trying to insert node between -2 and 2 II: 5
+Inst (7)   S2_storerf_io %8:intregs, 2, %70:intregs :: (store |	Inst (7)   S2_storerf_io %8:intregs, 2, %70:intregs :: (store
+Trying to insert node between -1 and 0 II: 3		      |	Trying to insert node between -1 and 0 II: 5
+	insert at cycle -1   S2_storerf_io %8:intregs, 2, %70 |		insert at cycle -1   S2_storerf_io %8:intregs, 2, %70
+Trying to insert node between 1 and 3 II: 3		      |	Trying to insert node between 1 and 5 II: 5
+	insert at cycle 1   %88:intregs = COPY %32.isub_lo:do |		insert at cycle 2   %88:intregs = COPY %32.isub_lo:do
+	es: ffffffff ls: 7fffffff me: 7fffffff ms: 80000000   |		es: fffffffe ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between -1 and 1 II: 3		      |	Trying to insert node between -2 and 2 II: 5
+							      >		insert at cycle 2   %75:intregs = PHI %87:intregs, %b
+							      >
+							      >	Inst (6)   S2_storerh_io %8:intregs, 0, %75:intregs :: (store
+							      >
+							      >		es:        2 ls:        0 me: 7fffffff ms: 80000000
+							      >		Can't schedule
+							      >	Try to schedule with 6
+							      >
+							      >	Inst (12)   %82:intregs = COPY %32.isub_hi:doubleregs
+							      >
+							      >		es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+							      >	Trying to insert node between 1 and 6 II: 6
+							      >		insert at cycle 1   %82:intregs = COPY %32.isub_hi:do
+							      >
+							      >	Inst (10)   %32:doubleregs, %19:intregs = L2_loadrd_pi %7:int
+							      >
+							      >		es: 80000000 ls:        1 me: 7fffffff ms: 80000000
+							      >	Trying to insert node between 1 and -4 II: 6
+							      >		insert at cycle 1   %32:doubleregs, %19:intregs = L2_
+							      >
+							      >	Inst (9)   S2_storerf_io %8:intregs, 6, %63:intregs :: (store
+							      >
+							      >		es: 80000000 ls:        0 me: 7fffffff ms: 80000000
+							      >	Trying to insert node between 0 and -5 II: 6
+							      >		insert at cycle 0   S2_storerf_io %8:intregs, 6, %63:
+							      >
+							      >	Inst (2)   %63:intregs = PHI %81:intregs, %bb.1, %82:intregs,
+							      >
+							      >		es: fffffffc ls:        0 me: 7fffffff ms: 80000000
+							      >	Trying to insert node between 0 and -4 II: 6
+							      >		insert at cycle -1   %63:intregs = PHI %81:intregs, %
+							      >
+							      >	Inst (13)   %84:intregs = COPY %32.isub_hi:doubleregs
+							      >
+							      >		es:        1 ls: 7fffffff me: 7fffffff ms: 80000000
+							      >	Trying to insert node between 1 and 6 II: 6
+							      >		insert at cycle 2   %84:intregs = COPY %32.isub_hi:do
+							      >
+							      >	Inst (3)   %67:intregs = PHI %83:intregs, %bb.1, %84:intregs,
+							      >
+							      >		es: fffffffd ls: 7fffffff me: 7fffffff ms: 80000000
+							      >	Trying to insert node between -3 and 2 II: 6
+							      >		insert at cycle -3   %67:intregs = PHI %83:intregs, %
+							      >
+							      >	Inst (8)   S2_storerh_io %8:intregs, 4, %67:intregs :: (store
+							      >
+							      >		es: fffffffd ls:        0 me: 7fffffff ms: 80000000
+							      >	Trying to insert node between -3 and 0 II: 6
+							      >		insert at cycle -3   S2_storerh_io %8:intregs, 4, %67
+							      >
+							      >	Inst (14)   %86:intregs = COPY %32.isub_lo:doubleregs
+							      >
+							      >		es:        1 ls: 7fffffff me: 7fffffff ms: 80000000
+							      >	Trying to insert node between 1 and 6 II: 6
+							      >		insert at cycle 2   %86:intregs = COPY %32.isub_lo:do
+							      >
+							      >	Inst (4)   %70:intregs = PHI %85:intregs, %bb.1, %86:intregs,
+							      >
+							      >		es: fffffffd ls: 7fffffff me: 7fffffff ms: 80000000
+							      >	Trying to insert node between -3 and 2 II: 6
+							      >		insert at cycle -2   %70:intregs = PHI %85:intregs, %
+							      >
+							      >	Inst (7)   S2_storerf_io %8:intregs, 2, %70:intregs :: (store
+							      >
+							      >		es: fffffffe ls:        0 me: 7fffffff ms: 80000000
+							      >	Trying to insert node between -2 and 0 II: 6
+							      >		insert at cycle -2   S2_storerf_io %8:intregs, 2, %70
+							      >
+							      >	Inst (15)   %88:intregs = COPY %32.isub_lo:doubleregs
+							      >
+							      >		es:        1 ls: 7fffffff me: 7fffffff ms: 80000000
+							      >	Trying to insert node between 1 and 6 II: 6
+							      >		insert at cycle 2   %88:intregs = COPY %32.isub_lo:do
+							      >
+							      >	Inst (5)   %75:intregs = PHI %87:intregs, %bb.1, %88:intregs,
+							      >
+							      >		es: fffffffd ls: 7fffffff me: 7fffffff ms: 80000000
+							      >	Trying to insert node between -3 and 2 II: 6
+Inst (6)   S2_storerh_io %8:intregs, 0, %75:intregs :: (store |	Inst (6)   S2_storerh_io %8:intregs, 0, %75:intregs :: (store
+Trying to insert node between -1 and 0 II: 3		      |	Trying to insert node between -1 and 0 II: 6
+	failed to insert at cycle -1   S2_storerh_io %8:intre |		insert at cycle -1   S2_storerh_io %8:intregs, 0, %75
+	insert at cycle 0   S2_storerh_io %8:intregs, 0, %75: <
+	es: ffffffff ls:        1 me: 7fffffff ms: 80000000   |		es: fffffffc ls:        1 me: 7fffffff ms: 80000000
+Trying to insert node between 1 and -1 II: 3		      |	Trying to insert node between 1 and -4 II: 6
+	insert at cycle 1   %7:intregs = PHI %6:intregs, %bb. |		insert at cycle -4   %7:intregs = PHI %6:intregs, %bb
+	es: 80000000 ls: ffffffff me: 7fffffff ms: 80000000   |		es: 80000000 ls: fffffffd me: 7fffffff ms: 80000000
+Trying to insert node between -1 and -3 II: 3		      |	Trying to insert node between -3 and -8 II: 6
+	insert at cycle -1   %8:intregs = PHI %5:intregs, %bb |		insert at cycle -4   %8:intregs = PHI %5:intregs, %bb
+	es: ffffffff ls:        1 me: 7fffffff ms: 80000000   |		es: fffffffc ls:        1 me: 7fffffff ms: 80000000
+Trying to insert node between -1 and 1 II: 3		      |	Trying to insert node between -4 and 1 II: 6
+	insert at cycle -1   %20:intregs = A2_addi %8:intregs |		insert at cycle -4   %20:intregs = A2_addi %8:intregs
+Schedule Found? 1 (II=4)				      |	Schedule Found? 1 (II=6)
+cycle -1 (0) (3) %67:intregs = PHI %83:intregs, %bb.1, %84:in |	cycle -4 (0) (0) %7:intregs = PHI %6:intregs, %bb.1, %19:intr
+cycle -1 (0) (4) %70:intregs = PHI %85:intregs, %bb.1, %86:in |	cycle -4 (0) (1) %8:intregs = PHI %5:intregs, %bb.1, %20:intr
+cycle -1 (0) (5) %75:intregs = PHI %87:intregs, %bb.1, %88:in |	cycle -4 (1) (13) %84:intregs = COPY %32.isub_hi:doubleregs
+cycle -1 (0) (1) %8:intregs = PHI %5:intregs, %bb.1, %20:intr |	cycle -4 (1) (14) %86:intregs = COPY %32.isub_lo:doubleregs
+cycle -1 (0) (8) S2_storerh_io %8:intregs, 4, %67:intregs ::  |	cycle -4 (1) (15) %88:intregs = COPY %32.isub_lo:doubleregs
+cycle -1 (0) (7) S2_storerf_io %8:intregs, 2, %70:intregs ::  |	cycle -4 (0) (11) %20:intregs = A2_addi %8:intregs, 8
+cycle -1 (0) (11) %20:intregs = A2_addi %8:intregs, 8	      |	cycle -3 (0) (3) %67:intregs = PHI %83:intregs, %bb.1, %84:in
+cycle 0 (0) (2) %63:intregs = PHI %81:intregs, %bb.1, %82:int |	cycle -3 (0) (8) S2_storerh_io %8:intregs, 4, %67:intregs :: 
+cycle 0 (0) (9) S2_storerf_io %8:intregs, 6, %63:intregs :: ( |	cycle -2 (0) (4) %70:intregs = PHI %85:intregs, %bb.1, %86:in
+cycle 0 (0) (6) S2_storerh_io %8:intregs, 0, %75:intregs :: ( |	cycle -2 (0) (7) S2_storerf_io %8:intregs, 2, %70:intregs :: 
+cycle 1 (0) (0) %7:intregs = PHI %6:intregs, %bb.1, %19:intre |	cycle -1 (0) (2) %63:intregs = PHI %81:intregs, %bb.1, %82:in
+cycle 1 (0) (10) %32:doubleregs, %19:intregs = L2_loadrd_pi % |	cycle -1 (0) (5) %75:intregs = PHI %87:intregs, %bb.1, %88:in
+cycle 1 (0) (12) %82:intregs = COPY %32.isub_hi:doubleregs    |	cycle -1 (0) (6) S2_storerh_io %8:intregs, 0, %75:intregs :: 
+cycle 1 (0) (13) %84:intregs = COPY %32.isub_hi:doubleregs    |	cycle 0 (0) (9) S2_storerf_io %8:intregs, 6, %63:intregs :: (
+cycle 1 (0) (14) %86:intregs = COPY %32.isub_lo:doubleregs    |	cycle 1 (0) (10) %32:doubleregs, %19:intregs = L2_loadrd_pi %
+cycle 1 (0) (15) %88:intregs = COPY %32.isub_lo:doubleregs    |	cycle 1 (0) (12) %82:intregs = COPY %32.isub_hi:doubleregs
+No schedule found, return				      |	[stage 0 @-4c] %7:intregs = PHI %6:intregs, %bb.1, %19:intreg
+							      >	[stage 0 @-4c] %8:intregs = PHI %5:intregs, %bb.1, %20:intreg
+							      >	[stage 1 @-4c] %84:intregs = COPY %32.isub_hi:doubleregs
+							      >	[stage 1 @-4c] %86:intregs = COPY %32.isub_lo:doubleregs
+							      >	[stage 1 @-4c] %88:intregs = COPY %32.isub_lo:doubleregs
+							      >	[stage 0 @-4c] %20:intregs = A2_addi %8:intregs, 8
+							      >	[stage 0 @-3c] %67:intregs = PHI %83:intregs, %bb.1, %84:intr
+							      >	[stage 0 @-3c] S2_storerh_io %8:intregs, 4, %67:intregs :: (s
+							      >	[stage 0 @-2c] %70:intregs = PHI %85:intregs, %bb.1, %86:intr
+							      >	[stage 0 @-2c] S2_storerf_io %8:intregs, 2, %70:intregs :: (s
+							      >	[stage 0 @-1c] %63:intregs = PHI %81:intregs, %bb.1, %82:intr
+							      >	[stage 0 @-1c] %75:intregs = PHI %87:intregs, %bb.1, %88:intr
+							      >	[stage 0 @-1c] S2_storerh_io %8:intregs, 0, %75:intregs :: (s
+							      >	[stage 0 @0c] S2_storerf_io %8:intregs, 6, %63:intregs :: (st
+							      >	[stage 0 @1c] %32:doubleregs, %19:intregs = L2_loadrd_pi %7:i
+							      >	[stage 0 @1c] %82:intregs = COPY %32.isub_hi:doubleregs
+							      >	Dynamic: TC > 1
+		p0 = cmp.eq(r1,#0)			      |			p0 = cmp.eq(r1,#0); if (p0.new) jump:nt .LBB0
+		if (p0.new) jumpr:nt r31		      <
+.LBB0_1:                                // %for.body.preheade |	// %bb.1:                               // %for.body.preheade
+		loop0(.LBB0_2,r1)			      |			r3 = addasl(r3,r2,#1)
+		r2 = addasl(r3,r2,#1)			      |			r2 = add(r1,#-1)
+							      >			p0 = cmp.gtu(r1,#1)
+							      >		{
+							      >			loop0(.LBB0_2,r2)
+							      >			r1 = add(r3,#8)
+							      >		}
+							      >		{
+							      >			memh(r3+#4) = r5
+							      >			memh(r3+#2) = r4.h
+							      >		}
+							      >		{
+							      >			memh(r3+#0) = r4
+							      >			memh(r3+#6) = r5.h
+							      >		}
+							      >		{
+							      >			if (!p0) jumpr:nt r31
+							      >			r3:2 = memd(r0++#8)
+							      >		}
+		memh(r2+#0) = r4			      |			memh(r1+#4) = r3
+		memh(r2+#2) = r4.h			      |			memh(r1+#2) = r2.h
+		r2 = add(r2,#8)				      |			r1 = add(r1,#8)
+		memh(r2+#4) = r5			      |			memh(r1+#0) = r2
+		memh(r2+#6) = r5.h			      |			memh(r1+#6) = r3.h
+		r5:4 = memd(r0++#8)			      |			r3:2 = memd(r0++#8)
+// %bb.3:                               // %for.end	      |	.LBB0_3:                                // %for.end

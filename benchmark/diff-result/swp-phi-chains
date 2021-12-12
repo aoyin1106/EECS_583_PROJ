@@ -1,0 +1,981 @@
+SU(11):   %37:intregs, %25:intregs = L2_loadri_pi %13:intregs |	SU(11):   %37:intregs, %25:intregs = L2_loadri_pi %13:intregs
+SU(15):   %42:intregs, %26:intregs = L2_loadri_pi %12:intregs |	SU(15):   %42:intregs, %26:intregs = L2_loadri_pi %12:intregs
+SU(23):   S2_storerigp @g0, %19:intregs, implicit $gp :: (sto |	SU(23):   S2_storerigp @g0, %19:intregs, implicit $gp :: (sto
+SU(26):   S2_storerigp @g1, %20:intregs, implicit $gp :: (sto |	SU(26):   S2_storerigp @g1, %20:intregs, implicit $gp :: (sto
+SU(29):   S2_storerigp @g2, %21:intregs, implicit $gp :: (sto |	SU(29):   S2_storerigp @g2, %21:intregs, implicit $gp :: (sto
+SU(33):   S2_storerigp @g3, %22:intregs, implicit $gp :: (sto |	SU(33):   S2_storerigp @g3, %22:intregs, implicit $gp :: (sto
+SU(36):   S2_storerigp @g4, %23:intregs, implicit $gp :: (sto |	SU(36):   S2_storerigp @g4, %23:intregs, implicit $gp :: (sto
+SU(37):   S2_storerigp @g5, %6:intregs, implicit $gp :: (stor |	SU(37):   S2_storerigp @g5, %6:intregs, implicit $gp :: (stor
+  %37:intregs, %25:intregs = L2_loadri_pi %13:intregs(tied-de |	  %37:intregs, %25:intregs = L2_loadri_pi %13:intregs(tied-de
+  S2_storerigp @g5, %6:intregs, implicit $gp :: (store 4 into |	  S2_storerigp @g5, %6:intregs, implicit $gp :: (store (s32) 
+  S2_storerigp @g4, %23:intregs, implicit $gp :: (store 4 int |	  S2_storerigp @g4, %23:intregs, implicit $gp :: (store (s32)
+  S2_storerigp @g3, %22:intregs, implicit $gp :: (store 4 int |	  S2_storerigp @g3, %22:intregs, implicit $gp :: (store (s32)
+  S2_storerigp @g0, %19:intregs, implicit $gp :: (store 4 int |	  S2_storerigp @g0, %19:intregs, implicit $gp :: (store (s32)
+  S2_storerigp @g2, %21:intregs, implicit $gp :: (store 4 int |	  S2_storerigp @g2, %21:intregs, implicit $gp :: (store (s32)
+  %42:intregs, %26:intregs = L2_loadri_pi %12:intregs(tied-de |	  %42:intregs, %26:intregs = L2_loadri_pi %12:intregs(tied-de
+  S2_storerigp @g1, %20:intregs, implicit $gp :: (store 4 int |	  S2_storerigp @g1, %20:intregs, implicit $gp :: (store (s32)
+SU(15):   %42:intregs, %26:intregs = L2_loadri_pi %12:intregs |	SU(15):   %42:intregs, %26:intregs = L2_loadri_pi %12:intregs
+SU(11):   %37:intregs, %25:intregs = L2_loadri_pi %13:intregs |	SU(11):   %37:intregs, %25:intregs = L2_loadri_pi %13:intregs
+SU(23):   S2_storerigp @g0, %19:intregs, implicit $gp :: (sto |	SU(23):   S2_storerigp @g0, %19:intregs, implicit $gp :: (sto
+SU(26):   S2_storerigp @g1, %20:intregs, implicit $gp :: (sto |	SU(26):   S2_storerigp @g1, %20:intregs, implicit $gp :: (sto
+SU(29):   S2_storerigp @g2, %21:intregs, implicit $gp :: (sto |	SU(29):   S2_storerigp @g2, %21:intregs, implicit $gp :: (sto
+SU(33):   S2_storerigp @g3, %22:intregs, implicit $gp :: (sto |	SU(33):   S2_storerigp @g3, %22:intregs, implicit $gp :: (sto
+SU(36):   S2_storerigp @g4, %23:intregs, implicit $gp :: (sto |	SU(36):   S2_storerigp @g4, %23:intregs, implicit $gp :: (sto
+SU(37):   S2_storerigp @g5, %6:intregs, implicit $gp :: (stor |	SU(37):   S2_storerigp @g5, %6:intregs, implicit $gp :: (stor
+   SU(15) %42:intregs, %26:intregs = L2_loadri_pi %12:intregs |	   SU(15) %42:intregs, %26:intregs = L2_loadri_pi %12:intregs
+   SU(11) %37:intregs, %25:intregs = L2_loadri_pi %13:intregs |	   SU(11) %37:intregs, %25:intregs = L2_loadri_pi %13:intregs
+   SU(15) %42:intregs, %26:intregs = L2_loadri_pi %12:intregs |	   SU(15) %42:intregs, %26:intregs = L2_loadri_pi %12:intregs
+   SU(36) S2_storerigp @g4, %23:intregs, implicit $gp :: (sto |	   SU(36) S2_storerigp @g4, %23:intregs, implicit $gp :: (sto
+   SU(33) S2_storerigp @g3, %22:intregs, implicit $gp :: (sto |	   SU(33) S2_storerigp @g3, %22:intregs, implicit $gp :: (sto
+   SU(29) S2_storerigp @g2, %21:intregs, implicit $gp :: (sto |	   SU(29) S2_storerigp @g2, %21:intregs, implicit $gp :: (sto
+   SU(26) S2_storerigp @g1, %20:intregs, implicit $gp :: (sto |	   SU(26) S2_storerigp @g1, %20:intregs, implicit $gp :: (sto
+   SU(37) S2_storerigp @g5, %6:intregs, implicit $gp :: (stor |	   SU(37) S2_storerigp @g5, %6:intregs, implicit $gp :: (stor
+   SU(15) %42:intregs, %26:intregs = L2_loadri_pi %12:intregs |	   SU(15) %42:intregs, %26:intregs = L2_loadri_pi %12:intregs
+   SU(36) S2_storerigp @g4, %23:intregs, implicit $gp :: (sto |	   SU(36) S2_storerigp @g4, %23:intregs, implicit $gp :: (sto
+   SU(33) S2_storerigp @g3, %22:intregs, implicit $gp :: (sto |	   SU(33) S2_storerigp @g3, %22:intregs, implicit $gp :: (sto
+   SU(29) S2_storerigp @g2, %21:intregs, implicit $gp :: (sto |	   SU(29) S2_storerigp @g2, %21:intregs, implicit $gp :: (sto
+   SU(26) S2_storerigp @g1, %20:intregs, implicit $gp :: (sto |	   SU(26) S2_storerigp @g1, %20:intregs, implicit $gp :: (sto
+   SU(37) S2_storerigp @g5, %6:intregs, implicit $gp :: (stor |	   SU(37) S2_storerigp @g5, %6:intregs, implicit $gp :: (stor
+   SU(11) %37:intregs, %25:intregs = L2_loadri_pi %13:intregs |	   SU(11) %37:intregs, %25:intregs = L2_loadri_pi %13:intregs
+   SU(23) S2_storerigp @g0, %19:intregs, implicit $gp :: (sto |	   SU(23) S2_storerigp @g0, %19:intregs, implicit $gp :: (sto
+Inst (36)   S2_storerigp @g4, %23:intregs, implicit $gp :: (s |	Inst (36)   S2_storerigp @g4, %23:intregs, implicit $gp :: (s
+	insert at cycle 11   S2_storerigp @g4, %23:intregs, i |		insert at cycle 11   S2_storerigp @g4, %23:intregs, i
+Inst (15)   %42:intregs, %26:intregs = L2_loadri_pi %12:intre |	Inst (15)   %42:intregs, %26:intregs = L2_loadri_pi %12:intre
+Inst (36)   S2_storerigp @g4, %23:intregs, implicit $gp :: (s |	Inst (36)   S2_storerigp @g4, %23:intregs, implicit $gp :: (s
+	insert at cycle 11   S2_storerigp @g4, %23:intregs, i |		insert at cycle 11   S2_storerigp @g4, %23:intregs, i
+Inst (15)   %42:intregs, %26:intregs = L2_loadri_pi %12:intre |	Inst (15)   %42:intregs, %26:intregs = L2_loadri_pi %12:intre
+	insert at cycle 0   %42:intregs, %26:intregs = L2_loa |		insert at cycle 0   %42:intregs, %26:intregs = L2_loa
+	insert at cycle 7   %52:intregs = M2_mpy_acc_sat_ll_s |		insert at cycle 8   %52:intregs = M2_mpy_acc_sat_ll_s
+	failed to insert at cycle 7   %22:intregs = M2_mpy_ac |		insert at cycle 10   %22:intregs = M2_mpy_acc_sat_ll_
+	insert at cycle 8   %22:intregs = M2_mpy_acc_sat_ll_s <
+	failed to insert at cycle 7   %20:intregs = M2_mpy_ac |		insert at cycle 13   %20:intregs = M2_mpy_acc_sat_ll_
+	insert at cycle 8   %20:intregs = M2_mpy_acc_sat_ll_s <
+	es:        9 ls: 7fffffff me: 7fffffff ms: 80000000   |		es:        a ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 9 and 20 II: 12		      |	Trying to insert node between 10 and 21 II: 12
+	insert at cycle 9   %21:intregs = M2_mpy_acc_sat_ll_s |		insert at cycle 16   %21:intregs = M2_mpy_acc_sat_ll_
+Inst (33)   S2_storerigp @g3, %22:intregs, implicit $gp :: (s |	Inst (33)   S2_storerigp @g3, %22:intregs, implicit $gp :: (s
+	es:        a ls: 7fffffff me:        b ms: 80000000   |		es:        c ls: 7fffffff me:        b ms: 80000000
+Trying to insert node between 10 and 11 II: 12		      <
+	insert at cycle 10   S2_storerigp @g3, %22:intregs, i <
+							      <
+Inst (29)   S2_storerigp @g2, %21:intregs, implicit $gp :: (s <
+							      <
+	es:        b ls: 7fffffff me:        b ms: 80000000   <
+Trying to insert node between 11 and 11 II: 12		      <
+	insert at cycle 11   S2_storerigp @g2, %21:intregs, i <
+							      <
+Inst (26)   S2_storerigp @g1, %20:intregs, implicit $gp :: (s <
+							      <
+	es:        a ls: 7fffffff me:        b ms: 80000000   <
+Trying to insert node between 10 and 11 II: 12		      <
+	insert at cycle 10   S2_storerigp @g1, %20:intregs, i <
+							      <
+Inst (37)   S2_storerigp @g5, %6:intregs, implicit $gp :: (st <
+							      <
+	es:        0 ls: 7fffffff me:        b ms: 80000000   <
+Trying to insert node between 0 and 11 II: 12		      <
+	insert at cycle 0   S2_storerigp @g5, %6:intregs, imp <
+							      <
+Inst (1)   %7:intregs = PHI %5:intregs, %bb.0, %23:intregs, % <
+							      <
+	es: fffffffe ls:        7 me: 7fffffff ms: 80000000   <
+Trying to insert node between 7 and -2 II: 12		      <
+	insert at cycle 7   %7:intregs = PHI %5:intregs, %bb. <
+							      <
+Inst (2)   %8:intregs = PHI %4:intregs, %bb.0, %22:intregs, % <
+							      <
+	es: fffffffd ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -3 and 8 II: 12		      <
+	insert at cycle -3   %8:intregs = PHI %4:intregs, %bb <
+							      <
+Inst (30)   %54:intregs = M2_mpy_acc_sat_ll_s1 %8:intregs(tie <
+							      <
+	es: fffffffd ls:        6 me: 7fffffff ms: 80000000   <
+Trying to insert node between -3 and 6 II: 12		      <
+	failed to insert at cycle -3   %54:intregs = M2_mpy_a <
+	insert at cycle -2   %54:intregs = M2_mpy_acc_sat_ll_ <
+							      <
+Inst (3)   %9:intregs = PHI %3:intregs, %bb.0, %21:intregs, % <
+							      <
+	es: fffffffe ls:        7 me: 7fffffff ms: 80000000   <
+Trying to insert node between 7 and -2 II: 12		      <
+	insert at cycle 7   %9:intregs = PHI %3:intregs, %bb. <
+							      <
+Inst (4)   %10:intregs = PHI %2:intregs, %bb.0, %20:intregs,  <
+							      <
+	es: fffffffd ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -3 and 8 II: 12		      <
+	insert at cycle -3   %10:intregs = PHI %2:intregs, %b <
+							      <
+Inst (24)   %50:intregs = M2_mpy_acc_sat_ll_s1 %10:intregs(ti <
+							      <
+	es: fffffffd ls:        6 me: 7fffffff ms: 80000000   <
+Trying to insert node between -3 and 6 II: 12		      <
+	failed to insert at cycle -3   %50:intregs = M2_mpy_a <
+	insert at cycle -2   %50:intregs = M2_mpy_acc_sat_ll_ <
+							      <
+Inst (8)   %14:intregs = PHI %0:intregs, %bb.0, %18:intregs,  <
+							      <
+	es: fffffffa ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -6 and 5 II: 12		      <
+	insert at cycle -6   %14:intregs = PHI %0:intregs, %b <
+							      <
+Inst (21)   %48:intregs = A2_sxth %14:intregs		      <
+							      <
+	es: fffffffa ls:        5 me: 7fffffff ms: 80000000   <
+Trying to insert node between -6 and 5 II: 12		      <
+	insert at cycle -6   %48:intregs = A2_sxth %14:intreg <
+							      <
+Inst (22)   %19:intregs = M2_mpy_nac_sat_ll_s1 %47:intregs(ti <
+							      <
+	es: fffffffc ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -4 and 7 II: 12		      <
+	failed to insert at cycle -4   %19:intregs = M2_mpy_n <
+	failed to insert at cycle -3   %19:intregs = M2_mpy_n <
+	failed to insert at cycle -2   %19:intregs = M2_mpy_n <
+	insert at cycle -1   %19:intregs = M2_mpy_nac_sat_ll_ <
+							      <
+Inst (5)   %11:intregs = PHI %1:intregs, %bb.0, %19:intregs,  <
+							      <
+	es: fffffff4 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -12 and -1 II: 12		      <
+	insert at cycle -12   %11:intregs = PHI %1:intregs, % <
+							      <
+Inst (20)   %47:intregs = M2_mpy_nac_sat_ll_s1 %11:intregs(ti <
+							      <
+	es: fffffff4 ls: fffffffd me: 7fffffff ms: 80000000   <
+Trying to insert node between -12 and -3 II: 12		      <
+	insert at cycle -12   %47:intregs = M2_mpy_nac_sat_ll <
+							      <
+Inst (6)   %12:intregs = PHI %29:intregs, %bb.0, %26:intregs, <
+							      <
+	es: fffffff5 ls:        0 me: 7fffffff ms: 80000000   <
+Trying to insert node between 0 and -11 II: 12		      <
+	insert at cycle 0   %12:intregs = PHI %29:intregs, %b <
+							      <
+Inst (14)   %17:intregs = A2_sath %41:intregs, implicit-def d <
+							      <
+	es: 80000000 ls: fffffffc me: 7fffffff ms: 80000000   <
+Trying to insert node between -4 and -15 II: 12		      <
+	failed to insert at cycle -4   %17:intregs = A2_sath  <
+	failed to insert at cycle -5   %17:intregs = A2_sath  <
+	insert at cycle -6   %17:intregs = A2_sath %41:intreg <
+							      <
+Inst (13)   %41:intregs = S2_asr_r_r_sat %38:intregs, %34:int <
+							      <
+	es: 80000000 ls: fffffff8 me: 7fffffff ms: 80000000   <
+Trying to insert node between -8 and -19 II: 12		      <
+	insert at cycle -8   %41:intregs = S2_asr_r_r_sat %38 <
+							      <
+Inst (12)   %38:intregs = A2_asrh %37:intregs		      <
+							      <
+	es: 80000000 ls: fffffff7 me: 7fffffff ms: 80000000   <
+Trying to insert node between -9 and -20 II: 12		      <
+	insert at cycle -9   %38:intregs = A2_asrh %37:intreg <
+							      <
+Inst (11)   %37:intregs, %25:intregs = L2_loadri_pi %13:intre <
+							      <
+	es: 80000000 ls: fffffff5 me: 7fffffff ms:        0   <
+Inst (36)   S2_storerigp @g4, %23:intregs, implicit $gp :: (s |	Inst (36)   S2_storerigp @g4, %23:intregs, implicit $gp :: (s
+	insert at cycle 11   S2_storerigp @g4, %23:intregs, i |		insert at cycle 11   S2_storerigp @g4, %23:intregs, i
+Inst (15)   %42:intregs, %26:intregs = L2_loadri_pi %12:intre |	Inst (15)   %42:intregs, %26:intregs = L2_loadri_pi %12:intre
+	insert at cycle 0   %42:intregs, %26:intregs = L2_loa |		insert at cycle 0   %42:intregs, %26:intregs = L2_loa
+	insert at cycle 7   %52:intregs = M2_mpy_acc_sat_ll_s |		insert at cycle 8   %52:intregs = M2_mpy_acc_sat_ll_s
+	failed to insert at cycle 7   %22:intregs = M2_mpy_ac |		insert at cycle 10   %22:intregs = M2_mpy_acc_sat_ll_
+	insert at cycle 8   %22:intregs = M2_mpy_acc_sat_ll_s <
+	failed to insert at cycle 7   %20:intregs = M2_mpy_ac |		insert at cycle 12   %20:intregs = M2_mpy_acc_sat_ll_
+	insert at cycle 8   %20:intregs = M2_mpy_acc_sat_ll_s <
+	es:        9 ls: 7fffffff me: 7fffffff ms: 80000000   |		es:        a ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 9 and 21 II: 13		      |	Trying to insert node between 10 and 22 II: 13
+	insert at cycle 9   %21:intregs = M2_mpy_acc_sat_ll_s |		insert at cycle 14   %21:intregs = M2_mpy_acc_sat_ll_
+							      <
+Inst (33)   S2_storerigp @g3, %22:intregs, implicit $gp :: (s <
+							      <
+	es:        a ls: 7fffffff me:        c ms: 80000000   <
+Trying to insert node between 10 and 12 II: 13		      <
+	insert at cycle 10   S2_storerigp @g3, %22:intregs, i <
+							      <
+Inst (29)   S2_storerigp @g2, %21:intregs, implicit $gp :: (s <
+							      <
+	es:        b ls: 7fffffff me:        c ms: 80000000   <
+Trying to insert node between 11 and 12 II: 13		      <
+	insert at cycle 11   S2_storerigp @g2, %21:intregs, i <
+							      <
+Inst (26)   S2_storerigp @g1, %20:intregs, implicit $gp :: (s <
+							      <
+	es:        a ls: 7fffffff me:        c ms: 80000000   <
+Trying to insert node between 10 and 12 II: 13		      <
+	insert at cycle 10   S2_storerigp @g1, %20:intregs, i <
+							      <
+Inst (37)   S2_storerigp @g5, %6:intregs, implicit $gp :: (st <
+	es:        0 ls: 7fffffff me:        c ms: 80000000   |	Inst (33)   S2_storerigp @g3, %22:intregs, implicit $gp :: (s
+Trying to insert node between 0 and 12 II: 13		      <
+	insert at cycle 0   S2_storerigp @g5, %6:intregs, imp <
+Inst (1)   %7:intregs = PHI %5:intregs, %bb.0, %23:intregs, % |		es:        c ls: 7fffffff me:        c ms: 80000000
+							      |	Trying to insert node between 12 and 12 II: 13
+	es: fffffffd ls:        7 me: 7fffffff ms: 80000000   |		insert at cycle 12   S2_storerigp @g3, %22:intregs, i
+Trying to insert node between 7 and -3 II: 13		      <
+	insert at cycle 7   %7:intregs = PHI %5:intregs, %bb. <
+							      <
+Inst (2)   %8:intregs = PHI %4:intregs, %bb.0, %22:intregs, % <
+							      <
+	es: fffffffc ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -4 and 8 II: 13		      <
+	insert at cycle -4   %8:intregs = PHI %4:intregs, %bb <
+Inst (30)   %54:intregs = M2_mpy_acc_sat_ll_s1 %8:intregs(tie |	Inst (29)   S2_storerigp @g2, %21:intregs, implicit $gp :: (s
+							      <
+	es: fffffffc ls:        6 me: 7fffffff ms: 80000000   <
+Trying to insert node between -4 and 6 II: 13		      <
+	failed to insert at cycle -4   %54:intregs = M2_mpy_a <
+	insert at cycle -3   %54:intregs = M2_mpy_acc_sat_ll_ <
+Inst (3)   %9:intregs = PHI %3:intregs, %bb.0, %21:intregs, % |		es:       10 ls: 7fffffff me:        c ms: 80000000
+							      <
+	es: fffffffd ls:        7 me: 7fffffff ms: 80000000   <
+Trying to insert node between 7 and -3 II: 13		      <
+	insert at cycle 7   %9:intregs = PHI %3:intregs, %bb. <
+							      <
+Inst (4)   %10:intregs = PHI %2:intregs, %bb.0, %20:intregs,  <
+							      <
+	es: fffffffc ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -4 and 8 II: 13		      <
+	insert at cycle -4   %10:intregs = PHI %2:intregs, %b <
+							      <
+Inst (24)   %50:intregs = M2_mpy_acc_sat_ll_s1 %10:intregs(ti <
+							      <
+	es: fffffffc ls:        6 me: 7fffffff ms: 80000000   <
+Trying to insert node between -4 and 6 II: 13		      <
+	failed to insert at cycle -4   %50:intregs = M2_mpy_a <
+	insert at cycle -3   %50:intregs = M2_mpy_acc_sat_ll_ <
+							      <
+Inst (8)   %14:intregs = PHI %0:intregs, %bb.0, %18:intregs,  <
+							      <
+	es: fffffff9 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -7 and 5 II: 13		      <
+	insert at cycle -7   %14:intregs = PHI %0:intregs, %b <
+							      <
+Inst (21)   %48:intregs = A2_sxth %14:intregs		      <
+							      <
+	es: fffffff9 ls:        5 me: 7fffffff ms: 80000000   <
+Trying to insert node between -7 and 5 II: 13		      <
+	insert at cycle -7   %48:intregs = A2_sxth %14:intreg <
+							      <
+Inst (22)   %19:intregs = M2_mpy_nac_sat_ll_s1 %47:intregs(ti <
+							      <
+	es: fffffffb ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -5 and 7 II: 13		      <
+	failed to insert at cycle -5   %19:intregs = M2_mpy_n <
+	failed to insert at cycle -4   %19:intregs = M2_mpy_n <
+	failed to insert at cycle -3   %19:intregs = M2_mpy_n <
+	insert at cycle -2   %19:intregs = M2_mpy_nac_sat_ll_ <
+							      <
+Inst (5)   %11:intregs = PHI %1:intregs, %bb.0, %19:intregs,  <
+							      <
+	es: fffffff2 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -14 and -2 II: 13		      <
+	insert at cycle -14   %11:intregs = PHI %1:intregs, % <
+							      <
+Inst (20)   %47:intregs = M2_mpy_nac_sat_ll_s1 %11:intregs(ti <
+							      <
+	es: fffffff2 ls: fffffffc me: 7fffffff ms: 80000000   <
+Trying to insert node between -14 and -4 II: 13		      <
+	insert at cycle -14   %47:intregs = M2_mpy_nac_sat_ll <
+							      <
+Inst (6)   %12:intregs = PHI %29:intregs, %bb.0, %26:intregs, <
+							      <
+	es: fffffff4 ls:        0 me: 7fffffff ms: 80000000   <
+Trying to insert node between 0 and -12 II: 13		      <
+	insert at cycle 0   %12:intregs = PHI %29:intregs, %b <
+							      <
+Inst (14)   %17:intregs = A2_sath %41:intregs, implicit-def d <
+							      <
+	es: 80000000 ls: fffffffb me: 7fffffff ms: 80000000   <
+Trying to insert node between -5 and -17 II: 13		      <
+	failed to insert at cycle -5   %17:intregs = A2_sath  <
+	failed to insert at cycle -6   %17:intregs = A2_sath  <
+	insert at cycle -7   %17:intregs = A2_sath %41:intreg <
+							      <
+Inst (13)   %41:intregs = S2_asr_r_r_sat %38:intregs, %34:int <
+							      <
+	es: 80000000 ls: fffffff7 me: 7fffffff ms: 80000000   <
+Trying to insert node between -9 and -21 II: 13		      <
+	insert at cycle -9   %41:intregs = S2_asr_r_r_sat %38 <
+							      <
+Inst (12)   %38:intregs = A2_asrh %37:intregs		      <
+							      <
+	es: 80000000 ls: fffffff6 me: 7fffffff ms: 80000000   <
+Trying to insert node between -10 and -22 II: 13	      <
+	insert at cycle -10   %38:intregs = A2_asrh %37:intre <
+							      <
+Inst (11)   %37:intregs, %25:intregs = L2_loadri_pi %13:intre <
+							      <
+	es: 80000000 ls: fffffff4 me: 7fffffff ms: ffffffff   <
+Inst (36)   S2_storerigp @g4, %23:intregs, implicit $gp :: (s |	Inst (36)   S2_storerigp @g4, %23:intregs, implicit $gp :: (s
+	insert at cycle 11   S2_storerigp @g4, %23:intregs, i |		insert at cycle 11   S2_storerigp @g4, %23:intregs, i
+Inst (15)   %42:intregs, %26:intregs = L2_loadri_pi %12:intre |	Inst (15)   %42:intregs, %26:intregs = L2_loadri_pi %12:intre
+	insert at cycle 0   %42:intregs, %26:intregs = L2_loa |		insert at cycle 0   %42:intregs, %26:intregs = L2_loa
+	insert at cycle 7   %52:intregs = M2_mpy_acc_sat_ll_s |		insert at cycle 8   %52:intregs = M2_mpy_acc_sat_ll_s
+	failed to insert at cycle 7   %22:intregs = M2_mpy_ac |		insert at cycle 10   %22:intregs = M2_mpy_acc_sat_ll_
+	insert at cycle 8   %22:intregs = M2_mpy_acc_sat_ll_s <
+	failed to insert at cycle 7   %20:intregs = M2_mpy_ac |		insert at cycle 12   %20:intregs = M2_mpy_acc_sat_ll_
+	insert at cycle 8   %20:intregs = M2_mpy_acc_sat_ll_s <
+	es:        9 ls: 7fffffff me: 7fffffff ms: 80000000   |		es:        a ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 9 and 22 II: 14		      |	Trying to insert node between 10 and 23 II: 14
+	insert at cycle 9   %21:intregs = M2_mpy_acc_sat_ll_s |		insert at cycle 13   %21:intregs = M2_mpy_acc_sat_ll_
+							      <
+Inst (33)   S2_storerigp @g3, %22:intregs, implicit $gp :: (s <
+							      <
+	es:        a ls: 7fffffff me:        d ms: 80000000   <
+Trying to insert node between 10 and 13 II: 14		      <
+	insert at cycle 10   S2_storerigp @g3, %22:intregs, i <
+							      <
+Inst (29)   S2_storerigp @g2, %21:intregs, implicit $gp :: (s <
+							      <
+	es:        b ls: 7fffffff me:        d ms: 80000000   <
+Trying to insert node between 11 and 13 II: 14		      <
+	insert at cycle 11   S2_storerigp @g2, %21:intregs, i <
+							      <
+Inst (26)   S2_storerigp @g1, %20:intregs, implicit $gp :: (s <
+	es:        a ls: 7fffffff me:        d ms: 80000000   |	Inst (33)   S2_storerigp @g3, %22:intregs, implicit $gp :: (s
+Trying to insert node between 10 and 13 II: 14		      <
+	insert at cycle 10   S2_storerigp @g1, %20:intregs, i <
+Inst (37)   S2_storerigp @g5, %6:intregs, implicit $gp :: (st |		es:        c ls: 7fffffff me:        d ms: 80000000
+							      |	Trying to insert node between 12 and 13 II: 14
+	es:        0 ls: 7fffffff me:        d ms: 80000000   |		insert at cycle 12   S2_storerigp @g3, %22:intregs, i
+Trying to insert node between 0 and 13 II: 14		      <
+	insert at cycle 0   S2_storerigp @g5, %6:intregs, imp <
+							      <
+Inst (1)   %7:intregs = PHI %5:intregs, %bb.0, %23:intregs, % <
+							      <
+	es: fffffffc ls:        7 me: 7fffffff ms: 80000000   <
+Trying to insert node between 7 and -4 II: 14		      <
+	insert at cycle 7   %7:intregs = PHI %5:intregs, %bb. <
+							      <
+Inst (2)   %8:intregs = PHI %4:intregs, %bb.0, %22:intregs, % <
+							      <
+	es: fffffffb ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -5 and 8 II: 14		      <
+	insert at cycle -5   %8:intregs = PHI %4:intregs, %bb <
+							      <
+Inst (30)   %54:intregs = M2_mpy_acc_sat_ll_s1 %8:intregs(tie <
+	es: fffffffb ls:        6 me: 7fffffff ms: 80000000   |	Inst (29)   S2_storerigp @g2, %21:intregs, implicit $gp :: (s
+Trying to insert node between -5 and 6 II: 14		      <
+	failed to insert at cycle -5   %54:intregs = M2_mpy_a <
+	insert at cycle -4   %54:intregs = M2_mpy_acc_sat_ll_ <
+							      <
+Inst (3)   %9:intregs = PHI %3:intregs, %bb.0, %21:intregs, % <
+							      <
+	es: fffffffc ls:        7 me: 7fffffff ms: 80000000   <
+Trying to insert node between 7 and -4 II: 14		      <
+	insert at cycle 7   %9:intregs = PHI %3:intregs, %bb. <
+							      <
+Inst (4)   %10:intregs = PHI %2:intregs, %bb.0, %20:intregs,  <
+							      <
+	es: fffffffb ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -5 and 8 II: 14		      <
+	insert at cycle -5   %10:intregs = PHI %2:intregs, %b <
+							      <
+Inst (24)   %50:intregs = M2_mpy_acc_sat_ll_s1 %10:intregs(ti <
+							      <
+	es: fffffffb ls:        6 me: 7fffffff ms: 80000000   <
+Trying to insert node between -5 and 6 II: 14		      <
+	failed to insert at cycle -5   %50:intregs = M2_mpy_a <
+	insert at cycle -4   %50:intregs = M2_mpy_acc_sat_ll_ <
+							      <
+Inst (8)   %14:intregs = PHI %0:intregs, %bb.0, %18:intregs,  <
+							      <
+	es: fffffff8 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -8 and 5 II: 14		      <
+	insert at cycle -8   %14:intregs = PHI %0:intregs, %b <
+							      <
+Inst (21)   %48:intregs = A2_sxth %14:intregs		      <
+							      <
+	es: fffffff8 ls:        5 me: 7fffffff ms: 80000000   <
+Trying to insert node between -8 and 5 II: 14		      <
+	insert at cycle -8   %48:intregs = A2_sxth %14:intreg <
+							      <
+Inst (22)   %19:intregs = M2_mpy_nac_sat_ll_s1 %47:intregs(ti <
+	es: fffffffa ls: 7fffffff me: 7fffffff ms: 80000000   |		es:        f ls: 7fffffff me:        d ms: 80000000
+Trying to insert node between -6 and 7 II: 14		      <
+	failed to insert at cycle -6   %19:intregs = M2_mpy_n <
+	failed to insert at cycle -5   %19:intregs = M2_mpy_n <
+	failed to insert at cycle -4   %19:intregs = M2_mpy_n <
+	insert at cycle -3   %19:intregs = M2_mpy_nac_sat_ll_ <
+							      <
+Inst (5)   %11:intregs = PHI %1:intregs, %bb.0, %19:intregs,  <
+							      <
+	es: fffffff0 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -16 and -3 II: 14		      <
+	insert at cycle -16   %11:intregs = PHI %1:intregs, % <
+							      <
+Inst (20)   %47:intregs = M2_mpy_nac_sat_ll_s1 %11:intregs(ti <
+							      <
+	es: fffffff0 ls: fffffffb me: 7fffffff ms: 80000000   <
+Trying to insert node between -16 and -5 II: 14		      <
+	insert at cycle -16   %47:intregs = M2_mpy_nac_sat_ll <
+							      <
+Inst (6)   %12:intregs = PHI %29:intregs, %bb.0, %26:intregs, <
+							      <
+	es: fffffff3 ls:        0 me: 7fffffff ms: 80000000   <
+Trying to insert node between 0 and -13 II: 14		      <
+	insert at cycle 0   %12:intregs = PHI %29:intregs, %b <
+							      <
+Inst (14)   %17:intregs = A2_sath %41:intregs, implicit-def d <
+							      <
+	es: 80000000 ls: fffffffa me: 7fffffff ms: 80000000   <
+Trying to insert node between -6 and -19 II: 14		      <
+	failed to insert at cycle -6   %17:intregs = A2_sath  <
+	failed to insert at cycle -7   %17:intregs = A2_sath  <
+	insert at cycle -8   %17:intregs = A2_sath %41:intreg <
+							      <
+Inst (13)   %41:intregs = S2_asr_r_r_sat %38:intregs, %34:int <
+							      <
+	es: 80000000 ls: fffffff6 me: 7fffffff ms: 80000000   <
+Trying to insert node between -10 and -23 II: 14	      <
+	insert at cycle -10   %41:intregs = S2_asr_r_r_sat %3 <
+							      <
+Inst (12)   %38:intregs = A2_asrh %37:intregs		      <
+							      <
+	es: 80000000 ls: fffffff5 me: 7fffffff ms: 80000000   <
+Trying to insert node between -11 and -24 II: 14	      <
+	insert at cycle -11   %38:intregs = A2_asrh %37:intre <
+							      <
+Inst (11)   %37:intregs, %25:intregs = L2_loadri_pi %13:intre <
+							      <
+	es: 80000000 ls: fffffff3 me: 7fffffff ms: fffffffe   <
+Inst (36)   S2_storerigp @g4, %23:intregs, implicit $gp :: (s |	Inst (36)   S2_storerigp @g4, %23:intregs, implicit $gp :: (s
+	insert at cycle 11   S2_storerigp @g4, %23:intregs, i |		insert at cycle 11   S2_storerigp @g4, %23:intregs, i
+Inst (15)   %42:intregs, %26:intregs = L2_loadri_pi %12:intre |	Inst (15)   %42:intregs, %26:intregs = L2_loadri_pi %12:intre
+	insert at cycle 0   %42:intregs, %26:intregs = L2_loa |		insert at cycle 0   %42:intregs, %26:intregs = L2_loa
+	insert at cycle 7   %52:intregs = M2_mpy_acc_sat_ll_s |		insert at cycle 8   %52:intregs = M2_mpy_acc_sat_ll_s
+	failed to insert at cycle 7   %22:intregs = M2_mpy_ac |		insert at cycle 10   %22:intregs = M2_mpy_acc_sat_ll_
+	insert at cycle 8   %22:intregs = M2_mpy_acc_sat_ll_s <
+	failed to insert at cycle 7   %20:intregs = M2_mpy_ac |		insert at cycle 12   %20:intregs = M2_mpy_acc_sat_ll_
+	insert at cycle 8   %20:intregs = M2_mpy_acc_sat_ll_s <
+	es:        9 ls: 7fffffff me: 7fffffff ms: 80000000   |		es:        a ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 9 and 23 II: 15		      |	Trying to insert node between 10 and 24 II: 15
+	insert at cycle 9   %21:intregs = M2_mpy_acc_sat_ll_s |		insert at cycle 13   %21:intregs = M2_mpy_acc_sat_ll_
+							      <
+Inst (33)   S2_storerigp @g3, %22:intregs, implicit $gp :: (s <
+							      <
+	es:        a ls: 7fffffff me:        e ms: 80000000   <
+Trying to insert node between 10 and 14 II: 15		      <
+	insert at cycle 10   S2_storerigp @g3, %22:intregs, i <
+							      <
+Inst (29)   S2_storerigp @g2, %21:intregs, implicit $gp :: (s <
+							      <
+	es:        b ls: 7fffffff me:        e ms: 80000000   <
+Trying to insert node between 11 and 14 II: 15		      <
+	insert at cycle 11   S2_storerigp @g2, %21:intregs, i <
+							      <
+Inst (26)   S2_storerigp @g1, %20:intregs, implicit $gp :: (s <
+							      <
+	es:        a ls: 7fffffff me:        e ms: 80000000   <
+Trying to insert node between 10 and 14 II: 15		      <
+	insert at cycle 10   S2_storerigp @g1, %20:intregs, i <
+							      <
+Inst (37)   S2_storerigp @g5, %6:intregs, implicit $gp :: (st <
+							      <
+	es:        0 ls: 7fffffff me:        e ms: 80000000   <
+Trying to insert node between 0 and 14 II: 15		      <
+	insert at cycle 0   S2_storerigp @g5, %6:intregs, imp <
+							      <
+Inst (1)   %7:intregs = PHI %5:intregs, %bb.0, %23:intregs, % <
+							      <
+	es: fffffffb ls:        7 me: 7fffffff ms: 80000000   <
+Trying to insert node between 7 and -5 II: 15		      <
+	insert at cycle 7   %7:intregs = PHI %5:intregs, %bb. <
+							      <
+Inst (2)   %8:intregs = PHI %4:intregs, %bb.0, %22:intregs, % <
+							      <
+	es: fffffffa ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -6 and 8 II: 15		      <
+	insert at cycle -6   %8:intregs = PHI %4:intregs, %bb <
+							      <
+Inst (30)   %54:intregs = M2_mpy_acc_sat_ll_s1 %8:intregs(tie <
+							      <
+	es: fffffffa ls:        6 me: 7fffffff ms: 80000000   <
+Trying to insert node between -6 and 6 II: 15		      <
+	failed to insert at cycle -6   %54:intregs = M2_mpy_a <
+	insert at cycle -5   %54:intregs = M2_mpy_acc_sat_ll_ <
+							      <
+Inst (3)   %9:intregs = PHI %3:intregs, %bb.0, %21:intregs, % <
+							      <
+	es: fffffffb ls:        7 me: 7fffffff ms: 80000000   <
+Trying to insert node between 7 and -5 II: 15		      <
+	insert at cycle 7   %9:intregs = PHI %3:intregs, %bb. <
+							      <
+Inst (4)   %10:intregs = PHI %2:intregs, %bb.0, %20:intregs,  <
+							      <
+	es: fffffffa ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -6 and 8 II: 15		      <
+	insert at cycle -6   %10:intregs = PHI %2:intregs, %b <
+							      <
+Inst (24)   %50:intregs = M2_mpy_acc_sat_ll_s1 %10:intregs(ti <
+							      <
+	es: fffffffa ls:        6 me: 7fffffff ms: 80000000   <
+Trying to insert node between -6 and 6 II: 15		      <
+	failed to insert at cycle -6   %50:intregs = M2_mpy_a <
+	insert at cycle -5   %50:intregs = M2_mpy_acc_sat_ll_ <
+							      <
+Inst (8)   %14:intregs = PHI %0:intregs, %bb.0, %18:intregs,  <
+							      <
+	es: fffffff7 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -9 and 5 II: 15		      <
+	insert at cycle -9   %14:intregs = PHI %0:intregs, %b <
+							      <
+Inst (21)   %48:intregs = A2_sxth %14:intregs		      <
+							      <
+	es: fffffff7 ls:        5 me: 7fffffff ms: 80000000   <
+Trying to insert node between -9 and 5 II: 15		      <
+	insert at cycle -9   %48:intregs = A2_sxth %14:intreg <
+							      <
+Inst (22)   %19:intregs = M2_mpy_nac_sat_ll_s1 %47:intregs(ti <
+	es: fffffff9 ls: 7fffffff me: 7fffffff ms: 80000000   |	Inst (33)   S2_storerigp @g3, %22:intregs, implicit $gp :: (s
+Trying to insert node between -7 and 7 II: 15		      <
+	failed to insert at cycle -7   %19:intregs = M2_mpy_n <
+	failed to insert at cycle -6   %19:intregs = M2_mpy_n <
+	failed to insert at cycle -5   %19:intregs = M2_mpy_n <
+	insert at cycle -4   %19:intregs = M2_mpy_nac_sat_ll_ <
+							      <
+Inst (5)   %11:intregs = PHI %1:intregs, %bb.0, %19:intregs,  <
+							      <
+	es: ffffffee ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -18 and -4 II: 15		      <
+	insert at cycle -18   %11:intregs = PHI %1:intregs, % <
+							      <
+Inst (20)   %47:intregs = M2_mpy_nac_sat_ll_s1 %11:intregs(ti <
+							      <
+	es: ffffffee ls: fffffffa me: 7fffffff ms: 80000000   <
+Trying to insert node between -18 and -6 II: 15		      <
+	insert at cycle -18   %47:intregs = M2_mpy_nac_sat_ll <
+							      <
+Inst (6)   %12:intregs = PHI %29:intregs, %bb.0, %26:intregs, <
+							      <
+	es: fffffff2 ls:        0 me: 7fffffff ms: 80000000   <
+Trying to insert node between 0 and -14 II: 15		      <
+	insert at cycle 0   %12:intregs = PHI %29:intregs, %b <
+							      <
+Inst (14)   %17:intregs = A2_sath %41:intregs, implicit-def d <
+							      <
+	es: 80000000 ls: fffffff9 me: 7fffffff ms: 80000000   <
+Trying to insert node between -7 and -21 II: 15		      <
+	failed to insert at cycle -7   %17:intregs = A2_sath  <
+	failed to insert at cycle -8   %17:intregs = A2_sath  <
+	insert at cycle -9   %17:intregs = A2_sath %41:intreg <
+							      <
+Inst (13)   %41:intregs = S2_asr_r_r_sat %38:intregs, %34:int <
+							      <
+	es: 80000000 ls: fffffff5 me: 7fffffff ms: 80000000   <
+Trying to insert node between -11 and -25 II: 15	      <
+	insert at cycle -11   %41:intregs = S2_asr_r_r_sat %3 <
+							      <
+Inst (12)   %38:intregs = A2_asrh %37:intregs		      <
+	es: 80000000 ls: fffffff4 me: 7fffffff ms: 80000000   |		es:        c ls: 7fffffff me:        e ms: 80000000
+Trying to insert node between -12 and -26 II: 15	      |	Trying to insert node between 12 and 14 II: 15
+	insert at cycle -12   %38:intregs = A2_asrh %37:intre |		insert at cycle 14   S2_storerigp @g3, %22:intregs, i
+Inst (11)   %37:intregs, %25:intregs = L2_loadri_pi %13:intre |	Inst (29)   S2_storerigp @g2, %21:intregs, implicit $gp :: (s
+	es: 80000000 ls: fffffff2 me: 7fffffff ms: fffffffd   |		es:        f ls: 7fffffff me:        e ms: 80000000
+Inst (36)   S2_storerigp @g4, %23:intregs, implicit $gp :: (s |	Inst (36)   S2_storerigp @g4, %23:intregs, implicit $gp :: (s
+	insert at cycle 11   S2_storerigp @g4, %23:intregs, i |		insert at cycle 11   S2_storerigp @g4, %23:intregs, i
+Inst (15)   %42:intregs, %26:intregs = L2_loadri_pi %12:intre |	Inst (15)   %42:intregs, %26:intregs = L2_loadri_pi %12:intre
+	insert at cycle 0   %42:intregs, %26:intregs = L2_loa |		insert at cycle 0   %42:intregs, %26:intregs = L2_loa
+	insert at cycle 7   %52:intregs = M2_mpy_acc_sat_ll_s |		insert at cycle 8   %52:intregs = M2_mpy_acc_sat_ll_s
+	failed to insert at cycle 7   %22:intregs = M2_mpy_ac |		insert at cycle 10   %22:intregs = M2_mpy_acc_sat_ll_
+	insert at cycle 8   %22:intregs = M2_mpy_acc_sat_ll_s <
+	failed to insert at cycle 7   %20:intregs = M2_mpy_ac |		insert at cycle 12   %20:intregs = M2_mpy_acc_sat_ll_
+	insert at cycle 8   %20:intregs = M2_mpy_acc_sat_ll_s <
+	es:        9 ls: 7fffffff me: 7fffffff ms: 80000000   |		es:        a ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 9 and 24 II: 16		      |	Trying to insert node between 10 and 25 II: 16
+	insert at cycle 9   %21:intregs = M2_mpy_acc_sat_ll_s |		insert at cycle 13   %21:intregs = M2_mpy_acc_sat_ll_
+Inst (33)   S2_storerigp @g3, %22:intregs, implicit $gp :: (s |	Inst (33)   S2_storerigp @g3, %22:intregs, implicit $gp :: (s
+	es:        a ls: 7fffffff me:        f ms: 80000000   |		es:        c ls: 7fffffff me:        f ms: 80000000
+Trying to insert node between 10 and 15 II: 16		      |	Trying to insert node between 12 and 15 II: 16
+	insert at cycle 10   S2_storerigp @g3, %22:intregs, i |		insert at cycle 14   S2_storerigp @g3, %22:intregs, i
+Inst (29)   S2_storerigp @g2, %21:intregs, implicit $gp :: (s |	Inst (29)   S2_storerigp @g2, %21:intregs, implicit $gp :: (s
+	es:        b ls: 7fffffff me:        f ms: 80000000   |		es:        f ls: 7fffffff me:        f ms: 80000000
+Trying to insert node between 11 and 15 II: 16		      |	Trying to insert node between 15 and 15 II: 16
+	insert at cycle 11   S2_storerigp @g2, %21:intregs, i |		insert at cycle 15   S2_storerigp @g2, %21:intregs, i
+Inst (26)   S2_storerigp @g1, %20:intregs, implicit $gp :: (s |	Inst (26)   S2_storerigp @g1, %20:intregs, implicit $gp :: (s
+	es:        a ls: 7fffffff me:        f ms: 80000000   |		es:        e ls: 7fffffff me:        f ms: 80000000
+Trying to insert node between 10 and 15 II: 16		      |	Trying to insert node between 14 and 15 II: 16
+	insert at cycle 10   S2_storerigp @g1, %20:intregs, i |		insert at cycle 14   S2_storerigp @g1, %20:intregs, i
+Inst (37)   S2_storerigp @g5, %6:intregs, implicit $gp :: (st |	Inst (37)   S2_storerigp @g5, %6:intregs, implicit $gp :: (st
+	insert at cycle 0   S2_storerigp @g5, %6:intregs, imp |		insert at cycle 1   S2_storerigp @g5, %6:intregs, imp
+	insert at cycle 7   %7:intregs = PHI %5:intregs, %bb. |		insert at cycle 6   %7:intregs = PHI %5:intregs, %bb.
+	es: fffffff9 ls: 7fffffff me: 7fffffff ms: 80000000   |		es: fffffffb ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between -7 and 8 II: 16		      |	Trying to insert node between -5 and 10 II: 16
+	insert at cycle -7   %8:intregs = PHI %4:intregs, %bb |		insert at cycle 4   %8:intregs = PHI %4:intregs, %bb.
+	es: fffffff9 ls:        6 me: 7fffffff ms: 80000000   |		es:        4 ls:        8 me: 7fffffff ms: 80000000
+Trying to insert node between -7 and 6 II: 16		      |	Trying to insert node between 4 and 8 II: 16
+	failed to insert at cycle -7   %54:intregs = M2_mpy_a |		insert at cycle 4   %54:intregs = M2_mpy_acc_sat_ll_s
+	insert at cycle -6   %54:intregs = M2_mpy_acc_sat_ll_ <
+	es: fffffffa ls:        7 me: 7fffffff ms: 80000000   |		es: fffffffe ls:        8 me: 7fffffff ms: 80000000
+Trying to insert node between 7 and -6 II: 16		      |	Trying to insert node between 8 and -2 II: 16
+	insert at cycle 7   %9:intregs = PHI %3:intregs, %bb. |		insert at cycle 6   %9:intregs = PHI %3:intregs, %bb.
+	es: fffffff9 ls: 7fffffff me: 7fffffff ms: 80000000   |		es: fffffffd ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between -7 and 8 II: 16		      |	Trying to insert node between -3 and 12 II: 16
+	insert at cycle -7   %10:intregs = PHI %2:intregs, %b |		insert at cycle 6   %10:intregs = PHI %2:intregs, %bb
+	es: fffffff9 ls:        6 me: 7fffffff ms: 80000000   |		es:        6 ls:        a me: 7fffffff ms: 80000000
+Trying to insert node between -7 and 6 II: 16		      |	Trying to insert node between 6 and 10 II: 16
+	failed to insert at cycle -7   %50:intregs = M2_mpy_a |		insert at cycle 6   %50:intregs = M2_mpy_acc_sat_ll_s
+	insert at cycle -6   %50:intregs = M2_mpy_acc_sat_ll_ <
+	failed to insert at cycle -8   %19:intregs = M2_mpy_n |		insert at cycle -8   %19:intregs = M2_mpy_nac_sat_ll_
+	failed to insert at cycle -7   %19:intregs = M2_mpy_n <
+	failed to insert at cycle -6   %19:intregs = M2_mpy_n <
+	insert at cycle -5   %19:intregs = M2_mpy_nac_sat_ll_ <
+	es: ffffffec ls: 7fffffff me: 7fffffff ms: 80000000   |		es: ffffffe9 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between -20 and -5 II: 16		      |	Trying to insert node between -23 and -8 II: 16
+	insert at cycle -20   %11:intregs = PHI %1:intregs, % |		insert at cycle -23   %11:intregs = PHI %1:intregs, %
+	es: ffffffec ls: fffffff9 me: 7fffffff ms: 80000000   |		es: ffffffe9 ls: fffffff6 me: 7fffffff ms: 80000000
+Trying to insert node between -20 and -7 II: 16		      |	Trying to insert node between -23 and -10 II: 16
+	insert at cycle -20   %47:intregs = M2_mpy_nac_sat_ll |		insert at cycle -23   %47:intregs = M2_mpy_nac_sat_ll
+	es: 80000000 ls: fffffff8 me: 7fffffff ms: 80000000   |		es: 80000000 ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between -8 and -23 II: 16		      |	Trying to insert node between 2 and -13 II: 16
+	failed to insert at cycle -8   %17:intregs = A2_sath  |		insert at cycle 2   %17:intregs = A2_sath %41:intregs
+	failed to insert at cycle -9   %17:intregs = A2_sath  <
+	insert at cycle -10   %17:intregs = A2_sath %41:intre <
+	es: 80000000 ls: fffffff4 me: 7fffffff ms: 80000000   |		es: 80000000 ls:        0 me: 7fffffff ms: 80000000
+Trying to insert node between -12 and -27 II: 16	      |	Trying to insert node between 0 and -15 II: 16
+	insert at cycle -12   %41:intregs = S2_asr_r_r_sat %3 |		insert at cycle 0   %41:intregs = S2_asr_r_r_sat %38:
+	es: 80000000 ls: fffffff3 me: 7fffffff ms: 80000000   |		es: 80000000 ls: ffffffff me: 7fffffff ms: 80000000
+Trying to insert node between -13 and -28 II: 16	      |	Trying to insert node between -1 and -16 II: 16
+	insert at cycle -13   %38:intregs = A2_asrh %37:intre |		insert at cycle -1   %38:intregs = A2_asrh %37:intreg
+Inst (11)   %37:intregs, %25:intregs = L2_loadri_pi %13:intre |	Inst (11)   %37:intregs, %25:intregs = L2_loadri_pi %13:intre
+	es: 80000000 ls: fffffff1 me: 7fffffff ms: fffffffc   |		es: 80000000 ls: fffffffd me: 7fffffff ms:        0
+Inst (36)   S2_storerigp @g4, %23:intregs, implicit $gp :: (s |	Inst (36)   S2_storerigp @g4, %23:intregs, implicit $gp :: (s
+	insert at cycle 11   S2_storerigp @g4, %23:intregs, i |		insert at cycle 11   S2_storerigp @g4, %23:intregs, i
+Inst (15)   %42:intregs, %26:intregs = L2_loadri_pi %12:intre |	Inst (15)   %42:intregs, %26:intregs = L2_loadri_pi %12:intre
+	insert at cycle 0   %42:intregs, %26:intregs = L2_loa |		insert at cycle 0   %42:intregs, %26:intregs = L2_loa
+	insert at cycle 7   %52:intregs = M2_mpy_acc_sat_ll_s |		insert at cycle 8   %52:intregs = M2_mpy_acc_sat_ll_s
+	failed to insert at cycle 7   %22:intregs = M2_mpy_ac |		insert at cycle 10   %22:intregs = M2_mpy_acc_sat_ll_
+	insert at cycle 8   %22:intregs = M2_mpy_acc_sat_ll_s <
+	failed to insert at cycle 7   %20:intregs = M2_mpy_ac |		insert at cycle 12   %20:intregs = M2_mpy_acc_sat_ll_
+	insert at cycle 8   %20:intregs = M2_mpy_acc_sat_ll_s <
+	es:        9 ls: 7fffffff me: 7fffffff ms: 80000000   |		es:        a ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 9 and 25 II: 17		      |	Trying to insert node between 10 and 26 II: 17
+	insert at cycle 9   %21:intregs = M2_mpy_acc_sat_ll_s |		insert at cycle 13   %21:intregs = M2_mpy_acc_sat_ll_
+Inst (33)   S2_storerigp @g3, %22:intregs, implicit $gp :: (s |	Inst (33)   S2_storerigp @g3, %22:intregs, implicit $gp :: (s
+	es:        a ls: 7fffffff me:       10 ms: 80000000   |		es:        c ls: 7fffffff me:       10 ms: 80000000
+Trying to insert node between 10 and 16 II: 17		      |	Trying to insert node between 12 and 16 II: 17
+	insert at cycle 10   S2_storerigp @g3, %22:intregs, i |		insert at cycle 14   S2_storerigp @g3, %22:intregs, i
+Inst (29)   S2_storerigp @g2, %21:intregs, implicit $gp :: (s |	Inst (29)   S2_storerigp @g2, %21:intregs, implicit $gp :: (s
+	es:        b ls: 7fffffff me:       10 ms: 80000000   |		es:        f ls: 7fffffff me:       10 ms: 80000000
+Trying to insert node between 11 and 16 II: 17		      |	Trying to insert node between 15 and 16 II: 17
+	insert at cycle 11   S2_storerigp @g2, %21:intregs, i |		insert at cycle 15   S2_storerigp @g2, %21:intregs, i
+Inst (26)   S2_storerigp @g1, %20:intregs, implicit $gp :: (s |	Inst (26)   S2_storerigp @g1, %20:intregs, implicit $gp :: (s
+	es:        a ls: 7fffffff me:       10 ms: 80000000   |		es:        e ls: 7fffffff me:       10 ms: 80000000
+Trying to insert node between 10 and 16 II: 17		      |	Trying to insert node between 14 and 16 II: 17
+	insert at cycle 10   S2_storerigp @g1, %20:intregs, i |		insert at cycle 16   S2_storerigp @g1, %20:intregs, i
+Inst (37)   S2_storerigp @g5, %6:intregs, implicit $gp :: (st |	Inst (37)   S2_storerigp @g5, %6:intregs, implicit $gp :: (st
+	insert at cycle 0   S2_storerigp @g5, %6:intregs, imp |		insert at cycle 1   S2_storerigp @g5, %6:intregs, imp
+	insert at cycle 7   %7:intregs = PHI %5:intregs, %bb. |		insert at cycle 6   %7:intregs = PHI %5:intregs, %bb.
+	es: fffffff8 ls: 7fffffff me: 7fffffff ms: 80000000   |		es: fffffffa ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between -8 and 8 II: 17		      |	Trying to insert node between -6 and 10 II: 17
+	insert at cycle -8   %8:intregs = PHI %4:intregs, %bb |		insert at cycle 4   %8:intregs = PHI %4:intregs, %bb.
+	es: fffffff8 ls:        6 me: 7fffffff ms: 80000000   |		es:        4 ls:        8 me: 7fffffff ms: 80000000
+Trying to insert node between -8 and 6 II: 17		      |	Trying to insert node between 4 and 8 II: 17
+	failed to insert at cycle -8   %54:intregs = M2_mpy_a |		insert at cycle 4   %54:intregs = M2_mpy_acc_sat_ll_s
+	insert at cycle -7   %54:intregs = M2_mpy_acc_sat_ll_ <
+	es: fffffff9 ls:        7 me: 7fffffff ms: 80000000   |		es: fffffffd ls:        8 me: 7fffffff ms: 80000000
+Trying to insert node between 7 and -7 II: 17		      |	Trying to insert node between 8 and -3 II: 17
+	insert at cycle 7   %9:intregs = PHI %3:intregs, %bb. |		insert at cycle 6   %9:intregs = PHI %3:intregs, %bb.
+	es: fffffff8 ls: 7fffffff me: 7fffffff ms: 80000000   |		es: fffffffc ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between -8 and 8 II: 17		      |	Trying to insert node between -4 and 12 II: 17
+	insert at cycle -8   %10:intregs = PHI %2:intregs, %b |		insert at cycle 6   %10:intregs = PHI %2:intregs, %bb
+	es: fffffff8 ls:        6 me: 7fffffff ms: 80000000   |		es:        6 ls:        a me: 7fffffff ms: 80000000
+Trying to insert node between -8 and 6 II: 17		      |	Trying to insert node between 6 and 10 II: 17
+	failed to insert at cycle -8   %50:intregs = M2_mpy_a |		insert at cycle 6   %50:intregs = M2_mpy_acc_sat_ll_s
+	insert at cycle -7   %50:intregs = M2_mpy_acc_sat_ll_ <
+	failed to insert at cycle -9   %19:intregs = M2_mpy_n |		insert at cycle -9   %19:intregs = M2_mpy_nac_sat_ll_
+	failed to insert at cycle -8   %19:intregs = M2_mpy_n <
+	failed to insert at cycle -7   %19:intregs = M2_mpy_n <
+	insert at cycle -6   %19:intregs = M2_mpy_nac_sat_ll_ <
+	es: ffffffea ls: 7fffffff me: 7fffffff ms: 80000000   |		es: ffffffe7 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between -22 and -6 II: 17		      |	Trying to insert node between -25 and -9 II: 17
+	insert at cycle -22   %11:intregs = PHI %1:intregs, % |		insert at cycle -25   %11:intregs = PHI %1:intregs, %
+	es: ffffffea ls: fffffff8 me: 7fffffff ms: 80000000   |		es: ffffffe7 ls: fffffff5 me: 7fffffff ms: 80000000
+Trying to insert node between -22 and -8 II: 17		      |	Trying to insert node between -25 and -11 II: 17
+	insert at cycle -22   %47:intregs = M2_mpy_nac_sat_ll |		insert at cycle -25   %47:intregs = M2_mpy_nac_sat_ll
+	es: 80000000 ls: fffffff7 me: 7fffffff ms: 80000000   |		es: 80000000 ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between -9 and -25 II: 17		      |	Trying to insert node between 2 and -14 II: 17
+	failed to insert at cycle -9   %17:intregs = A2_sath  |		insert at cycle 2   %17:intregs = A2_sath %41:intregs
+	failed to insert at cycle -10   %17:intregs = A2_sath <
+	insert at cycle -11   %17:intregs = A2_sath %41:intre <
+	es: 80000000 ls: fffffff3 me: 7fffffff ms: 80000000   |		es: 80000000 ls:        0 me: 7fffffff ms: 80000000
+Trying to insert node between -13 and -29 II: 17	      |	Trying to insert node between 0 and -16 II: 17
+	insert at cycle -13   %41:intregs = S2_asr_r_r_sat %3 |		insert at cycle 0   %41:intregs = S2_asr_r_r_sat %38:
+	es: 80000000 ls: fffffff2 me: 7fffffff ms: 80000000   |		es: 80000000 ls: ffffffff me: 7fffffff ms: 80000000
+Trying to insert node between -14 and -30 II: 17	      |	Trying to insert node between -1 and -17 II: 17
+	insert at cycle -14   %38:intregs = A2_asrh %37:intre |		insert at cycle -1   %38:intregs = A2_asrh %37:intreg
+Inst (11)   %37:intregs, %25:intregs = L2_loadri_pi %13:intre |	Inst (11)   %37:intregs, %25:intregs = L2_loadri_pi %13:intre
+	es: 80000000 ls: fffffff0 me: 7fffffff ms: fffffffb   |		es: 80000000 ls: fffffffd me: 7fffffff ms:        0
+Inst (36)   S2_storerigp @g4, %23:intregs, implicit $gp :: (s |	Inst (36)   S2_storerigp @g4, %23:intregs, implicit $gp :: (s
+	insert at cycle 11   S2_storerigp @g4, %23:intregs, i |		insert at cycle 11   S2_storerigp @g4, %23:intregs, i
+Inst (15)   %42:intregs, %26:intregs = L2_loadri_pi %12:intre |	Inst (15)   %42:intregs, %26:intregs = L2_loadri_pi %12:intre
+	insert at cycle 0   %42:intregs, %26:intregs = L2_loa |		insert at cycle 0   %42:intregs, %26:intregs = L2_loa
+	insert at cycle 7   %52:intregs = M2_mpy_acc_sat_ll_s |		insert at cycle 8   %52:intregs = M2_mpy_acc_sat_ll_s
+	failed to insert at cycle 7   %22:intregs = M2_mpy_ac |		insert at cycle 10   %22:intregs = M2_mpy_acc_sat_ll_
+	insert at cycle 8   %22:intregs = M2_mpy_acc_sat_ll_s <
+	failed to insert at cycle 7   %20:intregs = M2_mpy_ac |		insert at cycle 12   %20:intregs = M2_mpy_acc_sat_ll_
+	insert at cycle 8   %20:intregs = M2_mpy_acc_sat_ll_s <
+	es:        9 ls: 7fffffff me: 7fffffff ms: 80000000   |		es:        a ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 9 and 26 II: 18		      |	Trying to insert node between 10 and 27 II: 18
+	insert at cycle 9   %21:intregs = M2_mpy_acc_sat_ll_s |		insert at cycle 13   %21:intregs = M2_mpy_acc_sat_ll_
+Inst (33)   S2_storerigp @g3, %22:intregs, implicit $gp :: (s |	Inst (33)   S2_storerigp @g3, %22:intregs, implicit $gp :: (s
+	es:        a ls: 7fffffff me:       11 ms: 80000000   |		es:        c ls: 7fffffff me:       11 ms: 80000000
+Trying to insert node between 10 and 17 II: 18		      |	Trying to insert node between 12 and 17 II: 18
+	insert at cycle 10   S2_storerigp @g3, %22:intregs, i |		insert at cycle 14   S2_storerigp @g3, %22:intregs, i
+Inst (29)   S2_storerigp @g2, %21:intregs, implicit $gp :: (s |	Inst (29)   S2_storerigp @g2, %21:intregs, implicit $gp :: (s
+	es:        b ls: 7fffffff me:       11 ms: 80000000   |		es:        f ls: 7fffffff me:       11 ms: 80000000
+Trying to insert node between 11 and 17 II: 18		      |	Trying to insert node between 15 and 17 II: 18
+	insert at cycle 11   S2_storerigp @g2, %21:intregs, i |		insert at cycle 15   S2_storerigp @g2, %21:intregs, i
+Inst (26)   S2_storerigp @g1, %20:intregs, implicit $gp :: (s |	Inst (26)   S2_storerigp @g1, %20:intregs, implicit $gp :: (s
+	es:        a ls: 7fffffff me:       11 ms: 80000000   |		es:        e ls: 7fffffff me:       11 ms: 80000000
+Trying to insert node between 10 and 17 II: 18		      |	Trying to insert node between 14 and 17 II: 18
+	insert at cycle 10   S2_storerigp @g1, %20:intregs, i |		insert at cycle 16   S2_storerigp @g1, %20:intregs, i
+Inst (37)   S2_storerigp @g5, %6:intregs, implicit $gp :: (st |	Inst (37)   S2_storerigp @g5, %6:intregs, implicit $gp :: (st
+	insert at cycle 0   S2_storerigp @g5, %6:intregs, imp |		insert at cycle 1   S2_storerigp @g5, %6:intregs, imp
+	insert at cycle 7   %7:intregs = PHI %5:intregs, %bb. |		insert at cycle 6   %7:intregs = PHI %5:intregs, %bb.
+	es: fffffff7 ls: 7fffffff me: 7fffffff ms: 80000000   |		es: fffffff9 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between -9 and 8 II: 18		      |	Trying to insert node between -7 and 10 II: 18
+	insert at cycle -9   %8:intregs = PHI %4:intregs, %bb |		insert at cycle -1   %8:intregs = PHI %4:intregs, %bb
+	es: fffffff7 ls:        6 me: 7fffffff ms: 80000000   |		es: ffffffff ls:        8 me: 7fffffff ms: 80000000
+Trying to insert node between -9 and 6 II: 18		      |	Trying to insert node between -1 and 8 II: 18
+	failed to insert at cycle -9   %54:intregs = M2_mpy_a |		insert at cycle -1   %54:intregs = M2_mpy_acc_sat_ll_
+	insert at cycle -8   %54:intregs = M2_mpy_acc_sat_ll_ <
+	es: fffffff8 ls:        7 me: 7fffffff ms: 80000000   |		es: fffffffc ls:        8 me: 7fffffff ms: 80000000
+Trying to insert node between 7 and -8 II: 18		      |	Trying to insert node between 8 and -4 II: 18
+	insert at cycle 7   %9:intregs = PHI %3:intregs, %bb. |		insert at cycle 6   %9:intregs = PHI %3:intregs, %bb.
+	es: fffffff7 ls: 7fffffff me: 7fffffff ms: 80000000   |		es: fffffffb ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between -9 and 8 II: 18		      |	Trying to insert node between -5 and 12 II: 18
+	insert at cycle -9   %10:intregs = PHI %2:intregs, %b |		insert at cycle 4   %10:intregs = PHI %2:intregs, %bb
+	es: fffffff7 ls:        6 me: 7fffffff ms: 80000000   |		es:        4 ls:        a me: 7fffffff ms: 80000000
+Trying to insert node between -9 and 6 II: 18		      |	Trying to insert node between 4 and 10 II: 18
+	failed to insert at cycle -9   %50:intregs = M2_mpy_a |		insert at cycle 4   %50:intregs = M2_mpy_acc_sat_ll_s
+	insert at cycle -8   %50:intregs = M2_mpy_acc_sat_ll_ <
+	failed to insert at cycle -10   %19:intregs = M2_mpy_ |		insert at cycle -10   %19:intregs = M2_mpy_nac_sat_ll
+	failed to insert at cycle -9   %19:intregs = M2_mpy_n <
+	failed to insert at cycle -8   %19:intregs = M2_mpy_n <
+	insert at cycle -7   %19:intregs = M2_mpy_nac_sat_ll_ <
+	es: ffffffe8 ls: 7fffffff me: 7fffffff ms: 80000000   |		es: ffffffe5 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between -24 and -7 II: 18		      |	Trying to insert node between -27 and -10 II: 18
+	insert at cycle -24   %11:intregs = PHI %1:intregs, % |		insert at cycle -27   %11:intregs = PHI %1:intregs, %
+	es: ffffffe8 ls: fffffff7 me: 7fffffff ms: 80000000   |		es: ffffffe5 ls: fffffff4 me: 7fffffff ms: 80000000
+Trying to insert node between -24 and -9 II: 18		      |	Trying to insert node between -27 and -12 II: 18
+	insert at cycle -24   %47:intregs = M2_mpy_nac_sat_ll |		insert at cycle -27   %47:intregs = M2_mpy_nac_sat_ll
+	es: 80000000 ls: fffffff6 me: 7fffffff ms: 80000000   |		es: 80000000 ls: fffffffd me: 7fffffff ms: 80000000
+Trying to insert node between -10 and -27 II: 18	      |	Trying to insert node between -3 and -20 II: 18
+	failed to insert at cycle -10   %17:intregs = A2_sath |		insert at cycle -3   %17:intregs = A2_sath %41:intreg
+	failed to insert at cycle -11   %17:intregs = A2_sath <
+	insert at cycle -12   %17:intregs = A2_sath %41:intre <
+	es: 80000000 ls: fffffff2 me: 7fffffff ms: 80000000   |		es: 80000000 ls: fffffffb me: 7fffffff ms: 80000000
+Trying to insert node between -14 and -31 II: 18	      |	Trying to insert node between -5 and -22 II: 18
+	insert at cycle -14   %41:intregs = S2_asr_r_r_sat %3 |		insert at cycle -5   %41:intregs = S2_asr_r_r_sat %38
+	es: 80000000 ls: fffffff1 me: 7fffffff ms: 80000000   |		es: 80000000 ls: fffffffa me: 7fffffff ms: 80000000
+Trying to insert node between -15 and -32 II: 18	      |	Trying to insert node between -6 and -23 II: 18
+	insert at cycle -15   %38:intregs = A2_asrh %37:intre |		insert at cycle -6   %38:intregs = A2_asrh %37:intreg
+Inst (11)   %37:intregs, %25:intregs = L2_loadri_pi %13:intre |	Inst (11)   %37:intregs, %25:intregs = L2_loadri_pi %13:intre
+	es: 80000000 ls: ffffffef me: 7fffffff ms: fffffffa   |		es: 80000000 ls: fffffff8 me: 7fffffff ms: ffffffff
+Inst (36)   S2_storerigp @g4, %23:intregs, implicit $gp :: (s |	Inst (36)   S2_storerigp @g4, %23:intregs, implicit $gp :: (s
+	insert at cycle 11   S2_storerigp @g4, %23:intregs, i |		insert at cycle 11   S2_storerigp @g4, %23:intregs, i
+Inst (15)   %42:intregs, %26:intregs = L2_loadri_pi %12:intre |	Inst (15)   %42:intregs, %26:intregs = L2_loadri_pi %12:intre
+	insert at cycle 0   %42:intregs, %26:intregs = L2_loa |		insert at cycle 0   %42:intregs, %26:intregs = L2_loa
+	insert at cycle 7   %52:intregs = M2_mpy_acc_sat_ll_s |		insert at cycle 8   %52:intregs = M2_mpy_acc_sat_ll_s
+	failed to insert at cycle 7   %22:intregs = M2_mpy_ac |		insert at cycle 10   %22:intregs = M2_mpy_acc_sat_ll_
+	insert at cycle 8   %22:intregs = M2_mpy_acc_sat_ll_s <
+	failed to insert at cycle 7   %20:intregs = M2_mpy_ac |		insert at cycle 12   %20:intregs = M2_mpy_acc_sat_ll_
+	insert at cycle 8   %20:intregs = M2_mpy_acc_sat_ll_s <
+	es:        9 ls: 7fffffff me: 7fffffff ms: 80000000   |		es:        a ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 9 and 27 II: 19		      |	Trying to insert node between 10 and 28 II: 19
+	insert at cycle 9   %21:intregs = M2_mpy_acc_sat_ll_s |		insert at cycle 13   %21:intregs = M2_mpy_acc_sat_ll_
+Inst (33)   S2_storerigp @g3, %22:intregs, implicit $gp :: (s |	Inst (33)   S2_storerigp @g3, %22:intregs, implicit $gp :: (s
+	es:        a ls: 7fffffff me:       12 ms: 80000000   |		es:        c ls: 7fffffff me:       12 ms: 80000000
+Trying to insert node between 10 and 18 II: 19		      |	Trying to insert node between 12 and 18 II: 19
+	insert at cycle 10   S2_storerigp @g3, %22:intregs, i |		insert at cycle 14   S2_storerigp @g3, %22:intregs, i
+Inst (29)   S2_storerigp @g2, %21:intregs, implicit $gp :: (s |	Inst (29)   S2_storerigp @g2, %21:intregs, implicit $gp :: (s
+	es:        b ls: 7fffffff me:       12 ms: 80000000   |		es:        f ls: 7fffffff me:       12 ms: 80000000
+Trying to insert node between 11 and 18 II: 19		      |	Trying to insert node between 15 and 18 II: 19
+	insert at cycle 11   S2_storerigp @g2, %21:intregs, i |		insert at cycle 15   S2_storerigp @g2, %21:intregs, i
+Inst (26)   S2_storerigp @g1, %20:intregs, implicit $gp :: (s |	Inst (26)   S2_storerigp @g1, %20:intregs, implicit $gp :: (s
+	es:        a ls: 7fffffff me:       12 ms: 80000000   |		es:        e ls: 7fffffff me:       12 ms: 80000000
+Trying to insert node between 10 and 18 II: 19		      |	Trying to insert node between 14 and 18 II: 19
+	insert at cycle 10   S2_storerigp @g1, %20:intregs, i |		insert at cycle 16   S2_storerigp @g1, %20:intregs, i
+Inst (37)   S2_storerigp @g5, %6:intregs, implicit $gp :: (st |	Inst (37)   S2_storerigp @g5, %6:intregs, implicit $gp :: (st
+	insert at cycle 0   S2_storerigp @g5, %6:intregs, imp |		insert at cycle 1   S2_storerigp @g5, %6:intregs, imp
+	insert at cycle 7   %7:intregs = PHI %5:intregs, %bb. |		insert at cycle 6   %7:intregs = PHI %5:intregs, %bb.
+	es: fffffff6 ls: 7fffffff me: 7fffffff ms: 80000000   |		es: fffffff8 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between -10 and 8 II: 19		      |	Trying to insert node between -8 and 10 II: 19
+	insert at cycle -10   %8:intregs = PHI %4:intregs, %b |		insert at cycle -2   %8:intregs = PHI %4:intregs, %bb
+	es: fffffff6 ls:        6 me: 7fffffff ms: 80000000   |		es: fffffffe ls:        8 me: 7fffffff ms: 80000000
+Trying to insert node between -10 and 6 II: 19		      |	Trying to insert node between -2 and 8 II: 19
+	failed to insert at cycle -10   %54:intregs = M2_mpy_ |		insert at cycle -2   %54:intregs = M2_mpy_acc_sat_ll_
+	insert at cycle -9   %54:intregs = M2_mpy_acc_sat_ll_ <
+	es: fffffff7 ls:        7 me: 7fffffff ms: 80000000   |		es: fffffffb ls:        8 me: 7fffffff ms: 80000000
+Trying to insert node between 7 and -9 II: 19		      |	Trying to insert node between 8 and -5 II: 19
+	insert at cycle 7   %9:intregs = PHI %3:intregs, %bb. |		insert at cycle 6   %9:intregs = PHI %3:intregs, %bb.
+	es: fffffff6 ls: 7fffffff me: 7fffffff ms: 80000000   |		es: fffffffa ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between -10 and 8 II: 19		      |	Trying to insert node between -6 and 12 II: 19
+	insert at cycle -10   %10:intregs = PHI %2:intregs, % |		insert at cycle -1   %10:intregs = PHI %2:intregs, %b
+	es: fffffff6 ls:        6 me: 7fffffff ms: 80000000   |		es: ffffffff ls:        a me: 7fffffff ms: 80000000
+Trying to insert node between -10 and 6 II: 19		      |	Trying to insert node between -1 and 10 II: 19
+	failed to insert at cycle -10   %50:intregs = M2_mpy_ |		insert at cycle -1   %50:intregs = M2_mpy_acc_sat_ll_
+	insert at cycle -9   %50:intregs = M2_mpy_acc_sat_ll_ <
+	failed to insert at cycle -11   %19:intregs = M2_mpy_ |		insert at cycle 4   %19:intregs = M2_mpy_nac_sat_ll_s
+	failed to insert at cycle -10   %19:intregs = M2_mpy_ <
+	failed to insert at cycle -9   %19:intregs = M2_mpy_n <
+	insert at cycle -8   %19:intregs = M2_mpy_nac_sat_ll_ <
+	es: ffffffe6 ls: 7fffffff me: 7fffffff ms: 80000000   |		es: fffffff2 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between -26 and -8 II: 19		      |	Trying to insert node between -14 and 4 II: 19
+	insert at cycle -26   %11:intregs = PHI %1:intregs, % |		insert at cycle -14   %11:intregs = PHI %1:intregs, %
+	es: ffffffe6 ls: fffffff6 me: 7fffffff ms: 80000000   |		es: fffffff2 ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between -26 and -10 II: 19	      |	Trying to insert node between -14 and 2 II: 19
+	insert at cycle -26   %47:intregs = M2_mpy_nac_sat_ll |		insert at cycle -14   %47:intregs = M2_mpy_nac_sat_ll
+	es: 80000000 ls: fffffff5 me: 7fffffff ms: 80000000   |		es: 80000000 ls: fffffffc me: 7fffffff ms: 80000000
+Trying to insert node between -11 and -29 II: 19	      |	Trying to insert node between -4 and -22 II: 19
+	failed to insert at cycle -11   %17:intregs = A2_sath |		insert at cycle -4   %17:intregs = A2_sath %41:intreg
+	failed to insert at cycle -12   %17:intregs = A2_sath <
+	insert at cycle -13   %17:intregs = A2_sath %41:intre <
+	es: 80000000 ls: fffffff1 me: 7fffffff ms: 80000000   |		es: 80000000 ls: fffffffa me: 7fffffff ms: 80000000
+Trying to insert node between -15 and -33 II: 19	      |	Trying to insert node between -6 and -24 II: 19
+	insert at cycle -15   %41:intregs = S2_asr_r_r_sat %3 |		insert at cycle -6   %41:intregs = S2_asr_r_r_sat %38
+	es: 80000000 ls: fffffff0 me: 7fffffff ms: 80000000   |		es: 80000000 ls: fffffff9 me: 7fffffff ms: 80000000
+Trying to insert node between -16 and -34 II: 19	      |	Trying to insert node between -7 and -25 II: 19
+	insert at cycle -16   %38:intregs = A2_asrh %37:intre |		insert at cycle -7   %38:intregs = A2_asrh %37:intreg
+Inst (11)   %37:intregs, %25:intregs = L2_loadri_pi %13:intre |	Inst (11)   %37:intregs, %25:intregs = L2_loadri_pi %13:intre
+	es: 80000000 ls: ffffffee me: 7fffffff ms: fffffff9   |		es: 80000000 ls: fffffff7 me: 7fffffff ms: fffffffe
+Inst (36)   S2_storerigp @g4, %23:intregs, implicit $gp :: (s |	Inst (36)   S2_storerigp @g4, %23:intregs, implicit $gp :: (s
+	insert at cycle 11   S2_storerigp @g4, %23:intregs, i |		insert at cycle 11   S2_storerigp @g4, %23:intregs, i
+Inst (15)   %42:intregs, %26:intregs = L2_loadri_pi %12:intre |	Inst (15)   %42:intregs, %26:intregs = L2_loadri_pi %12:intre
+	insert at cycle 0   %42:intregs, %26:intregs = L2_loa |		insert at cycle 0   %42:intregs, %26:intregs = L2_loa
+	insert at cycle 7   %52:intregs = M2_mpy_acc_sat_ll_s |		insert at cycle 8   %52:intregs = M2_mpy_acc_sat_ll_s
+	failed to insert at cycle 7   %22:intregs = M2_mpy_ac |		insert at cycle 10   %22:intregs = M2_mpy_acc_sat_ll_
+	insert at cycle 8   %22:intregs = M2_mpy_acc_sat_ll_s <
+	failed to insert at cycle 7   %20:intregs = M2_mpy_ac |		insert at cycle 12   %20:intregs = M2_mpy_acc_sat_ll_
+	insert at cycle 8   %20:intregs = M2_mpy_acc_sat_ll_s <
+	es:        9 ls: 7fffffff me: 7fffffff ms: 80000000   |		es:        a ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 9 and 28 II: 20		      |	Trying to insert node between 10 and 29 II: 20
+	insert at cycle 9   %21:intregs = M2_mpy_acc_sat_ll_s |		insert at cycle 13   %21:intregs = M2_mpy_acc_sat_ll_
+Inst (33)   S2_storerigp @g3, %22:intregs, implicit $gp :: (s |	Inst (33)   S2_storerigp @g3, %22:intregs, implicit $gp :: (s
+	es:        a ls: 7fffffff me:       13 ms: 80000000   |		es:        c ls: 7fffffff me:       13 ms: 80000000
+Trying to insert node between 10 and 19 II: 20		      |	Trying to insert node between 12 and 19 II: 20
+	insert at cycle 10   S2_storerigp @g3, %22:intregs, i |		insert at cycle 14   S2_storerigp @g3, %22:intregs, i
+Inst (29)   S2_storerigp @g2, %21:intregs, implicit $gp :: (s |	Inst (29)   S2_storerigp @g2, %21:intregs, implicit $gp :: (s
+	es:        b ls: 7fffffff me:       13 ms: 80000000   |		es:        f ls: 7fffffff me:       13 ms: 80000000
+Trying to insert node between 11 and 19 II: 20		      |	Trying to insert node between 15 and 19 II: 20
+	insert at cycle 11   S2_storerigp @g2, %21:intregs, i |		insert at cycle 15   S2_storerigp @g2, %21:intregs, i
+Inst (26)   S2_storerigp @g1, %20:intregs, implicit $gp :: (s |	Inst (26)   S2_storerigp @g1, %20:intregs, implicit $gp :: (s
+	es:        a ls: 7fffffff me:       13 ms: 80000000   |		es:        e ls: 7fffffff me:       13 ms: 80000000
+Trying to insert node between 10 and 19 II: 20		      |	Trying to insert node between 14 and 19 II: 20
+	insert at cycle 10   S2_storerigp @g1, %20:intregs, i |		insert at cycle 16   S2_storerigp @g1, %20:intregs, i
+Inst (37)   S2_storerigp @g5, %6:intregs, implicit $gp :: (st |	Inst (37)   S2_storerigp @g5, %6:intregs, implicit $gp :: (st
+	insert at cycle 0   S2_storerigp @g5, %6:intregs, imp |		insert at cycle 1   S2_storerigp @g5, %6:intregs, imp
+	insert at cycle 7   %7:intregs = PHI %5:intregs, %bb. |		insert at cycle 6   %7:intregs = PHI %5:intregs, %bb.
+	es: fffffff5 ls: 7fffffff me: 7fffffff ms: 80000000   |		es: fffffff7 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between -11 and 8 II: 20		      |	Trying to insert node between -9 and 10 II: 20
+	insert at cycle -11   %8:intregs = PHI %4:intregs, %b |		insert at cycle -3   %8:intregs = PHI %4:intregs, %bb
+	es: fffffff5 ls:        6 me: 7fffffff ms: 80000000   |		es: fffffffd ls:        8 me: 7fffffff ms: 80000000
+Trying to insert node between -11 and 6 II: 20		      |	Trying to insert node between -3 and 8 II: 20
+	failed to insert at cycle -11   %54:intregs = M2_mpy_ |		insert at cycle -3   %54:intregs = M2_mpy_acc_sat_ll_
+	insert at cycle -10   %54:intregs = M2_mpy_acc_sat_ll <
+	es: fffffff6 ls:        7 me: 7fffffff ms: 80000000   |		es: fffffffa ls:        8 me: 7fffffff ms: 80000000
+Trying to insert node between 7 and -10 II: 20		      |	Trying to insert node between 8 and -6 II: 20
+	insert at cycle 7   %9:intregs = PHI %3:intregs, %bb. |		insert at cycle 6   %9:intregs = PHI %3:intregs, %bb.
+	es: fffffff5 ls: 7fffffff me: 7fffffff ms: 80000000   |		es: fffffff9 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between -11 and 8 II: 20		      |	Trying to insert node between -7 and 12 II: 20
+	insert at cycle -11   %10:intregs = PHI %2:intregs, % |		insert at cycle -2   %10:intregs = PHI %2:intregs, %b
+	es: fffffff5 ls:        6 me: 7fffffff ms: 80000000   |		es: fffffffe ls:        a me: 7fffffff ms: 80000000
+Trying to insert node between -11 and 6 II: 20		      |	Trying to insert node between -2 and 10 II: 20
+	failed to insert at cycle -11   %50:intregs = M2_mpy_ |		insert at cycle -2   %50:intregs = M2_mpy_acc_sat_ll_
+	insert at cycle -10   %50:intregs = M2_mpy_acc_sat_ll <
+	failed to insert at cycle -12   %19:intregs = M2_mpy_ |		insert at cycle -1   %19:intregs = M2_mpy_nac_sat_ll_
+	failed to insert at cycle -11   %19:intregs = M2_mpy_ <
+	failed to insert at cycle -10   %19:intregs = M2_mpy_ <
+	insert at cycle -9   %19:intregs = M2_mpy_nac_sat_ll_ <
+	es: ffffffe4 ls: 7fffffff me: 7fffffff ms: 80000000   |		es: ffffffec ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between -28 and -9 II: 20		      |	Trying to insert node between -20 and -1 II: 20
+	insert at cycle -28   %11:intregs = PHI %1:intregs, % |		insert at cycle -16   %11:intregs = PHI %1:intregs, %
+	es: ffffffe4 ls: fffffff5 me: 7fffffff ms: 80000000   |		es: fffffff0 ls: fffffffd me: 7fffffff ms: 80000000
+Trying to insert node between -28 and -11 II: 20	      |	Trying to insert node between -16 and -3 II: 20
+	insert at cycle -28   %47:intregs = M2_mpy_nac_sat_ll |		insert at cycle -16   %47:intregs = M2_mpy_nac_sat_ll
+	es: 80000000 ls: fffffff4 me: 7fffffff ms: 80000000   |		es: 80000000 ls: fffffffb me: 7fffffff ms: 80000000
+Trying to insert node between -12 and -31 II: 20	      |	Trying to insert node between -5 and -24 II: 20
+	failed to insert at cycle -12   %17:intregs = A2_sath |		insert at cycle -5   %17:intregs = A2_sath %41:intreg
+	failed to insert at cycle -13   %17:intregs = A2_sath <
+	insert at cycle -14   %17:intregs = A2_sath %41:intre <
+	es: 80000000 ls: fffffff0 me: 7fffffff ms: 80000000   |		es: 80000000 ls: fffffff9 me: 7fffffff ms: 80000000
+Trying to insert node between -16 and -35 II: 20	      |	Trying to insert node between -7 and -26 II: 20
+	insert at cycle -16   %41:intregs = S2_asr_r_r_sat %3 |		insert at cycle -7   %41:intregs = S2_asr_r_r_sat %38
+	es: 80000000 ls: ffffffef me: 7fffffff ms: 80000000   |		es: 80000000 ls: fffffff8 me: 7fffffff ms: 80000000
+Trying to insert node between -17 and -36 II: 20	      |	Trying to insert node between -8 and -27 II: 20
+	insert at cycle -17   %38:intregs = A2_asrh %37:intre |		insert at cycle -8   %38:intregs = A2_asrh %37:intreg
+Inst (11)   %37:intregs, %25:intregs = L2_loadri_pi %13:intre |	Inst (11)   %37:intregs, %25:intregs = L2_loadri_pi %13:intre
+	es: 80000000 ls: ffffffed me: 7fffffff ms: fffffff8   |		es: 80000000 ls: fffffff6 me: 7fffffff ms: fffffffd
+Inst (36)   S2_storerigp @g4, %23:intregs, implicit $gp :: (s |	Inst (36)   S2_storerigp @g4, %23:intregs, implicit $gp :: (s
+	insert at cycle 11   S2_storerigp @g4, %23:intregs, i |		insert at cycle 11   S2_storerigp @g4, %23:intregs, i
+Inst (15)   %42:intregs, %26:intregs = L2_loadri_pi %12:intre |	Inst (15)   %42:intregs, %26:intregs = L2_loadri_pi %12:intre
+	insert at cycle 0   %42:intregs, %26:intregs = L2_loa |		insert at cycle 0   %42:intregs, %26:intregs = L2_loa
+	insert at cycle 7   %52:intregs = M2_mpy_acc_sat_ll_s |		insert at cycle 8   %52:intregs = M2_mpy_acc_sat_ll_s
+	failed to insert at cycle 7   %22:intregs = M2_mpy_ac |		insert at cycle 10   %22:intregs = M2_mpy_acc_sat_ll_
+	insert at cycle 8   %22:intregs = M2_mpy_acc_sat_ll_s <
+	failed to insert at cycle 7   %20:intregs = M2_mpy_ac |		insert at cycle 12   %20:intregs = M2_mpy_acc_sat_ll_
+	insert at cycle 8   %20:intregs = M2_mpy_acc_sat_ll_s <
+	es:        9 ls: 7fffffff me: 7fffffff ms: 80000000   |		es:        a ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 9 and 29 II: 21		      |	Trying to insert node between 10 and 30 II: 21
+	insert at cycle 9   %21:intregs = M2_mpy_acc_sat_ll_s |		insert at cycle 13   %21:intregs = M2_mpy_acc_sat_ll_
+Inst (33)   S2_storerigp @g3, %22:intregs, implicit $gp :: (s |	Inst (33)   S2_storerigp @g3, %22:intregs, implicit $gp :: (s
+	es:        a ls: 7fffffff me:       14 ms: 80000000   |		es:        c ls: 7fffffff me:       14 ms: 80000000
+Trying to insert node between 10 and 20 II: 21		      |	Trying to insert node between 12 and 20 II: 21
+	insert at cycle 10   S2_storerigp @g3, %22:intregs, i |		insert at cycle 14   S2_storerigp @g3, %22:intregs, i
+Inst (29)   S2_storerigp @g2, %21:intregs, implicit $gp :: (s |	Inst (29)   S2_storerigp @g2, %21:intregs, implicit $gp :: (s
+	es:        b ls: 7fffffff me:       14 ms: 80000000   |		es:        f ls: 7fffffff me:       14 ms: 80000000
+Trying to insert node between 11 and 20 II: 21		      |	Trying to insert node between 15 and 20 II: 21
+	insert at cycle 11   S2_storerigp @g2, %21:intregs, i |		insert at cycle 15   S2_storerigp @g2, %21:intregs, i
+Inst (26)   S2_storerigp @g1, %20:intregs, implicit $gp :: (s |	Inst (26)   S2_storerigp @g1, %20:intregs, implicit $gp :: (s
+	es:        a ls: 7fffffff me:       14 ms: 80000000   |		es:        e ls: 7fffffff me:       14 ms: 80000000
+Trying to insert node between 10 and 20 II: 21		      |	Trying to insert node between 14 and 20 II: 21
+	insert at cycle 10   S2_storerigp @g1, %20:intregs, i |		insert at cycle 16   S2_storerigp @g1, %20:intregs, i
+Inst (37)   S2_storerigp @g5, %6:intregs, implicit $gp :: (st |	Inst (37)   S2_storerigp @g5, %6:intregs, implicit $gp :: (st
+	insert at cycle 0   S2_storerigp @g5, %6:intregs, imp |		insert at cycle 1   S2_storerigp @g5, %6:intregs, imp
+	insert at cycle 7   %7:intregs = PHI %5:intregs, %bb. |		insert at cycle 6   %7:intregs = PHI %5:intregs, %bb.
+	es: fffffff4 ls: 7fffffff me: 7fffffff ms: 80000000   |		es: fffffff6 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between -12 and 8 II: 21		      |	Trying to insert node between -10 and 10 II: 21
+	insert at cycle -12   %8:intregs = PHI %4:intregs, %b |		insert at cycle -4   %8:intregs = PHI %4:intregs, %bb
+	es: fffffff4 ls:        6 me: 7fffffff ms: 80000000   |		es: fffffffc ls:        8 me: 7fffffff ms: 80000000
+Trying to insert node between -12 and 6 II: 21		      |	Trying to insert node between -4 and 8 II: 21
+	failed to insert at cycle -12   %54:intregs = M2_mpy_ |		insert at cycle -4   %54:intregs = M2_mpy_acc_sat_ll_
+	insert at cycle -11   %54:intregs = M2_mpy_acc_sat_ll <
+	es: fffffff5 ls:        7 me: 7fffffff ms: 80000000   |		es: fffffff9 ls:        8 me: 7fffffff ms: 80000000
+Trying to insert node between 7 and -11 II: 21		      |	Trying to insert node between 8 and -7 II: 21
+	insert at cycle 7   %9:intregs = PHI %3:intregs, %bb. |		insert at cycle 6   %9:intregs = PHI %3:intregs, %bb.
+	es: fffffff4 ls: 7fffffff me: 7fffffff ms: 80000000   |		es: fffffff8 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between -12 and 8 II: 21		      |	Trying to insert node between -8 and 12 II: 21
+	insert at cycle -12   %10:intregs = PHI %2:intregs, % |		insert at cycle -3   %10:intregs = PHI %2:intregs, %b
+	es: fffffff4 ls:        6 me: 7fffffff ms: 80000000   |		es: fffffffd ls:        a me: 7fffffff ms: 80000000
+Trying to insert node between -12 and 6 II: 21		      |	Trying to insert node between -3 and 10 II: 21
+	failed to insert at cycle -12   %50:intregs = M2_mpy_ |		insert at cycle -3   %50:intregs = M2_mpy_acc_sat_ll_
+	insert at cycle -11   %50:intregs = M2_mpy_acc_sat_ll <
+	failed to insert at cycle -13   %19:intregs = M2_mpy_ |		insert at cycle -2   %19:intregs = M2_mpy_nac_sat_ll_
+	failed to insert at cycle -12   %19:intregs = M2_mpy_ <
+	failed to insert at cycle -11   %19:intregs = M2_mpy_ <
+	insert at cycle -10   %19:intregs = M2_mpy_nac_sat_ll <
+	es: ffffffe2 ls: 7fffffff me: 7fffffff ms: 80000000   |		es: ffffffea ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between -30 and -10 II: 21	      |	Trying to insert node between -22 and -2 II: 21
+	insert at cycle -30   %11:intregs = PHI %1:intregs, % |		insert at cycle -22   %11:intregs = PHI %1:intregs, %
+	es: ffffffe2 ls: fffffff4 me: 7fffffff ms: 80000000   |		es: ffffffea ls: fffffffc me: 7fffffff ms: 80000000
+Trying to insert node between -30 and -12 II: 21	      |	Trying to insert node between -22 and -4 II: 21
+	insert at cycle -30   %47:intregs = M2_mpy_nac_sat_ll |		insert at cycle -22   %47:intregs = M2_mpy_nac_sat_ll
+	insert at cycle 0   %12:intregs = PHI %29:intregs, %b |		insert at cycle -17   %12:intregs = PHI %29:intregs, 
+	es: 80000000 ls: fffffff3 me: 7fffffff ms: 80000000   |		es: 80000000 ls: fffffffa me: 7fffffff ms: 80000000
+Trying to insert node between -13 and -33 II: 21	      |	Trying to insert node between -6 and -26 II: 21
+	failed to insert at cycle -13   %17:intregs = A2_sath |		insert at cycle -17   %17:intregs = A2_sath %41:intre
+	failed to insert at cycle -14   %17:intregs = A2_sath <
+	insert at cycle -15   %17:intregs = A2_sath %41:intre <
+	es: 80000000 ls: ffffffef me: 7fffffff ms: 80000000   |		es: 80000000 ls: ffffffed me: 7fffffff ms: 80000000
+Trying to insert node between -17 and -37 II: 21	      |	Trying to insert node between -19 and -39 II: 21
+	insert at cycle -17   %41:intregs = S2_asr_r_r_sat %3 |		insert at cycle -19   %41:intregs = S2_asr_r_r_sat %3
+	es: 80000000 ls: ffffffee me: 7fffffff ms: 80000000   |		es: 80000000 ls: ffffffec me: 7fffffff ms: 80000000
+Trying to insert node between -18 and -38 II: 21	      |	Trying to insert node between -20 and -40 II: 21
+	insert at cycle -18   %38:intregs = A2_asrh %37:intre |		insert at cycle -20   %38:intregs = A2_asrh %37:intre
+Inst (11)   %37:intregs, %25:intregs = L2_loadri_pi %13:intre |	Inst (11)   %37:intregs, %25:intregs = L2_loadri_pi %13:intre
+	es: 80000000 ls: ffffffec me: 7fffffff ms: fffffff7   |		es: 80000000 ls: ffffffea me: 7fffffff ms: fffffffc
+Schedule Found? 0 (II=22)				      |	Schedule Found? 0 (II=21)

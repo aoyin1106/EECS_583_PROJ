@@ -1,0 +1,2205 @@
+SU(3):   %63:intregs = L2_loadri_io %15:intregs, 0 :: (load 4 |	SU(3):   %63:intregs = L2_loadri_io %15:intregs, 0 :: (load (
+SU(4):   %64:intregs = L2_loadri_io %15:intregs, 2304 :: (loa |	SU(4):   %64:intregs = L2_loadri_io %15:intregs, 2304 :: (loa
+SU(6):   S2_storeri_io %15:intregs, 0, %65:intregs :: (store  |	SU(6):   S2_storeri_io %15:intregs, 0, %65:intregs :: (store 
+SU(8):   S2_storeri_io %15:intregs, 2304, %66:intregs :: (sto |	SU(8):   S2_storeri_io %15:intregs, 2304, %66:intregs :: (sto
+  %63:intregs = L2_loadri_io %15:intregs, 0 :: (load 4 from % |	  %63:intregs = L2_loadri_io %15:intregs, 0 :: (load (s32) fr
+  S2_storeri_io %15:intregs, 2304, %66:intregs :: (store 4 in |	  S2_storeri_io %15:intregs, 2304, %66:intregs :: (store (s32
+  %64:intregs = L2_loadri_io %15:intregs, 2304 :: (load 4 fro |	  %64:intregs = L2_loadri_io %15:intregs, 2304 :: (load (s32)
+  S2_storeri_io %15:intregs, 0, %65:intregs :: (store 4 into  |	  S2_storeri_io %15:intregs, 0, %65:intregs :: (store (s32) i
+SU(4):   %64:intregs = L2_loadri_io %15:intregs, 2304 :: (loa |	SU(4):   %64:intregs = L2_loadri_io %15:intregs, 2304 :: (loa
+SU(3):   %63:intregs = L2_loadri_io %15:intregs, 0 :: (load 4 |	SU(3):   %63:intregs = L2_loadri_io %15:intregs, 0 :: (load (
+SU(6):   S2_storeri_io %15:intregs, 0, %65:intregs :: (store  |	SU(6):   S2_storeri_io %15:intregs, 0, %65:intregs :: (store 
+SU(8):   S2_storeri_io %15:intregs, 2304, %66:intregs :: (sto |	SU(8):   S2_storeri_io %15:intregs, 2304, %66:intregs :: (sto
+   SU(3) %63:intregs = L2_loadri_io %15:intregs, 0 :: (load 4 |	   SU(3) %63:intregs = L2_loadri_io %15:intregs, 0 :: (load (
+   SU(8) S2_storeri_io %15:intregs, 2304, %66:intregs :: (sto |	   SU(8) S2_storeri_io %15:intregs, 2304, %66:intregs :: (sto
+   SU(3) %63:intregs = L2_loadri_io %15:intregs, 0 :: (load 4 |	   SU(3) %63:intregs = L2_loadri_io %15:intregs, 0 :: (load (
+   SU(8) S2_storeri_io %15:intregs, 2304, %66:intregs :: (sto |	   SU(8) S2_storeri_io %15:intregs, 2304, %66:intregs :: (sto
+   SU(4) %64:intregs = L2_loadri_io %15:intregs, 2304 :: (loa |	   SU(4) %64:intregs = L2_loadri_io %15:intregs, 2304 :: (loa
+   SU(6) S2_storeri_io %15:intregs, 0, %65:intregs :: (store  |	   SU(6) S2_storeri_io %15:intregs, 0, %65:intregs :: (store 
+Inst (8)   S2_storeri_io %15:intregs, 2304, %66:intregs :: (s |	Inst (8)   S2_storeri_io %15:intregs, 2304, %66:intregs :: (s
+	insert at cycle 1   S2_storeri_io %15:intregs, 2304,  |		insert at cycle 1   S2_storeri_io %15:intregs, 2304, 
+	insert at cycle 1   %66:intregs = nsw A2_sub %63:intr |		insert at cycle 0   %66:intregs = nsw A2_sub %63:intr
+Inst (3)   %63:intregs = L2_loadri_io %15:intregs, 0 :: (load |	Inst (3)   %63:intregs = L2_loadri_io %15:intregs, 0 :: (load
+	es: 80000000 ls:        0 me: 7fffffff ms: ffffffff   |		es: 80000000 ls: ffffffff me: 7fffffff ms: ffffffff
+Trying to insert node between 0 and -1 II: 3		      |	Trying to insert node between -1 and -1 II: 3
+	insert at cycle 0   %63:intregs = L2_loadri_io %15:in |		insert at cycle -1   %63:intregs = L2_loadri_io %15:i
+	es:        2 ls: 7fffffff me: 7fffffff ms: 80000000   |		es:        1 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 2 and 4 II: 3		      |	Trying to insert node between 1 and 3 II: 3
+	insert at cycle 2   %68:intregs = A2_abs %66:intregs  |		insert at cycle 1   %68:intregs = A2_abs %66:intregs
+	es:        3 ls: 7fffffff me: 7fffffff ms: 80000000   |		es:        2 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 3 and 5 II: 3		      |	Trying to insert node between 2 and 4 II: 3
+	insert at cycle 3   %20:intregs = A2_or %68:intregs,  |		insert at cycle 2   %20:intregs = A2_or %68:intregs, 
+	es:        1 ls:        3 me: 7fffffff ms: 80000000   |		es:        0 ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and 1 II: 3		      |	Trying to insert node between 2 and 0 II: 3
+	insert at cycle 3   %17:intregs = PHI %11:intregs, %b |		insert at cycle 0   %17:intregs = PHI %11:intregs, %b
+	es:        1 ls: 7fffffff me: 7fffffff ms: 80000000   |		es:        0 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 1 and 3 II: 3		      |	Trying to insert node between 0 and 2 II: 3
+	insert at cycle 1   %65:intregs = nsw A2_add %64:intr |		insert at cycle 0   %65:intregs = nsw A2_add %64:intr
+	es:        2 ls: 7fffffff me: 7fffffff ms: 80000000   |		es:        1 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 2 and 4 II: 3		      |	Trying to insert node between 1 and 3 II: 3
+	insert at cycle 2   %67:intregs = A2_abs %65:intregs  |		insert at cycle 1   %67:intregs = A2_abs %65:intregs
+	es:        3 ls: 7fffffff me: 7fffffff ms: 80000000   |		es:        2 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 3 and 5 II: 3		      |	Trying to insert node between 2 and 4 II: 3
+	insert at cycle 3   %19:intregs = A2_or %67:intregs,  |		insert at cycle 2   %19:intregs = A2_or %67:intregs, 
+	es:        1 ls:        3 me: 7fffffff ms: 80000000   |		es:        0 ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and 1 II: 3		      |	Trying to insert node between 2 and 0 II: 3
+	insert at cycle 3   %18:intregs = PHI %12:intregs, %b |		insert at cycle 0   %18:intregs = PHI %12:intregs, %b
+Inst (4)   %64:intregs = L2_loadri_io %15:intregs, 2304 :: (l |	Inst (4)   %64:intregs = L2_loadri_io %15:intregs, 2304 :: (l
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000   |		es: 80000000 ls: ffffffff me: 7fffffff ms: 80000000
+Trying to insert node between 0 and -2 II: 3		      |	Trying to insert node between -1 and -3 II: 3
+	insert at cycle 0   %64:intregs = L2_loadri_io %15:in |		insert at cycle -3   %64:intregs = L2_loadri_io %15:i
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000   |		es: 80000000 ls: fffffffd me: 7fffffff ms: 80000000
+Trying to insert node between 0 and -2 II: 3		      |	Trying to insert node between -3 and -5 II: 3
+	insert at cycle 0   %15:intregs = PHI %14:intregs, %b |		insert at cycle -3   %15:intregs = PHI %14:intregs, %
+	es:        0 ls:        2 me: 7fffffff ms: 80000000   |		es: fffffffd ls: ffffffff me: 7fffffff ms: 80000000
+Trying to insert node between 0 and 2 II: 3		      |	Trying to insert node between -3 and -1 II: 3
+	failed to insert at cycle 0   %22:intregs = A2_addi % |		insert at cycle -3   %22:intregs = A2_addi %15:intreg
+	insert at cycle 1   %22:intregs = A2_addi %15:intregs <
+Inst (6)   S2_storeri_io %15:intregs, 0, %65:intregs :: (stor |	Inst (6)   S2_storeri_io %15:intregs, 0, %65:intregs :: (stor
+	es:        1 ls: 7fffffff me: 7fffffff ms: 80000000   |		es:        0 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 1 and 3 II: 3		      |	Trying to insert node between 0 and 2 II: 3
+	failed to insert at cycle 1   S2_storeri_io %15:intre |		insert at cycle 1   S2_storeri_io %15:intregs, 0, %65
+	insert at cycle 2   S2_storeri_io %15:intregs, 0, %65 |	Schedule Found? 1 (II=3)
+Schedule Found? 1 (II=4)				      |	cycle -3 (1) (1) %17:intregs = PHI %11:intregs, %bb.5, %20:in
+cycle 0 (1) (1) %17:intregs = PHI %11:intregs, %bb.5, %20:int <
+cycle 0 (1) (2) %18:intregs = PHI %12:intregs, %bb.5, %19:int |	cycle -3 (1) (2) %18:intregs = PHI %12:intregs, %bb.5, %19:in
+cycle 0 (0) (0) %15:intregs = PHI %14:intregs, %bb.5, %22:int |	cycle -3 (0) (0) %15:intregs = PHI %14:intregs, %bb.5, %22:in
+cycle 0 (1) (12) %20:intregs = A2_or %68:intregs, %17:intregs |	cycle -3 (1) (7) %66:intregs = nsw A2_sub %63:intregs, %64:in
+cycle 0 (1) (10) %19:intregs = A2_or %67:intregs, %18:intregs |	cycle -3 (1) (5) %65:intregs = nsw A2_add %64:intregs, %63:in
+cycle 0 (0) (3) %63:intregs = L2_loadri_io %15:intregs, 0 ::  |	cycle -3 (0) (4) %64:intregs = L2_loadri_io %15:intregs, 2304
+cycle 0 (0) (4) %64:intregs = L2_loadri_io %15:intregs, 2304  |	cycle -3 (0) (13) %22:intregs = A2_addi %15:intregs, 4
+cycle 1 (0) (7) %66:intregs = nsw A2_sub %63:intregs, %64:int |	cycle -2 (1) (8) S2_storeri_io %15:intregs, 2304, %66:intregs
+cycle 1 (0) (8) S2_storeri_io %15:intregs, 2304, %66:intregs  |	cycle -2 (1) (11) %68:intregs = A2_abs %66:intregs
+cycle 1 (0) (5) %65:intregs = nsw A2_add %64:intregs, %63:int |	cycle -2 (1) (9) %67:intregs = A2_abs %65:intregs
+cycle 1 (0) (13) %22:intregs = A2_addi %15:intregs, 4	      |	cycle -2 (1) (6) S2_storeri_io %15:intregs, 0, %65:intregs ::
+cycle 2 (0) (11) %68:intregs = A2_abs %66:intregs	      |	cycle -1 (1) (12) %20:intregs = A2_or %68:intregs, %17:intreg
+cycle 2 (0) (9) %67:intregs = A2_abs %65:intregs	      |	cycle -1 (1) (10) %19:intregs = A2_or %67:intregs, %18:intreg
+cycle 2 (0) (6) S2_storeri_io %15:intregs, 0, %65:intregs ::  |	cycle -1 (0) (3) %63:intregs = L2_loadri_io %15:intregs, 0 ::
+[stage 1 @0c] %17:intregs = PHI %11:intregs, %bb.5, %20:intre |	[stage 1 @-3c] %17:intregs = PHI %11:intregs, %bb.5, %20:intr
+[stage 1 @0c] %18:intregs = PHI %12:intregs, %bb.5, %19:intre |	[stage 1 @-3c] %18:intregs = PHI %12:intregs, %bb.5, %19:intr
+[stage 0 @0c] %15:intregs = PHI %14:intregs, %bb.5, %22:intre |	[stage 0 @-3c] %15:intregs = PHI %14:intregs, %bb.5, %22:intr
+[stage 1 @0c] %20:intregs = A2_or %68:intregs, %17:intregs    |	[stage 1 @-3c] %66:intregs = nsw A2_sub %63:intregs, %64:intr
+[stage 1 @0c] %19:intregs = A2_or %67:intregs, %18:intregs    |	[stage 1 @-3c] %65:intregs = nsw A2_add %64:intregs, %63:intr
+[stage 0 @0c] %63:intregs = L2_loadri_io %15:intregs, 0 :: (l |	[stage 0 @-3c] %64:intregs = L2_loadri_io %15:intregs, 2304 :
+[stage 0 @0c] %64:intregs = L2_loadri_io %15:intregs, 2304 :: |	[stage 0 @-3c] %22:intregs = A2_addi %15:intregs, 4
+[stage 0 @1c] %66:intregs = nsw A2_sub %63:intregs, %64:intre |	[stage 1 @-2c] S2_storeri_io %15:intregs, 2304, %66:intregs :
+[stage 0 @1c] S2_storeri_io %15:intregs, 2304, %66:intregs :: |	[stage 1 @-2c] %68:intregs = A2_abs %66:intregs
+[stage 0 @1c] %65:intregs = nsw A2_add %64:intregs, %63:intre |	[stage 1 @-2c] %67:intregs = A2_abs %65:intregs
+[stage 0 @1c] %22:intregs = A2_addi %15:intregs, 4	      |	[stage 1 @-2c] S2_storeri_io %15:intregs, 0, %65:intregs :: (
+[stage 0 @2c] %68:intregs = A2_abs %66:intregs		      |	[stage 1 @-1c] %20:intregs = A2_or %68:intregs, %17:intregs
+[stage 0 @2c] %67:intregs = A2_abs %65:intregs		      |	[stage 1 @-1c] %19:intregs = A2_or %67:intregs, %18:intregs
+[stage 0 @2c] S2_storeri_io %15:intregs, 0, %65:intregs :: (s |	[stage 0 @-1c] %63:intregs = L2_loadri_io %15:intregs, 0 :: (
+							      >	 -- padding defaults array from 1 to 2
+							      >	 -- padding defaults array from 1 to 2
+SU(4):   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (loa |	SU(4):   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (loa
+SU(5):   %36:intregs = L2_loadri_io %2:intregs, -12 :: (load  |	SU(5):   %36:intregs = L2_loadri_io %2:intregs, -12 :: (load 
+SU(7):   S2_storeri_io %2:intregs, -2316, %37:intregs :: (sto |	SU(7):   S2_storeri_io %2:intregs, -2316, %37:intregs :: (sto
+SU(9):   S2_storeri_io %2:intregs, -12, %38:intregs :: (store |	SU(9):   S2_storeri_io %2:intregs, -12, %38:intregs :: (store
+SU(12):   %41:intregs = L2_loadri_io %2:intregs, -2312 :: (lo |	SU(12):   %41:intregs = L2_loadri_io %2:intregs, -2312 :: (lo
+SU(13):   %42:intregs = L2_loadri_io %2:intregs, -8 :: (load  |	SU(13):   %42:intregs = L2_loadri_io %2:intregs, -8 :: (load 
+SU(15):   S2_storeri_io %2:intregs, -2312, %43:intregs :: (st |	SU(15):   S2_storeri_io %2:intregs, -2312, %43:intregs :: (st
+SU(17):   S2_storeri_io %2:intregs, -8, %44:intregs :: (store |	SU(17):   S2_storeri_io %2:intregs, -8, %44:intregs :: (store
+SU(22):   %49:intregs = L2_loadri_io %2:intregs, -2308 :: (lo |	SU(22):   %49:intregs = L2_loadri_io %2:intregs, -2308 :: (lo
+SU(23):   %50:intregs = L2_loadri_io %2:intregs, -4 :: (load  |	SU(23):   %50:intregs = L2_loadri_io %2:intregs, -4 :: (load 
+SU(25):   S2_storeri_io %2:intregs, -2308, %51:intregs :: (st |	SU(25):   S2_storeri_io %2:intregs, -2308, %51:intregs :: (st
+SU(27):   S2_storeri_io %2:intregs, -4, %52:intregs :: (store |	SU(27):   S2_storeri_io %2:intregs, -4, %52:intregs :: (store
+SU(30):   %55:intregs = L2_loadri_io %2:intregs, -2304 :: (lo |	SU(30):   %55:intregs = L2_loadri_io %2:intregs, -2304 :: (lo
+SU(31):   %56:intregs = L2_loadri_io %2:intregs, 0 :: (load 4 |	SU(31):   %56:intregs = L2_loadri_io %2:intregs, 0 :: (load (
+SU(33):   S2_storeri_io %2:intregs, -2304, %57:intregs :: (st |	SU(33):   S2_storeri_io %2:intregs, -2304, %57:intregs :: (st
+SU(35):   S2_storeri_io %2:intregs, 0, %58:intregs :: (store  |	SU(35):   S2_storeri_io %2:intregs, 0, %58:intregs :: (store 
+  %35:intregs = L2_loadri_io %2:intregs, -2316 :: (load 4 fro |	  %35:intregs = L2_loadri_io %2:intregs, -2316 :: (load (s32)
+  S2_storeri_io %2:intregs, -12, %38:intregs :: (store 4 into |	  S2_storeri_io %2:intregs, -12, %38:intregs :: (store (s32) 
+  S2_storeri_io %2:intregs, -2304, %57:intregs :: (store 4 in |	  S2_storeri_io %2:intregs, -2304, %57:intregs :: (store (s32
+  S2_storeri_io %2:intregs, -8, %44:intregs :: (store 4 into  |	  S2_storeri_io %2:intregs, -8, %44:intregs :: (store (s32) i
+  %56:intregs = L2_loadri_io %2:intregs, 0 :: (load 4 from %i |	  %56:intregs = L2_loadri_io %2:intregs, 0 :: (load (s32) fro
+  S2_storeri_io %2:intregs, 0, %58:intregs :: (store 4 into % |	  S2_storeri_io %2:intregs, 0, %58:intregs :: (store (s32) in
+  S2_storeri_io %2:intregs, -2312, %43:intregs :: (store 4 in |	  S2_storeri_io %2:intregs, -2312, %43:intregs :: (store (s32
+  %55:intregs = L2_loadri_io %2:intregs, -2304 :: (load 4 fro |	  %55:intregs = L2_loadri_io %2:intregs, -2304 :: (load (s32)
+  S2_storeri_io %2:intregs, -4, %52:intregs :: (store 4 into  |	  S2_storeri_io %2:intregs, -4, %52:intregs :: (store (s32) i
+  %36:intregs = L2_loadri_io %2:intregs, -12 :: (load 4 from  |	  %36:intregs = L2_loadri_io %2:intregs, -12 :: (load (s32) f
+  %42:intregs = L2_loadri_io %2:intregs, -8 :: (load 4 from % |	  %42:intregs = L2_loadri_io %2:intregs, -8 :: (load (s32) fr
+  S2_storeri_io %2:intregs, -2308, %51:intregs :: (store 4 in |	  S2_storeri_io %2:intregs, -2308, %51:intregs :: (store (s32
+  %50:intregs = L2_loadri_io %2:intregs, -4 :: (load 4 from % |	  %50:intregs = L2_loadri_io %2:intregs, -4 :: (load (s32) fr
+  S2_storeri_io %2:intregs, -2316, %37:intregs :: (store 4 in |	  S2_storeri_io %2:intregs, -2316, %37:intregs :: (store (s32
+  %41:intregs = L2_loadri_io %2:intregs, -2312 :: (load 4 fro |	  %41:intregs = L2_loadri_io %2:intregs, -2312 :: (load (s32)
+  %49:intregs = L2_loadri_io %2:intregs, -2308 :: (load 4 fro |	  %49:intregs = L2_loadri_io %2:intregs, -2308 :: (load (s32)
+SU(5):   %36:intregs = L2_loadri_io %2:intregs, -12 :: (load  |	SU(5):   %36:intregs = L2_loadri_io %2:intregs, -12 :: (load 
+SU(4):   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (loa |	SU(4):   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (loa
+SU(7):   S2_storeri_io %2:intregs, -2316, %37:intregs :: (sto |	SU(7):   S2_storeri_io %2:intregs, -2316, %37:intregs :: (sto
+SU(9):   S2_storeri_io %2:intregs, -12, %38:intregs :: (store |	SU(9):   S2_storeri_io %2:intregs, -12, %38:intregs :: (store
+SU(13):   %42:intregs = L2_loadri_io %2:intregs, -8 :: (load  |	SU(13):   %42:intregs = L2_loadri_io %2:intregs, -8 :: (load 
+SU(12):   %41:intregs = L2_loadri_io %2:intregs, -2312 :: (lo |	SU(12):   %41:intregs = L2_loadri_io %2:intregs, -2312 :: (lo
+SU(15):   S2_storeri_io %2:intregs, -2312, %43:intregs :: (st |	SU(15):   S2_storeri_io %2:intregs, -2312, %43:intregs :: (st
+SU(17):   S2_storeri_io %2:intregs, -8, %44:intregs :: (store |	SU(17):   S2_storeri_io %2:intregs, -8, %44:intregs :: (store
+SU(23):   %50:intregs = L2_loadri_io %2:intregs, -4 :: (load  |	SU(23):   %50:intregs = L2_loadri_io %2:intregs, -4 :: (load 
+SU(22):   %49:intregs = L2_loadri_io %2:intregs, -2308 :: (lo |	SU(22):   %49:intregs = L2_loadri_io %2:intregs, -2308 :: (lo
+SU(25):   S2_storeri_io %2:intregs, -2308, %51:intregs :: (st |	SU(25):   S2_storeri_io %2:intregs, -2308, %51:intregs :: (st
+SU(27):   S2_storeri_io %2:intregs, -4, %52:intregs :: (store |	SU(27):   S2_storeri_io %2:intregs, -4, %52:intregs :: (store
+SU(31):   %56:intregs = L2_loadri_io %2:intregs, 0 :: (load 4 |	SU(31):   %56:intregs = L2_loadri_io %2:intregs, 0 :: (load (
+SU(30):   %55:intregs = L2_loadri_io %2:intregs, -2304 :: (lo |	SU(30):   %55:intregs = L2_loadri_io %2:intregs, -2304 :: (lo
+SU(33):   S2_storeri_io %2:intregs, -2304, %57:intregs :: (st |	SU(33):   S2_storeri_io %2:intregs, -2304, %57:intregs :: (st
+SU(35):   S2_storeri_io %2:intregs, 0, %58:intregs :: (store  |	SU(35):   S2_storeri_io %2:intregs, 0, %58:intregs :: (store 
+   SU(4) %35:intregs = L2_loadri_io %2:intregs, -2316 :: (loa |	   SU(4) %35:intregs = L2_loadri_io %2:intregs, -2316 :: (loa
+   SU(9) S2_storeri_io %2:intregs, -12, %38:intregs :: (store |	   SU(9) S2_storeri_io %2:intregs, -12, %38:intregs :: (store
+   SU(15) S2_storeri_io %2:intregs, -2312, %43:intregs :: (st |	   SU(15) S2_storeri_io %2:intregs, -2312, %43:intregs :: (st
+   SU(17) S2_storeri_io %2:intregs, -8, %44:intregs :: (store |	   SU(17) S2_storeri_io %2:intregs, -8, %44:intregs :: (store
+   SU(25) S2_storeri_io %2:intregs, -2308, %51:intregs :: (st |	   SU(25) S2_storeri_io %2:intregs, -2308, %51:intregs :: (st
+   SU(27) S2_storeri_io %2:intregs, -4, %52:intregs :: (store |	   SU(27) S2_storeri_io %2:intregs, -4, %52:intregs :: (store
+   SU(5) %36:intregs = L2_loadri_io %2:intregs, -12 :: (load  |	   SU(5) %36:intregs = L2_loadri_io %2:intregs, -12 :: (load 
+   SU(17) S2_storeri_io %2:intregs, -8, %44:intregs :: (store |	   SU(17) S2_storeri_io %2:intregs, -8, %44:intregs :: (store
+   SU(12) %41:intregs = L2_loadri_io %2:intregs, -2312 :: (lo |	   SU(12) %41:intregs = L2_loadri_io %2:intregs, -2312 :: (lo
+   SU(17) S2_storeri_io %2:intregs, -8, %44:intregs :: (store |	   SU(17) S2_storeri_io %2:intregs, -8, %44:intregs :: (store
+   SU(25) S2_storeri_io %2:intregs, -2308, %51:intregs :: (st |	   SU(25) S2_storeri_io %2:intregs, -2308, %51:intregs :: (st
+   SU(27) S2_storeri_io %2:intregs, -4, %52:intregs :: (store |	   SU(27) S2_storeri_io %2:intregs, -4, %52:intregs :: (store
+   SU(33) S2_storeri_io %2:intregs, -2304, %57:intregs :: (st |	   SU(33) S2_storeri_io %2:intregs, -2304, %57:intregs :: (st
+   SU(35) S2_storeri_io %2:intregs, 0, %58:intregs :: (store  |	   SU(35) S2_storeri_io %2:intregs, 0, %58:intregs :: (store 
+   SU(13) %42:intregs = L2_loadri_io %2:intregs, -8 :: (load  |	   SU(13) %42:intregs = L2_loadri_io %2:intregs, -8 :: (load 
+   SU(27) S2_storeri_io %2:intregs, -4, %52:intregs :: (store |	   SU(27) S2_storeri_io %2:intregs, -4, %52:intregs :: (store
+   SU(35) S2_storeri_io %2:intregs, 0, %58:intregs :: (store  |	   SU(35) S2_storeri_io %2:intregs, 0, %58:intregs :: (store 
+   SU(22) %49:intregs = L2_loadri_io %2:intregs, -2308 :: (lo |	   SU(22) %49:intregs = L2_loadri_io %2:intregs, -2308 :: (lo
+   SU(27) S2_storeri_io %2:intregs, -4, %52:intregs :: (store |	   SU(27) S2_storeri_io %2:intregs, -4, %52:intregs :: (store
+   SU(33) S2_storeri_io %2:intregs, -2304, %57:intregs :: (st |	   SU(33) S2_storeri_io %2:intregs, -2304, %57:intregs :: (st
+   SU(35) S2_storeri_io %2:intregs, 0, %58:intregs :: (store  |	   SU(35) S2_storeri_io %2:intregs, 0, %58:intregs :: (store 
+   SU(23) %50:intregs = L2_loadri_io %2:intregs, -4 :: (load  |	   SU(23) %50:intregs = L2_loadri_io %2:intregs, -4 :: (load 
+   SU(35) S2_storeri_io %2:intregs, 0, %58:intregs :: (store  |	   SU(35) S2_storeri_io %2:intregs, 0, %58:intregs :: (store 
+   SU(30) %55:intregs = L2_loadri_io %2:intregs, -2304 :: (lo |	   SU(30) %55:intregs = L2_loadri_io %2:intregs, -2304 :: (lo
+   SU(35) S2_storeri_io %2:intregs, 0, %58:intregs :: (store  |	   SU(35) S2_storeri_io %2:intregs, 0, %58:intregs :: (store 
+   SU(4) %35:intregs = L2_loadri_io %2:intregs, -2316 :: (loa |	   SU(4) %35:intregs = L2_loadri_io %2:intregs, -2316 :: (loa
+   SU(9) S2_storeri_io %2:intregs, -12, %38:intregs :: (store |	   SU(9) S2_storeri_io %2:intregs, -12, %38:intregs :: (store
+   SU(15) S2_storeri_io %2:intregs, -2312, %43:intregs :: (st |	   SU(15) S2_storeri_io %2:intregs, -2312, %43:intregs :: (st
+   SU(17) S2_storeri_io %2:intregs, -8, %44:intregs :: (store |	   SU(17) S2_storeri_io %2:intregs, -8, %44:intregs :: (store
+   SU(25) S2_storeri_io %2:intregs, -2308, %51:intregs :: (st |	   SU(25) S2_storeri_io %2:intregs, -2308, %51:intregs :: (st
+   SU(27) S2_storeri_io %2:intregs, -4, %52:intregs :: (store |	   SU(27) S2_storeri_io %2:intregs, -4, %52:intregs :: (store
+   SU(12) %41:intregs = L2_loadri_io %2:intregs, -2312 :: (lo |	   SU(12) %41:intregs = L2_loadri_io %2:intregs, -2312 :: (lo
+   SU(33) S2_storeri_io %2:intregs, -2304, %57:intregs :: (st |	   SU(33) S2_storeri_io %2:intregs, -2304, %57:intregs :: (st
+   SU(35) S2_storeri_io %2:intregs, 0, %58:intregs :: (store  |	   SU(35) S2_storeri_io %2:intregs, 0, %58:intregs :: (store 
+   SU(22) %49:intregs = L2_loadri_io %2:intregs, -2308 :: (lo |	   SU(22) %49:intregs = L2_loadri_io %2:intregs, -2308 :: (lo
+   SU(30) %55:intregs = L2_loadri_io %2:intregs, -2304 :: (lo |	   SU(30) %55:intregs = L2_loadri_io %2:intregs, -2304 :: (lo
+   SU(5) %36:intregs = L2_loadri_io %2:intregs, -12 :: (load  |	   SU(5) %36:intregs = L2_loadri_io %2:intregs, -12 :: (load 
+   SU(13) %42:intregs = L2_loadri_io %2:intregs, -8 :: (load  |	   SU(13) %42:intregs = L2_loadri_io %2:intregs, -8 :: (load 
+   SU(23) %50:intregs = L2_loadri_io %2:intregs, -4 :: (load  |	   SU(23) %50:intregs = L2_loadri_io %2:intregs, -4 :: (load 
+   SU(31) %56:intregs = L2_loadri_io %2:intregs, 0 :: (load 4 |	   SU(31) %56:intregs = L2_loadri_io %2:intregs, 0 :: (load (
+   SU(7) S2_storeri_io %2:intregs, -2316, %37:intregs :: (sto |	   SU(7) S2_storeri_io %2:intregs, -2316, %37:intregs :: (sto
+	insert at cycle 3   %3:intregs = PHI %34:intregs, %bb |		insert at cycle 2   %3:intregs = PHI %34:intregs, %bb
+	insert at cycle 4   %6:intregs = M4_or_or %59:intregs |		insert at cycle 5   %6:intregs = M4_or_or %59:intregs
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000   |		es: 80000000 ls:        4 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -6 II: 10		      |	Trying to insert node between 4 and -5 II: 10
+	insert at cycle 3   %46:intregs = M4_or_or %45:intreg |		insert at cycle 2   %46:intregs = M4_or_or %45:intreg
+	es: fffffffb ls:        3 me: 7fffffff ms: 80000000   |		es: fffffffc ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -5 II: 10		      |	Trying to insert node between 2 and -4 II: 10
+	insert at cycle 3   %4:intregs = PHI %34:intregs, %bb |		insert at cycle 1   %4:intregs = PHI %34:intregs, %bb
+	insert at cycle 2   %40:intregs = A2_abs %38:intregs  |		insert at cycle 1   %40:intregs = A2_abs %38:intregs
+	es: 80000000 ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and -8 II: 10		      <
+	insert at cycle 1   %38:intregs = nsw A2_sub %35:intr <
+							      <
+Inst (4)   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (l <
+							      <
+	insert at cycle 0   %35:intregs = L2_loadri_io %2:int |		insert at cycle 0   %38:intregs = nsw A2_sub %35:intr
+							      <
+Inst (6)   %37:intregs = nsw A2_add %36:intregs, %35:intregs  <
+							      <
+	es:        1 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 10 II: 10		      <
+	insert at cycle 1   %37:intregs = nsw A2_add %36:intr <
+							      <
+Inst (10)   %39:intregs = A2_abs %37:intregs		      <
+							      <
+	es:        2 ls:        2 me: 7fffffff ms: 80000000   <
+Trying to insert node between 2 and 2 II: 10		      <
+	insert at cycle 2   %39:intregs = A2_abs %37:intregs  <
+							      <
+Inst (9)   S2_storeri_io %2:intregs, -12, %38:intregs :: (sto <
+							      <
+	es:        1 ls: 7fffffff me:        9 ms: 80000000   <
+Trying to insert node between 1 and 9 II: 10		      <
+	insert at cycle 1   S2_storeri_io %2:intregs, -12, %3 <
+							      <
+Inst (15)   S2_storeri_io %2:intregs, -2312, %43:intregs :: ( <
+							      <
+	es:        1 ls: 7fffffff me:        9 ms: 80000000   <
+Trying to insert node between 1 and 9 II: 10		      <
+	insert at cycle 1   S2_storeri_io %2:intregs, -2312,  <
+							      <
+Inst (17)   S2_storeri_io %2:intregs, -8, %44:intregs :: (sto <
+	es:        1 ls: 7fffffff me:        9 ms: 80000000   |	Inst (4)   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (l
+Trying to insert node between 1 and 9 II: 10		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	insert at cycle 2   S2_storeri_io %2:intregs, -8, %44 <
+							      <
+Inst (25)   S2_storeri_io %2:intregs, -2308, %51:intregs :: ( <
+							      <
+	es:        1 ls: 7fffffff me:        9 ms: 80000000   <
+Trying to insert node between 1 and 9 II: 10		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	insert at cycle 2   S2_storeri_io %2:intregs, -2308,  <
+							      <
+Inst (27)   S2_storeri_io %2:intregs, -4, %52:intregs :: (sto <
+							      <
+	es:        1 ls: 7fffffff me:        9 ms: 80000000   <
+Trying to insert node between 1 and 9 II: 10		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	failed to insert at cycle 2   S2_storeri_io %2:intreg <
+	insert at cycle 3   S2_storeri_io %2:intregs, -4, %52 <
+							      <
+Inst (33)   S2_storeri_io %2:intregs, -2304, %57:intregs :: ( <
+							      <
+	es:        1 ls: 7fffffff me:        9 ms: 80000000   <
+Trying to insert node between 1 and 9 II: 10		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	failed to insert at cycle 2   S2_storeri_io %2:intreg <
+	insert at cycle 3   S2_storeri_io %2:intregs, -2304,  <
+							      <
+Inst (35)   S2_storeri_io %2:intregs, 0, %58:intregs :: (stor <
+							      <
+	es:        1 ls: 7fffffff me:        9 ms: 80000000   <
+Trying to insert node between 1 and 9 II: 10		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	failed to insert at cycle 2   S2_storeri_io %2:intreg <
+	failed to insert at cycle 3   S2_storeri_io %2:intreg <
+	insert at cycle 4   S2_storeri_io %2:intregs, 0, %58: <
+							      <
+Inst (20)   %47:intregs = A2_abs %44:intregs		      <
+							      <
+	es: 80000000 ls:        2 me: 7fffffff ms: 80000000   <
+Trying to insert node between 2 and -7 II: 10		      <
+	failed to insert at cycle 2   %47:intregs = A2_abs %4 <
+	failed to insert at cycle 1   %47:intregs = A2_abs %4 <
+	insert at cycle 0   %47:intregs = A2_abs %44:intregs  <
+							      <
+Inst (18)   %45:intregs = A2_abs %43:intregs		      <
+							      <
+	es: 80000000 ls:        2 me: 7fffffff ms: 80000000   <
+Trying to insert node between 2 and -7 II: 10		      <
+	failed to insert at cycle 2   %45:intregs = A2_abs %4 <
+	failed to insert at cycle 1   %45:intregs = A2_abs %4 <
+	insert at cycle 0   %45:intregs = A2_abs %43:intregs  <
+							      <
+Inst (14)   %43:intregs = nsw A2_add %42:intregs, %41:intregs <
+	insert at cycle -1   %43:intregs = nsw A2_add %42:int |		insert at cycle -1   %35:intregs = L2_loadri_io %2:in
+							      <
+Inst (16)   %44:intregs = nsw A2_sub %41:intregs, %42:intregs <
+							      <
+	es: 80000000 ls: ffffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -1 and -10 II: 10		      <
+	insert at cycle -1   %44:intregs = nsw A2_sub %41:int <
+							      <
+Inst (12)   %41:intregs = L2_loadri_io %2:intregs, -2312 :: ( <
+	es: 80000000 ls: fffffffe me: 7fffffff ms: fffffffb   |	Inst (6)   %37:intregs = nsw A2_add %36:intregs, %35:intregs
+Trying to insert node between -2 and -5 II: 10		      <
+	insert at cycle -2   %41:intregs = L2_loadri_io %2:in <
+							      <
+Inst (29)   %54:intregs = A2_abs %52:intregs		      <
+							      <
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between 3 and -6 II: 10		      <
+	failed to insert at cycle 3   %54:intregs = A2_abs %5 <
+	failed to insert at cycle 2   %54:intregs = A2_abs %5 <
+	failed to insert at cycle 1   %54:intregs = A2_abs %5 <
+	failed to insert at cycle 0   %54:intregs = A2_abs %5 <
+	insert at cycle -1   %54:intregs = A2_abs %52:intregs <
+							      <
+Inst (26)   %52:intregs = nsw A2_sub %49:intregs, %50:intregs <
+							      <
+	es: 80000000 ls: fffffffe me: 7fffffff ms: 80000000   <
+Trying to insert node between -2 and -11 II: 10		      <
+	insert at cycle -2   %52:intregs = nsw A2_sub %49:int <
+							      <
+Inst (22)   %49:intregs = L2_loadri_io %2:intregs, -2308 :: ( <
+							      <
+	es: 80000000 ls: fffffffd me: 7fffffff ms: fffffffb   <
+Trying to insert node between -3 and -5 II: 10		      <
+	insert at cycle -3   %49:intregs = L2_loadri_io %2:in <
+							      <
+Inst (24)   %51:intregs = nsw A2_add %50:intregs, %49:intregs <
+							      <
+	es: fffffffe ls:        2 me: 7fffffff ms: 80000000   <
+Trying to insert node between -2 and 2 II: 10		      <
+	insert at cycle -2   %51:intregs = nsw A2_add %50:int <
+							      <
+Inst (28)   %53:intregs = A2_abs %51:intregs		      <
+							      <
+	es: ffffffff ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between -1 and 3 II: 10		      <
+	insert at cycle -1   %53:intregs = A2_abs %51:intregs <
+							      <
+Inst (38)   %60:intregs = A2_abs %58:intregs		      <
+							      <
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between 3 and -6 II: 10		      <
+	failed to insert at cycle 3   %60:intregs = A2_abs %5 <
+	failed to insert at cycle 2   %60:intregs = A2_abs %5 <
+	failed to insert at cycle 1   %60:intregs = A2_abs %5 <
+	failed to insert at cycle 0   %60:intregs = A2_abs %5 <
+	failed to insert at cycle -1   %60:intregs = A2_abs % <
+	insert at cycle -2   %60:intregs = A2_abs %58:intregs <
+							      <
+Inst (34)   %58:intregs = nsw A2_sub %55:intregs, %56:intregs <
+	es: 80000000 ls: fffffffd me: 7fffffff ms: 80000000   |		es:        0 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between -3 and -12 II: 10		      |	Trying to insert node between 0 and 9 II: 10
+	insert at cycle -3   %58:intregs = nsw A2_sub %55:int |		insert at cycle 6   %37:intregs = nsw A2_add %36:intr
+Inst (30)   %55:intregs = L2_loadri_io %2:intregs, -2304 :: ( |	Inst (10)   %39:intregs = A2_abs %37:intregs
+	es: 80000000 ls: fffffffc me: 7fffffff ms: fffffffb   |		es:        7 ls:        1 me: 7fffffff ms: 80000000
+Trying to insert node between -4 and -5 II: 10		      <
+	insert at cycle -4   %55:intregs = L2_loadri_io %2:in <
+							      <
+Inst (32)   %57:intregs = nsw A2_add %56:intregs, %55:intregs <
+							      <
+	es: fffffffd ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between -3 and 3 II: 10		      <
+	insert at cycle -3   %57:intregs = nsw A2_add %56:int <
+							      <
+Inst (36)   %59:intregs = A2_abs %57:intregs		      <
+							      <
+	es: fffffffe ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between -2 and 3 II: 10		      <
+	failed to insert at cycle -2   %59:intregs = A2_abs % <
+	failed to insert at cycle -1   %59:intregs = A2_abs % <
+	failed to insert at cycle 0   %59:intregs = A2_abs %5 <
+	failed to insert at cycle 1   %59:intregs = A2_abs %5 <
+	failed to insert at cycle 2   %59:intregs = A2_abs %5 <
+	failed to insert at cycle 3   %59:intregs = A2_abs %5 <
+	insert at cycle 3   %3:intregs = PHI %34:intregs, %bb |		insert at cycle 2   %3:intregs = PHI %34:intregs, %bb
+	insert at cycle 4   %6:intregs = M4_or_or %59:intregs |		insert at cycle 5   %6:intregs = M4_or_or %59:intregs
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000   |		es: 80000000 ls:        4 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -7 II: 11		      |	Trying to insert node between 4 and -6 II: 11
+	insert at cycle 3   %46:intregs = M4_or_or %45:intreg |		insert at cycle 2   %46:intregs = M4_or_or %45:intreg
+	es: fffffffa ls:        3 me: 7fffffff ms: 80000000   |		es: fffffffb ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -6 II: 11		      |	Trying to insert node between 2 and -5 II: 11
+	insert at cycle 3   %4:intregs = PHI %34:intregs, %bb |		insert at cycle 1   %4:intregs = PHI %34:intregs, %bb
+	insert at cycle 2   %40:intregs = A2_abs %38:intregs  |		insert at cycle 1   %40:intregs = A2_abs %38:intregs
+	es: 80000000 ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and -9 II: 11		      <
+	insert at cycle 1   %38:intregs = nsw A2_sub %35:intr <
+							      <
+Inst (4)   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (l <
+							      <
+	insert at cycle 0   %35:intregs = L2_loadri_io %2:int |		insert at cycle 0   %38:intregs = nsw A2_sub %35:intr
+							      <
+Inst (6)   %37:intregs = nsw A2_add %36:intregs, %35:intregs  <
+							      <
+	es:        1 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 11 II: 11		      <
+	insert at cycle 1   %37:intregs = nsw A2_add %36:intr <
+							      <
+Inst (10)   %39:intregs = A2_abs %37:intregs		      <
+							      <
+	es:        2 ls:        2 me: 7fffffff ms: 80000000   <
+Trying to insert node between 2 and 2 II: 11		      <
+	insert at cycle 2   %39:intregs = A2_abs %37:intregs  <
+							      <
+Inst (9)   S2_storeri_io %2:intregs, -12, %38:intregs :: (sto <
+							      <
+	es:        1 ls: 7fffffff me:        a ms: 80000000   <
+Trying to insert node between 1 and 10 II: 11		      <
+	insert at cycle 1   S2_storeri_io %2:intregs, -12, %3 <
+							      <
+Inst (15)   S2_storeri_io %2:intregs, -2312, %43:intregs :: ( <
+							      <
+	es:        1 ls: 7fffffff me:        a ms: 80000000   <
+Trying to insert node between 1 and 10 II: 11		      <
+	insert at cycle 1   S2_storeri_io %2:intregs, -2312,  <
+							      <
+Inst (17)   S2_storeri_io %2:intregs, -8, %44:intregs :: (sto <
+							      <
+	es:        1 ls: 7fffffff me:        a ms: 80000000   <
+Trying to insert node between 1 and 10 II: 11		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	insert at cycle 2   S2_storeri_io %2:intregs, -8, %44 <
+							      <
+Inst (25)   S2_storeri_io %2:intregs, -2308, %51:intregs :: ( <
+							      <
+	es:        1 ls: 7fffffff me:        a ms: 80000000   <
+Trying to insert node between 1 and 10 II: 11		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	insert at cycle 2   S2_storeri_io %2:intregs, -2308,  <
+							      <
+Inst (27)   S2_storeri_io %2:intregs, -4, %52:intregs :: (sto <
+							      <
+	es:        1 ls: 7fffffff me:        a ms: 80000000   <
+Trying to insert node between 1 and 10 II: 11		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	failed to insert at cycle 2   S2_storeri_io %2:intreg <
+	insert at cycle 3   S2_storeri_io %2:intregs, -4, %52 <
+							      <
+Inst (33)   S2_storeri_io %2:intregs, -2304, %57:intregs :: ( <
+	es:        1 ls: 7fffffff me:        a ms: 80000000   |	Inst (4)   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (l
+Trying to insert node between 1 and 10 II: 11		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	failed to insert at cycle 2   S2_storeri_io %2:intreg <
+	insert at cycle 3   S2_storeri_io %2:intregs, -2304,  <
+							      <
+Inst (35)   S2_storeri_io %2:intregs, 0, %58:intregs :: (stor <
+							      <
+	es:        1 ls: 7fffffff me:        a ms: 80000000   <
+Trying to insert node between 1 and 10 II: 11		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	failed to insert at cycle 2   S2_storeri_io %2:intreg <
+	failed to insert at cycle 3   S2_storeri_io %2:intreg <
+	insert at cycle 4   S2_storeri_io %2:intregs, 0, %58: <
+							      <
+Inst (20)   %47:intregs = A2_abs %44:intregs		      <
+							      <
+	es: 80000000 ls:        2 me: 7fffffff ms: 80000000   <
+Trying to insert node between 2 and -8 II: 11		      <
+	failed to insert at cycle 2   %47:intregs = A2_abs %4 <
+	failed to insert at cycle 1   %47:intregs = A2_abs %4 <
+	insert at cycle 0   %47:intregs = A2_abs %44:intregs  <
+							      <
+Inst (18)   %45:intregs = A2_abs %43:intregs		      <
+							      <
+	es: 80000000 ls:        2 me: 7fffffff ms: 80000000   <
+Trying to insert node between 2 and -8 II: 11		      <
+	failed to insert at cycle 2   %45:intregs = A2_abs %4 <
+	failed to insert at cycle 1   %45:intregs = A2_abs %4 <
+	insert at cycle 0   %45:intregs = A2_abs %43:intregs  <
+							      <
+Inst (14)   %43:intregs = nsw A2_add %42:intregs, %41:intregs <
+	insert at cycle -1   %43:intregs = nsw A2_add %42:int |		insert at cycle -1   %35:intregs = L2_loadri_io %2:in
+							      <
+Inst (16)   %44:intregs = nsw A2_sub %41:intregs, %42:intregs <
+							      <
+	es: 80000000 ls: ffffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -1 and -11 II: 11		      <
+	insert at cycle -1   %44:intregs = nsw A2_sub %41:int <
+							      <
+Inst (12)   %41:intregs = L2_loadri_io %2:intregs, -2312 :: ( <
+							      <
+	es: 80000000 ls: fffffffe me: 7fffffff ms: fffffffa   <
+Trying to insert node between -2 and -6 II: 11		      <
+	insert at cycle -2   %41:intregs = L2_loadri_io %2:in <
+							      <
+Inst (29)   %54:intregs = A2_abs %52:intregs		      <
+							      <
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between 3 and -7 II: 11		      <
+	failed to insert at cycle 3   %54:intregs = A2_abs %5 <
+	failed to insert at cycle 2   %54:intregs = A2_abs %5 <
+	failed to insert at cycle 1   %54:intregs = A2_abs %5 <
+	failed to insert at cycle 0   %54:intregs = A2_abs %5 <
+	insert at cycle -1   %54:intregs = A2_abs %52:intregs <
+							      <
+Inst (26)   %52:intregs = nsw A2_sub %49:intregs, %50:intregs <
+	es: 80000000 ls: fffffffe me: 7fffffff ms: 80000000   |	Inst (6)   %37:intregs = nsw A2_add %36:intregs, %35:intregs
+Trying to insert node between -2 and -12 II: 11		      <
+	insert at cycle -2   %52:intregs = nsw A2_sub %49:int <
+							      <
+Inst (22)   %49:intregs = L2_loadri_io %2:intregs, -2308 :: ( <
+							      <
+	es: 80000000 ls: fffffffd me: 7fffffff ms: fffffffa   <
+Trying to insert node between -3 and -6 II: 11		      <
+	insert at cycle -3   %49:intregs = L2_loadri_io %2:in <
+							      <
+Inst (24)   %51:intregs = nsw A2_add %50:intregs, %49:intregs <
+							      <
+	es: fffffffe ls:        2 me: 7fffffff ms: 80000000   <
+Trying to insert node between -2 and 2 II: 11		      <
+	insert at cycle -2   %51:intregs = nsw A2_add %50:int <
+							      <
+Inst (28)   %53:intregs = A2_abs %51:intregs		      <
+							      <
+	es: ffffffff ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between -1 and 3 II: 11		      <
+	insert at cycle -1   %53:intregs = A2_abs %51:intregs <
+							      <
+Inst (38)   %60:intregs = A2_abs %58:intregs		      <
+							      <
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between 3 and -7 II: 11		      <
+	failed to insert at cycle 3   %60:intregs = A2_abs %5 <
+	failed to insert at cycle 2   %60:intregs = A2_abs %5 <
+	failed to insert at cycle 1   %60:intregs = A2_abs %5 <
+	failed to insert at cycle 0   %60:intregs = A2_abs %5 <
+	failed to insert at cycle -1   %60:intregs = A2_abs % <
+	insert at cycle -2   %60:intregs = A2_abs %58:intregs <
+							      <
+Inst (34)   %58:intregs = nsw A2_sub %55:intregs, %56:intregs <
+	es: 80000000 ls: fffffffd me: 7fffffff ms: 80000000   |		es:        0 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between -3 and -13 II: 11		      |	Trying to insert node between 0 and 10 II: 11
+	insert at cycle -3   %58:intregs = nsw A2_sub %55:int |		insert at cycle 6   %37:intregs = nsw A2_add %36:intr
+Inst (30)   %55:intregs = L2_loadri_io %2:intregs, -2304 :: ( |	Inst (10)   %39:intregs = A2_abs %37:intregs
+	es: 80000000 ls: fffffffc me: 7fffffff ms: fffffffa   |		es:        7 ls:        1 me: 7fffffff ms: 80000000
+Trying to insert node between -4 and -6 II: 11		      <
+	insert at cycle -4   %55:intregs = L2_loadri_io %2:in <
+							      <
+Inst (32)   %57:intregs = nsw A2_add %56:intregs, %55:intregs <
+							      <
+	es: fffffffd ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between -3 and 3 II: 11		      <
+	insert at cycle -3   %57:intregs = nsw A2_add %56:int <
+							      <
+Inst (36)   %59:intregs = A2_abs %57:intregs		      <
+							      <
+	es: fffffffe ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between -2 and 3 II: 11		      <
+	failed to insert at cycle -2   %59:intregs = A2_abs % <
+	failed to insert at cycle -1   %59:intregs = A2_abs % <
+	failed to insert at cycle 0   %59:intregs = A2_abs %5 <
+	failed to insert at cycle 1   %59:intregs = A2_abs %5 <
+	failed to insert at cycle 2   %59:intregs = A2_abs %5 <
+	failed to insert at cycle 3   %59:intregs = A2_abs %5 <
+	insert at cycle 3   %3:intregs = PHI %34:intregs, %bb |		insert at cycle 2   %3:intregs = PHI %34:intregs, %bb
+	insert at cycle 4   %6:intregs = M4_or_or %59:intregs |		insert at cycle 5   %6:intregs = M4_or_or %59:intregs
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000   |		es: 80000000 ls:        4 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -8 II: 12		      |	Trying to insert node between 4 and -7 II: 12
+	insert at cycle 3   %46:intregs = M4_or_or %45:intreg |		insert at cycle 2   %46:intregs = M4_or_or %45:intreg
+	es: fffffff9 ls:        3 me: 7fffffff ms: 80000000   |		es: fffffffa ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -7 II: 12		      |	Trying to insert node between 2 and -6 II: 12
+	insert at cycle 3   %4:intregs = PHI %34:intregs, %bb |		insert at cycle 1   %4:intregs = PHI %34:intregs, %bb
+	insert at cycle 2   %40:intregs = A2_abs %38:intregs  |		insert at cycle 1   %40:intregs = A2_abs %38:intregs
+	es: 80000000 ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and -10 II: 12		      <
+	insert at cycle 1   %38:intregs = nsw A2_sub %35:intr <
+							      <
+Inst (4)   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (l <
+							      <
+	insert at cycle 0   %35:intregs = L2_loadri_io %2:int |		insert at cycle 0   %38:intregs = nsw A2_sub %35:intr
+							      <
+Inst (6)   %37:intregs = nsw A2_add %36:intregs, %35:intregs  <
+							      <
+	es:        1 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 12 II: 12		      <
+	insert at cycle 1   %37:intregs = nsw A2_add %36:intr <
+							      <
+Inst (10)   %39:intregs = A2_abs %37:intregs		      <
+							      <
+	es:        2 ls:        2 me: 7fffffff ms: 80000000   <
+Trying to insert node between 2 and 2 II: 12		      <
+	insert at cycle 2   %39:intregs = A2_abs %37:intregs  <
+							      <
+Inst (9)   S2_storeri_io %2:intregs, -12, %38:intregs :: (sto <
+							      <
+	es:        1 ls: 7fffffff me:        b ms: 80000000   <
+Trying to insert node between 1 and 11 II: 12		      <
+	insert at cycle 1   S2_storeri_io %2:intregs, -12, %3 <
+							      <
+Inst (15)   S2_storeri_io %2:intregs, -2312, %43:intregs :: ( <
+							      <
+	es:        1 ls: 7fffffff me:        b ms: 80000000   <
+Trying to insert node between 1 and 11 II: 12		      <
+	insert at cycle 1   S2_storeri_io %2:intregs, -2312,  <
+							      <
+Inst (17)   S2_storeri_io %2:intregs, -8, %44:intregs :: (sto <
+	es:        1 ls: 7fffffff me:        b ms: 80000000   |	Inst (4)   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (l
+Trying to insert node between 1 and 11 II: 12		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	insert at cycle 2   S2_storeri_io %2:intregs, -8, %44 <
+							      <
+Inst (25)   S2_storeri_io %2:intregs, -2308, %51:intregs :: ( <
+							      <
+	es:        1 ls: 7fffffff me:        b ms: 80000000   <
+Trying to insert node between 1 and 11 II: 12		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	insert at cycle 2   S2_storeri_io %2:intregs, -2308,  <
+							      <
+Inst (27)   S2_storeri_io %2:intregs, -4, %52:intregs :: (sto <
+							      <
+	es:        1 ls: 7fffffff me:        b ms: 80000000   <
+Trying to insert node between 1 and 11 II: 12		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	failed to insert at cycle 2   S2_storeri_io %2:intreg <
+	insert at cycle 3   S2_storeri_io %2:intregs, -4, %52 <
+							      <
+Inst (33)   S2_storeri_io %2:intregs, -2304, %57:intregs :: ( <
+							      <
+	es:        1 ls: 7fffffff me:        b ms: 80000000   <
+Trying to insert node between 1 and 11 II: 12		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	failed to insert at cycle 2   S2_storeri_io %2:intreg <
+	insert at cycle 3   S2_storeri_io %2:intregs, -2304,  <
+							      <
+Inst (35)   S2_storeri_io %2:intregs, 0, %58:intregs :: (stor <
+							      <
+	es:        1 ls: 7fffffff me:        b ms: 80000000   <
+Trying to insert node between 1 and 11 II: 12		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	failed to insert at cycle 2   S2_storeri_io %2:intreg <
+	failed to insert at cycle 3   S2_storeri_io %2:intreg <
+	insert at cycle 4   S2_storeri_io %2:intregs, 0, %58: <
+							      <
+Inst (20)   %47:intregs = A2_abs %44:intregs		      <
+							      <
+	es: 80000000 ls:        2 me: 7fffffff ms: 80000000   <
+Trying to insert node between 2 and -9 II: 12		      <
+	failed to insert at cycle 2   %47:intregs = A2_abs %4 <
+	failed to insert at cycle 1   %47:intregs = A2_abs %4 <
+	insert at cycle 0   %47:intregs = A2_abs %44:intregs  <
+							      <
+Inst (18)   %45:intregs = A2_abs %43:intregs		      <
+							      <
+	es: 80000000 ls:        2 me: 7fffffff ms: 80000000   <
+Trying to insert node between 2 and -9 II: 12		      <
+	failed to insert at cycle 2   %45:intregs = A2_abs %4 <
+	failed to insert at cycle 1   %45:intregs = A2_abs %4 <
+	insert at cycle 0   %45:intregs = A2_abs %43:intregs  <
+							      <
+Inst (14)   %43:intregs = nsw A2_add %42:intregs, %41:intregs <
+	insert at cycle -1   %43:intregs = nsw A2_add %42:int |		insert at cycle -1   %35:intregs = L2_loadri_io %2:in
+							      <
+Inst (16)   %44:intregs = nsw A2_sub %41:intregs, %42:intregs <
+							      <
+	es: 80000000 ls: ffffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -1 and -12 II: 12		      <
+	insert at cycle -1   %44:intregs = nsw A2_sub %41:int <
+							      <
+Inst (12)   %41:intregs = L2_loadri_io %2:intregs, -2312 :: ( <
+							      <
+	es: 80000000 ls: fffffffe me: 7fffffff ms: fffffff9   <
+Trying to insert node between -2 and -7 II: 12		      <
+	insert at cycle -2   %41:intregs = L2_loadri_io %2:in <
+							      <
+Inst (29)   %54:intregs = A2_abs %52:intregs		      <
+							      <
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between 3 and -8 II: 12		      <
+	failed to insert at cycle 3   %54:intregs = A2_abs %5 <
+	failed to insert at cycle 2   %54:intregs = A2_abs %5 <
+	failed to insert at cycle 1   %54:intregs = A2_abs %5 <
+	failed to insert at cycle 0   %54:intregs = A2_abs %5 <
+	insert at cycle -1   %54:intregs = A2_abs %52:intregs <
+							      <
+Inst (26)   %52:intregs = nsw A2_sub %49:intregs, %50:intregs <
+							      <
+	es: 80000000 ls: fffffffe me: 7fffffff ms: 80000000   <
+Trying to insert node between -2 and -13 II: 12		      <
+	insert at cycle -2   %52:intregs = nsw A2_sub %49:int <
+							      <
+Inst (22)   %49:intregs = L2_loadri_io %2:intregs, -2308 :: ( <
+							      <
+	es: 80000000 ls: fffffffd me: 7fffffff ms: fffffff9   <
+Trying to insert node between -3 and -7 II: 12		      <
+	insert at cycle -3   %49:intregs = L2_loadri_io %2:in <
+							      <
+Inst (24)   %51:intregs = nsw A2_add %50:intregs, %49:intregs <
+							      <
+	es: fffffffe ls:        2 me: 7fffffff ms: 80000000   <
+Trying to insert node between -2 and 2 II: 12		      <
+	insert at cycle -2   %51:intregs = nsw A2_add %50:int <
+							      <
+Inst (28)   %53:intregs = A2_abs %51:intregs		      <
+	es: ffffffff ls:        3 me: 7fffffff ms: 80000000   |	Inst (6)   %37:intregs = nsw A2_add %36:intregs, %35:intregs
+Trying to insert node between -1 and 3 II: 12		      <
+	insert at cycle -1   %53:intregs = A2_abs %51:intregs <
+							      <
+Inst (38)   %60:intregs = A2_abs %58:intregs		      <
+							      <
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between 3 and -8 II: 12		      <
+	failed to insert at cycle 3   %60:intregs = A2_abs %5 <
+	failed to insert at cycle 2   %60:intregs = A2_abs %5 <
+	failed to insert at cycle 1   %60:intregs = A2_abs %5 <
+	failed to insert at cycle 0   %60:intregs = A2_abs %5 <
+	failed to insert at cycle -1   %60:intregs = A2_abs % <
+	insert at cycle -2   %60:intregs = A2_abs %58:intregs <
+Inst (34)   %58:intregs = nsw A2_sub %55:intregs, %56:intregs |		es:        0 ls: 7fffffff me: 7fffffff ms: 80000000
+							      >	Trying to insert node between 0 and 11 II: 12
+							      >		insert at cycle 6   %37:intregs = nsw A2_add %36:intr
+	es: 80000000 ls: fffffffd me: 7fffffff ms: 80000000   |	Inst (10)   %39:intregs = A2_abs %37:intregs
+Trying to insert node between -3 and -14 II: 12		      <
+	insert at cycle -3   %58:intregs = nsw A2_sub %55:int <
+							      <
+Inst (30)   %55:intregs = L2_loadri_io %2:intregs, -2304 :: ( <
+	es: 80000000 ls: fffffffc me: 7fffffff ms: fffffff9   |		es:        7 ls:        1 me: 7fffffff ms: 80000000
+Trying to insert node between -4 and -7 II: 12		      <
+	insert at cycle -4   %55:intregs = L2_loadri_io %2:in <
+							      <
+Inst (32)   %57:intregs = nsw A2_add %56:intregs, %55:intregs <
+							      <
+	es: fffffffd ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between -3 and 3 II: 12		      <
+	insert at cycle -3   %57:intregs = nsw A2_add %56:int <
+							      <
+Inst (36)   %59:intregs = A2_abs %57:intregs		      <
+							      <
+	es: fffffffe ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between -2 and 3 II: 12		      <
+	failed to insert at cycle -2   %59:intregs = A2_abs % <
+	failed to insert at cycle -1   %59:intregs = A2_abs % <
+	failed to insert at cycle 0   %59:intregs = A2_abs %5 <
+	failed to insert at cycle 1   %59:intregs = A2_abs %5 <
+	failed to insert at cycle 2   %59:intregs = A2_abs %5 <
+	failed to insert at cycle 3   %59:intregs = A2_abs %5 <
+	insert at cycle 3   %3:intregs = PHI %34:intregs, %bb |		insert at cycle 2   %3:intregs = PHI %34:intregs, %bb
+	insert at cycle 4   %6:intregs = M4_or_or %59:intregs |		insert at cycle 5   %6:intregs = M4_or_or %59:intregs
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000   |		es: 80000000 ls:        4 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -9 II: 13		      |	Trying to insert node between 4 and -8 II: 13
+	insert at cycle 3   %46:intregs = M4_or_or %45:intreg |		insert at cycle 2   %46:intregs = M4_or_or %45:intreg
+	es: fffffff8 ls:        3 me: 7fffffff ms: 80000000   |		es: fffffff9 ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -8 II: 13		      |	Trying to insert node between 2 and -7 II: 13
+	insert at cycle 3   %4:intregs = PHI %34:intregs, %bb |		insert at cycle 1   %4:intregs = PHI %34:intregs, %bb
+	insert at cycle 2   %40:intregs = A2_abs %38:intregs  |		insert at cycle 1   %40:intregs = A2_abs %38:intregs
+	es: 80000000 ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and -11 II: 13		      <
+	insert at cycle 1   %38:intregs = nsw A2_sub %35:intr <
+							      <
+Inst (4)   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (l <
+							      <
+	insert at cycle 0   %35:intregs = L2_loadri_io %2:int |		insert at cycle 0   %38:intregs = nsw A2_sub %35:intr
+							      <
+Inst (6)   %37:intregs = nsw A2_add %36:intregs, %35:intregs  <
+							      <
+	es:        1 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 13 II: 13		      <
+	insert at cycle 1   %37:intregs = nsw A2_add %36:intr <
+							      <
+Inst (10)   %39:intregs = A2_abs %37:intregs		      <
+							      <
+	es:        2 ls:        2 me: 7fffffff ms: 80000000   <
+Trying to insert node between 2 and 2 II: 13		      <
+	insert at cycle 2   %39:intregs = A2_abs %37:intregs  <
+Inst (9)   S2_storeri_io %2:intregs, -12, %38:intregs :: (sto |	Inst (4)   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (l
+							      <
+	es:        1 ls: 7fffffff me:        c ms: 80000000   <
+Trying to insert node between 1 and 12 II: 13		      <
+	insert at cycle 1   S2_storeri_io %2:intregs, -12, %3 <
+							      <
+Inst (15)   S2_storeri_io %2:intregs, -2312, %43:intregs :: ( <
+							      <
+	es:        1 ls: 7fffffff me:        c ms: 80000000   <
+Trying to insert node between 1 and 12 II: 13		      <
+	insert at cycle 1   S2_storeri_io %2:intregs, -2312,  <
+							      <
+Inst (17)   S2_storeri_io %2:intregs, -8, %44:intregs :: (sto <
+							      <
+	es:        1 ls: 7fffffff me:        c ms: 80000000   <
+Trying to insert node between 1 and 12 II: 13		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	insert at cycle 2   S2_storeri_io %2:intregs, -8, %44 <
+							      <
+Inst (25)   S2_storeri_io %2:intregs, -2308, %51:intregs :: ( <
+							      <
+	es:        1 ls: 7fffffff me:        c ms: 80000000   <
+Trying to insert node between 1 and 12 II: 13		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	insert at cycle 2   S2_storeri_io %2:intregs, -2308,  <
+							      <
+Inst (27)   S2_storeri_io %2:intregs, -4, %52:intregs :: (sto <
+							      <
+	es:        1 ls: 7fffffff me:        c ms: 80000000   <
+Trying to insert node between 1 and 12 II: 13		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	failed to insert at cycle 2   S2_storeri_io %2:intreg <
+	insert at cycle 3   S2_storeri_io %2:intregs, -4, %52 <
+							      <
+Inst (33)   S2_storeri_io %2:intregs, -2304, %57:intregs :: ( <
+							      <
+	es:        1 ls: 7fffffff me:        c ms: 80000000   <
+Trying to insert node between 1 and 12 II: 13		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	failed to insert at cycle 2   S2_storeri_io %2:intreg <
+	insert at cycle 3   S2_storeri_io %2:intregs, -2304,  <
+							      <
+Inst (35)   S2_storeri_io %2:intregs, 0, %58:intregs :: (stor <
+							      <
+	es:        1 ls: 7fffffff me:        c ms: 80000000   <
+Trying to insert node between 1 and 12 II: 13		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	failed to insert at cycle 2   S2_storeri_io %2:intreg <
+	failed to insert at cycle 3   S2_storeri_io %2:intreg <
+	insert at cycle 4   S2_storeri_io %2:intregs, 0, %58: <
+							      <
+Inst (20)   %47:intregs = A2_abs %44:intregs		      <
+							      <
+	es: 80000000 ls:        2 me: 7fffffff ms: 80000000   <
+Trying to insert node between 2 and -10 II: 13		      <
+	failed to insert at cycle 2   %47:intregs = A2_abs %4 <
+	failed to insert at cycle 1   %47:intregs = A2_abs %4 <
+	insert at cycle 0   %47:intregs = A2_abs %44:intregs  <
+							      <
+Inst (18)   %45:intregs = A2_abs %43:intregs		      <
+							      <
+	es: 80000000 ls:        2 me: 7fffffff ms: 80000000   <
+Trying to insert node between 2 and -10 II: 13		      <
+	failed to insert at cycle 2   %45:intregs = A2_abs %4 <
+	failed to insert at cycle 1   %45:intregs = A2_abs %4 <
+	insert at cycle 0   %45:intregs = A2_abs %43:intregs  <
+							      <
+Inst (14)   %43:intregs = nsw A2_add %42:intregs, %41:intregs <
+	insert at cycle -1   %43:intregs = nsw A2_add %42:int |		insert at cycle -1   %35:intregs = L2_loadri_io %2:in
+							      <
+Inst (16)   %44:intregs = nsw A2_sub %41:intregs, %42:intregs <
+							      <
+	es: 80000000 ls: ffffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -1 and -13 II: 13		      <
+	insert at cycle -1   %44:intregs = nsw A2_sub %41:int <
+							      <
+Inst (12)   %41:intregs = L2_loadri_io %2:intregs, -2312 :: ( <
+							      <
+	es: 80000000 ls: fffffffe me: 7fffffff ms: fffffff8   <
+Trying to insert node between -2 and -8 II: 13		      <
+	insert at cycle -2   %41:intregs = L2_loadri_io %2:in <
+							      <
+Inst (29)   %54:intregs = A2_abs %52:intregs		      <
+							      <
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between 3 and -9 II: 13		      <
+	failed to insert at cycle 3   %54:intregs = A2_abs %5 <
+	failed to insert at cycle 2   %54:intregs = A2_abs %5 <
+	failed to insert at cycle 1   %54:intregs = A2_abs %5 <
+	failed to insert at cycle 0   %54:intregs = A2_abs %5 <
+	insert at cycle -1   %54:intregs = A2_abs %52:intregs <
+							      <
+Inst (26)   %52:intregs = nsw A2_sub %49:intregs, %50:intregs <
+							      <
+	es: 80000000 ls: fffffffe me: 7fffffff ms: 80000000   <
+Trying to insert node between -2 and -14 II: 13		      <
+	insert at cycle -2   %52:intregs = nsw A2_sub %49:int <
+							      <
+Inst (22)   %49:intregs = L2_loadri_io %2:intregs, -2308 :: ( <
+							      <
+	es: 80000000 ls: fffffffd me: 7fffffff ms: fffffff8   <
+Trying to insert node between -3 and -8 II: 13		      <
+	insert at cycle -3   %49:intregs = L2_loadri_io %2:in <
+							      <
+Inst (24)   %51:intregs = nsw A2_add %50:intregs, %49:intregs <
+							      <
+	es: fffffffe ls:        2 me: 7fffffff ms: 80000000   <
+Trying to insert node between -2 and 2 II: 13		      <
+	insert at cycle -2   %51:intregs = nsw A2_add %50:int <
+							      <
+Inst (28)   %53:intregs = A2_abs %51:intregs		      <
+							      <
+	es: ffffffff ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between -1 and 3 II: 13		      <
+	insert at cycle -1   %53:intregs = A2_abs %51:intregs <
+							      <
+Inst (38)   %60:intregs = A2_abs %58:intregs		      <
+							      <
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between 3 and -9 II: 13		      <
+	failed to insert at cycle 3   %60:intregs = A2_abs %5 <
+	failed to insert at cycle 2   %60:intregs = A2_abs %5 <
+	failed to insert at cycle 1   %60:intregs = A2_abs %5 <
+	failed to insert at cycle 0   %60:intregs = A2_abs %5 <
+	failed to insert at cycle -1   %60:intregs = A2_abs % <
+	insert at cycle -2   %60:intregs = A2_abs %58:intregs <
+Inst (34)   %58:intregs = nsw A2_sub %55:intregs, %56:intregs |	Inst (6)   %37:intregs = nsw A2_add %36:intregs, %35:intregs
+	es: 80000000 ls: fffffffd me: 7fffffff ms: 80000000   |		es:        0 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between -3 and -15 II: 13		      |	Trying to insert node between 0 and 12 II: 13
+	insert at cycle -3   %58:intregs = nsw A2_sub %55:int |		insert at cycle 6   %37:intregs = nsw A2_add %36:intr
+Inst (30)   %55:intregs = L2_loadri_io %2:intregs, -2304 :: ( |	Inst (10)   %39:intregs = A2_abs %37:intregs
+	es: 80000000 ls: fffffffc me: 7fffffff ms: fffffff8   |		es:        7 ls:        1 me: 7fffffff ms: 80000000
+Trying to insert node between -4 and -8 II: 13		      <
+	insert at cycle -4   %55:intregs = L2_loadri_io %2:in <
+							      <
+Inst (32)   %57:intregs = nsw A2_add %56:intregs, %55:intregs <
+							      <
+	es: fffffffd ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between -3 and 3 II: 13		      <
+	insert at cycle -3   %57:intregs = nsw A2_add %56:int <
+							      <
+Inst (36)   %59:intregs = A2_abs %57:intregs		      <
+							      <
+	es: fffffffe ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between -2 and 3 II: 13		      <
+	failed to insert at cycle -2   %59:intregs = A2_abs % <
+	failed to insert at cycle -1   %59:intregs = A2_abs % <
+	failed to insert at cycle 0   %59:intregs = A2_abs %5 <
+	failed to insert at cycle 1   %59:intregs = A2_abs %5 <
+	failed to insert at cycle 2   %59:intregs = A2_abs %5 <
+	failed to insert at cycle 3   %59:intregs = A2_abs %5 <
+	insert at cycle 3   %3:intregs = PHI %34:intregs, %bb |		insert at cycle 2   %3:intregs = PHI %34:intregs, %bb
+	insert at cycle 4   %6:intregs = M4_or_or %59:intregs |		insert at cycle 5   %6:intregs = M4_or_or %59:intregs
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000   |		es: 80000000 ls:        4 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -10 II: 14		      |	Trying to insert node between 4 and -9 II: 14
+	insert at cycle 3   %46:intregs = M4_or_or %45:intreg |		insert at cycle 2   %46:intregs = M4_or_or %45:intreg
+	es: fffffff7 ls:        3 me: 7fffffff ms: 80000000   |		es: fffffff8 ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -9 II: 14		      |	Trying to insert node between 2 and -8 II: 14
+	insert at cycle 3   %4:intregs = PHI %34:intregs, %bb |		insert at cycle 1   %4:intregs = PHI %34:intregs, %bb
+	insert at cycle 2   %40:intregs = A2_abs %38:intregs  |		insert at cycle 1   %40:intregs = A2_abs %38:intregs
+	es: 80000000 ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and -12 II: 14		      <
+	insert at cycle 1   %38:intregs = nsw A2_sub %35:intr <
+							      <
+Inst (4)   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (l <
+							      <
+	insert at cycle 0   %35:intregs = L2_loadri_io %2:int |		insert at cycle 0   %38:intregs = nsw A2_sub %35:intr
+							      <
+Inst (6)   %37:intregs = nsw A2_add %36:intregs, %35:intregs  <
+							      <
+	es:        1 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 14 II: 14		      <
+	insert at cycle 1   %37:intregs = nsw A2_add %36:intr <
+							      <
+Inst (10)   %39:intregs = A2_abs %37:intregs		      <
+							      <
+	es:        2 ls:        2 me: 7fffffff ms: 80000000   <
+Trying to insert node between 2 and 2 II: 14		      <
+	insert at cycle 2   %39:intregs = A2_abs %37:intregs  <
+							      <
+Inst (9)   S2_storeri_io %2:intregs, -12, %38:intregs :: (sto <
+							      <
+	es:        1 ls: 7fffffff me:        d ms: 80000000   <
+Trying to insert node between 1 and 13 II: 14		      <
+	insert at cycle 1   S2_storeri_io %2:intregs, -12, %3 <
+							      <
+Inst (15)   S2_storeri_io %2:intregs, -2312, %43:intregs :: ( <
+							      <
+	es:        1 ls: 7fffffff me:        d ms: 80000000   <
+Trying to insert node between 1 and 13 II: 14		      <
+	insert at cycle 1   S2_storeri_io %2:intregs, -2312,  <
+							      <
+Inst (17)   S2_storeri_io %2:intregs, -8, %44:intregs :: (sto <
+	es:        1 ls: 7fffffff me:        d ms: 80000000   |	Inst (4)   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (l
+Trying to insert node between 1 and 13 II: 14		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	insert at cycle 2   S2_storeri_io %2:intregs, -8, %44 <
+							      <
+Inst (25)   S2_storeri_io %2:intregs, -2308, %51:intregs :: ( <
+							      <
+	es:        1 ls: 7fffffff me:        d ms: 80000000   <
+Trying to insert node between 1 and 13 II: 14		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	insert at cycle 2   S2_storeri_io %2:intregs, -2308,  <
+							      <
+Inst (27)   S2_storeri_io %2:intregs, -4, %52:intregs :: (sto <
+							      <
+	es:        1 ls: 7fffffff me:        d ms: 80000000   <
+Trying to insert node between 1 and 13 II: 14		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	failed to insert at cycle 2   S2_storeri_io %2:intreg <
+	insert at cycle 3   S2_storeri_io %2:intregs, -4, %52 <
+							      <
+Inst (33)   S2_storeri_io %2:intregs, -2304, %57:intregs :: ( <
+							      <
+	es:        1 ls: 7fffffff me:        d ms: 80000000   <
+Trying to insert node between 1 and 13 II: 14		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	failed to insert at cycle 2   S2_storeri_io %2:intreg <
+	insert at cycle 3   S2_storeri_io %2:intregs, -2304,  <
+							      <
+Inst (35)   S2_storeri_io %2:intregs, 0, %58:intregs :: (stor <
+							      <
+	es:        1 ls: 7fffffff me:        d ms: 80000000   <
+Trying to insert node between 1 and 13 II: 14		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	failed to insert at cycle 2   S2_storeri_io %2:intreg <
+	failed to insert at cycle 3   S2_storeri_io %2:intreg <
+	insert at cycle 4   S2_storeri_io %2:intregs, 0, %58: <
+							      <
+Inst (20)   %47:intregs = A2_abs %44:intregs		      <
+							      <
+	es: 80000000 ls:        2 me: 7fffffff ms: 80000000   <
+Trying to insert node between 2 and -11 II: 14		      <
+	failed to insert at cycle 2   %47:intregs = A2_abs %4 <
+	failed to insert at cycle 1   %47:intregs = A2_abs %4 <
+	insert at cycle 0   %47:intregs = A2_abs %44:intregs  <
+							      <
+Inst (18)   %45:intregs = A2_abs %43:intregs		      <
+							      <
+	es: 80000000 ls:        2 me: 7fffffff ms: 80000000   <
+Trying to insert node between 2 and -11 II: 14		      <
+	failed to insert at cycle 2   %45:intregs = A2_abs %4 <
+	failed to insert at cycle 1   %45:intregs = A2_abs %4 <
+	insert at cycle 0   %45:intregs = A2_abs %43:intregs  <
+							      <
+Inst (14)   %43:intregs = nsw A2_add %42:intregs, %41:intregs <
+	insert at cycle -1   %43:intregs = nsw A2_add %42:int |		insert at cycle -1   %35:intregs = L2_loadri_io %2:in
+							      <
+Inst (16)   %44:intregs = nsw A2_sub %41:intregs, %42:intregs <
+							      <
+	es: 80000000 ls: ffffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -1 and -14 II: 14		      <
+	insert at cycle -1   %44:intregs = nsw A2_sub %41:int <
+							      <
+Inst (12)   %41:intregs = L2_loadri_io %2:intregs, -2312 :: ( <
+	es: 80000000 ls: fffffffe me: 7fffffff ms: fffffff7   |	Inst (6)   %37:intregs = nsw A2_add %36:intregs, %35:intregs
+Trying to insert node between -2 and -9 II: 14		      <
+	insert at cycle -2   %41:intregs = L2_loadri_io %2:in <
+							      <
+Inst (29)   %54:intregs = A2_abs %52:intregs		      <
+							      <
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between 3 and -10 II: 14		      <
+	failed to insert at cycle 3   %54:intregs = A2_abs %5 <
+	failed to insert at cycle 2   %54:intregs = A2_abs %5 <
+	failed to insert at cycle 1   %54:intregs = A2_abs %5 <
+	failed to insert at cycle 0   %54:intregs = A2_abs %5 <
+	insert at cycle -1   %54:intregs = A2_abs %52:intregs <
+							      <
+Inst (26)   %52:intregs = nsw A2_sub %49:intregs, %50:intregs <
+							      <
+	es: 80000000 ls: fffffffe me: 7fffffff ms: 80000000   <
+Trying to insert node between -2 and -15 II: 14		      <
+	insert at cycle -2   %52:intregs = nsw A2_sub %49:int <
+							      <
+Inst (22)   %49:intregs = L2_loadri_io %2:intregs, -2308 :: ( <
+							      <
+	es: 80000000 ls: fffffffd me: 7fffffff ms: fffffff7   <
+Trying to insert node between -3 and -9 II: 14		      <
+	insert at cycle -3   %49:intregs = L2_loadri_io %2:in <
+							      <
+Inst (24)   %51:intregs = nsw A2_add %50:intregs, %49:intregs <
+							      <
+	es: fffffffe ls:        2 me: 7fffffff ms: 80000000   <
+Trying to insert node between -2 and 2 II: 14		      <
+	insert at cycle -2   %51:intregs = nsw A2_add %50:int <
+							      <
+Inst (28)   %53:intregs = A2_abs %51:intregs		      <
+							      <
+	es: ffffffff ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between -1 and 3 II: 14		      <
+	insert at cycle -1   %53:intregs = A2_abs %51:intregs <
+							      <
+Inst (38)   %60:intregs = A2_abs %58:intregs		      <
+							      <
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between 3 and -10 II: 14		      <
+	failed to insert at cycle 3   %60:intregs = A2_abs %5 <
+	failed to insert at cycle 2   %60:intregs = A2_abs %5 <
+	failed to insert at cycle 1   %60:intregs = A2_abs %5 <
+	failed to insert at cycle 0   %60:intregs = A2_abs %5 <
+	failed to insert at cycle -1   %60:intregs = A2_abs % <
+	insert at cycle -2   %60:intregs = A2_abs %58:intregs <
+							      <
+Inst (34)   %58:intregs = nsw A2_sub %55:intregs, %56:intregs <
+	es: 80000000 ls: fffffffd me: 7fffffff ms: 80000000   |		es:        0 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between -3 and -16 II: 14		      |	Trying to insert node between 0 and 13 II: 14
+	insert at cycle -3   %58:intregs = nsw A2_sub %55:int |		insert at cycle 6   %37:intregs = nsw A2_add %36:intr
+Inst (30)   %55:intregs = L2_loadri_io %2:intregs, -2304 :: ( |	Inst (10)   %39:intregs = A2_abs %37:intregs
+	es: 80000000 ls: fffffffc me: 7fffffff ms: fffffff7   |		es:        7 ls:        1 me: 7fffffff ms: 80000000
+Trying to insert node between -4 and -9 II: 14		      <
+	insert at cycle -4   %55:intregs = L2_loadri_io %2:in <
+							      <
+Inst (32)   %57:intregs = nsw A2_add %56:intregs, %55:intregs <
+							      <
+	es: fffffffd ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between -3 and 3 II: 14		      <
+	insert at cycle -3   %57:intregs = nsw A2_add %56:int <
+							      <
+Inst (36)   %59:intregs = A2_abs %57:intregs		      <
+							      <
+	es: fffffffe ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between -2 and 3 II: 14		      <
+	failed to insert at cycle -2   %59:intregs = A2_abs % <
+	failed to insert at cycle -1   %59:intregs = A2_abs % <
+	failed to insert at cycle 0   %59:intregs = A2_abs %5 <
+	failed to insert at cycle 1   %59:intregs = A2_abs %5 <
+	failed to insert at cycle 2   %59:intregs = A2_abs %5 <
+	failed to insert at cycle 3   %59:intregs = A2_abs %5 <
+	insert at cycle 3   %3:intregs = PHI %34:intregs, %bb |		insert at cycle 2   %3:intregs = PHI %34:intregs, %bb
+	insert at cycle 4   %6:intregs = M4_or_or %59:intregs |		insert at cycle 5   %6:intregs = M4_or_or %59:intregs
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000   |		es: 80000000 ls:        4 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -11 II: 15		      |	Trying to insert node between 4 and -10 II: 15
+	insert at cycle 3   %46:intregs = M4_or_or %45:intreg |		insert at cycle 2   %46:intregs = M4_or_or %45:intreg
+	es: fffffff6 ls:        3 me: 7fffffff ms: 80000000   |		es: fffffff7 ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -10 II: 15		      |	Trying to insert node between 2 and -9 II: 15
+	insert at cycle 3   %4:intregs = PHI %34:intregs, %bb |		insert at cycle 1   %4:intregs = PHI %34:intregs, %bb
+	insert at cycle 2   %40:intregs = A2_abs %38:intregs  |		insert at cycle 1   %40:intregs = A2_abs %38:intregs
+	es: 80000000 ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and -13 II: 15		      <
+	insert at cycle 1   %38:intregs = nsw A2_sub %35:intr <
+							      <
+Inst (4)   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (l <
+							      <
+	insert at cycle 0   %35:intregs = L2_loadri_io %2:int |		insert at cycle 0   %38:intregs = nsw A2_sub %35:intr
+							      <
+Inst (6)   %37:intregs = nsw A2_add %36:intregs, %35:intregs  <
+							      <
+	es:        1 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 15 II: 15		      <
+	insert at cycle 1   %37:intregs = nsw A2_add %36:intr <
+							      <
+Inst (10)   %39:intregs = A2_abs %37:intregs		      <
+							      <
+	es:        2 ls:        2 me: 7fffffff ms: 80000000   <
+Trying to insert node between 2 and 2 II: 15		      <
+	insert at cycle 2   %39:intregs = A2_abs %37:intregs  <
+							      <
+Inst (9)   S2_storeri_io %2:intregs, -12, %38:intregs :: (sto <
+							      <
+	es:        1 ls: 7fffffff me:        e ms: 80000000   <
+Trying to insert node between 1 and 14 II: 15		      <
+	insert at cycle 1   S2_storeri_io %2:intregs, -12, %3 <
+							      <
+Inst (15)   S2_storeri_io %2:intregs, -2312, %43:intregs :: ( <
+							      <
+	es:        1 ls: 7fffffff me:        e ms: 80000000   <
+Trying to insert node between 1 and 14 II: 15		      <
+	insert at cycle 1   S2_storeri_io %2:intregs, -2312,  <
+							      <
+Inst (17)   S2_storeri_io %2:intregs, -8, %44:intregs :: (sto <
+							      <
+	es:        1 ls: 7fffffff me:        e ms: 80000000   <
+Trying to insert node between 1 and 14 II: 15		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	insert at cycle 2   S2_storeri_io %2:intregs, -8, %44 <
+							      <
+Inst (25)   S2_storeri_io %2:intregs, -2308, %51:intregs :: ( <
+							      <
+	es:        1 ls: 7fffffff me:        e ms: 80000000   <
+Trying to insert node between 1 and 14 II: 15		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	insert at cycle 2   S2_storeri_io %2:intregs, -2308,  <
+							      <
+Inst (27)   S2_storeri_io %2:intregs, -4, %52:intregs :: (sto <
+							      <
+	es:        1 ls: 7fffffff me:        e ms: 80000000   <
+Trying to insert node between 1 and 14 II: 15		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	failed to insert at cycle 2   S2_storeri_io %2:intreg <
+	insert at cycle 3   S2_storeri_io %2:intregs, -4, %52 <
+Inst (33)   S2_storeri_io %2:intregs, -2304, %57:intregs :: ( |	Inst (4)   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (l
+							      <
+	es:        1 ls: 7fffffff me:        e ms: 80000000   <
+Trying to insert node between 1 and 14 II: 15		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	failed to insert at cycle 2   S2_storeri_io %2:intreg <
+	insert at cycle 3   S2_storeri_io %2:intregs, -2304,  <
+							      <
+Inst (35)   S2_storeri_io %2:intregs, 0, %58:intregs :: (stor <
+							      <
+	es:        1 ls: 7fffffff me:        e ms: 80000000   <
+Trying to insert node between 1 and 14 II: 15		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	failed to insert at cycle 2   S2_storeri_io %2:intreg <
+	failed to insert at cycle 3   S2_storeri_io %2:intreg <
+	insert at cycle 4   S2_storeri_io %2:intregs, 0, %58: <
+							      <
+Inst (20)   %47:intregs = A2_abs %44:intregs		      <
+							      <
+	es: 80000000 ls:        2 me: 7fffffff ms: 80000000   <
+Trying to insert node between 2 and -12 II: 15		      <
+	failed to insert at cycle 2   %47:intregs = A2_abs %4 <
+	failed to insert at cycle 1   %47:intregs = A2_abs %4 <
+	insert at cycle 0   %47:intregs = A2_abs %44:intregs  <
+							      <
+Inst (18)   %45:intregs = A2_abs %43:intregs		      <
+							      <
+	es: 80000000 ls:        2 me: 7fffffff ms: 80000000   <
+Trying to insert node between 2 and -12 II: 15		      <
+	failed to insert at cycle 2   %45:intregs = A2_abs %4 <
+	failed to insert at cycle 1   %45:intregs = A2_abs %4 <
+	insert at cycle 0   %45:intregs = A2_abs %43:intregs  <
+							      <
+Inst (14)   %43:intregs = nsw A2_add %42:intregs, %41:intregs <
+	insert at cycle -1   %43:intregs = nsw A2_add %42:int |		insert at cycle -1   %35:intregs = L2_loadri_io %2:in
+							      <
+Inst (16)   %44:intregs = nsw A2_sub %41:intregs, %42:intregs <
+							      <
+	es: 80000000 ls: ffffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -1 and -15 II: 15		      <
+	insert at cycle -1   %44:intregs = nsw A2_sub %41:int <
+							      <
+Inst (12)   %41:intregs = L2_loadri_io %2:intregs, -2312 :: ( <
+							      <
+	es: 80000000 ls: fffffffe me: 7fffffff ms: fffffff6   <
+Trying to insert node between -2 and -10 II: 15		      <
+	insert at cycle -2   %41:intregs = L2_loadri_io %2:in <
+							      <
+Inst (29)   %54:intregs = A2_abs %52:intregs		      <
+							      <
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between 3 and -11 II: 15		      <
+	failed to insert at cycle 3   %54:intregs = A2_abs %5 <
+	failed to insert at cycle 2   %54:intregs = A2_abs %5 <
+	failed to insert at cycle 1   %54:intregs = A2_abs %5 <
+	failed to insert at cycle 0   %54:intregs = A2_abs %5 <
+	insert at cycle -1   %54:intregs = A2_abs %52:intregs <
+							      <
+Inst (26)   %52:intregs = nsw A2_sub %49:intregs, %50:intregs <
+	es: 80000000 ls: fffffffe me: 7fffffff ms: 80000000   |	Inst (6)   %37:intregs = nsw A2_add %36:intregs, %35:intregs
+Trying to insert node between -2 and -16 II: 15		      <
+	insert at cycle -2   %52:intregs = nsw A2_sub %49:int <
+							      <
+Inst (22)   %49:intregs = L2_loadri_io %2:intregs, -2308 :: ( <
+							      <
+	es: 80000000 ls: fffffffd me: 7fffffff ms: fffffff6   <
+Trying to insert node between -3 and -10 II: 15		      <
+	insert at cycle -3   %49:intregs = L2_loadri_io %2:in <
+							      <
+Inst (24)   %51:intregs = nsw A2_add %50:intregs, %49:intregs <
+							      <
+	es: fffffffe ls:        2 me: 7fffffff ms: 80000000   <
+Trying to insert node between -2 and 2 II: 15		      <
+	insert at cycle -2   %51:intregs = nsw A2_add %50:int <
+							      <
+Inst (28)   %53:intregs = A2_abs %51:intregs		      <
+							      <
+	es: ffffffff ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between -1 and 3 II: 15		      <
+	insert at cycle -1   %53:intregs = A2_abs %51:intregs <
+							      <
+Inst (38)   %60:intregs = A2_abs %58:intregs		      <
+							      <
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between 3 and -11 II: 15		      <
+	failed to insert at cycle 3   %60:intregs = A2_abs %5 <
+	failed to insert at cycle 2   %60:intregs = A2_abs %5 <
+	failed to insert at cycle 1   %60:intregs = A2_abs %5 <
+	failed to insert at cycle 0   %60:intregs = A2_abs %5 <
+	failed to insert at cycle -1   %60:intregs = A2_abs % <
+	insert at cycle -2   %60:intregs = A2_abs %58:intregs <
+							      <
+Inst (34)   %58:intregs = nsw A2_sub %55:intregs, %56:intregs <
+	es: 80000000 ls: fffffffd me: 7fffffff ms: 80000000   |		es:        0 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between -3 and -17 II: 15		      |	Trying to insert node between 0 and 14 II: 15
+	insert at cycle -3   %58:intregs = nsw A2_sub %55:int |		insert at cycle 6   %37:intregs = nsw A2_add %36:intr
+Inst (30)   %55:intregs = L2_loadri_io %2:intregs, -2304 :: ( |	Inst (10)   %39:intregs = A2_abs %37:intregs
+	es: 80000000 ls: fffffffc me: 7fffffff ms: fffffff6   |		es:        7 ls:        1 me: 7fffffff ms: 80000000
+Trying to insert node between -4 and -10 II: 15		      <
+	insert at cycle -4   %55:intregs = L2_loadri_io %2:in <
+							      <
+Inst (32)   %57:intregs = nsw A2_add %56:intregs, %55:intregs <
+							      <
+	es: fffffffd ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between -3 and 3 II: 15		      <
+	insert at cycle -3   %57:intregs = nsw A2_add %56:int <
+							      <
+Inst (36)   %59:intregs = A2_abs %57:intregs		      <
+							      <
+	es: fffffffe ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between -2 and 3 II: 15		      <
+	failed to insert at cycle -2   %59:intregs = A2_abs % <
+	failed to insert at cycle -1   %59:intregs = A2_abs % <
+	failed to insert at cycle 0   %59:intregs = A2_abs %5 <
+	failed to insert at cycle 1   %59:intregs = A2_abs %5 <
+	failed to insert at cycle 2   %59:intregs = A2_abs %5 <
+	failed to insert at cycle 3   %59:intregs = A2_abs %5 <
+	insert at cycle 3   %3:intregs = PHI %34:intregs, %bb |		insert at cycle 2   %3:intregs = PHI %34:intregs, %bb
+	insert at cycle 4   %6:intregs = M4_or_or %59:intregs |		insert at cycle 5   %6:intregs = M4_or_or %59:intregs
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000   |		es: 80000000 ls:        4 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -12 II: 16		      |	Trying to insert node between 4 and -11 II: 16
+	insert at cycle 3   %46:intregs = M4_or_or %45:intreg |		insert at cycle 2   %46:intregs = M4_or_or %45:intreg
+	es: fffffff5 ls:        3 me: 7fffffff ms: 80000000   |		es: fffffff6 ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -11 II: 16		      |	Trying to insert node between 2 and -10 II: 16
+	insert at cycle 3   %4:intregs = PHI %34:intregs, %bb |		insert at cycle 1   %4:intregs = PHI %34:intregs, %bb
+	insert at cycle 2   %40:intregs = A2_abs %38:intregs  |		insert at cycle 1   %40:intregs = A2_abs %38:intregs
+	es: 80000000 ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and -14 II: 16		      <
+	insert at cycle 1   %38:intregs = nsw A2_sub %35:intr <
+							      <
+Inst (4)   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (l <
+							      <
+	insert at cycle 0   %35:intregs = L2_loadri_io %2:int |		insert at cycle 0   %38:intregs = nsw A2_sub %35:intr
+Inst (6)   %37:intregs = nsw A2_add %36:intregs, %35:intregs  |	Inst (4)   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (l
+							      <
+	es:        1 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 16 II: 16		      <
+	insert at cycle 1   %37:intregs = nsw A2_add %36:intr <
+							      <
+Inst (10)   %39:intregs = A2_abs %37:intregs		      <
+							      <
+	es:        2 ls:        2 me: 7fffffff ms: 80000000   <
+Trying to insert node between 2 and 2 II: 16		      <
+	insert at cycle 2   %39:intregs = A2_abs %37:intregs  <
+							      <
+Inst (9)   S2_storeri_io %2:intregs, -12, %38:intregs :: (sto <
+							      <
+	es:        1 ls: 7fffffff me:        f ms: 80000000   <
+Trying to insert node between 1 and 15 II: 16		      <
+	insert at cycle 1   S2_storeri_io %2:intregs, -12, %3 <
+							      <
+Inst (15)   S2_storeri_io %2:intregs, -2312, %43:intregs :: ( <
+							      <
+	es:        1 ls: 7fffffff me:        f ms: 80000000   <
+Trying to insert node between 1 and 15 II: 16		      <
+	insert at cycle 1   S2_storeri_io %2:intregs, -2312,  <
+							      <
+Inst (17)   S2_storeri_io %2:intregs, -8, %44:intregs :: (sto <
+							      <
+	es:        1 ls: 7fffffff me:        f ms: 80000000   <
+Trying to insert node between 1 and 15 II: 16		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	insert at cycle 2   S2_storeri_io %2:intregs, -8, %44 <
+							      <
+Inst (25)   S2_storeri_io %2:intregs, -2308, %51:intregs :: ( <
+							      <
+	es:        1 ls: 7fffffff me:        f ms: 80000000   <
+Trying to insert node between 1 and 15 II: 16		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	insert at cycle 2   S2_storeri_io %2:intregs, -2308,  <
+							      <
+Inst (27)   S2_storeri_io %2:intregs, -4, %52:intregs :: (sto <
+							      <
+	es:        1 ls: 7fffffff me:        f ms: 80000000   <
+Trying to insert node between 1 and 15 II: 16		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	failed to insert at cycle 2   S2_storeri_io %2:intreg <
+	insert at cycle 3   S2_storeri_io %2:intregs, -4, %52 <
+							      <
+Inst (33)   S2_storeri_io %2:intregs, -2304, %57:intregs :: ( <
+							      <
+	es:        1 ls: 7fffffff me:        f ms: 80000000   <
+Trying to insert node between 1 and 15 II: 16		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	failed to insert at cycle 2   S2_storeri_io %2:intreg <
+	insert at cycle 3   S2_storeri_io %2:intregs, -2304,  <
+							      <
+Inst (35)   S2_storeri_io %2:intregs, 0, %58:intregs :: (stor <
+							      <
+	es:        1 ls: 7fffffff me:        f ms: 80000000   <
+Trying to insert node between 1 and 15 II: 16		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	failed to insert at cycle 2   S2_storeri_io %2:intreg <
+	failed to insert at cycle 3   S2_storeri_io %2:intreg <
+	insert at cycle 4   S2_storeri_io %2:intregs, 0, %58: <
+							      <
+Inst (20)   %47:intregs = A2_abs %44:intregs		      <
+							      <
+	es: 80000000 ls:        2 me: 7fffffff ms: 80000000   <
+Trying to insert node between 2 and -13 II: 16		      <
+	failed to insert at cycle 2   %47:intregs = A2_abs %4 <
+	failed to insert at cycle 1   %47:intregs = A2_abs %4 <
+	insert at cycle 0   %47:intregs = A2_abs %44:intregs  <
+							      <
+Inst (18)   %45:intregs = A2_abs %43:intregs		      <
+							      <
+	es: 80000000 ls:        2 me: 7fffffff ms: 80000000   <
+Trying to insert node between 2 and -13 II: 16		      <
+	failed to insert at cycle 2   %45:intregs = A2_abs %4 <
+	failed to insert at cycle 1   %45:intregs = A2_abs %4 <
+	insert at cycle 0   %45:intregs = A2_abs %43:intregs  <
+							      <
+Inst (14)   %43:intregs = nsw A2_add %42:intregs, %41:intregs <
+	insert at cycle -1   %43:intregs = nsw A2_add %42:int |		insert at cycle -1   %35:intregs = L2_loadri_io %2:in
+							      <
+Inst (16)   %44:intregs = nsw A2_sub %41:intregs, %42:intregs <
+							      <
+	es: 80000000 ls: ffffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -1 and -16 II: 16		      <
+	insert at cycle -1   %44:intregs = nsw A2_sub %41:int <
+							      <
+Inst (12)   %41:intregs = L2_loadri_io %2:intregs, -2312 :: ( <
+							      <
+	es: 80000000 ls: fffffffe me: 7fffffff ms: fffffff5   <
+Trying to insert node between -2 and -11 II: 16		      <
+	insert at cycle -2   %41:intregs = L2_loadri_io %2:in <
+							      <
+Inst (29)   %54:intregs = A2_abs %52:intregs		      <
+							      <
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between 3 and -12 II: 16		      <
+	failed to insert at cycle 3   %54:intregs = A2_abs %5 <
+	failed to insert at cycle 2   %54:intregs = A2_abs %5 <
+	failed to insert at cycle 1   %54:intregs = A2_abs %5 <
+	failed to insert at cycle 0   %54:intregs = A2_abs %5 <
+	insert at cycle -1   %54:intregs = A2_abs %52:intregs <
+							      <
+Inst (26)   %52:intregs = nsw A2_sub %49:intregs, %50:intregs <
+							      <
+	es: 80000000 ls: fffffffe me: 7fffffff ms: 80000000   <
+Trying to insert node between -2 and -17 II: 16		      <
+	insert at cycle -2   %52:intregs = nsw A2_sub %49:int <
+							      <
+Inst (22)   %49:intregs = L2_loadri_io %2:intregs, -2308 :: ( <
+							      <
+	es: 80000000 ls: fffffffd me: 7fffffff ms: fffffff5   <
+Trying to insert node between -3 and -11 II: 16		      <
+	insert at cycle -3   %49:intregs = L2_loadri_io %2:in <
+							      <
+Inst (24)   %51:intregs = nsw A2_add %50:intregs, %49:intregs <
+							      <
+	es: fffffffe ls:        2 me: 7fffffff ms: 80000000   <
+Trying to insert node between -2 and 2 II: 16		      <
+	insert at cycle -2   %51:intregs = nsw A2_add %50:int <
+Inst (28)   %53:intregs = A2_abs %51:intregs		      |	Inst (6)   %37:intregs = nsw A2_add %36:intregs, %35:intregs
+							      <
+	es: ffffffff ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between -1 and 3 II: 16		      <
+	insert at cycle -1   %53:intregs = A2_abs %51:intregs <
+							      <
+Inst (38)   %60:intregs = A2_abs %58:intregs		      <
+							      <
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between 3 and -12 II: 16		      <
+	failed to insert at cycle 3   %60:intregs = A2_abs %5 <
+	failed to insert at cycle 2   %60:intregs = A2_abs %5 <
+	failed to insert at cycle 1   %60:intregs = A2_abs %5 <
+	failed to insert at cycle 0   %60:intregs = A2_abs %5 <
+	failed to insert at cycle -1   %60:intregs = A2_abs % <
+	insert at cycle -2   %60:intregs = A2_abs %58:intregs <
+							      <
+Inst (34)   %58:intregs = nsw A2_sub %55:intregs, %56:intregs <
+	es: 80000000 ls: fffffffd me: 7fffffff ms: 80000000   |		es:        0 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between -3 and -18 II: 16		      |	Trying to insert node between 0 and 15 II: 16
+	insert at cycle -3   %58:intregs = nsw A2_sub %55:int |		insert at cycle 6   %37:intregs = nsw A2_add %36:intr
+Inst (30)   %55:intregs = L2_loadri_io %2:intregs, -2304 :: ( |	Inst (10)   %39:intregs = A2_abs %37:intregs
+	es: 80000000 ls: fffffffc me: 7fffffff ms: fffffff5   |		es:        7 ls:        1 me: 7fffffff ms: 80000000
+Trying to insert node between -4 and -11 II: 16		      <
+	insert at cycle -4   %55:intregs = L2_loadri_io %2:in <
+							      <
+Inst (32)   %57:intregs = nsw A2_add %56:intregs, %55:intregs <
+							      <
+	es: fffffffd ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between -3 and 3 II: 16		      <
+	insert at cycle -3   %57:intregs = nsw A2_add %56:int <
+							      <
+Inst (36)   %59:intregs = A2_abs %57:intregs		      <
+							      <
+	es: fffffffe ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between -2 and 3 II: 16		      <
+	failed to insert at cycle -2   %59:intregs = A2_abs % <
+	failed to insert at cycle -1   %59:intregs = A2_abs % <
+	failed to insert at cycle 0   %59:intregs = A2_abs %5 <
+	failed to insert at cycle 1   %59:intregs = A2_abs %5 <
+	failed to insert at cycle 2   %59:intregs = A2_abs %5 <
+	failed to insert at cycle 3   %59:intregs = A2_abs %5 <
+	insert at cycle 3   %3:intregs = PHI %34:intregs, %bb |		insert at cycle 2   %3:intregs = PHI %34:intregs, %bb
+	insert at cycle 4   %6:intregs = M4_or_or %59:intregs |		insert at cycle 5   %6:intregs = M4_or_or %59:intregs
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000   |		es: 80000000 ls:        4 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -13 II: 17		      |	Trying to insert node between 4 and -12 II: 17
+	insert at cycle 3   %46:intregs = M4_or_or %45:intreg |		insert at cycle 2   %46:intregs = M4_or_or %45:intreg
+	es: fffffff4 ls:        3 me: 7fffffff ms: 80000000   |		es: fffffff5 ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -12 II: 17		      |	Trying to insert node between 2 and -11 II: 17
+	insert at cycle 3   %4:intregs = PHI %34:intregs, %bb |		insert at cycle 1   %4:intregs = PHI %34:intregs, %bb
+	insert at cycle 2   %40:intregs = A2_abs %38:intregs  |		insert at cycle 1   %40:intregs = A2_abs %38:intregs
+	es: 80000000 ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and -15 II: 17		      <
+	insert at cycle 1   %38:intregs = nsw A2_sub %35:intr <
+							      <
+Inst (4)   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (l <
+							      <
+	insert at cycle 0   %35:intregs = L2_loadri_io %2:int |		insert at cycle 0   %38:intregs = nsw A2_sub %35:intr
+							      <
+Inst (6)   %37:intregs = nsw A2_add %36:intregs, %35:intregs  <
+							      <
+	es:        1 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 17 II: 17		      <
+	insert at cycle 1   %37:intregs = nsw A2_add %36:intr <
+							      <
+Inst (10)   %39:intregs = A2_abs %37:intregs		      <
+							      <
+	es:        2 ls:        2 me: 7fffffff ms: 80000000   <
+Trying to insert node between 2 and 2 II: 17		      <
+	insert at cycle 2   %39:intregs = A2_abs %37:intregs  <
+							      <
+Inst (9)   S2_storeri_io %2:intregs, -12, %38:intregs :: (sto <
+							      <
+	es:        1 ls: 7fffffff me:       10 ms: 80000000   <
+Trying to insert node between 1 and 16 II: 17		      <
+	insert at cycle 1   S2_storeri_io %2:intregs, -12, %3 <
+							      <
+Inst (15)   S2_storeri_io %2:intregs, -2312, %43:intregs :: ( <
+							      <
+	es:        1 ls: 7fffffff me:       10 ms: 80000000   <
+Trying to insert node between 1 and 16 II: 17		      <
+	insert at cycle 1   S2_storeri_io %2:intregs, -2312,  <
+							      <
+Inst (17)   S2_storeri_io %2:intregs, -8, %44:intregs :: (sto <
+							      <
+	es:        1 ls: 7fffffff me:       10 ms: 80000000   <
+Trying to insert node between 1 and 16 II: 17		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	insert at cycle 2   S2_storeri_io %2:intregs, -8, %44 <
+							      <
+Inst (25)   S2_storeri_io %2:intregs, -2308, %51:intregs :: ( <
+							      <
+	es:        1 ls: 7fffffff me:       10 ms: 80000000   <
+Trying to insert node between 1 and 16 II: 17		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	insert at cycle 2   S2_storeri_io %2:intregs, -2308,  <
+							      <
+Inst (27)   S2_storeri_io %2:intregs, -4, %52:intregs :: (sto <
+							      <
+	es:        1 ls: 7fffffff me:       10 ms: 80000000   <
+Trying to insert node between 1 and 16 II: 17		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	failed to insert at cycle 2   S2_storeri_io %2:intreg <
+	insert at cycle 3   S2_storeri_io %2:intregs, -4, %52 <
+							      <
+Inst (33)   S2_storeri_io %2:intregs, -2304, %57:intregs :: ( <
+							      <
+	es:        1 ls: 7fffffff me:       10 ms: 80000000   <
+Trying to insert node between 1 and 16 II: 17		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	failed to insert at cycle 2   S2_storeri_io %2:intreg <
+	insert at cycle 3   S2_storeri_io %2:intregs, -2304,  <
+							      <
+Inst (35)   S2_storeri_io %2:intregs, 0, %58:intregs :: (stor <
+							      <
+	es:        1 ls: 7fffffff me:       10 ms: 80000000   <
+Trying to insert node between 1 and 16 II: 17		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	failed to insert at cycle 2   S2_storeri_io %2:intreg <
+	failed to insert at cycle 3   S2_storeri_io %2:intreg <
+	insert at cycle 4   S2_storeri_io %2:intregs, 0, %58: <
+							      <
+Inst (20)   %47:intregs = A2_abs %44:intregs		      <
+							      <
+	es: 80000000 ls:        2 me: 7fffffff ms: 80000000   <
+Trying to insert node between 2 and -14 II: 17		      <
+	failed to insert at cycle 2   %47:intregs = A2_abs %4 <
+	failed to insert at cycle 1   %47:intregs = A2_abs %4 <
+	insert at cycle 0   %47:intregs = A2_abs %44:intregs  <
+							      <
+Inst (18)   %45:intregs = A2_abs %43:intregs		      <
+							      <
+	es: 80000000 ls:        2 me: 7fffffff ms: 80000000   <
+Trying to insert node between 2 and -14 II: 17		      <
+	failed to insert at cycle 2   %45:intregs = A2_abs %4 <
+	failed to insert at cycle 1   %45:intregs = A2_abs %4 <
+	insert at cycle 0   %45:intregs = A2_abs %43:intregs  <
+							      <
+Inst (14)   %43:intregs = nsw A2_add %42:intregs, %41:intregs <
+							      <
+	es: 80000000 ls: ffffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -1 and -17 II: 17		      <
+	insert at cycle -1   %43:intregs = nsw A2_add %42:int <
+Inst (16)   %44:intregs = nsw A2_sub %41:intregs, %42:intregs |	Inst (4)   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (l
+	insert at cycle -1   %44:intregs = nsw A2_sub %41:int |		insert at cycle -1   %35:intregs = L2_loadri_io %2:in
+							      <
+Inst (12)   %41:intregs = L2_loadri_io %2:intregs, -2312 :: ( <
+							      <
+	es: 80000000 ls: fffffffe me: 7fffffff ms: fffffff4   <
+Trying to insert node between -2 and -12 II: 17		      <
+	insert at cycle -2   %41:intregs = L2_loadri_io %2:in <
+							      <
+Inst (29)   %54:intregs = A2_abs %52:intregs		      <
+							      <
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between 3 and -13 II: 17		      <
+	failed to insert at cycle 3   %54:intregs = A2_abs %5 <
+	failed to insert at cycle 2   %54:intregs = A2_abs %5 <
+	failed to insert at cycle 1   %54:intregs = A2_abs %5 <
+	failed to insert at cycle 0   %54:intregs = A2_abs %5 <
+	insert at cycle -1   %54:intregs = A2_abs %52:intregs <
+							      <
+Inst (26)   %52:intregs = nsw A2_sub %49:intregs, %50:intregs <
+							      <
+	es: 80000000 ls: fffffffe me: 7fffffff ms: 80000000   <
+Trying to insert node between -2 and -18 II: 17		      <
+	insert at cycle -2   %52:intregs = nsw A2_sub %49:int <
+							      <
+Inst (22)   %49:intregs = L2_loadri_io %2:intregs, -2308 :: ( <
+							      <
+	es: 80000000 ls: fffffffd me: 7fffffff ms: fffffff4   <
+Trying to insert node between -3 and -12 II: 17		      <
+	insert at cycle -3   %49:intregs = L2_loadri_io %2:in <
+							      <
+Inst (24)   %51:intregs = nsw A2_add %50:intregs, %49:intregs <
+							      <
+	es: fffffffe ls:        2 me: 7fffffff ms: 80000000   <
+Trying to insert node between -2 and 2 II: 17		      <
+	insert at cycle -2   %51:intregs = nsw A2_add %50:int <
+							      <
+Inst (28)   %53:intregs = A2_abs %51:intregs		      <
+							      <
+	es: ffffffff ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between -1 and 3 II: 17		      <
+	insert at cycle -1   %53:intregs = A2_abs %51:intregs <
+							      <
+Inst (38)   %60:intregs = A2_abs %58:intregs		      <
+							      <
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between 3 and -13 II: 17		      <
+	failed to insert at cycle 3   %60:intregs = A2_abs %5 <
+	failed to insert at cycle 2   %60:intregs = A2_abs %5 <
+	failed to insert at cycle 1   %60:intregs = A2_abs %5 <
+	failed to insert at cycle 0   %60:intregs = A2_abs %5 <
+	failed to insert at cycle -1   %60:intregs = A2_abs % <
+	insert at cycle -2   %60:intregs = A2_abs %58:intregs <
+Inst (34)   %58:intregs = nsw A2_sub %55:intregs, %56:intregs |	Inst (6)   %37:intregs = nsw A2_add %36:intregs, %35:intregs
+	es: 80000000 ls: fffffffd me: 7fffffff ms: 80000000   |		es:        0 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between -3 and -19 II: 17		      |	Trying to insert node between 0 and 16 II: 17
+	insert at cycle -3   %58:intregs = nsw A2_sub %55:int |		insert at cycle 6   %37:intregs = nsw A2_add %36:intr
+Inst (30)   %55:intregs = L2_loadri_io %2:intregs, -2304 :: ( |	Inst (10)   %39:intregs = A2_abs %37:intregs
+	es: 80000000 ls: fffffffc me: 7fffffff ms: fffffff4   |		es:        7 ls:        1 me: 7fffffff ms: 80000000
+Trying to insert node between -4 and -12 II: 17		      <
+	insert at cycle -4   %55:intregs = L2_loadri_io %2:in <
+							      <
+Inst (32)   %57:intregs = nsw A2_add %56:intregs, %55:intregs <
+							      <
+	es: fffffffd ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between -3 and 3 II: 17		      <
+	insert at cycle -3   %57:intregs = nsw A2_add %56:int <
+							      <
+Inst (36)   %59:intregs = A2_abs %57:intregs		      <
+							      <
+	es: fffffffe ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between -2 and 3 II: 17		      <
+	failed to insert at cycle -2   %59:intregs = A2_abs % <
+	failed to insert at cycle -1   %59:intregs = A2_abs % <
+	failed to insert at cycle 0   %59:intregs = A2_abs %5 <
+	failed to insert at cycle 1   %59:intregs = A2_abs %5 <
+	failed to insert at cycle 2   %59:intregs = A2_abs %5 <
+	failed to insert at cycle 3   %59:intregs = A2_abs %5 <
+	insert at cycle 3   %3:intregs = PHI %34:intregs, %bb |		insert at cycle 2   %3:intregs = PHI %34:intregs, %bb
+	insert at cycle 4   %6:intregs = M4_or_or %59:intregs |		insert at cycle 5   %6:intregs = M4_or_or %59:intregs
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000   |		es: 80000000 ls:        4 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -14 II: 18		      |	Trying to insert node between 4 and -13 II: 18
+	insert at cycle 3   %46:intregs = M4_or_or %45:intreg |		insert at cycle 2   %46:intregs = M4_or_or %45:intreg
+	es: fffffff3 ls:        3 me: 7fffffff ms: 80000000   |		es: fffffff4 ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -13 II: 18		      |	Trying to insert node between 2 and -12 II: 18
+	insert at cycle 3   %4:intregs = PHI %34:intregs, %bb |		insert at cycle 1   %4:intregs = PHI %34:intregs, %bb
+	insert at cycle 2   %40:intregs = A2_abs %38:intregs  |		insert at cycle 1   %40:intregs = A2_abs %38:intregs
+	es: 80000000 ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and -16 II: 18		      <
+	insert at cycle 1   %38:intregs = nsw A2_sub %35:intr <
+							      <
+Inst (4)   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (l <
+							      <
+	insert at cycle 0   %35:intregs = L2_loadri_io %2:int |		insert at cycle 0   %38:intregs = nsw A2_sub %35:intr
+							      <
+Inst (6)   %37:intregs = nsw A2_add %36:intregs, %35:intregs  <
+							      <
+	es:        1 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 18 II: 18		      <
+	insert at cycle 1   %37:intregs = nsw A2_add %36:intr <
+							      <
+Inst (10)   %39:intregs = A2_abs %37:intregs		      <
+							      <
+	es:        2 ls:        2 me: 7fffffff ms: 80000000   <
+Trying to insert node between 2 and 2 II: 18		      <
+	insert at cycle 2   %39:intregs = A2_abs %37:intregs  <
+							      <
+Inst (9)   S2_storeri_io %2:intregs, -12, %38:intregs :: (sto <
+							      <
+	es:        1 ls: 7fffffff me:       11 ms: 80000000   <
+Trying to insert node between 1 and 17 II: 18		      <
+	insert at cycle 1   S2_storeri_io %2:intregs, -12, %3 <
+							      <
+Inst (15)   S2_storeri_io %2:intregs, -2312, %43:intregs :: ( <
+							      <
+	es:        1 ls: 7fffffff me:       11 ms: 80000000   <
+Trying to insert node between 1 and 17 II: 18		      <
+	insert at cycle 1   S2_storeri_io %2:intregs, -2312,  <
+Inst (17)   S2_storeri_io %2:intregs, -8, %44:intregs :: (sto |	Inst (4)   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (l
+							      <
+	es:        1 ls: 7fffffff me:       11 ms: 80000000   <
+Trying to insert node between 1 and 17 II: 18		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	insert at cycle 2   S2_storeri_io %2:intregs, -8, %44 <
+							      <
+Inst (25)   S2_storeri_io %2:intregs, -2308, %51:intregs :: ( <
+							      <
+	es:        1 ls: 7fffffff me:       11 ms: 80000000   <
+Trying to insert node between 1 and 17 II: 18		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	insert at cycle 2   S2_storeri_io %2:intregs, -2308,  <
+							      <
+Inst (27)   S2_storeri_io %2:intregs, -4, %52:intregs :: (sto <
+							      <
+	es:        1 ls: 7fffffff me:       11 ms: 80000000   <
+Trying to insert node between 1 and 17 II: 18		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	failed to insert at cycle 2   S2_storeri_io %2:intreg <
+	insert at cycle 3   S2_storeri_io %2:intregs, -4, %52 <
+							      <
+Inst (33)   S2_storeri_io %2:intregs, -2304, %57:intregs :: ( <
+							      <
+	es:        1 ls: 7fffffff me:       11 ms: 80000000   <
+Trying to insert node between 1 and 17 II: 18		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	failed to insert at cycle 2   S2_storeri_io %2:intreg <
+	insert at cycle 3   S2_storeri_io %2:intregs, -2304,  <
+							      <
+Inst (35)   S2_storeri_io %2:intregs, 0, %58:intregs :: (stor <
+							      <
+	es:        1 ls: 7fffffff me:       11 ms: 80000000   <
+Trying to insert node between 1 and 17 II: 18		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	failed to insert at cycle 2   S2_storeri_io %2:intreg <
+	failed to insert at cycle 3   S2_storeri_io %2:intreg <
+	insert at cycle 4   S2_storeri_io %2:intregs, 0, %58: <
+							      <
+Inst (20)   %47:intregs = A2_abs %44:intregs		      <
+							      <
+	es: 80000000 ls:        2 me: 7fffffff ms: 80000000   <
+Trying to insert node between 2 and -15 II: 18		      <
+	failed to insert at cycle 2   %47:intregs = A2_abs %4 <
+	failed to insert at cycle 1   %47:intregs = A2_abs %4 <
+	insert at cycle 0   %47:intregs = A2_abs %44:intregs  <
+							      <
+Inst (18)   %45:intregs = A2_abs %43:intregs		      <
+							      <
+	es: 80000000 ls:        2 me: 7fffffff ms: 80000000   <
+Trying to insert node between 2 and -15 II: 18		      <
+	failed to insert at cycle 2   %45:intregs = A2_abs %4 <
+	failed to insert at cycle 1   %45:intregs = A2_abs %4 <
+	insert at cycle 0   %45:intregs = A2_abs %43:intregs  <
+							      <
+Inst (14)   %43:intregs = nsw A2_add %42:intregs, %41:intregs <
+	insert at cycle -1   %43:intregs = nsw A2_add %42:int |		insert at cycle -1   %35:intregs = L2_loadri_io %2:in
+							      <
+Inst (16)   %44:intregs = nsw A2_sub %41:intregs, %42:intregs <
+							      <
+	es: 80000000 ls: ffffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -1 and -18 II: 18		      <
+	insert at cycle -1   %44:intregs = nsw A2_sub %41:int <
+							      <
+Inst (12)   %41:intregs = L2_loadri_io %2:intregs, -2312 :: ( <
+	es: 80000000 ls: fffffffe me: 7fffffff ms: fffffff3   |	Inst (6)   %37:intregs = nsw A2_add %36:intregs, %35:intregs
+Trying to insert node between -2 and -13 II: 18		      <
+	insert at cycle -2   %41:intregs = L2_loadri_io %2:in <
+							      <
+Inst (29)   %54:intregs = A2_abs %52:intregs		      <
+							      <
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between 3 and -14 II: 18		      <
+	failed to insert at cycle 3   %54:intregs = A2_abs %5 <
+	failed to insert at cycle 2   %54:intregs = A2_abs %5 <
+	failed to insert at cycle 1   %54:intregs = A2_abs %5 <
+	failed to insert at cycle 0   %54:intregs = A2_abs %5 <
+	insert at cycle -1   %54:intregs = A2_abs %52:intregs <
+							      <
+Inst (26)   %52:intregs = nsw A2_sub %49:intregs, %50:intregs <
+							      <
+	es: 80000000 ls: fffffffe me: 7fffffff ms: 80000000   <
+Trying to insert node between -2 and -19 II: 18		      <
+	insert at cycle -2   %52:intregs = nsw A2_sub %49:int <
+							      <
+Inst (22)   %49:intregs = L2_loadri_io %2:intregs, -2308 :: ( <
+							      <
+	es: 80000000 ls: fffffffd me: 7fffffff ms: fffffff3   <
+Trying to insert node between -3 and -13 II: 18		      <
+	insert at cycle -3   %49:intregs = L2_loadri_io %2:in <
+							      <
+Inst (24)   %51:intregs = nsw A2_add %50:intregs, %49:intregs <
+							      <
+	es: fffffffe ls:        2 me: 7fffffff ms: 80000000   <
+Trying to insert node between -2 and 2 II: 18		      <
+	insert at cycle -2   %51:intregs = nsw A2_add %50:int <
+							      <
+Inst (28)   %53:intregs = A2_abs %51:intregs		      <
+							      <
+	es: ffffffff ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between -1 and 3 II: 18		      <
+	insert at cycle -1   %53:intregs = A2_abs %51:intregs <
+							      <
+Inst (38)   %60:intregs = A2_abs %58:intregs		      <
+							      <
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between 3 and -14 II: 18		      <
+	failed to insert at cycle 3   %60:intregs = A2_abs %5 <
+	failed to insert at cycle 2   %60:intregs = A2_abs %5 <
+	failed to insert at cycle 1   %60:intregs = A2_abs %5 <
+	failed to insert at cycle 0   %60:intregs = A2_abs %5 <
+	failed to insert at cycle -1   %60:intregs = A2_abs % <
+	insert at cycle -2   %60:intregs = A2_abs %58:intregs <
+							      <
+Inst (34)   %58:intregs = nsw A2_sub %55:intregs, %56:intregs <
+	es: 80000000 ls: fffffffd me: 7fffffff ms: 80000000   |		es:        0 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between -3 and -20 II: 18		      |	Trying to insert node between 0 and 17 II: 18
+	insert at cycle -3   %58:intregs = nsw A2_sub %55:int |		insert at cycle 6   %37:intregs = nsw A2_add %36:intr
+Inst (30)   %55:intregs = L2_loadri_io %2:intregs, -2304 :: ( |	Inst (10)   %39:intregs = A2_abs %37:intregs
+	es: 80000000 ls: fffffffc me: 7fffffff ms: fffffff3   |		es:        7 ls:        1 me: 7fffffff ms: 80000000
+Trying to insert node between -4 and -13 II: 18		      <
+	insert at cycle -4   %55:intregs = L2_loadri_io %2:in <
+							      <
+Inst (32)   %57:intregs = nsw A2_add %56:intregs, %55:intregs <
+							      <
+	es: fffffffd ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between -3 and 3 II: 18		      <
+	insert at cycle -3   %57:intregs = nsw A2_add %56:int <
+							      <
+Inst (36)   %59:intregs = A2_abs %57:intregs		      <
+							      <
+	es: fffffffe ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between -2 and 3 II: 18		      <
+	failed to insert at cycle -2   %59:intregs = A2_abs % <
+	failed to insert at cycle -1   %59:intregs = A2_abs % <
+	failed to insert at cycle 0   %59:intregs = A2_abs %5 <
+	failed to insert at cycle 1   %59:intregs = A2_abs %5 <
+	failed to insert at cycle 2   %59:intregs = A2_abs %5 <
+	failed to insert at cycle 3   %59:intregs = A2_abs %5 <
+	insert at cycle 3   %3:intregs = PHI %34:intregs, %bb |		insert at cycle 2   %3:intregs = PHI %34:intregs, %bb
+	insert at cycle 4   %6:intregs = M4_or_or %59:intregs |		insert at cycle 5   %6:intregs = M4_or_or %59:intregs
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000   |		es: 80000000 ls:        4 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -15 II: 19		      |	Trying to insert node between 4 and -14 II: 19
+	insert at cycle 3   %46:intregs = M4_or_or %45:intreg |		insert at cycle 2   %46:intregs = M4_or_or %45:intreg
+	es: fffffff2 ls:        3 me: 7fffffff ms: 80000000   |		es: fffffff3 ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -14 II: 19		      |	Trying to insert node between 2 and -13 II: 19
+	insert at cycle 3   %4:intregs = PHI %34:intregs, %bb |		insert at cycle 1   %4:intregs = PHI %34:intregs, %bb
+	insert at cycle 2   %40:intregs = A2_abs %38:intregs  |		insert at cycle 1   %40:intregs = A2_abs %38:intregs
+	es: 80000000 ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and -17 II: 19		      <
+	insert at cycle 1   %38:intregs = nsw A2_sub %35:intr <
+							      <
+Inst (4)   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (l <
+							      <
+	insert at cycle 0   %35:intregs = L2_loadri_io %2:int |		insert at cycle 0   %38:intregs = nsw A2_sub %35:intr
+							      <
+Inst (6)   %37:intregs = nsw A2_add %36:intregs, %35:intregs  <
+							      <
+	es:        1 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 19 II: 19		      <
+	insert at cycle 1   %37:intregs = nsw A2_add %36:intr <
+							      <
+Inst (10)   %39:intregs = A2_abs %37:intregs		      <
+							      <
+	es:        2 ls:        2 me: 7fffffff ms: 80000000   <
+Trying to insert node between 2 and 2 II: 19		      <
+	insert at cycle 2   %39:intregs = A2_abs %37:intregs  <
+							      <
+Inst (9)   S2_storeri_io %2:intregs, -12, %38:intregs :: (sto <
+							      <
+	es:        1 ls: 7fffffff me:       12 ms: 80000000   <
+Trying to insert node between 1 and 18 II: 19		      <
+	insert at cycle 1   S2_storeri_io %2:intregs, -12, %3 <
+							      <
+Inst (15)   S2_storeri_io %2:intregs, -2312, %43:intregs :: ( <
+							      <
+	es:        1 ls: 7fffffff me:       12 ms: 80000000   <
+Trying to insert node between 1 and 18 II: 19		      <
+	insert at cycle 1   S2_storeri_io %2:intregs, -2312,  <
+							      <
+Inst (17)   S2_storeri_io %2:intregs, -8, %44:intregs :: (sto <
+							      <
+	es:        1 ls: 7fffffff me:       12 ms: 80000000   <
+Trying to insert node between 1 and 18 II: 19		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	insert at cycle 2   S2_storeri_io %2:intregs, -8, %44 <
+							      <
+Inst (25)   S2_storeri_io %2:intregs, -2308, %51:intregs :: ( <
+							      <
+	es:        1 ls: 7fffffff me:       12 ms: 80000000   <
+Trying to insert node between 1 and 18 II: 19		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	insert at cycle 2   S2_storeri_io %2:intregs, -2308,  <
+							      <
+Inst (27)   S2_storeri_io %2:intregs, -4, %52:intregs :: (sto <
+							      <
+	es:        1 ls: 7fffffff me:       12 ms: 80000000   <
+Trying to insert node between 1 and 18 II: 19		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	failed to insert at cycle 2   S2_storeri_io %2:intreg <
+	insert at cycle 3   S2_storeri_io %2:intregs, -4, %52 <
+Inst (33)   S2_storeri_io %2:intregs, -2304, %57:intregs :: ( |	Inst (4)   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (l
+							      <
+	es:        1 ls: 7fffffff me:       12 ms: 80000000   <
+Trying to insert node between 1 and 18 II: 19		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	failed to insert at cycle 2   S2_storeri_io %2:intreg <
+	insert at cycle 3   S2_storeri_io %2:intregs, -2304,  <
+							      <
+Inst (35)   S2_storeri_io %2:intregs, 0, %58:intregs :: (stor <
+							      <
+	es:        1 ls: 7fffffff me:       12 ms: 80000000   <
+Trying to insert node between 1 and 18 II: 19		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	failed to insert at cycle 2   S2_storeri_io %2:intreg <
+	failed to insert at cycle 3   S2_storeri_io %2:intreg <
+	insert at cycle 4   S2_storeri_io %2:intregs, 0, %58: <
+							      <
+Inst (20)   %47:intregs = A2_abs %44:intregs		      <
+							      <
+	es: 80000000 ls:        2 me: 7fffffff ms: 80000000   <
+Trying to insert node between 2 and -16 II: 19		      <
+	failed to insert at cycle 2   %47:intregs = A2_abs %4 <
+	failed to insert at cycle 1   %47:intregs = A2_abs %4 <
+	insert at cycle 0   %47:intregs = A2_abs %44:intregs  <
+							      <
+Inst (18)   %45:intregs = A2_abs %43:intregs		      <
+							      <
+	es: 80000000 ls:        2 me: 7fffffff ms: 80000000   <
+Trying to insert node between 2 and -16 II: 19		      <
+	failed to insert at cycle 2   %45:intregs = A2_abs %4 <
+	failed to insert at cycle 1   %45:intregs = A2_abs %4 <
+	insert at cycle 0   %45:intregs = A2_abs %43:intregs  <
+							      <
+Inst (14)   %43:intregs = nsw A2_add %42:intregs, %41:intregs <
+							      <
+	es: 80000000 ls: ffffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -1 and -19 II: 19		      <
+	insert at cycle -1   %43:intregs = nsw A2_add %42:int <
+							      <
+Inst (16)   %44:intregs = nsw A2_sub %41:intregs, %42:intregs <
+	insert at cycle -1   %44:intregs = nsw A2_sub %41:int |		insert at cycle -1   %35:intregs = L2_loadri_io %2:in
+							      <
+Inst (12)   %41:intregs = L2_loadri_io %2:intregs, -2312 :: ( <
+							      <
+	es: 80000000 ls: fffffffe me: 7fffffff ms: fffffff2   <
+Trying to insert node between -2 and -14 II: 19		      <
+	insert at cycle -2   %41:intregs = L2_loadri_io %2:in <
+							      <
+Inst (29)   %54:intregs = A2_abs %52:intregs		      <
+							      <
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between 3 and -15 II: 19		      <
+	failed to insert at cycle 3   %54:intregs = A2_abs %5 <
+	failed to insert at cycle 2   %54:intregs = A2_abs %5 <
+	failed to insert at cycle 1   %54:intregs = A2_abs %5 <
+	failed to insert at cycle 0   %54:intregs = A2_abs %5 <
+	insert at cycle -1   %54:intregs = A2_abs %52:intregs <
+Inst (26)   %52:intregs = nsw A2_sub %49:intregs, %50:intregs |	Inst (6)   %37:intregs = nsw A2_add %36:intregs, %35:intregs
+							      <
+	es: 80000000 ls: fffffffe me: 7fffffff ms: 80000000   <
+Trying to insert node between -2 and -20 II: 19		      <
+	insert at cycle -2   %52:intregs = nsw A2_sub %49:int <
+							      <
+Inst (22)   %49:intregs = L2_loadri_io %2:intregs, -2308 :: ( <
+							      <
+	es: 80000000 ls: fffffffd me: 7fffffff ms: fffffff2   <
+Trying to insert node between -3 and -14 II: 19		      <
+	insert at cycle -3   %49:intregs = L2_loadri_io %2:in <
+							      <
+Inst (24)   %51:intregs = nsw A2_add %50:intregs, %49:intregs <
+							      <
+	es: fffffffe ls:        2 me: 7fffffff ms: 80000000   <
+Trying to insert node between -2 and 2 II: 19		      <
+	insert at cycle -2   %51:intregs = nsw A2_add %50:int <
+							      <
+Inst (28)   %53:intregs = A2_abs %51:intregs		      <
+							      <
+	es: ffffffff ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between -1 and 3 II: 19		      <
+	insert at cycle -1   %53:intregs = A2_abs %51:intregs <
+							      <
+Inst (38)   %60:intregs = A2_abs %58:intregs		      <
+							      <
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between 3 and -15 II: 19		      <
+	failed to insert at cycle 3   %60:intregs = A2_abs %5 <
+	failed to insert at cycle 2   %60:intregs = A2_abs %5 <
+	failed to insert at cycle 1   %60:intregs = A2_abs %5 <
+	failed to insert at cycle 0   %60:intregs = A2_abs %5 <
+	failed to insert at cycle -1   %60:intregs = A2_abs % <
+	insert at cycle -2   %60:intregs = A2_abs %58:intregs <
+							      <
+Inst (34)   %58:intregs = nsw A2_sub %55:intregs, %56:intregs <
+	es: 80000000 ls: fffffffd me: 7fffffff ms: 80000000   |		es:        0 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between -3 and -21 II: 19		      |	Trying to insert node between 0 and 18 II: 19
+	insert at cycle -3   %58:intregs = nsw A2_sub %55:int |		insert at cycle 6   %37:intregs = nsw A2_add %36:intr
+Inst (30)   %55:intregs = L2_loadri_io %2:intregs, -2304 :: ( |	Inst (10)   %39:intregs = A2_abs %37:intregs
+	es: 80000000 ls: fffffffc me: 7fffffff ms: fffffff2   |		es:        7 ls:        1 me: 7fffffff ms: 80000000
+Trying to insert node between -4 and -14 II: 19		      <
+	insert at cycle -4   %55:intregs = L2_loadri_io %2:in <
+							      <
+Inst (32)   %57:intregs = nsw A2_add %56:intregs, %55:intregs <
+							      <
+	es: fffffffd ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between -3 and 3 II: 19		      <
+	insert at cycle -3   %57:intregs = nsw A2_add %56:int <
+							      <
+Inst (36)   %59:intregs = A2_abs %57:intregs		      <
+							      <
+	es: fffffffe ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between -2 and 3 II: 19		      <
+	failed to insert at cycle -2   %59:intregs = A2_abs % <
+	failed to insert at cycle -1   %59:intregs = A2_abs % <
+	failed to insert at cycle 0   %59:intregs = A2_abs %5 <
+	failed to insert at cycle 1   %59:intregs = A2_abs %5 <
+	failed to insert at cycle 2   %59:intregs = A2_abs %5 <
+	failed to insert at cycle 3   %59:intregs = A2_abs %5 <
+	insert at cycle 3   %3:intregs = PHI %34:intregs, %bb |		insert at cycle 2   %3:intregs = PHI %34:intregs, %bb
+	insert at cycle 4   %6:intregs = M4_or_or %59:intregs |		insert at cycle 5   %6:intregs = M4_or_or %59:intregs
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000   |		es: 80000000 ls:        4 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -16 II: 20		      |	Trying to insert node between 4 and -15 II: 20
+	insert at cycle 3   %46:intregs = M4_or_or %45:intreg |		insert at cycle 2   %46:intregs = M4_or_or %45:intreg
+	es: fffffff1 ls:        3 me: 7fffffff ms: 80000000   |		es: fffffff2 ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -15 II: 20		      |	Trying to insert node between 2 and -14 II: 20
+	insert at cycle 3   %4:intregs = PHI %34:intregs, %bb |		insert at cycle 1   %4:intregs = PHI %34:intregs, %bb
+	insert at cycle 2   %40:intregs = A2_abs %38:intregs  |		insert at cycle 1   %40:intregs = A2_abs %38:intregs
+	es: 80000000 ls:        1 me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and -18 II: 20		      <
+	insert at cycle 1   %38:intregs = nsw A2_sub %35:intr <
+							      <
+Inst (4)   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (l <
+							      <
+	insert at cycle 0   %35:intregs = L2_loadri_io %2:int |		insert at cycle 0   %38:intregs = nsw A2_sub %35:intr
+							      <
+Inst (6)   %37:intregs = nsw A2_add %36:intregs, %35:intregs  <
+							      <
+	es:        1 ls: 7fffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between 1 and 20 II: 20		      <
+	insert at cycle 1   %37:intregs = nsw A2_add %36:intr <
+							      <
+Inst (10)   %39:intregs = A2_abs %37:intregs		      <
+							      <
+	es:        2 ls:        2 me: 7fffffff ms: 80000000   <
+Trying to insert node between 2 and 2 II: 20		      <
+	insert at cycle 2   %39:intregs = A2_abs %37:intregs  <
+							      <
+Inst (9)   S2_storeri_io %2:intregs, -12, %38:intregs :: (sto <
+							      <
+	es:        1 ls: 7fffffff me:       13 ms: 80000000   <
+Trying to insert node between 1 and 19 II: 20		      <
+	insert at cycle 1   S2_storeri_io %2:intregs, -12, %3 <
+							      <
+Inst (15)   S2_storeri_io %2:intregs, -2312, %43:intregs :: ( <
+							      <
+	es:        1 ls: 7fffffff me:       13 ms: 80000000   <
+Trying to insert node between 1 and 19 II: 20		      <
+	insert at cycle 1   S2_storeri_io %2:intregs, -2312,  <
+							      <
+Inst (17)   S2_storeri_io %2:intregs, -8, %44:intregs :: (sto <
+							      <
+	es:        1 ls: 7fffffff me:       13 ms: 80000000   <
+Trying to insert node between 1 and 19 II: 20		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	insert at cycle 2   S2_storeri_io %2:intregs, -8, %44 <
+							      <
+Inst (25)   S2_storeri_io %2:intregs, -2308, %51:intregs :: ( <
+							      <
+	es:        1 ls: 7fffffff me:       13 ms: 80000000   <
+Trying to insert node between 1 and 19 II: 20		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	insert at cycle 2   S2_storeri_io %2:intregs, -2308,  <
+							      <
+Inst (27)   S2_storeri_io %2:intregs, -4, %52:intregs :: (sto <
+							      <
+	es:        1 ls: 7fffffff me:       13 ms: 80000000   <
+Trying to insert node between 1 and 19 II: 20		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	failed to insert at cycle 2   S2_storeri_io %2:intreg <
+	insert at cycle 3   S2_storeri_io %2:intregs, -4, %52 <
+							      <
+Inst (33)   S2_storeri_io %2:intregs, -2304, %57:intregs :: ( <
+							      <
+	es:        1 ls: 7fffffff me:       13 ms: 80000000   <
+Trying to insert node between 1 and 19 II: 20		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	failed to insert at cycle 2   S2_storeri_io %2:intreg <
+	insert at cycle 3   S2_storeri_io %2:intregs, -2304,  <
+							      <
+Inst (35)   S2_storeri_io %2:intregs, 0, %58:intregs :: (stor <
+							      <
+	es:        1 ls: 7fffffff me:       13 ms: 80000000   <
+Trying to insert node between 1 and 19 II: 20		      <
+	failed to insert at cycle 1   S2_storeri_io %2:intreg <
+	failed to insert at cycle 2   S2_storeri_io %2:intreg <
+	failed to insert at cycle 3   S2_storeri_io %2:intreg <
+	insert at cycle 4   S2_storeri_io %2:intregs, 0, %58: <
+							      <
+Inst (20)   %47:intregs = A2_abs %44:intregs		      <
+	es: 80000000 ls:        2 me: 7fffffff ms: 80000000   |	Inst (4)   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (l
+Trying to insert node between 2 and -17 II: 20		      <
+	failed to insert at cycle 2   %47:intregs = A2_abs %4 <
+	failed to insert at cycle 1   %47:intregs = A2_abs %4 <
+	insert at cycle 0   %47:intregs = A2_abs %44:intregs  <
+							      <
+Inst (18)   %45:intregs = A2_abs %43:intregs		      <
+							      <
+	es: 80000000 ls:        2 me: 7fffffff ms: 80000000   <
+Trying to insert node between 2 and -17 II: 20		      <
+	failed to insert at cycle 2   %45:intregs = A2_abs %4 <
+	failed to insert at cycle 1   %45:intregs = A2_abs %4 <
+	insert at cycle 0   %45:intregs = A2_abs %43:intregs  <
+							      <
+Inst (14)   %43:intregs = nsw A2_add %42:intregs, %41:intregs <
+							      <
+	es: 80000000 ls: ffffffff me: 7fffffff ms: 80000000   <
+Trying to insert node between -1 and -20 II: 20		      <
+	insert at cycle -1   %43:intregs = nsw A2_add %42:int <
+							      <
+Inst (16)   %44:intregs = nsw A2_sub %41:intregs, %42:intregs <
+	insert at cycle -1   %44:intregs = nsw A2_sub %41:int |		insert at cycle -1   %35:intregs = L2_loadri_io %2:in
+							      <
+Inst (12)   %41:intregs = L2_loadri_io %2:intregs, -2312 :: ( <
+							      <
+	es: 80000000 ls: fffffffe me: 7fffffff ms: fffffff1   <
+Trying to insert node between -2 and -15 II: 20		      <
+	insert at cycle -2   %41:intregs = L2_loadri_io %2:in <
+							      <
+Inst (29)   %54:intregs = A2_abs %52:intregs		      <
+							      <
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between 3 and -16 II: 20		      <
+	failed to insert at cycle 3   %54:intregs = A2_abs %5 <
+	failed to insert at cycle 2   %54:intregs = A2_abs %5 <
+	failed to insert at cycle 1   %54:intregs = A2_abs %5 <
+	failed to insert at cycle 0   %54:intregs = A2_abs %5 <
+	insert at cycle -1   %54:intregs = A2_abs %52:intregs <
+							      <
+Inst (26)   %52:intregs = nsw A2_sub %49:intregs, %50:intregs <
+							      <
+	es: 80000000 ls: fffffffe me: 7fffffff ms: 80000000   <
+Trying to insert node between -2 and -21 II: 20		      <
+	insert at cycle -2   %52:intregs = nsw A2_sub %49:int <
+							      <
+Inst (22)   %49:intregs = L2_loadri_io %2:intregs, -2308 :: ( <
+							      <
+	es: 80000000 ls: fffffffd me: 7fffffff ms: fffffff1   <
+Trying to insert node between -3 and -15 II: 20		      <
+	insert at cycle -3   %49:intregs = L2_loadri_io %2:in <
+							      <
+Inst (24)   %51:intregs = nsw A2_add %50:intregs, %49:intregs <
+	es: fffffffe ls:        2 me: 7fffffff ms: 80000000   |	Inst (6)   %37:intregs = nsw A2_add %36:intregs, %35:intregs
+Trying to insert node between -2 and 2 II: 20		      <
+	insert at cycle -2   %51:intregs = nsw A2_add %50:int <
+							      <
+Inst (28)   %53:intregs = A2_abs %51:intregs		      <
+							      <
+	es: ffffffff ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between -1 and 3 II: 20		      <
+	insert at cycle -1   %53:intregs = A2_abs %51:intregs <
+							      <
+Inst (38)   %60:intregs = A2_abs %58:intregs		      <
+							      <
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between 3 and -16 II: 20		      <
+	failed to insert at cycle 3   %60:intregs = A2_abs %5 <
+	failed to insert at cycle 2   %60:intregs = A2_abs %5 <
+	failed to insert at cycle 1   %60:intregs = A2_abs %5 <
+	failed to insert at cycle 0   %60:intregs = A2_abs %5 <
+	failed to insert at cycle -1   %60:intregs = A2_abs % <
+	insert at cycle -2   %60:intregs = A2_abs %58:intregs <
+							      <
+Inst (34)   %58:intregs = nsw A2_sub %55:intregs, %56:intregs <
+	es: 80000000 ls: fffffffd me: 7fffffff ms: 80000000   |		es:        0 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between -3 and -22 II: 20		      |	Trying to insert node between 0 and 19 II: 20
+	insert at cycle -3   %58:intregs = nsw A2_sub %55:int |		insert at cycle 6   %37:intregs = nsw A2_add %36:intr
+Inst (30)   %55:intregs = L2_loadri_io %2:intregs, -2304 :: ( |	Inst (10)   %39:intregs = A2_abs %37:intregs
+	es: 80000000 ls: fffffffc me: 7fffffff ms: fffffff1   |		es:        7 ls:        1 me: 7fffffff ms: 80000000
+Trying to insert node between -4 and -15 II: 20		      <
+	insert at cycle -4   %55:intregs = L2_loadri_io %2:in <
+							      <
+Inst (32)   %57:intregs = nsw A2_add %56:intregs, %55:intregs <
+							      <
+	es: fffffffd ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between -3 and 3 II: 20		      <
+	insert at cycle -3   %57:intregs = nsw A2_add %56:int <
+							      <
+Inst (36)   %59:intregs = A2_abs %57:intregs		      <
+							      <
+	es: fffffffe ls:        3 me: 7fffffff ms: 80000000   <
+Trying to insert node between -2 and 3 II: 20		      <
+	failed to insert at cycle -2   %59:intregs = A2_abs % <
+	failed to insert at cycle -1   %59:intregs = A2_abs % <
+	failed to insert at cycle 0   %59:intregs = A2_abs %5 <
+	failed to insert at cycle 1   %59:intregs = A2_abs %5 <
+	failed to insert at cycle 2   %59:intregs = A2_abs %5 <
+	failed to insert at cycle 3   %59:intregs = A2_abs %5 <
+Schedule Found? 0 (II=21)				      |	Schedule Found? 0 (II=20)
+		r5 = addasl(r0,r5,#2)			      |			r0 = addasl(r0,r5,#2)
+		r6 = sub(r1,r5)				      |			r1 = sub(r1,r5)
+	}						      <
+	{						      <
+		p0 = cmp.gtu(r6,#1)			      <
+		r0 = add(r5,#4)				      <
+		r1 = add(r6,#-1)			      <
+		r7 = memw(r5+#0)			      <
+	}						      <
+	{						      <
+		loop0(.LBB0_7,r1)			      <
+		r8 = memw(r5+#2304)			      <
+		r6 = sub(r7,r8)				      |			r6 = add(r1,#-1)
+		r7 = add(r8,r7)				      |			p0 = cmp.gtu(r1,#1)
+		memw(r5+#2304) = r6.new			      |			r5 = add(r0,#4)
+	}						      |			r1 = memw(r0+#2304)
+	{						      <
+		r1 = abs(r6)				      <
+		r5 = abs(r7)				      <
+		memw(r5+#0) = r7			      <
+							      >			loop0(.LBB0_7,r6)
+							      >			r6 = r0
+							      >			r7 = memw(r0+#0)
+		r4 = or(r5,r4)				      |			r8 = add(r1,r7)
+		r8 = add(r0,#4)				      |			r7 = sub(r7,r1)
+		r3 = or(r1,r3)				      |			r6 = r5
+		r6 = memw(r0+#0)			      |			memw(r0+#0) = r8.new
+		r7 = memw(r0+#2304)			      |			r9 = abs(r7)
+							      >			r8 = abs(r8)
+							      >			r1 = memw(r6+#2304)
+							      >			memw(r0+#2304) = r7
+		r5 = sub(r6,r7)				      |			r0 = r6
+		r6 = add(r7,r6)				      |			r3 = or(r9,r3)
+		memw(r0+#2304) = r5.new			      |			r5 = add(r5,#4)
+							      >			r7 = memw(r6+#0)
+		r1 = abs(r5)				      |			r4 = or(r8,r4)
+		r5 = abs(r6)				      |			nop
+		r0 = r8					      <
+		memw(r0+#0) = r6			      <
+							      >			r0 = sub(r7,r1)
+							      >			r7 = add(r1,r7)
+							      >			memw(r6+#2304) = r0.new
+							      >		}
+							      >		{
+							      >			r0 = abs(r0)
+							      >			r1 = abs(r7)
+							      >			memw(r6+#0) = r7
+							      >		}
+							      >		{
+		r3 = or(r1,r3)				      |			r3 = or(r0,r3)
+		r4 = or(r5,r4)				      |			r4 = or(r1,r4)

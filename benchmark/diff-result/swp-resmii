@@ -1,0 +1,34 @@
+SU(3):   S2_storeri_io %5:intregs, 0, %14:intregs :: (store 4 |	SU(3):   S2_storeri_io %5:intregs, 0, %14:intregs :: (store (
+SU(4):   S2_storeri_io %5:intregs, -4, %3:intregs :: (store 4 |	SU(4):   S2_storeri_io %5:intregs, -4, %3:intregs :: (store (
+  S2_storeri_io %5:intregs, 0, %14:intregs :: (store 4 into % |	  S2_storeri_io %5:intregs, 0, %14:intregs :: (store (s32) in
+  S2_storeri_io %5:intregs, -4, %3:intregs :: (store 4 into % |	  S2_storeri_io %5:intregs, -4, %3:intregs :: (store (s32) in
+SU(3):   S2_storeri_io %5:intregs, 0, %14:intregs :: (store 4 |	SU(3):   S2_storeri_io %5:intregs, 0, %14:intregs :: (store (
+SU(4):   S2_storeri_io %5:intregs, -4, %3:intregs :: (store 4 |	SU(4):   S2_storeri_io %5:intregs, -4, %3:intregs :: (store (
+   SU(4) S2_storeri_io %5:intregs, -4, %3:intregs :: (store 4 |	   SU(4) S2_storeri_io %5:intregs, -4, %3:intregs :: (store (
+   SU(3) S2_storeri_io %5:intregs, 0, %14:intregs :: (store 4 |	   SU(3) S2_storeri_io %5:intregs, 0, %14:intregs :: (store (
+	insert at cycle 0   %3:intregs = PHI %1:intregs, %bb. |		insert at cycle -1   %3:intregs = PHI %1:intregs, %bb
+Trying to insert node between 0 and 1 II: 2		      |	Trying to insert node between -1 and 0 II: 2
+	insert at cycle 0   %8:intregs = A2_addi %5:intregs,  |		insert at cycle -1   %8:intregs = A2_addi %5:intregs,
+	es: ffffffff ls:        0 me: 7fffffff ms: 80000000   |		es: fffffffe ls: ffffffff me: 7fffffff ms: 80000000
+Trying to insert node between 0 and -1 II: 2		      |	Trying to insert node between -1 and -2 II: 2
+	insert at cycle 0   %5:intregs = PHI %2:intregs, %bb. |		insert at cycle -1   %5:intregs = PHI %2:intregs, %bb
+	es:        0 ls: 7fffffff me: 7fffffff ms: 80000000   |		es: ffffffff ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 0 and 1 II: 2		      |	Trying to insert node between -1 and 0 II: 2
+	insert at cycle 0   %14:intregs = A2_addi %3:intregs, |		insert at cycle -1   %14:intregs = A2_addi %3:intregs
+Inst (4)   S2_storeri_io %5:intregs, -4, %3:intregs :: (store |	Inst (4)   S2_storeri_io %5:intregs, -4, %3:intregs :: (store
+	es:        0 ls: 7fffffff me: 7fffffff ms: 80000000   |		es: ffffffff ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 0 and 1 II: 2		      |	Trying to insert node between -1 and 0 II: 2
+	insert at cycle 0   S2_storeri_io %5:intregs, -4, %3: |		insert at cycle 0   S2_storeri_io %5:intregs, -4, %3:
+Inst (3)   S2_storeri_io %5:intregs, 0, %14:intregs :: (store |	Inst (3)   S2_storeri_io %5:intregs, 0, %14:intregs :: (store
+	es:        0 ls: 7fffffff me: 7fffffff ms: 80000000   |		es: ffffffff ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 0 and 1 II: 2		      |	Trying to insert node between -1 and 0 II: 2
+	failed to insert at cycle 0   S2_storeri_io %5:intreg |		insert at cycle -1   S2_storeri_io %5:intregs, 0, %14
+	insert at cycle 1   S2_storeri_io %5:intregs, 0, %14: |	Schedule Found? 1 (II=2)
+Schedule Found? 1 (II=3)				      |	cycle -1 (0) (0) %3:intregs = PHI %1:intregs, %bb.1, %7:intre
+cycle 0 (0) (0) %3:intregs = PHI %1:intregs, %bb.1, %7:intreg <
+cycle 0 (0) (1) %5:intregs = PHI %2:intregs, %bb.1, %8:intreg |	cycle -1 (0) (1) %5:intregs = PHI %2:intregs, %bb.1, %8:intre
+cycle 0 (0) (4) S2_storeri_io %5:intregs, -4, %3:intregs :: ( |	cycle -1 (0) (6) %8:intregs = A2_addi %5:intregs, 4
+cycle 0 (0) (2) %14:intregs = A2_addi %3:intregs, -10	      |	cycle -1 (0) (2) %14:intregs = A2_addi %3:intregs, -10
+cycle 0 (0) (5) %7:intregs = A2_addi %3:intregs, 10	      |	cycle -1 (0) (3) S2_storeri_io %5:intregs, 0, %14:intregs :: 
+cycle 0 (0) (6) %8:intregs = A2_addi %5:intregs, 4	      |	cycle 0 (0) (4) S2_storeri_io %5:intregs, -4, %3:intregs :: (
+cycle 1 (0) (3) S2_storeri_io %5:intregs, 0, %14:intregs :: ( |	cycle 0 (0) (5) %7:intregs = A2_addi %3:intregs, 10

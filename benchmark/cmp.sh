@@ -15,7 +15,7 @@ for file in $DIR_0/*; do
     file_1=$DIR_1/$case.ll-output
     echo "Compare " $file_0 " And " $file_1
 
-    diff  -y -w -B -E --suppress-common-lines $file_0 $file_1 > $DIR_DIFF/$case
+    diff -y --suppress-common-lines -w -B -E $file_0 $file_1 > $DIR_DIFF/$case
 done
 
-swp-bad-sched
+find $DIR_DIFF -type f -empty -print -delete

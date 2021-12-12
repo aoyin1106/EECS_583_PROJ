@@ -1,0 +1,77 @@
+SU(2):   %14:intregs, %6:intregs = L2_loadrh_pi %3:intregs(ti |	SU(2):   %14:intregs, %6:intregs = L2_loadrh_pi %3:intregs(ti
+SU(9):   S2_storerf_io %7:intregs, 0, %24:intregs :: (store 2 |	SU(9):   S2_storerf_io %7:intregs, 0, %24:intregs :: (store (
+  %14:intregs, %6:intregs = L2_loadrh_pi %3:intregs(tied-def  |	  %14:intregs, %6:intregs = L2_loadrh_pi %3:intregs(tied-def 
+  S2_storerf_io %7:intregs, 0, %24:intregs :: (store 2 into % |	  S2_storerf_io %7:intregs, 0, %24:intregs :: (store (s16) in
+SU(2):   %14:intregs, %6:intregs = L2_loadrh_pi %3:intregs(ti |	SU(2):   %14:intregs, %6:intregs = L2_loadrh_pi %3:intregs(ti
+SU(9):   S2_storerf_io %7:intregs, 0, %24:intregs :: (store 2 |	SU(9):   S2_storerf_io %7:intregs, 0, %24:intregs :: (store (
+   SU(2) %14:intregs, %6:intregs = L2_loadrh_pi %3:intregs(ti |	   SU(2) %14:intregs, %6:intregs = L2_loadrh_pi %3:intregs(ti
+   SU(2) %14:intregs, %6:intregs = L2_loadrh_pi %3:intregs(ti |	   SU(2) %14:intregs, %6:intregs = L2_loadrh_pi %3:intregs(ti
+   SU(9) S2_storerf_io %7:intregs, 0, %24:intregs :: (store 2 |	   SU(9) S2_storerf_io %7:intregs, 0, %24:intregs :: (store (
+   SU(2) %14:intregs, %6:intregs = L2_loadrh_pi %3:intregs(ti |	   SU(2) %14:intregs, %6:intregs = L2_loadrh_pi %3:intregs(ti
+   SU(9) S2_storerf_io %7:intregs, 0, %24:intregs :: (store 2 |	   SU(9) S2_storerf_io %7:intregs, 0, %24:intregs :: (store (
+Inst (9)   S2_storerf_io %7:intregs, 0, %24:intregs :: (store |	Inst (9)   S2_storerf_io %7:intregs, 0, %24:intregs :: (store
+	insert at cycle 11   S2_storerf_io %7:intregs, 0, %24 |		insert at cycle 11   S2_storerf_io %7:intregs, 0, %24
+Inst (2)   %14:intregs, %6:intregs = L2_loadrh_pi %3:intregs( |	Inst (2)   %14:intregs, %6:intregs = L2_loadrh_pi %3:intregs(
+Inst (9)   S2_storerf_io %7:intregs, 0, %24:intregs :: (store |	Inst (9)   S2_storerf_io %7:intregs, 0, %24:intregs :: (store
+	insert at cycle 11   S2_storerf_io %7:intregs, 0, %24 |		insert at cycle 11   S2_storerf_io %7:intregs, 0, %24
+Inst (2)   %14:intregs, %6:intregs = L2_loadrh_pi %3:intregs( |	Inst (2)   %14:intregs, %6:intregs = L2_loadrh_pi %3:intregs(
+	insert at cycle 0   %14:intregs, %6:intregs = L2_load |		insert at cycle 0   %14:intregs, %6:intregs = L2_load
+	insert at cycle 11   %4:intregs = A2_asrh %24:intregs |		insert at cycle 13   %4:intregs = A2_asrh %24:intregs
+	es:        0 ls:        5 me: 7fffffff ms: 80000000   |		es:        2 ls:        5 me: 7fffffff ms: 80000000
+Trying to insert node between 5 and 0 II: 12		      |	Trying to insert node between 5 and 2 II: 12
+	insert at cycle 5   %2:intregs = PHI %13:intregs, %bb |		insert at cycle 4   %2:intregs = PHI %13:intregs, %bb
+	insert at cycle 0   %3:intregs = PHI %8:intregs, %bb. |		insert at cycle -2   %3:intregs = PHI %8:intregs, %bb
+Schedule Found? 1 (II=13)				      |	Schedule Found? 1 (II=12)
+cycle 0 (0) (1) %3:intregs = PHI %8:intregs, %bb.1, %6:intreg |	cycle -2 (0) (1) %3:intregs = PHI %8:intregs, %bb.1, %6:intre
+cycle 0 (0) (2) %14:intregs, %6:intregs = L2_loadrh_pi %3:int |	cycle -1 (1) (9) S2_storerf_io %7:intregs, 0, %24:intregs :: 
+							      >
+							      >	cycle 0 (0) (2) %14:intregs, %6:intregs = L2_loadrh_pi %3:int
+							      >
+							      >	cycle 1 (1) (8) %4:intregs = A2_asrh %24:intregs
+cycle 5 (0) (0) %2:intregs = PHI %13:intregs, %bb.1, %4:intre |	cycle 4 (0) (0) %2:intregs = PHI %13:intregs, %bb.1, %4:intre
+cycle 11 (0) (9) S2_storerf_io %7:intregs, 0, %24:intregs ::  |	[stage 0 @-2c] %3:intregs = PHI %8:intregs, %bb.1, %6:intregs
+							      |	[stage 1 @-1c] S2_storerf_io %7:intregs, 0, %24:intregs :: (s
+cycle 11 (0) (8) %4:intregs = A2_asrh %24:intregs	      |	[stage 0 @0c] %14:intregs, %6:intregs = L2_loadrh_pi %3:intre
+							      |	[stage 1 @1c] %4:intregs = A2_asrh %24:intregs
+No schedule found, return				      |	[stage 0 @2c] %15:intregs = A2_aslh %14:intregs
+							      >	[stage 0 @3c] %16:intregs = S2_asr_r_r_sat %15:intregs, %17:i
+							      >	[stage 0 @4c] %2:intregs = PHI %13:intregs, %bb.1, %4:intregs
+							      >	[stage 0 @5c] %19:intregs = M2_mpy_nac_sat_ll_s1 %16:intregs(
+							      >	[stage 0 @7c] %21:intregs = S2_asl_r_r_sat %19:intregs, %22:i
+							      >	[stage 0 @9c] %24:intregs = A2_addsat %21:intregs, %23:intreg
+							      >	Dynamic: TC > 1
+		loop0(.LBB0_2,r2)			      |			r4 = add(r2,#-1)
+							      >			p0 = cmp.gtu(r2,#1)
+							      >			r5 = memh(r1++#2)
+							      >		}
+							      >		{
+                                        // implicit-def: $r2  |		{
+							      >			r2 = aslh(r5)
+							      >		}
+							      >		{
+							      >			r2 = asr(r2,r0):sat
+							      >		}
+							      >		{
+							      >			r2 -= mpy(r0.l,r0.l):<<1:sat
+							      >		}
+							      >		{
+							      >			r2 = asl(r2,r0):sat
+							      >		}
+							      >		{
+							      >			r2 = add(r2,r3):sat
+							      >		}
+							      >		{
+							      >			loop0(.LBB0_2,r4)
+							      >			if (!p0) jump:nt .LBB0_3
+							      >		}
+							      >			r2 = asrh(r2)
+							      >			memh(r0+#0) = r2.h
+							      >		}
+							      >		{
+		r4 = add(r2,r3):sat			      |			r2 = add(r2,r3):sat
+	}						      |			nop
+	{						      <
+		r2 = asrh(r4)				      <
+		memh(r0+#0) = r4.h			      <
+// %bb.3:                               // %b3		      |	.LBB0_3:                                // %b2
+							      >			memh(r0+#0) = r2.h

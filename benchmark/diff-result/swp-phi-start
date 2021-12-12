@@ -1,0 +1,20 @@
+SU(4):   %11:intregs = L2_loadruh_io %10:intregs, -4 :: (load |	SU(4):   %11:intregs = L2_loadruh_io %10:intregs, -4 :: (load
+SU(5):   %5:intregs = S2_storerh_pi %1:intregs(tied-def 0), - |	SU(5):   %5:intregs = S2_storerh_pi %1:intregs(tied-def 0), -
+  %5:intregs = S2_storerh_pi %1:intregs(tied-def 0), -2, %11: |	  %5:intregs = S2_storerh_pi %1:intregs(tied-def 0), -2, %11:
+  %11:intregs = L2_loadruh_io %10:intregs, -4 :: (load 2 from |	  %11:intregs = L2_loadruh_io %10:intregs, -4 :: (load (s16) 
+SU(4):   %11:intregs = L2_loadruh_io %10:intregs, -4 :: (load |	SU(4):   %11:intregs = L2_loadruh_io %10:intregs, -4 :: (load
+SU(5):   %5:intregs = S2_storerh_pi %1:intregs(tied-def 0), - |	SU(5):   %5:intregs = S2_storerh_pi %1:intregs(tied-def 0), -
+   SU(5) %5:intregs = S2_storerh_pi %1:intregs(tied-def 0), - |	   SU(5) %5:intregs = S2_storerh_pi %1:intregs(tied-def 0), -
+   SU(4) %11:intregs = L2_loadruh_io %10:intregs, -4 :: (load |	   SU(4) %11:intregs = L2_loadruh_io %10:intregs, -4 :: (load
+   SU(5) %5:intregs = S2_storerh_pi %1:intregs(tied-def 0), - |	   SU(5) %5:intregs = S2_storerh_pi %1:intregs(tied-def 0), -
+   SU(5) %5:intregs = S2_storerh_pi %1:intregs(tied-def 0), - |	   SU(5) %5:intregs = S2_storerh_pi %1:intregs(tied-def 0), -
+   SU(4) %11:intregs = L2_loadruh_io %10:intregs, -4 :: (load |	   SU(4) %11:intregs = L2_loadruh_io %10:intregs, -4 :: (load
+Inst (5)   %5:intregs = S2_storerh_pi %1:intregs(tied-def 0), |	Inst (5)   %5:intregs = S2_storerh_pi %1:intregs(tied-def 0),
+	insert at cycle 3   %5:intregs = S2_storerh_pi %1:int |		insert at cycle 3   %5:intregs = S2_storerh_pi %1:int
+Inst (4)   %11:intregs = L2_loadruh_io %10:intregs, -4 :: (lo |	Inst (4)   %11:intregs = L2_loadruh_io %10:intregs, -4 :: (lo
+	insert at cycle 3   %11:intregs = L2_loadruh_io %10:i |		insert at cycle 3   %11:intregs = L2_loadruh_io %10:i
+Schedule Found? 1 (II=2)				      |	Schedule Found? 1 (II=1)
+cycle 0 (3) (4) %11:intregs = L2_loadruh_io %10:intregs, -4 : |	cycle 0 (3) (4) %11:intregs = L2_loadruh_io %10:intregs, -4 :
+cycle 0 (3) (5) %5:intregs = S2_storerh_pi %1:intregs(tied-de |	cycle 0 (3) (5) %5:intregs = S2_storerh_pi %1:intregs(tied-de
+[stage 3 @0c] %11:intregs = L2_loadruh_io %10:intregs, -4 ::  |	[stage 3 @0c] %11:intregs = L2_loadruh_io %10:intregs, -4 :: 
+[stage 3 @0c] %5:intregs = S2_storerh_pi %1:intregs(tied-def  |	[stage 3 @0c] %5:intregs = S2_storerh_pi %1:intregs(tied-def 

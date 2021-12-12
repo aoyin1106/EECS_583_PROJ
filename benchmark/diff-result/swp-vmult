@@ -1,0 +1,19 @@
+SU(3):   %13:intregs, %6:intregs = L2_loadri_pi %2:intregs(ti |	SU(3):   %13:intregs, %6:intregs = L2_loadri_pi %2:intregs(ti
+SU(4):   %14:intregs, %7:intregs = L2_loadri_pi %3:intregs(ti |	SU(4):   %14:intregs, %7:intregs = L2_loadri_pi %3:intregs(ti
+  %13:intregs, %6:intregs = L2_loadri_pi %2:intregs(tied-def  |	  %13:intregs, %6:intregs = L2_loadri_pi %2:intregs(tied-def 
+  %14:intregs, %7:intregs = L2_loadri_pi %3:intregs(tied-def  |	  %14:intregs, %7:intregs = L2_loadri_pi %3:intregs(tied-def 
+SU(4):   %14:intregs, %7:intregs = L2_loadri_pi %3:intregs(ti |	SU(4):   %14:intregs, %7:intregs = L2_loadri_pi %3:intregs(ti
+SU(3):   %13:intregs, %6:intregs = L2_loadri_pi %2:intregs(ti |	SU(3):   %13:intregs, %6:intregs = L2_loadri_pi %2:intregs(ti
+   SU(3) %13:intregs, %6:intregs = L2_loadri_pi %2:intregs(ti |	   SU(3) %13:intregs, %6:intregs = L2_loadri_pi %2:intregs(ti
+   SU(4) %14:intregs, %7:intregs = L2_loadri_pi %3:intregs(ti |	   SU(4) %14:intregs, %7:intregs = L2_loadri_pi %3:intregs(ti
+   SU(3) %13:intregs, %6:intregs = L2_loadri_pi %2:intregs(ti |	   SU(3) %13:intregs, %6:intregs = L2_loadri_pi %2:intregs(ti
+   SU(4) %14:intregs, %7:intregs = L2_loadri_pi %3:intregs(ti |	   SU(4) %14:intregs, %7:intregs = L2_loadri_pi %3:intregs(ti
+Inst (3)   %13:intregs, %6:intregs = L2_loadri_pi %2:intregs( |	Inst (3)   %13:intregs, %6:intregs = L2_loadri_pi %2:intregs(
+	insert at cycle 0   %13:intregs, %6:intregs = L2_load |		insert at cycle 0   %13:intregs, %6:intregs = L2_load
+Inst (4)   %14:intregs, %7:intregs = L2_loadri_pi %3:intregs( |	Inst (4)   %14:intregs, %7:intregs = L2_loadri_pi %3:intregs(
+	insert at cycle 0   %14:intregs, %7:intregs = L2_load |		insert at cycle 0   %14:intregs, %7:intregs = L2_load
+Schedule Found? 1 (II=2)				      |	Schedule Found? 1 (II=1)
+cycle 0 (0) (3) %13:intregs, %6:intregs = L2_loadri_pi %2:int |	cycle 0 (0) (3) %13:intregs, %6:intregs = L2_loadri_pi %2:int
+cycle 0 (0) (4) %14:intregs, %7:intregs = L2_loadri_pi %3:int |	cycle 0 (0) (4) %14:intregs, %7:intregs = L2_loadri_pi %3:int
+[stage 0 @0c] %13:intregs, %6:intregs = L2_loadri_pi %2:intre |	[stage 0 @0c] %13:intregs, %6:intregs = L2_loadri_pi %2:intre
+[stage 0 @0c] %14:intregs, %7:intregs = L2_loadri_pi %3:intre |	[stage 0 @0c] %14:intregs, %7:intregs = L2_loadri_pi %3:intre

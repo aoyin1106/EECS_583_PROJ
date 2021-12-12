@@ -1,0 +1,103 @@
+SU(3):   %27:intregs, %17:intregs = L2_loadrh_pi %13:intregs( |	SU(3):   %27:intregs, %17:intregs = L2_loadrh_pi %13:intregs(
+SU(4):   %28:intregs = L2_loadrh_io %10:intregs, 0 :: (load 2 |	SU(4):   %28:intregs = L2_loadrh_io %10:intregs, 0 :: (load (
+  %27:intregs, %17:intregs = L2_loadrh_pi %13:intregs(tied-de |	  %27:intregs, %17:intregs = L2_loadrh_pi %13:intregs(tied-de
+  %28:intregs = L2_loadrh_io %10:intregs, 0 :: (load 2 from % |	  %28:intregs = L2_loadrh_io %10:intregs, 0 :: (load (s16) fr
+SU(4):   %28:intregs = L2_loadrh_io %10:intregs, 0 :: (load 2 |	SU(4):   %28:intregs = L2_loadrh_io %10:intregs, 0 :: (load (
+SU(3):   %27:intregs, %17:intregs = L2_loadrh_pi %13:intregs( |	SU(3):   %27:intregs, %17:intregs = L2_loadrh_pi %13:intregs(
+   SU(3) %27:intregs, %17:intregs = L2_loadrh_pi %13:intregs( |	   SU(3) %27:intregs, %17:intregs = L2_loadrh_pi %13:intregs(
+   SU(3) %27:intregs, %17:intregs = L2_loadrh_pi %13:intregs( |	   SU(3) %27:intregs, %17:intregs = L2_loadrh_pi %13:intregs(
+   SU(4) %28:intregs = L2_loadrh_io %10:intregs, 0 :: (load 2 |	   SU(4) %28:intregs = L2_loadrh_io %10:intregs, 0 :: (load (
+Inst (3)   %27:intregs, %17:intregs = L2_loadrh_pi %13:intreg |	Inst (3)   %27:intregs, %17:intregs = L2_loadrh_pi %13:intreg
+	insert at cycle 0   %27:intregs, %17:intregs = L2_loa |		insert at cycle 0   %27:intregs, %17:intregs = L2_loa
+	insert at cycle 0   %13:intregs = PHI %3:intregs, %bb |		insert at cycle -1   %13:intregs = PHI %3:intregs, %b
+	insert at cycle 2   %30:intregs = S2_extractu %29:int |		insert at cycle 3   %30:intregs = S2_extractu %29:int
+	es:        3 ls: 7fffffff me: 7fffffff ms: 80000000   |		es:        4 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 3 and 4 II: 2		      |	Trying to insert node between 4 and 5 II: 2
+	insert at cycle 3   %14:intregs = M2_maci %12:intregs |		insert at cycle 4   %14:intregs = M2_maci %12:intregs
+	es:        2 ls:        3 me: 7fffffff ms: 80000000   |		es:        3 ls:        4 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and 2 II: 2		      |	Trying to insert node between 4 and 3 II: 2
+Inst (4)   %28:intregs = L2_loadrh_io %10:intregs, 0 :: (load |	Inst (4)   %28:intregs = L2_loadrh_io %10:intregs, 0 :: (load
+	insert at cycle 0   %28:intregs = L2_loadrh_io %10:in |		insert at cycle -1   %28:intregs = L2_loadrh_io %10:i
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000   |		es: 80000000 ls: ffffffff me: 7fffffff ms: 80000000
+Trying to insert node between 0 and -1 II: 2		      |	Trying to insert node between -1 and -2 II: 2
+	insert at cycle 0   %10:intregs = PHI %5:intregs, %bb |		insert at cycle -1   %10:intregs = PHI %5:intregs, %b
+	es:        0 ls:        1 me: 7fffffff ms: 80000000   |		es: ffffffff ls:        0 me: 7fffffff ms: 80000000
+Trying to insert node between 0 and 1 II: 2		      |	Trying to insert node between -1 and 0 II: 2
+	failed to insert at cycle 0   %16:intregs = A2_add %1 |		insert at cycle -1   %16:intregs = A2_add %10:intregs
+	insert at cycle 1   %16:intregs = A2_add %10:intregs, |	Schedule Found? 1 (II=2)
+Schedule Found? 1 (II=3)				      |	cycle -1 (2) (1) %12:intregs = PHI %25:intregs, %bb.4, %14:in
+cycle 0 (0) (2) %13:intregs = PHI %3:intregs, %bb.4, %17:intr <
+cycle 0 (0) (0) %10:intregs = PHI %5:intregs, %bb.4, %16:intr |	cycle -1 (0) (2) %13:intregs = PHI %3:intregs, %bb.4, %17:int
+cycle 0 (1) (7) %31:intregs = S2_extractu %29:intregs, 7, 5   |	cycle -1 (0) (0) %10:intregs = PHI %5:intregs, %bb.4, %16:int
+cycle 0 (1) (6) %30:intregs = S2_extractu %29:intregs, 4, 2   |	cycle -1 (2) (6) %30:intregs = S2_extractu %29:intregs, 4, 2
+cycle 0 (0) (3) %27:intregs, %17:intregs = L2_loadrh_pi %13:i |	cycle -1 (1) (5) %29:intregs = nsw M2_mpyi %28:intregs, %27:i
+cycle 0 (0) (4) %28:intregs = L2_loadrh_io %10:intregs, 0 ::  |	cycle -1 (0) (4) %28:intregs = L2_loadrh_io %10:intregs, 0 ::
+cycle 1 (1) (1) %12:intregs = PHI %25:intregs, %bb.4, %14:int |	cycle -1 (0) (9) %16:intregs = A2_add %10:intregs, %0:intregs
+cycle 1 (1) (8) %14:intregs = M2_maci %12:intregs(tied-def 0) |	cycle 0 (2) (8) %14:intregs = M2_maci %12:intregs(tied-def 0)
+cycle 1 (0) (5) %29:intregs = nsw M2_mpyi %28:intregs, %27:in |	cycle 0 (1) (7) %31:intregs = S2_extractu %29:intregs, 7, 5
+cycle 1 (0) (9) %16:intregs = A2_add %10:intregs, %0:intregs  |	cycle 0 (0) (3) %27:intregs, %17:intregs = L2_loadrh_pi %13:i
+[stage 0 @0c] %13:intregs = PHI %3:intregs, %bb.4, %17:intreg |	[stage 2 @-1c] %12:intregs = PHI %25:intregs, %bb.4, %14:intr
+[stage 0 @0c] %10:intregs = PHI %5:intregs, %bb.4, %16:intreg |	[stage 0 @-1c] %13:intregs = PHI %3:intregs, %bb.4, %17:intre
+							      >	[stage 0 @-1c] %10:intregs = PHI %5:intregs, %bb.4, %16:intre
+							      >	[stage 2 @-1c] %30:intregs = S2_extractu %29:intregs, 4, 2
+							      >	[stage 1 @-1c] %29:intregs = nsw M2_mpyi %28:intregs, %27:int
+							      >	[stage 0 @-1c] %28:intregs = L2_loadrh_io %10:intregs, 0 :: (
+							      >	[stage 0 @-1c] %16:intregs = A2_add %10:intregs, %0:intregs
+							      >	[stage 2 @0c] %14:intregs = M2_maci %12:intregs(tied-def 0), 
+[stage 1 @0c] %30:intregs = S2_extractu %29:intregs, 4, 2     |	[stage 0 @0c] %27:intregs, %17:intregs = L2_loadrh_pi %13:int
+[stage 0 @0c] %27:intregs, %17:intregs = L2_loadrh_pi %13:int |	Dynamic: TC > 2
+[stage 0 @0c] %28:intregs = L2_loadrh_io %10:intregs, 0 :: (l <
+[stage 1 @1c] %12:intregs = PHI %25:intregs, %bb.4, %14:intre <
+[stage 1 @1c] %14:intregs = M2_maci %12:intregs(tied-def 0),  <
+[stage 0 @1c] %29:intregs = nsw M2_mpyi %28:intregs, %27:intr <
+[stage 0 @1c] %16:intregs = A2_add %10:intregs, %0:intregs    <
+.LBB0_6:                                // %for_cond1_for_inc |	.LBB0_8:                                // %for_cond1_for_inc
+		if (cmp.eq(r5.new,r0)) jump:nt .LBB0_7	      |			if (cmp.eq(r5.new,r0)) jump:nt .LBB0_9
+                                        //       Child Loop B |	                                        //       Child Loop B
+.LBB0_5:                                // %for_body6_us_us   |	.LBB0_6:                                // %for_body6_us_us
+							      >	                                        //   in Loop: Header=
+							      >		{
+							      >			r28 = extractu(r10,#4,#2)
+							      >		}
+							      >		{
+							      >			r12 += mpyi(r28,r16)
+							      >		}
+							      >	.LBB0_7:                                // %for_body6_us_us
+		r14 = extractu(r28,#7,#5)		      |			r14 = mpyi(r14,r15)
+		r15 = extractu(r28,#4,#2)		      <
+		r12 += mpyi(r15,r14)			      |			r15 = extractu(r14,#7,#5)
+							      >			r14 = extractu(r14,#4,#2)
+							      >		}
+							      >		{
+							      >			r12 += mpyi(r14,r15)
+		jump .LBB0_6				      |			jump .LBB0_8
+                                        //       Child Loop B |	                                        //       Child Loop B
+		r14 = r9				      |			r28 = r9
+		r15 = add(r0,#-1)			      |			r16 = add(r0,#-2)
+		loop0(.LBB0_4,r15)			      <
+							      >			r11 = add(r7,r4)
+		r15 = add(r7,r4)			      |			if (!p0) jump:nt .LBB0_7
+		r28 = memh(r7+#0)			      |			r14 = memh(r7+#0)
+		r10 = memh(r14++#2)			      |			r15 = memh(r28++#2)
+							      >		}
+							      >	// %bb.4:                               // %for_body6_us_us
+							      >	                                        //   in Loop: Header=
+							      >		{
+							      >			loop0(.LBB0_5,r16)
+							      >			r10 = mpyi(r14,r15)
+							      >			p0 = cmp.gtu(r0,#2)
+							      >			r14 = memh(r11+#0)
+		r28 = mpyi(r28,r10)			      |			r16 = extractu(r10,#7,#5)
+		if (!p0) jump:nt .LBB0_5		      |			if (!p0) jump:nt .LBB0_6
+							      >			r11 = add(r11,r4)
+							      >			r15 = memh(r28++#2)
+.LBB0_4:                                // %for_body6_us_us   |	.LBB0_5:                                // %for_body6_us_us
+		r11 = extractu(r28,#7,#5)		      |			r17 = extractu(r10,#4,#2)
+		r28 = extractu(r28,#4,#2)		      |			r10 = mpyi(r14,r15)
+		r10 = memh(r15+#0)			      |			r11 = add(r11,r4)
+		r16 = memh(r14++#2)			      |			r14 = memh(r11+#0)
+		r12 += mpyi(r28,r11)			      |			r12 += mpyi(r17,r16)
+		r28 = mpyi(r10,r16)			      |			r16 = extractu(r10,#7,#5)
+		r15 = add(r15,r4)			      |			r15 = memh(r28++#2)
+		jump .LBB0_5				      |			jump .LBB0_6
+.LBB0_7:                                // %for_end27	      |	.LBB0_9:                                // %for_end27

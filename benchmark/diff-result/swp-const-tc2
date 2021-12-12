@@ -1,0 +1,9 @@
+SU(1):   %7:intregs = L2_loadri_io %4:intregs, 0 :: (load 4 f |	SU(1):   %7:intregs = L2_loadri_io %4:intregs, 0 :: (load (s3
+  %7:intregs = L2_loadri_io %4:intregs, 0 :: (load 4 from %ir |	  %7:intregs = L2_loadri_io %4:intregs, 0 :: (load (s32) from
+SU(1):   %7:intregs = L2_loadri_io %4:intregs, 0 :: (load 4 f |	SU(1):   %7:intregs = L2_loadri_io %4:intregs, 0 :: (load (s3
+   SU(1) %7:intregs = L2_loadri_io %4:intregs, 0 :: (load 4 f |	   SU(1) %7:intregs = L2_loadri_io %4:intregs, 0 :: (load (s3
+Inst (1)   %7:intregs = L2_loadri_io %4:intregs, 0 :: (load 4 |	Inst (1)   %7:intregs = L2_loadri_io %4:intregs, 0 :: (load (
+	insert at cycle 0   %7:intregs = L2_loadri_io %4:intr |		insert at cycle 0   %7:intregs = L2_loadri_io %4:intr
+Schedule Found? 1 (II=3)				      |	Schedule Found? 1 (II=2)
+cycle 0 (0) (1) %7:intregs = L2_loadri_io %4:intregs, 0 :: (l |	cycle 0 (0) (1) %7:intregs = L2_loadri_io %4:intregs, 0 :: (l
+[stage 0 @0c] %7:intregs = L2_loadri_io %4:intregs, 0 :: (loa |	[stage 0 @0c] %7:intregs = L2_loadri_io %4:intregs, 0 :: (loa

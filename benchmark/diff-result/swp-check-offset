@@ -1,0 +1,73 @@
+SU(2):   %6:intregs = L2_loadri_io %0:intregs, 0 :: (load 4 f |	SU(2):   %6:intregs = L2_loadri_io %0:intregs, 0 :: (load (s3
+SU(3):   S4_storeiri_io %6:intregs, 0, 0 :: (store 4 into %ir |	SU(3):   S4_storeiri_io %6:intregs, 0, 0 :: (store (s32) into
+SU(4):   %7:intregs, %3:intregs = L2_loadri_pi %0:intregs(tie |	SU(4):   %7:intregs, %3:intregs = L2_loadri_pi %0:intregs(tie
+SU(5):   S4_storeiri_io %7:intregs, 8, 0 :: (store 4 into %ir |	SU(5):   S4_storeiri_io %7:intregs, 8, 0 :: (store (s32) into
+  %6:intregs = L2_loadri_io %0:intregs, 0 :: (load 4 from %ir |	  %6:intregs = L2_loadri_io %0:intregs, 0 :: (load (s32) from
+  %7:intregs, %3:intregs = L2_loadri_pi %0:intregs(tied-def 1 |	  %7:intregs, %3:intregs = L2_loadri_pi %0:intregs(tied-def 1
+  S4_storeiri_io %6:intregs, 0, 0 :: (store 4 into %ir.v3)    |	  S4_storeiri_io %6:intregs, 0, 0 :: (store (s32) into %ir.v3
+  S4_storeiri_io %7:intregs, 8, 0 :: (store 4 into %ir.v6)    |	  S4_storeiri_io %7:intregs, 8, 0 :: (store (s32) into %ir.v6
+SU(2):   %6:intregs = L2_loadri_io %0:intregs, 0 :: (load 4 f |	SU(2):   %6:intregs = L2_loadri_io %0:intregs, 0 :: (load (s3
+SU(3):   S4_storeiri_io %6:intregs, 0, 0 :: (store 4 into %ir |	SU(3):   S4_storeiri_io %6:intregs, 0, 0 :: (store (s32) into
+SU(4):   %7:intregs, %3:intregs = L2_loadri_pi %0:intregs(tie |	SU(4):   %7:intregs, %3:intregs = L2_loadri_pi %0:intregs(tie
+SU(5):   S4_storeiri_io %7:intregs, 8, 0 :: (store 4 into %ir |	SU(5):   S4_storeiri_io %7:intregs, 8, 0 :: (store (s32) into
+   SU(4) %7:intregs, %3:intregs = L2_loadri_pi %0:intregs(tie |	   SU(4) %7:intregs, %3:intregs = L2_loadri_pi %0:intregs(tie
+   SU(2) %6:intregs = L2_loadri_io %0:intregs, 0 :: (load 4 f |	   SU(2) %6:intregs = L2_loadri_io %0:intregs, 0 :: (load (s3
+   SU(3) S4_storeiri_io %6:intregs, 0, 0 :: (store 4 into %ir |	   SU(3) S4_storeiri_io %6:intregs, 0, 0 :: (store (s32) into
+   SU(5) S4_storeiri_io %7:intregs, 8, 0 :: (store 4 into %ir |	   SU(5) S4_storeiri_io %7:intregs, 8, 0 :: (store (s32) into
+   SU(4) %7:intregs, %3:intregs = L2_loadri_pi %0:intregs(tie |	   SU(4) %7:intregs, %3:intregs = L2_loadri_pi %0:intregs(tie
+   SU(4) %7:intregs, %3:intregs = L2_loadri_pi %0:intregs(tie |	   SU(4) %7:intregs, %3:intregs = L2_loadri_pi %0:intregs(tie
+   SU(5) S4_storeiri_io %7:intregs, 8, 0 :: (store 4 into %ir |	   SU(5) S4_storeiri_io %7:intregs, 8, 0 :: (store (s32) into
+   SU(2) %6:intregs = L2_loadri_io %0:intregs, 0 :: (load 4 f |	   SU(2) %6:intregs = L2_loadri_io %0:intregs, 0 :: (load (s3
+   SU(3) S4_storeiri_io %6:intregs, 0, 0 :: (store 4 into %ir |	   SU(3) S4_storeiri_io %6:intregs, 0, 0 :: (store (s32) into
+   SU(5) S4_storeiri_io %7:intregs, 8, 0 :: (store 4 into %ir |	   SU(5) S4_storeiri_io %7:intregs, 8, 0 :: (store (s32) into
+   SU(4) %7:intregs, %3:intregs = L2_loadri_pi %0:intregs(tie |	   SU(4) %7:intregs, %3:intregs = L2_loadri_pi %0:intregs(tie
+Inst (5)   S4_storeiri_io %7:intregs, 8, 0 :: (store 4 into % |	Inst (5)   S4_storeiri_io %7:intregs, 8, 0 :: (store (s32) in
+	insert at cycle 3   S4_storeiri_io %7:intregs, 8, 0 : |		insert at cycle 3   S4_storeiri_io %7:intregs, 8, 0 :
+Inst (4)   %7:intregs, %3:intregs = L2_loadri_pi %0:intregs(t |	Inst (4)   %7:intregs, %3:intregs = L2_loadri_pi %0:intregs(t
+	insert at cycle 2   %7:intregs, %3:intregs = L2_loadr |		insert at cycle 2   %7:intregs, %3:intregs = L2_loadr
+Inst (3)   S4_storeiri_io %6:intregs, 0, 0 :: (store 4 into % |	Inst (3)   S4_storeiri_io %6:intregs, 0, 0 :: (store (s32) in
+	insert at cycle 1   S4_storeiri_io %6:intregs, 0, 0 : |		insert at cycle 1   S4_storeiri_io %6:intregs, 0, 0 :
+Inst (2)   %6:intregs = L2_loadri_io %0:intregs, 0 :: (load 4 |	Inst (2)   %6:intregs = L2_loadri_io %0:intregs, 0 :: (load (
+Inst (5)   S4_storeiri_io %7:intregs, 8, 0 :: (store 4 into % |	Inst (5)   S4_storeiri_io %7:intregs, 8, 0 :: (store (s32) in
+	insert at cycle 3   S4_storeiri_io %7:intregs, 8, 0 : |		insert at cycle 3   S4_storeiri_io %7:intregs, 8, 0 :
+Inst (4)   %7:intregs, %3:intregs = L2_loadri_pi %0:intregs(t |	Inst (4)   %7:intregs, %3:intregs = L2_loadri_pi %0:intregs(t
+	insert at cycle 2   %7:intregs, %3:intregs = L2_loadr |		insert at cycle 2   %7:intregs, %3:intregs = L2_loadr
+Inst (3)   S4_storeiri_io %6:intregs, 0, 0 :: (store 4 into % |	Inst (3)   S4_storeiri_io %6:intregs, 0, 0 :: (store (s32) in
+	insert at cycle 1   S4_storeiri_io %6:intregs, 0, 0 : |		insert at cycle 1   S4_storeiri_io %6:intregs, 0, 0 :
+Inst (2)   %6:intregs = L2_loadri_io %0:intregs, 0 :: (load 4 |	Inst (2)   %6:intregs = L2_loadri_io %0:intregs, 0 :: (load (
+	insert at cycle 0   %6:intregs = L2_loadri_io %0:intr |		insert at cycle 0   %6:intregs = L2_loadri_io %0:intr
+	insert at cycle 0   %1:intregs = PHI %5:intregs, %bb. |		insert at cycle -1   %1:intregs = PHI %5:intregs, %bb
+Schedule Found? 1 (II=5)				      |	Schedule Found? 1 (II=4)
+cycle 0 (0) (1) %1:intregs = PHI %5:intregs, %bb.0, %2:intreg |	cycle -1 (0) (1) %1:intregs = PHI %5:intregs, %bb.0, %2:intre
+cycle 0 (0) (2) %6:intregs = L2_loadri_io %0:intregs, 0 :: (l |	cycle -1 (1) (5) S4_storeiri_io %7:intregs, 8, 0 :: (store (s
+							      >
+							      >	cycle 0 (0) (2) %6:intregs = L2_loadri_io %0:intregs, 0 :: (l
+cycle 1 (0) (3) S4_storeiri_io %6:intregs, 0, 0 :: (store 4 i |	cycle 1 (0) (3) S4_storeiri_io %6:intregs, 0, 0 :: (store (s3
+cycle 2 (0) (4) %7:intregs, %3:intregs = L2_loadri_pi %0:intr |	cycle 2 (0) (4) %7:intregs, %3:intregs = L2_loadri_pi %0:intr
+							      <
+cycle 3 (0) (5) S4_storeiri_io %7:intregs, 8, 0 :: (store 4 i <
+No schedule found, return				      |	[stage 0 @-1c] %1:intregs = PHI %5:intregs, %bb.0, %2:intregs
+							      >	[stage 1 @-1c] S4_storeiri_io %7:intregs, 8, 0 :: (store (s32
+							      >	[stage 0 @0c] %6:intregs = L2_loadri_io %0:intregs, 0 :: (loa
+							      >	[stage 0 @0c] %2:intregs = nsw A2_addi %1:intregs, 1
+							      >	[stage 0 @1c] S4_storeiri_io %6:intregs, 0, 0 :: (store (s32)
+							      >	[stage 0 @2c] %0:intregs = PHI %4:intregs, %bb.0, %3:intregs,
+							      >	[stage 0 @2c] %7:intregs, %3:intregs = L2_loadri_pi %0:intreg
+							      >	Static-true: TC > 1
+		loop0(.LBB0_1,#2)			      |			loop0(.LBB0_1,#1)
+							      >		{
+							      >			r0 = add(r0,#1)
+							      >			r2 = memw(r1+#0)
+							      >		}
+							      >		{
+							      >			memw(r2+#0) = #0
+							      >		}
+							      >		{
+							      >			r2 = memw(r1++#4)
+							      >		}
+		r2 = memw(r1+#0)			      |			memw(r2+#8) = #0
+		memw(r2+#0) = #0			      |			r2 = memw(r1+#0)
+		r2 = memw(r1++#4)			      |			memw(r2+#0) = #0
+		memw(r2+#8) = #0			      |			r2 = memw(r1++#4)
+// %bb.2:                               // %b2		      |	// %bb.2:                               // %b1
+							      >			memw(r2+#8) = #0

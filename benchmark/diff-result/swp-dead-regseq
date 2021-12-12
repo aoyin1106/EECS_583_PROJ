@@ -1,0 +1,35 @@
+ExitSU:   ENDLOOP0 %bb.1, implicit-def $pc, implicit-def $lc0 |	Unable to analyzeLoop, can NOT pipeline Loop
+  # preds left       : 0				      |
+  # succs left       : 0				      |	!!! Can not pipeline loop.
+  # rdefs left       : 0				      <
+  Latency            : 0				      <
+  Depth              : 0				      <
+  Height             : 0				      <
+calculateResMII:					      <
+Return Res MII:1					      <
+MII = 1 MAX_II = 11 (rec=0, res=1)			      <
+Node order: 						      <
+NodeOrder is empty! abort scheduling			      <
+No schedule found, return				      <
+	{						      <
+		r0 = asl(r1,#2)				      <
+		if (!cmp.gt(r0.new,#0)) jump:t .LBB0_3	      <
+	}						      <
+// %bb.1:						      <
+	{						      <
+		r0 = add(r0,#3)				      <
+	}						      <
+	{						      <
+		r0 = lsr(r0,#2)				      <
+	}						      <
+	{						      <
+		loop0(.LBB0_2,r0)			      <
+	}						      <
+.Ltmp0:                                 // Block address take |	.LBB0_1:                                // %b1
+.LBB0_2:                                // %b1		      <
+		nop					      |			jump .LBB0_1
+		nop					      <
+	} :endloop0					      <
+.LBB0_3:                                // %b2		      <
+	{						      <
+		r27:26 = memd(##3134984174)		      <

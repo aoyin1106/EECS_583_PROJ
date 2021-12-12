@@ -1,0 +1,661 @@
+SU(0):   %10:intregs = PHI %3:intregs, %bb.2, %20:intregs, %bb.3
+  # preds left       : 0
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 8
+  Successors:
+    SU(5): Data Latency=0 Reg=%10
+    SU(5): Anti Latency=1
+SU(1):   %11:intregs = PHI %2:intregs, %bb.2, %19:intregs, %bb.3
+  # preds left       : 0
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 7
+  Successors:
+    SU(9): Data Latency=0 Reg=%11
+    SU(9): Anti Latency=1
+SU(2):   %13:intregs = PHI %7:intregs, %bb.2, %14:intregs, %bb.3
+  # preds left       : 0
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 7
+  Successors:
+    SU(14): Data Latency=0 Reg=%13
+    SU(3): Ord  Latency=0 Barrier
+SU(3):   %14:intregs = PHI %9:intregs, %bb.2, %18:intregs, %bb.3
+  # preds left       : 1
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 7
+  Predecessors:
+    SU(2): Ord  Latency=0 Barrier
+  Successors:
+    SU(6): Data Latency=0 Reg=%14
+    SU(14): Anti Latency=1
+SU(4):   %15:intregs = PHI %8:intregs, %bb.2, %16:intregs, %bb.3
+  # preds left       : 0
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 1
+  Successors:
+    SU(13): Data Latency=0 Reg=%15
+    SU(13): Anti Latency=1
+SU(5):   %45:intregs, %20:intregs = L2_loadrh_pi %10:intregs(tied-def 1), 2 :: (load 2 from %ir.lsr.iv4)
+  # preds left       : 2
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 7
+  Predecessors:
+    SU(0): Data Latency=0 Reg=%10
+    SU(0): Anti Latency=1
+  Successors:
+    SU(7): Data Latency=1 Reg=%45
+SU(6):   %46:intregs = L2_loadrh_io %14:intregs, 0 :: (load 2 from %ir.v19)
+  # preds left       : 1
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 0
+  Height             : 7
+  Predecessors:
+    SU(3): Data Latency=0 Reg=%14
+  Successors:
+    SU(7): Data Latency=1 Reg=%46
+SU(7):   %47:intregs = A2_subh_l16_sat_ll %45:intregs, %46:intregs, implicit-def dead $usr_ovf
+  # preds left       : 2
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 2
+  Height             : 6
+  Predecessors:
+    SU(6): Data Latency=1 Reg=%46
+    SU(5): Data Latency=1 Reg=%45
+  Successors:
+    SU(8): Data Latency=1 Reg=%47
+SU(8):   %48:intregs = A2_sxth %47:intregs
+  # preds left       : 1
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 3
+  Height             : 5
+  Predecessors:
+    SU(7): Data Latency=1 Reg=%47
+  Successors:
+    SU(11): Data Latency=1 Reg=%48
+    SU(10): Data Latency=1 Reg=%48
+SU(9):   %49:intregs, %19:intregs = L2_loadrh_pi %11:intregs(tied-def 1), 2 :: (load 2 from %ir.lsr.iv1)
+  # preds left       : 2
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 6
+  Predecessors:
+    SU(1): Data Latency=0 Reg=%11
+    SU(1): Anti Latency=1
+  Successors:
+    SU(10): Data Latency=2 Reg=%49
+SU(10):   %50:intregs = M2_mpy_sat_ll_s1 %48:intregs, %49:intregs, implicit-def dead $usr_ovf
+  # preds left       : 2
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 4
+  Height             : 4
+  Predecessors:
+    SU(9): Data Latency=2 Reg=%49
+    SU(8): Data Latency=1 Reg=%48
+  Successors:
+    SU(11): Data Latency=2 Reg=%50
+SU(11):   %51:intregs = M2_hmmpyl_s1 %50:intregs, %48:intregs, implicit-def dead $usr_ovf
+  # preds left       : 2
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 6
+  Height             : 2
+  Predecessors:
+    SU(10): Data Latency=2 Reg=%50
+    SU(8): Data Latency=1 Reg=%48
+  Successors:
+    SU(12): Data Latency=1 Reg=%51
+SU(12):   %53:intregs = S2_asr_r_r_sat %51:intregs, %44:intregs, implicit-def dead $usr_ovf
+  # preds left       : 1
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 7
+  Height             : 1
+  Predecessors:
+    SU(11): Data Latency=1 Reg=%51
+  Successors:
+    SU(13): Data Latency=1 Reg=%53
+SU(13):   %16:intregs = A2_addsat %15:intregs, %53:intregs, implicit-def dead $usr_ovf
+  # preds left       : 3
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 8
+  Height             : 0
+  Predecessors:
+    SU(12): Data Latency=1 Reg=%53
+    SU(4): Data Latency=0 Reg=%15
+    SU(4): Anti Latency=1
+SU(14):   %18:intregs = nuw A2_addi %13:intregs, 4
+  # preds left       : 2
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 0
+  Predecessors:
+    SU(2): Data Latency=0 Reg=%13
+    SU(3): Anti Latency=1
+ExitSU:   ENDLOOP0 %bb.3, implicit-def $pc, implicit-def $lc0, implicit $sa0, implicit $lc0
+  # preds left       : 0
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 0
+calculateResMII:
+Trying to reserve resource for 1 cycles for 
+  %45:intregs, %20:intregs = L2_loadrh_pi %10:intregs(tied-def 1), 2 :: (load 2 from %ir.lsr.iv4)
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %47:intregs = A2_subh_l16_sat_ll %45:intregs, %46:intregs, implicit-def dead $usr_ovf
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %51:intregs = M2_hmmpyl_s1 %50:intregs, %48:intregs, implicit-def dead $usr_ovf
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %50:intregs = M2_mpy_sat_ll_s1 %48:intregs, %49:intregs, implicit-def dead $usr_ovf
+ReservedCycles:0, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %46:intregs = L2_loadrh_io %14:intregs, 0 :: (load 2 from %ir.v19)
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %49:intregs, %19:intregs = L2_loadrh_pi %11:intregs(tied-def 1), 2 :: (load 2 from %ir.lsr.iv1)
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %53:intregs = S2_asr_r_r_sat %51:intregs, %44:intregs, implicit-def dead $usr_ovf
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %18:intregs = nuw A2_addi %13:intregs, 4
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %16:intregs = A2_addsat %15:intregs, %53:intregs, implicit-def dead $usr_ovf
+ReservedCycles:0, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %48:intregs = A2_sxth %47:intregs
+ReservedCycles:1, NumCycles:1
+Return Res MII:3
+MII = 3 MAX_II = 13 (rec=1, res=3)
+SU(1):   %11:intregs = PHI %2:intregs, %bb.2, %19:intregs, %bb.3
+SU(9):   %49:intregs, %19:intregs = L2_loadrh_pi %11:intregs(tied-def 1), 2 :: (load 2 from %ir.lsr.iv1)
+SU(2):   %13:intregs = PHI %7:intregs, %bb.2, %14:intregs, %bb.3
+SU(3):   %14:intregs = PHI %9:intregs, %bb.2, %18:intregs, %bb.3
+SU(6):   %46:intregs = L2_loadrh_io %14:intregs, 0 :: (load 2 from %ir.v19)
+SU(0):   %10:intregs = PHI %3:intregs, %bb.2, %20:intregs, %bb.3
+SU(5):   %45:intregs, %20:intregs = L2_loadrh_pi %10:intregs(tied-def 1), 2 :: (load 2 from %ir.lsr.iv4)
+SU(7):   %47:intregs = A2_subh_l16_sat_ll %45:intregs, %46:intregs, implicit-def dead $usr_ovf
+SU(8):   %48:intregs = A2_sxth %47:intregs
+SU(10):   %50:intregs = M2_mpy_sat_ll_s1 %48:intregs, %49:intregs, implicit-def dead $usr_ovf
+SU(11):   %51:intregs = M2_hmmpyl_s1 %50:intregs, %48:intregs, implicit-def dead $usr_ovf
+SU(12):   %53:intregs = S2_asr_r_r_sat %51:intregs, %44:intregs, implicit-def dead $usr_ovf
+SU(4):   %15:intregs = PHI %8:intregs, %bb.2, %16:intregs, %bb.3
+SU(13):   %16:intregs = A2_addsat %15:intregs, %53:intregs, implicit-def dead $usr_ovf
+SU(14):   %18:intregs = nuw A2_addi %13:intregs, 4
+	Node 0:
+	   ASAP = 0
+	   ALAP = 0
+	   MOV  = 0
+	   D    = 0
+	   H    = 8
+	   ZLD  = 0
+	   ZLH  = 1
+	Node 1:
+	   ASAP = 0
+	   ALAP = 1
+	   MOV  = 1
+	   D    = 0
+	   H    = 7
+	   ZLD  = 0
+	   ZLH  = 1
+	Node 2:
+	   ASAP = 0
+	   ALAP = 0
+	   MOV  = 0
+	   D    = 0
+	   H    = 7
+	   ZLD  = 0
+	   ZLH  = 2
+	Node 3:
+	   ASAP = 0
+	   ALAP = 0
+	   MOV  = 0
+	   D    = 0
+	   H    = 7
+	   ZLD  = 1
+	   ZLH  = 1
+	Node 4:
+	   ASAP = 0
+	   ALAP = 7
+	   MOV  = 7
+	   D    = 0
+	   H    = 1
+	   ZLD  = 0
+	   ZLH  = 1
+	Node 5:
+	   ASAP = 0
+	   ALAP = 0
+	   MOV  = 0
+	   D    = 1
+	   H    = 7
+	   ZLD  = 1
+	   ZLH  = 0
+	Node 6:
+	   ASAP = 0
+	   ALAP = 0
+	   MOV  = 0
+	   D    = 0
+	   H    = 7
+	   ZLD  = 2
+	   ZLH  = 0
+	Node 7:
+	   ASAP = 1
+	   ALAP = 1
+	   MOV  = 0
+	   D    = 2
+	   H    = 6
+	   ZLD  = 0
+	   ZLH  = 0
+	Node 8:
+	   ASAP = 2
+	   ALAP = 2
+	   MOV  = 0
+	   D    = 3
+	   H    = 5
+	   ZLD  = 0
+	   ZLH  = 0
+	Node 9:
+	   ASAP = 0
+	   ALAP = 1
+	   MOV  = 1
+	   D    = 1
+	   H    = 6
+	   ZLD  = 1
+	   ZLH  = 0
+	Node 10:
+	   ASAP = 3
+	   ALAP = 3
+	   MOV  = 0
+	   D    = 4
+	   H    = 4
+	   ZLD  = 0
+	   ZLH  = 0
+	Node 11:
+	   ASAP = 5
+	   ALAP = 5
+	   MOV  = 0
+	   D    = 6
+	   H    = 2
+	   ZLD  = 0
+	   ZLH  = 0
+	Node 12:
+	   ASAP = 6
+	   ALAP = 6
+	   MOV  = 0
+	   D    = 7
+	   H    = 1
+	   ZLD  = 0
+	   ZLH  = 0
+	Node 13:
+	   ASAP = 7
+	   ALAP = 7
+	   MOV  = 0
+	   D    = 8
+	   H    = 0
+	   ZLD  = 1
+	   ZLH  = 0
+	Node 14:
+	   ASAP = 0
+	   ALAP = 7
+	   MOV  = 7
+	   D    = 1
+	   H    = 0
+	   ZLD  = 1
+	   ZLH  = 0
+  Rec NodeSet Num nodes 2 rec 1 mov 0 depth 1 col 0
+   SU(0) %10:intregs = PHI %3:intregs, %bb.2, %20:intregs, %bb.3
+   SU(5) %45:intregs, %20:intregs = L2_loadrh_pi %10:intregs(tied-def 1), 2 :: (load 2 from %ir.lsr.iv4)
+
+  Rec NodeSet Num nodes 2 rec 1 mov 1 depth 1 col 0
+   SU(1) %11:intregs = PHI %2:intregs, %bb.2, %19:intregs, %bb.3
+   SU(9) %49:intregs, %19:intregs = L2_loadrh_pi %11:intregs(tied-def 1), 2 :: (load 2 from %ir.lsr.iv1)
+
+  Rec NodeSet Num nodes 2 rec 1 mov 7 depth 8 col 0
+   SU(4) %15:intregs = PHI %8:intregs, %bb.2, %16:intregs, %bb.3
+   SU(13) %16:intregs = A2_addsat %15:intregs, %53:intregs, implicit-def dead $usr_ovf
+
+  NodeSet Num nodes 2 rec 1 mov 0 depth 1 col 0
+   SU(0) %10:intregs = PHI %3:intregs, %bb.2, %20:intregs, %bb.3
+   SU(5) %45:intregs, %20:intregs = L2_loadrh_pi %10:intregs(tied-def 1), 2 :: (load 2 from %ir.lsr.iv4)
+
+  NodeSet Num nodes 2 rec 1 mov 1 depth 1 col 0
+   SU(1) %11:intregs = PHI %2:intregs, %bb.2, %19:intregs, %bb.3
+   SU(9) %49:intregs, %19:intregs = L2_loadrh_pi %11:intregs(tied-def 1), 2 :: (load 2 from %ir.lsr.iv1)
+
+  NodeSet Num nodes 7 rec 1 mov 7 depth 8 col 0
+   SU(4) %15:intregs = PHI %8:intregs, %bb.2, %16:intregs, %bb.3
+   SU(13) %16:intregs = A2_addsat %15:intregs, %53:intregs, implicit-def dead $usr_ovf
+   SU(12) %53:intregs = S2_asr_r_r_sat %51:intregs, %44:intregs, implicit-def dead $usr_ovf
+   SU(11) %51:intregs = M2_hmmpyl_s1 %50:intregs, %48:intregs, implicit-def dead $usr_ovf
+   SU(10) %50:intregs = M2_mpy_sat_ll_s1 %48:intregs, %49:intregs, implicit-def dead $usr_ovf
+   SU(8) %48:intregs = A2_sxth %47:intregs
+   SU(7) %47:intregs = A2_subh_l16_sat_ll %45:intregs, %46:intregs, implicit-def dead $usr_ovf
+
+  NodeSet Num nodes 4 rec 0 mov 0 depth 0 col 0
+   SU(6) %46:intregs = L2_loadrh_io %14:intregs, 0 :: (load 2 from %ir.v19)
+   SU(3) %14:intregs = PHI %9:intregs, %bb.2, %18:intregs, %bb.3
+   SU(14) %18:intregs = nuw A2_addi %13:intregs, 4
+   SU(2) %13:intregs = PHI %7:intregs, %bb.2, %14:intregs, %bb.3
+
+NodeSet size 2
+  Bottom up (default) 5 0 
+   Switching order to top down 
+Done with Nodeset
+NodeSet size 2
+  Bottom up (default) 9 1 
+   Switching order to top down 
+Done with Nodeset
+NodeSet size 7
+  Top down (succs) 7 8 10 11 12 13 4 
+   Switching order to bottom up 
+Done with Nodeset
+NodeSet size 4
+  Bottom up (preds) 6 3 14 2 
+   Switching order to top down 
+Done with Nodeset
+Node order:  5  0  9  1  7  8  10  11  12  13  4  6  3  14  2 
+Try to schedule with 3
+
+Inst (5)   %45:intregs, %20:intregs = L2_loadrh_pi %10:intregs(tied-def 1), 2 :: (load 2 from %ir.lsr.iv4)
+
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 0 and 2 II: 3
+	insert at cycle 0   %45:intregs, %20:intregs = L2_loadrh_pi %10:intregs(tied-def 1), 2 :: (load 2 from %ir.lsr.iv4)
+
+Inst (0)   %10:intregs = PHI %3:intregs, %bb.2, %20:intregs, %bb.3
+
+	es: fffffffe ls:        0 me: 7fffffff ms: 80000000
+Trying to insert node between 0 and -2 II: 3
+	insert at cycle 0   %10:intregs = PHI %3:intregs, %bb.2, %20:intregs, %bb.3
+
+Inst (9)   %49:intregs, %19:intregs = L2_loadrh_pi %11:intregs(tied-def 1), 2 :: (load 2 from %ir.lsr.iv1)
+
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 0 and 2 II: 3
+	insert at cycle 0   %49:intregs, %19:intregs = L2_loadrh_pi %11:intregs(tied-def 1), 2 :: (load 2 from %ir.lsr.iv1)
+
+Inst (1)   %11:intregs = PHI %2:intregs, %bb.2, %19:intregs, %bb.3
+
+	es: fffffffe ls:        0 me: 7fffffff ms: 80000000
+Trying to insert node between 0 and -2 II: 3
+	insert at cycle 0   %11:intregs = PHI %2:intregs, %bb.2, %19:intregs, %bb.3
+
+Inst (7)   %47:intregs = A2_subh_l16_sat_ll %45:intregs, %46:intregs, implicit-def dead $usr_ovf
+
+	es:        1 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 1 and 3 II: 3
+	insert at cycle 1   %47:intregs = A2_subh_l16_sat_ll %45:intregs, %46:intregs, implicit-def dead $usr_ovf
+
+Inst (8)   %48:intregs = A2_sxth %47:intregs
+
+	es:        2 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 2 and 4 II: 3
+	insert at cycle 2   %48:intregs = A2_sxth %47:intregs
+
+Inst (10)   %50:intregs = M2_mpy_sat_ll_s1 %48:intregs, %49:intregs, implicit-def dead $usr_ovf
+
+	es:        3 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 3 and 5 II: 3
+	insert at cycle 3   %50:intregs = M2_mpy_sat_ll_s1 %48:intregs, %49:intregs, implicit-def dead $usr_ovf
+
+Inst (11)   %51:intregs = M2_hmmpyl_s1 %50:intregs, %48:intregs, implicit-def dead $usr_ovf
+
+	es:        5 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 5 and 7 II: 3
+	insert at cycle 5   %51:intregs = M2_hmmpyl_s1 %50:intregs, %48:intregs, implicit-def dead $usr_ovf
+
+Inst (12)   %53:intregs = S2_asr_r_r_sat %51:intregs, %44:intregs, implicit-def dead $usr_ovf
+
+	es:        6 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 6 and 8 II: 3
+	insert at cycle 6   %53:intregs = S2_asr_r_r_sat %51:intregs, %44:intregs, implicit-def dead $usr_ovf
+
+Inst (13)   %16:intregs = A2_addsat %15:intregs, %53:intregs, implicit-def dead $usr_ovf
+
+	es:        7 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 7 and 9 II: 3
+	insert at cycle 7   %16:intregs = A2_addsat %15:intregs, %53:intregs, implicit-def dead $usr_ovf
+
+Inst (4)   %15:intregs = PHI %8:intregs, %bb.2, %16:intregs, %bb.3
+
+	es:        5 ls:        7 me: 7fffffff ms: 80000000
+Trying to insert node between 7 and 5 II: 3
+	insert at cycle 7   %15:intregs = PHI %8:intregs, %bb.2, %16:intregs, %bb.3
+
+Inst (6)   %46:intregs = L2_loadrh_io %14:intregs, 0 :: (load 2 from %ir.v19)
+
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000
+Trying to insert node between 0 and -2 II: 3
+	failed to insert at cycle 0   %46:intregs = L2_loadrh_io %14:intregs, 0 :: (load 2 from %ir.v19)
+	insert at cycle -1   %46:intregs = L2_loadrh_io %14:intregs, 0 :: (load 2 from %ir.v19)
+
+Inst (3)   %14:intregs = PHI %9:intregs, %bb.2, %18:intregs, %bb.3
+
+	es: 80000000 ls: ffffffff me: 7fffffff ms: 80000000
+Trying to insert node between -1 and -3 II: 3
+	insert at cycle -1   %14:intregs = PHI %9:intregs, %bb.2, %18:intregs, %bb.3
+
+Inst (14)   %18:intregs = nuw A2_addi %13:intregs, 4
+
+	es: 80000000 ls:        1 me: 7fffffff ms: 80000000
+Trying to insert node between 1 and -1 II: 3
+	insert at cycle 1   %18:intregs = nuw A2_addi %13:intregs, 4
+
+Inst (2)   %13:intregs = PHI %7:intregs, %bb.2, %14:intregs, %bb.3
+
+	es: 80000000 ls: ffffffff me: 7fffffff ms: 80000000
+Trying to insert node between -1 and -3 II: 3
+	insert at cycle -1   %13:intregs = PHI %7:intregs, %bb.2, %14:intregs, %bb.3
+Schedule Found? 1 (II=4)
+cycle -1 (0) (3) %14:intregs = PHI %9:intregs, %bb.2, %18:intregs, %bb.3
+
+cycle -1 (0) (2) %13:intregs = PHI %7:intregs, %bb.2, %14:intregs, %bb.3
+
+cycle -1 (2) (11) %51:intregs = M2_hmmpyl_s1 %50:intregs, %48:intregs, implicit-def dead $usr_ovf
+
+cycle -1 (1) (8) %48:intregs = A2_sxth %47:intregs
+
+cycle -1 (0) (6) %46:intregs = L2_loadrh_io %14:intregs, 0 :: (load 2 from %ir.v19)
+
+cycle 0 (0) (0) %10:intregs = PHI %3:intregs, %bb.2, %20:intregs, %bb.3
+
+cycle 0 (0) (1) %11:intregs = PHI %2:intregs, %bb.2, %19:intregs, %bb.3
+
+cycle 0 (2) (12) %53:intregs = S2_asr_r_r_sat %51:intregs, %44:intregs, implicit-def dead $usr_ovf
+
+cycle 0 (1) (10) %50:intregs = M2_mpy_sat_ll_s1 %48:intregs, %49:intregs, implicit-def dead $usr_ovf
+
+cycle 0 (0) (5) %45:intregs, %20:intregs = L2_loadrh_pi %10:intregs(tied-def 1), 2 :: (load 2 from %ir.lsr.iv4)
+
+cycle 0 (0) (9) %49:intregs, %19:intregs = L2_loadrh_pi %11:intregs(tied-def 1), 2 :: (load 2 from %ir.lsr.iv1)
+
+cycle 1 (2) (4) %15:intregs = PHI %8:intregs, %bb.2, %16:intregs, %bb.3
+
+cycle 1 (2) (13) %16:intregs = A2_addsat %15:intregs, %53:intregs, implicit-def dead $usr_ovf
+
+cycle 1 (0) (7) %47:intregs = A2_subh_l16_sat_ll %45:intregs, %46:intregs, implicit-def dead $usr_ovf
+
+cycle 1 (0) (14) %18:intregs = nuw A2_addi %13:intregs, 4
+
+[stage 0 @-1c] %14:intregs = PHI %9:intregs, %bb.2, %18:intregs, %bb.3
+[stage 0 @-1c] %13:intregs = PHI %7:intregs, %bb.2, %14:intregs, %bb.3
+[stage 2 @-1c] %51:intregs = M2_hmmpyl_s1 %50:intregs, %48:intregs, implicit-def dead $usr_ovf
+[stage 1 @-1c] %48:intregs = A2_sxth %47:intregs
+[stage 0 @-1c] %46:intregs = L2_loadrh_io %14:intregs, 0 :: (load 2 from %ir.v19)
+[stage 0 @0c] %10:intregs = PHI %3:intregs, %bb.2, %20:intregs, %bb.3
+[stage 0 @0c] %11:intregs = PHI %2:intregs, %bb.2, %19:intregs, %bb.3
+[stage 2 @0c] %53:intregs = S2_asr_r_r_sat %51:intregs, %44:intregs, implicit-def dead $usr_ovf
+[stage 1 @0c] %50:intregs = M2_mpy_sat_ll_s1 %48:intregs, %49:intregs, implicit-def dead $usr_ovf
+[stage 0 @0c] %45:intregs, %20:intregs = L2_loadrh_pi %10:intregs(tied-def 1), 2 :: (load 2 from %ir.lsr.iv4)
+[stage 0 @0c] %49:intregs, %19:intregs = L2_loadrh_pi %11:intregs(tied-def 1), 2 :: (load 2 from %ir.lsr.iv1)
+[stage 2 @1c] %15:intregs = PHI %8:intregs, %bb.2, %16:intregs, %bb.3
+[stage 2 @1c] %16:intregs = A2_addsat %15:intregs, %53:intregs, implicit-def dead $usr_ovf
+[stage 0 @1c] %47:intregs = A2_subh_l16_sat_ll %45:intregs, %46:intregs, implicit-def dead $usr_ovf
+[stage 0 @1c] %18:intregs = nuw A2_addi %13:intregs, 4
+Static-false: TC > 2
+Static-true: TC > 1
+
+!!! Can not pipeline loop.
+	.text
+	.file	"<stdin>"
+	.globl	f0                              // -- Begin function f0
+	.p2align	4
+	.type	f0,@function
+f0:                                     // @f0
+// %bb.0:                               // %b0
+	{
+		r29 = add(r29,#-16)
+		p0 = cmp.gt(r5,#0)
+	}
+	{
+		if (!p0) jump:nt .LBB0_1
+		memd(r29+#8) = r17:16
+		memd(r29+#0) = r19:18
+	}                                       // 8-byte Folded Spill
+// %bb.2:                               // %b1
+	{
+		r7:6 = combine(##2147483647,#0)
+		r1 = memh(r0++#2)
+		r4 = memh(r3++#2)
+	}
+	{
+		r9:8 = combine(#10,#0)
+		r13:12 = combine(#0,#1)
+	}
+	.p2align	4
+.LBB0_3:                                // %b2
+                                        // =>This Inner Loop Header: Depth=1
+	{
+		r19 = add(r13.l,r12.l)
+		r14 = r2
+		r10 = r0
+		r2 = add(r2,#4)
+	}
+	{
+		r15 = memh(r14++#2)
+		r17 = memh(r10++#2)
+	}
+	{
+		r15 = sub(r1.l,r15.l):sat
+		p0 = cmp.eq(r19,r5)
+		r11 = memh(r14+#0)
+		r18 = memh(r10++#2)
+	}
+	{
+		r11 = sub(r17.l,r11.l):sat
+		r15 = sxth(r15)
+		r2 = add(r14,#4)
+		r17 = memh(r2+#0)
+	}
+	{
+		r28 = mpy(r15.l,r4.l):<<1:sat
+		r17 = sub(r18.l,r17.l):sat
+		r11 = sxth(r11)
+	}
+	{
+		r14 = sxth(r17)
+	}
+	{
+		r15 = mpy(r28,r15.l):<<1:sat
+		r28 = r3
+	}
+	{
+		r15 = asr(r15,r9):sat
+		r16 = memh(r28++#2)
+	}
+	{
+		r10 = memh(r28++#2)
+	}
+	{
+		r28 = mpy(r11.l,r16.l):<<1:sat
+	}
+	{
+		r18 = mpy(r14.l,r10.l):<<1:sat
+	}
+	{
+		r28 = mpy(r28,r11.l):<<1:sat
+	}
+	{
+		r14 = mpy(r18,r14.l):<<1:sat
+		r28 = asr(r28,r9):sat
+	}
+	{
+		r14 = asr(r14,r9):sat
+		r15 = add(r15,r28):sat
+	}
+	{
+		r14 = add(r15,r14):sat
+	}
+	{
+		r15 = sub(r14,r7):sat
+		r14 = add(r14,r6):sat
+	}
+	{
+		p1 = cmp.gt(r15,#-1)
+		if (!p1.new) r8 = add(r13,#0)
+		if (!p1.new) r7 = add(r14,#0)
+		r13 = add(r13,#1)
+	}
+	{
+		if (!p0) jump:nt .LBB0_3
+	}
+	{
+		jump .LBB0_4
+	}
+.LBB0_1:
+	{
+		r8 = #0
+	}
+.LBB0_4:                                // %b7
+	{
+		r0 = sxth(r8)
+		r29 = add(r29,#16)
+		r17:16 = memd(r29+#8)
+		r19:18 = memd(r29+#0)
+	}                                       // 8-byte Folded Reload
+	{
+		jumpr r31
+	}
+.Ltmp0:                                 // Address of block that was removed by CodeGen
+.Lfunc_end0:
+	.size	f0, .Lfunc_end0-f0
+                                        // -- End function
+	.section	".note.GNU-stack","",@progbits

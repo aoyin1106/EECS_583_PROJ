@@ -1,0 +1,20 @@
+SU(1):   %6:intregs = L2_loadruh_io %1:intregs, -2 :: (load 2 |	SU(1):   %6:intregs = L2_loadruh_io %1:intregs, -2 :: (load (
+SU(2):   S2_storerh_io %1:intregs, 0, %6:intregs :: (store 2  |	SU(2):   S2_storerh_io %1:intregs, 0, %6:intregs :: (store (s
+  %6:intregs = L2_loadruh_io %1:intregs, -2 :: (load 2 from % |	  %6:intregs = L2_loadruh_io %1:intregs, -2 :: (load (s16) fr
+  S2_storerh_io %1:intregs, 0, %6:intregs :: (store 2 into %i |	  S2_storerh_io %1:intregs, 0, %6:intregs :: (store (s16) int
+SU(1):   %6:intregs = L2_loadruh_io %1:intregs, -2 :: (load 2 |	SU(1):   %6:intregs = L2_loadruh_io %1:intregs, -2 :: (load (
+SU(2):   S2_storerh_io %1:intregs, 0, %6:intregs :: (store 2  |	SU(2):   S2_storerh_io %1:intregs, 0, %6:intregs :: (store (s
+   SU(1) %6:intregs = L2_loadruh_io %1:intregs, -2 :: (load 2 |	   SU(1) %6:intregs = L2_loadruh_io %1:intregs, -2 :: (load (
+   SU(2) S2_storerh_io %1:intregs, 0, %6:intregs :: (store 2  |	   SU(2) S2_storerh_io %1:intregs, 0, %6:intregs :: (store (s
+   SU(1) %6:intregs = L2_loadruh_io %1:intregs, -2 :: (load 2 |	   SU(1) %6:intregs = L2_loadruh_io %1:intregs, -2 :: (load (
+   SU(2) S2_storerh_io %1:intregs, 0, %6:intregs :: (store 2  |	   SU(2) S2_storerh_io %1:intregs, 0, %6:intregs :: (store (s
+Inst (2)   S2_storerh_io %1:intregs, 0, %6:intregs :: (store  |	Inst (2)   S2_storerh_io %1:intregs, 0, %6:intregs :: (store 
+	insert at cycle 1   S2_storerh_io %1:intregs, 0, %6:i |		insert at cycle 1   S2_storerh_io %1:intregs, 0, %6:i
+Inst (1)   %6:intregs = L2_loadruh_io %1:intregs, -2 :: (load |	Inst (1)   %6:intregs = L2_loadruh_io %1:intregs, -2 :: (load
+Inst (2)   S2_storerh_io %1:intregs, 0, %6:intregs :: (store  |	Inst (2)   S2_storerh_io %1:intregs, 0, %6:intregs :: (store 
+	insert at cycle 1   S2_storerh_io %1:intregs, 0, %6:i |		insert at cycle 1   S2_storerh_io %1:intregs, 0, %6:i
+Inst (1)   %6:intregs = L2_loadruh_io %1:intregs, -2 :: (load |	Inst (1)   %6:intregs = L2_loadruh_io %1:intregs, -2 :: (load
+	insert at cycle 0   %6:intregs = L2_loadruh_io %1:int |		insert at cycle 0   %6:intregs = L2_loadruh_io %1:int
+Schedule Found? 1 (II=3)				      |	Schedule Found? 1 (II=2)
+cycle 0 (0) (1) %6:intregs = L2_loadruh_io %1:intregs, -2 ::  |	cycle 0 (0) (1) %6:intregs = L2_loadruh_io %1:intregs, -2 :: 
+cycle 1 (0) (2) S2_storerh_io %1:intregs, 0, %6:intregs :: (s |	cycle 1 (0) (2) S2_storerh_io %1:intregs, 0, %6:intregs :: (s

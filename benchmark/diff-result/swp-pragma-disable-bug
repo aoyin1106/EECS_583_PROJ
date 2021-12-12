@@ -1,0 +1,58 @@
+SU(2):   %17:intregs, %5:intregs = L2_loadri_pi %0:intregs(ti |	SU(2):   %17:intregs, %5:intregs = L2_loadri_pi %0:intregs(ti
+SU(3):   %18:intregs = L2_loadri_io %1:intregs, 0 :: (load 4  |	SU(3):   %18:intregs = L2_loadri_io %1:intregs, 0 :: (load (s
+SU(5):   %4:intregs = S2_storeri_pi %1:intregs(tied-def 0), 4 |	SU(5):   %4:intregs = S2_storeri_pi %1:intregs(tied-def 0), 4
+  %17:intregs, %5:intregs = L2_loadri_pi %0:intregs(tied-def  |	  %17:intregs, %5:intregs = L2_loadri_pi %0:intregs(tied-def 
+  %18:intregs = L2_loadri_io %1:intregs, 0 :: (load 4 from %i |	  %18:intregs = L2_loadri_io %1:intregs, 0 :: (load (s32) fro
+  %4:intregs = S2_storeri_pi %1:intregs(tied-def 0), 4, %19:i |	  %4:intregs = S2_storeri_pi %1:intregs(tied-def 0), 4, %19:i
+SU(3):   %18:intregs = L2_loadri_io %1:intregs, 0 :: (load 4  |	SU(3):   %18:intregs = L2_loadri_io %1:intregs, 0 :: (load (s
+SU(2):   %17:intregs, %5:intregs = L2_loadri_pi %0:intregs(ti |	SU(2):   %17:intregs, %5:intregs = L2_loadri_pi %0:intregs(ti
+SU(5):   %4:intregs = S2_storeri_pi %1:intregs(tied-def 0), 4 |	SU(5):   %4:intregs = S2_storeri_pi %1:intregs(tied-def 0), 4
+   SU(2) %17:intregs, %5:intregs = L2_loadri_pi %0:intregs(ti |	   SU(2) %17:intregs, %5:intregs = L2_loadri_pi %0:intregs(ti
+   SU(5) %4:intregs = S2_storeri_pi %1:intregs(tied-def 0), 4 |	   SU(5) %4:intregs = S2_storeri_pi %1:intregs(tied-def 0), 4
+   SU(2) %17:intregs, %5:intregs = L2_loadri_pi %0:intregs(ti |	   SU(2) %17:intregs, %5:intregs = L2_loadri_pi %0:intregs(ti
+   SU(5) %4:intregs = S2_storeri_pi %1:intregs(tied-def 0), 4 |	   SU(5) %4:intregs = S2_storeri_pi %1:intregs(tied-def 0), 4
+   SU(2) %17:intregs, %5:intregs = L2_loadri_pi %0:intregs(ti |	   SU(2) %17:intregs, %5:intregs = L2_loadri_pi %0:intregs(ti
+   SU(5) %4:intregs = S2_storeri_pi %1:intregs(tied-def 0), 4 |	   SU(5) %4:intregs = S2_storeri_pi %1:intregs(tied-def 0), 4
+   SU(3) %18:intregs = L2_loadri_io %1:intregs, 0 :: (load 4  |	   SU(3) %18:intregs = L2_loadri_io %1:intregs, 0 :: (load (s
+Inst (5)   %4:intregs = S2_storeri_pi %1:intregs(tied-def 0), |	Inst (5)   %4:intregs = S2_storeri_pi %1:intregs(tied-def 0),
+	insert at cycle 1   %4:intregs = S2_storeri_pi %1:int |		insert at cycle 1   %4:intregs = S2_storeri_pi %1:int
+	insert at cycle 1   %19:intregs = nsw A2_add %18:intr |		insert at cycle 0   %19:intregs = nsw A2_add %18:intr
+Inst (2)   %17:intregs, %5:intregs = L2_loadri_pi %0:intregs( |	Inst (2)   %17:intregs, %5:intregs = L2_loadri_pi %0:intregs(
+	es: 80000000 ls:        0 me: 7fffffff ms:        0   |		es: 80000000 ls: ffffffff me: 7fffffff ms:        0
+Trying to insert node between 0 and 0 II: 2		      |		Can't schedule
+	insert at cycle 0   %17:intregs, %5:intregs = L2_load |	Try to schedule with 3
+							      >
+							      >	Inst (5)   %4:intregs = S2_storeri_pi %1:intregs(tied-def 0),
+							      >
+							      >		es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+							      >	Trying to insert node between 1 and 3 II: 3
+							      >		insert at cycle 1   %4:intregs = S2_storeri_pi %1:int
+							      >
+							      >	Inst (4)   %19:intregs = nsw A2_add %18:intregs, %17:intregs
+							      >
+							      >		es: 80000000 ls:        1 me: 7fffffff ms: 80000000
+							      >	Trying to insert node between 1 and -1 II: 3
+							      >		insert at cycle 0   %19:intregs = nsw A2_add %18:intr
+							      >
+							      >	Inst (2)   %17:intregs, %5:intregs = L2_loadri_pi %0:intregs(
+							      >
+							      >		es: 80000000 ls: ffffffff me: 7fffffff ms: ffffffff
+							      >	Trying to insert node between -1 and -1 II: 3
+							      >		insert at cycle -1   %17:intregs, %5:intregs = L2_loa
+	es: ffffffff ls:        0 me: 7fffffff ms: 80000000   |		es: fffffffd ls: ffffffff me: 7fffffff ms: 80000000
+Trying to insert node between 0 and -1 II: 2		      |	Trying to insert node between -1 and -3 II: 3
+	insert at cycle 0   %0:intregs = PHI %13:intregs, %bb |		insert at cycle -1   %0:intregs = PHI %13:intregs, %b
+							      |
+Inst (3)   %18:intregs = L2_loadri_io %1:intregs, 0 :: (load  |	Inst (3)   %18:intregs = L2_loadri_io %1:intregs, 0 :: (load 
+							      |
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000   |		es: 80000000 ls: ffffffff me: 7fffffff ms: 80000000
+Trying to insert node between 0 and -1 II: 2		      |	Trying to insert node between -1 and -3 II: 3
+	insert at cycle 0   %18:intregs = L2_loadri_io %1:int |		insert at cycle -1   %18:intregs = L2_loadri_io %1:in
+	es:        0 ls:        1 me: 7fffffff ms: 80000000   |		es: ffffffff ls:        1 me: 7fffffff ms: 80000000
+Trying to insert node between 1 and 0 II: 2		      |	Trying to insert node between 1 and -1 II: 3
+cycle 0 (0) (0) %0:intregs = PHI %13:intregs, %bb.0, %5:intre |	cycle -1 (0) (0) %0:intregs = PHI %13:intregs, %bb.0, %5:intr
+cycle 0 (0) (2) %17:intregs, %5:intregs = L2_loadri_pi %0:int |	cycle -1 (0) (2) %17:intregs, %5:intregs = L2_loadri_pi %0:in
+cycle 0 (0) (3) %18:intregs = L2_loadri_io %1:intregs, 0 :: ( |	cycle -1 (0) (3) %18:intregs = L2_loadri_io %1:intregs, 0 :: 
+cycle 1 (0) (1) %1:intregs = PHI %12:intregs, %bb.0, %4:intre |	cycle 0 (0) (4) %19:intregs = nsw A2_add %18:intregs, %17:int
+cycle 1 (0) (4) %19:intregs = nsw A2_add %18:intregs, %17:int |	cycle 1 (0) (1) %1:intregs = PHI %12:intregs, %bb.0, %4:intre
+cycle 1 (0) (5) %4:intregs = S2_storeri_pi %1:intregs(tied-de |	cycle 1 (0) (5) %4:intregs = S2_storeri_pi %1:intregs(tied-de

@@ -1,0 +1,208 @@
+SU(5):   %45:intregs, %20:intregs = L2_loadrh_pi %10:intregs( |	SU(5):   %45:intregs, %20:intregs = L2_loadrh_pi %10:intregs(
+SU(6):   %46:intregs = L2_loadrh_io %14:intregs, 0 :: (load 2 |	SU(6):   %46:intregs = L2_loadrh_io %14:intregs, 0 :: (load (
+SU(9):   %49:intregs, %19:intregs = L2_loadrh_pi %11:intregs( |	SU(9):   %49:intregs, %19:intregs = L2_loadrh_pi %11:intregs(
+  %45:intregs, %20:intregs = L2_loadrh_pi %10:intregs(tied-de |	  %45:intregs, %20:intregs = L2_loadrh_pi %10:intregs(tied-de
+  %46:intregs = L2_loadrh_io %14:intregs, 0 :: (load 2 from % |	  %46:intregs = L2_loadrh_io %14:intregs, 0 :: (load (s16) fr
+  %49:intregs, %19:intregs = L2_loadrh_pi %11:intregs(tied-de |	  %49:intregs, %19:intregs = L2_loadrh_pi %11:intregs(tied-de
+SU(9):   %49:intregs, %19:intregs = L2_loadrh_pi %11:intregs( |	SU(9):   %49:intregs, %19:intregs = L2_loadrh_pi %11:intregs(
+SU(6):   %46:intregs = L2_loadrh_io %14:intregs, 0 :: (load 2 |	SU(6):   %46:intregs = L2_loadrh_io %14:intregs, 0 :: (load (
+SU(5):   %45:intregs, %20:intregs = L2_loadrh_pi %10:intregs( |	SU(5):   %45:intregs, %20:intregs = L2_loadrh_pi %10:intregs(
+   SU(5) %45:intregs, %20:intregs = L2_loadrh_pi %10:intregs( |	   SU(5) %45:intregs, %20:intregs = L2_loadrh_pi %10:intregs(
+   SU(9) %49:intregs, %19:intregs = L2_loadrh_pi %11:intregs( |	   SU(9) %49:intregs, %19:intregs = L2_loadrh_pi %11:intregs(
+   SU(5) %45:intregs, %20:intregs = L2_loadrh_pi %10:intregs( |	   SU(5) %45:intregs, %20:intregs = L2_loadrh_pi %10:intregs(
+   SU(9) %49:intregs, %19:intregs = L2_loadrh_pi %11:intregs( |	   SU(9) %49:intregs, %19:intregs = L2_loadrh_pi %11:intregs(
+   SU(6) %46:intregs = L2_loadrh_io %14:intregs, 0 :: (load 2 |	   SU(6) %46:intregs = L2_loadrh_io %14:intregs, 0 :: (load (
+Inst (5)   %45:intregs, %20:intregs = L2_loadrh_pi %10:intreg |	Inst (5)   %45:intregs, %20:intregs = L2_loadrh_pi %10:intreg
+	insert at cycle 0   %45:intregs, %20:intregs = L2_loa |		insert at cycle 0   %45:intregs, %20:intregs = L2_loa
+	insert at cycle 0   %10:intregs = PHI %3:intregs, %bb |		insert at cycle -1   %10:intregs = PHI %3:intregs, %b
+Inst (9)   %49:intregs, %19:intregs = L2_loadrh_pi %11:intreg |	Inst (9)   %49:intregs, %19:intregs = L2_loadrh_pi %11:intreg
+Trying to insert node between 0 and 2 II: 3		      |	Trying to insert node between -1 and 1 II: 3
+	insert at cycle 0   %49:intregs, %19:intregs = L2_loa |		insert at cycle -1   %49:intregs, %19:intregs = L2_lo
+	es: fffffffe ls:        0 me: 7fffffff ms: 80000000   |		es: fffffffd ls: ffffffff me: 7fffffff ms: 80000000
+Trying to insert node between 0 and -2 II: 3		      |	Trying to insert node between -1 and -3 II: 3
+	insert at cycle 0   %11:intregs = PHI %2:intregs, %bb |		insert at cycle -2   %11:intregs = PHI %2:intregs, %b
+	insert at cycle 5   %51:intregs = M2_hmmpyl_s1 %50:in |		insert at cycle 7   %51:intregs = M2_hmmpyl_s1 %50:in
+	es:        6 ls: 7fffffff me: 7fffffff ms: 80000000   |		es:        8 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 6 and 8 II: 3		      |	Trying to insert node between 8 and 10 II: 3
+	insert at cycle 6   %53:intregs = S2_asr_r_r_sat %51: |		insert at cycle 8   %53:intregs = S2_asr_r_r_sat %51:
+	es:        7 ls: 7fffffff me: 7fffffff ms: 80000000   |		es:        9 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 7 and 9 II: 3		      |	Trying to insert node between 9 and 11 II: 3
+	insert at cycle 7   %16:intregs = A2_addsat %15:intre |		insert at cycle 9   %16:intregs = A2_addsat %15:intre
+	es:        5 ls:        7 me: 7fffffff ms: 80000000   |		es:        7 ls:        9 me: 7fffffff ms: 80000000
+Trying to insert node between 7 and 5 II: 3		      |	Trying to insert node between 9 and 7 II: 3
+Inst (6)   %46:intregs = L2_loadrh_io %14:intregs, 0 :: (load |	Inst (6)   %46:intregs = L2_loadrh_io %14:intregs, 0 :: (load
+	failed to insert at cycle 0   %46:intregs = L2_loadrh |		insert at cycle -2   %46:intregs = L2_loadrh_io %14:i
+	insert at cycle -1   %46:intregs = L2_loadrh_io %14:i <
+	es: 80000000 ls: ffffffff me: 7fffffff ms: 80000000   |		es: 80000000 ls: fffffffe me: 7fffffff ms: 80000000
+Trying to insert node between -1 and -3 II: 3		      |	Trying to insert node between -2 and -4 II: 3
+	insert at cycle -1   %14:intregs = PHI %9:intregs, %b |		insert at cycle -2   %14:intregs = PHI %9:intregs, %b
+	es: 80000000 ls:        1 me: 7fffffff ms: 80000000   |		es: 80000000 ls:        0 me: 7fffffff ms: 80000000
+Trying to insert node between 1 and -1 II: 3		      |	Trying to insert node between 0 and -2 II: 3
+	insert at cycle 1   %18:intregs = nuw A2_addi %13:int |		insert at cycle 0   %18:intregs = nuw A2_addi %13:int
+	es: 80000000 ls: ffffffff me: 7fffffff ms: 80000000   |		es: 80000000 ls: fffffffe me: 7fffffff ms: 80000000
+Trying to insert node between -1 and -3 II: 3		      |	Trying to insert node between -2 and -4 II: 3
+	insert at cycle -1   %13:intregs = PHI %7:intregs, %b |		insert at cycle -2   %13:intregs = PHI %7:intregs, %b
+Schedule Found? 1 (II=4)				      |	Schedule Found? 1 (II=3)
+cycle -1 (0) (3) %14:intregs = PHI %9:intregs, %bb.2, %18:int |	cycle -2 (3) (4) %15:intregs = PHI %8:intregs, %bb.2, %16:int
+cycle -1 (0) (2) %13:intregs = PHI %7:intregs, %bb.2, %14:int |	cycle -2 (0) (1) %11:intregs = PHI %2:intregs, %bb.2, %19:int
+cycle -1 (2) (11) %51:intregs = M2_hmmpyl_s1 %50:intregs, %48 |	cycle -2 (0) (3) %14:intregs = PHI %9:intregs, %bb.2, %18:int
+cycle -1 (1) (8) %48:intregs = A2_sxth %47:intregs	      |	cycle -2 (0) (2) %13:intregs = PHI %7:intregs, %bb.2, %14:int
+cycle -1 (0) (6) %46:intregs = L2_loadrh_io %14:intregs, 0 :: |	cycle -2 (3) (11) %51:intregs = M2_hmmpyl_s1 %50:intregs, %48
+cycle 0 (0) (0) %10:intregs = PHI %3:intregs, %bb.2, %20:intr |	cycle -2 (1) (7) %47:intregs = A2_subh_l16_sat_ll %45:intregs
+cycle 0 (0) (1) %11:intregs = PHI %2:intregs, %bb.2, %19:intr |	cycle -2 (0) (6) %46:intregs = L2_loadrh_io %14:intregs, 0 ::
+cycle 0 (2) (12) %53:intregs = S2_asr_r_r_sat %51:intregs, %4 |	cycle -1 (0) (0) %10:intregs = PHI %3:intregs, %bb.2, %20:int
+cycle 0 (1) (10) %50:intregs = M2_mpy_sat_ll_s1 %48:intregs,  |	cycle -1 (3) (12) %53:intregs = S2_asr_r_r_sat %51:intregs, %
+cycle 0 (0) (5) %45:intregs, %20:intregs = L2_loadrh_pi %10:i |	cycle -1 (1) (8) %48:intregs = A2_sxth %47:intregs
+cycle 0 (0) (9) %49:intregs, %19:intregs = L2_loadrh_pi %11:i |	cycle -1 (0) (9) %49:intregs, %19:intregs = L2_loadrh_pi %11:
+cycle 1 (2) (4) %15:intregs = PHI %8:intregs, %bb.2, %16:intr |	cycle 0 (3) (13) %16:intregs = A2_addsat %15:intregs, %53:int
+cycle 1 (2) (13) %16:intregs = A2_addsat %15:intregs, %53:int |	cycle 0 (1) (10) %50:intregs = M2_mpy_sat_ll_s1 %48:intregs, 
+cycle 1 (0) (7) %47:intregs = A2_subh_l16_sat_ll %45:intregs, |	cycle 0 (0) (5) %45:intregs, %20:intregs = L2_loadrh_pi %10:i
+cycle 1 (0) (14) %18:intregs = nuw A2_addi %13:intregs, 4     |	cycle 0 (0) (14) %18:intregs = nuw A2_addi %13:intregs, 4
+[stage 0 @-1c] %14:intregs = PHI %9:intregs, %bb.2, %18:intre |	[stage 3 @-2c] %15:intregs = PHI %8:intregs, %bb.2, %16:intre
+[stage 0 @-1c] %13:intregs = PHI %7:intregs, %bb.2, %14:intre |	[stage 0 @-2c] %11:intregs = PHI %2:intregs, %bb.2, %19:intre
+[stage 2 @-1c] %51:intregs = M2_hmmpyl_s1 %50:intregs, %48:in |	[stage 0 @-2c] %14:intregs = PHI %9:intregs, %bb.2, %18:intre
+							      >	[stage 0 @-2c] %13:intregs = PHI %7:intregs, %bb.2, %14:intre
+							      >	[stage 3 @-2c] %51:intregs = M2_hmmpyl_s1 %50:intregs, %48:in
+							      >	[stage 1 @-2c] %47:intregs = A2_subh_l16_sat_ll %45:intregs, 
+							      >	[stage 0 @-2c] %46:intregs = L2_loadrh_io %14:intregs, 0 :: (
+							      >	[stage 0 @-1c] %10:intregs = PHI %3:intregs, %bb.2, %20:intre
+							      >	[stage 3 @-1c] %53:intregs = S2_asr_r_r_sat %51:intregs, %44:
+[stage 0 @-1c] %46:intregs = L2_loadrh_io %14:intregs, 0 :: ( |	[stage 0 @-1c] %49:intregs, %19:intregs = L2_loadrh_pi %11:in
+[stage 0 @0c] %10:intregs = PHI %3:intregs, %bb.2, %20:intreg |	[stage 3 @0c] %16:intregs = A2_addsat %15:intregs, %53:intreg
+[stage 0 @0c] %11:intregs = PHI %2:intregs, %bb.2, %19:intreg <
+[stage 2 @0c] %53:intregs = S2_asr_r_r_sat %51:intregs, %44:i <
+[stage 0 @0c] %45:intregs, %20:intregs = L2_loadrh_pi %10:int |	[stage 0 @0c] %45:intregs, %20:intregs = L2_loadrh_pi %10:int
+[stage 0 @0c] %49:intregs, %19:intregs = L2_loadrh_pi %11:int |	[stage 0 @0c] %18:intregs = nuw A2_addi %13:intregs, 4
+[stage 2 @1c] %15:intregs = PHI %8:intregs, %bb.2, %16:intreg |	llc: /mnt/f/My_Github/llvm-project/llvm/lib/CodeGen/ModuloSch
+[stage 2 @1c] %16:intregs = A2_addsat %15:intregs, %53:intreg |	PLEASE submit a bug report to https://bugs.llvm.org/ and incl
+[stage 0 @1c] %47:intregs = A2_subh_l16_sat_ll %45:intregs, % |	Stack dump:
+[stage 0 @1c] %18:intregs = nuw A2_addi %13:intregs, 4	      |	0.	Program arguments: llc -march=hexagon -mcpu=hexagonv5
+Static-false: TC > 2					      |	1.	Running pass 'Function Pass Manager' on module '<stdi
+Static-true: TC > 1					      |	2.	Running pass 'Modulo Software Pipelining' on function
+							      |	 #0 0x000055ca6011312a llvm::sys::PrintStackTrace(llvm::raw_o
+!!! Can not pipeline loop.				      |	 #1 0x000055ca601131e5 PrintStackTraceSignalHandler(void*) /m
+	.text						      |	 #2 0x000055ca60110e4c llvm::sys::RunSignalHandlers() /mnt/f/
+	.file	"<stdin>"				      |	 #3 0x000055ca60112a76 SignalHandler(int) /mnt/f/My_Github/ll
+	.globl	f0                              // -- Begin f |	 #4 0x00007ff115a7c3c0 __restore_rt (/lib/x86_64-linux-gnu/li
+	.p2align	4				      |	 #5 0x00007ff11556a18b raise /build/glibc-eX1tMB/glibc-2.31/s
+	.type	f0,@function				      |	 #6 0x00007ff115549859 abort /build/glibc-eX1tMB/glibc-2.31/s
+f0:                                     // @f0		      |	 #7 0x00007ff115549729 get_sysdep_segment_value /build/glibc-
+// %bb.0:                               // %b0		      |	 #8 0x00007ff115549729 _nl_load_domain /build/glibc-eX1tMB/gl
+	{						      |	 #9 0x00007ff11555af36 (/lib/x86_64-linux-gnu/libc.so.6+0x36f
+		r29 = add(r29,#-16)			      |	#10 0x000055ca5f19300f llvm::PeelingModuloScheduleExpander::g
+		p0 = cmp.gt(r5,#0)			      |	#11 0x000055ca5f19399f llvm::PeelingModuloScheduleExpander::p
+	}						      |	#12 0x000055ca5f195632 llvm::PeelingModuloScheduleExpander::e
+	{						      |	#13 0x000055ca5f095138 llvm::SwingSchedulerDAG::schedule() /m
+		if (!p0) jump:nt .LBB0_1		      |	#14 0x000055ca5f093635 llvm::MachinePipeliner::swingModuloSch
+		memd(r29+#8) = r17:16			      |	#15 0x000055ca5f092364 llvm::MachinePipeliner::scheduleLoop(l
+		memd(r29+#0) = r19:18			      |	#16 0x000055ca5f092244 llvm::MachinePipeliner::scheduleLoop(l
+	}                                       // 8-byte Fol |	#17 0x000055ca5f09203d llvm::MachinePipeliner::runOnMachineFu
+// %bb.2:                               // %b1		      |	#18 0x000055ca5f03acd3 llvm::MachineFunctionPass::runOnFuncti
+	{						      |	#19 0x000055ca5f6be6fa llvm::FPPassManager::runOnFunction(llv
+		r7:6 = combine(##2147483647,#0)		      |	#20 0x000055ca5f6be9c3 llvm::FPPassManager::runOnModule(llvm:
+		r1 = memh(r0++#2)			      |	#21 0x000055ca5f6bee35 (anonymous namespace)::MPPassManager::
+		r4 = memh(r3++#2)			      |	#22 0x000055ca5f6b9d6a llvm::legacy::PassManagerImpl::run(llv
+	}						      |	#23 0x000055ca5f6bf70b llvm::legacy::PassManager::run(llvm::M
+	{						      |	#24 0x000055ca5cc56c7e compileModule(char**, llvm::LLVMContex
+		r9:8 = combine(#10,#0)			      |	#25 0x000055ca5cc54921 main /mnt/f/My_Github/llvm-project/llv
+		r13:12 = combine(#0,#1)			      |	#26 0x00007ff11554b0b3 __libc_start_main /build/glibc-eX1tMB/
+	}						      |	#27 0x000055ca5cc5375e _start (/usr/local/bin/llc+0x1cee75e)
+	.p2align	4				      <
+.LBB0_3:                                // %b2		      <
+                                        // =>This Inner Loop  <
+	{						      <
+		r19 = add(r13.l,r12.l)			      <
+		r14 = r2				      <
+		r10 = r0				      <
+		r2 = add(r2,#4)				      <
+	}						      <
+	{						      <
+		r15 = memh(r14++#2)			      <
+		r17 = memh(r10++#2)			      <
+	}						      <
+	{						      <
+		r15 = sub(r1.l,r15.l):sat		      <
+		p0 = cmp.eq(r19,r5)			      <
+		r11 = memh(r14+#0)			      <
+		r18 = memh(r10++#2)			      <
+	}						      <
+	{						      <
+		r11 = sub(r17.l,r11.l):sat		      <
+		r15 = sxth(r15)				      <
+		r2 = add(r14,#4)			      <
+		r17 = memh(r2+#0)			      <
+	}						      <
+	{						      <
+		r28 = mpy(r15.l,r4.l):<<1:sat		      <
+		r17 = sub(r18.l,r17.l):sat		      <
+		r11 = sxth(r11)				      <
+	}						      <
+	{						      <
+		r14 = sxth(r17)				      <
+	}						      <
+	{						      <
+		r15 = mpy(r28,r15.l):<<1:sat		      <
+		r28 = r3				      <
+	}						      <
+	{						      <
+		r15 = asr(r15,r9):sat			      <
+		r16 = memh(r28++#2)			      <
+	}						      <
+	{						      <
+		r10 = memh(r28++#2)			      <
+	}						      <
+	{						      <
+		r28 = mpy(r11.l,r16.l):<<1:sat		      <
+	}						      <
+	{						      <
+		r18 = mpy(r14.l,r10.l):<<1:sat		      <
+	}						      <
+	{						      <
+		r28 = mpy(r28,r11.l):<<1:sat		      <
+	}						      <
+	{						      <
+		r14 = mpy(r18,r14.l):<<1:sat		      <
+		r28 = asr(r28,r9):sat			      <
+	}						      <
+	{						      <
+		r14 = asr(r14,r9):sat			      <
+		r15 = add(r15,r28):sat			      <
+	}						      <
+	{						      <
+		r14 = add(r15,r14):sat			      <
+	}						      <
+	{						      <
+		r15 = sub(r14,r7):sat			      <
+		r14 = add(r14,r6):sat			      <
+	}						      <
+	{						      <
+		p1 = cmp.gt(r15,#-1)			      <
+		if (!p1.new) r8 = add(r13,#0)		      <
+		if (!p1.new) r7 = add(r14,#0)		      <
+		r13 = add(r13,#1)			      <
+	}						      <
+	{						      <
+		if (!p0) jump:nt .LBB0_3		      <
+	}						      <
+	{						      <
+		jump .LBB0_4				      <
+	}						      <
+.LBB0_1:						      <
+	{						      <
+		r8 = #0					      <
+	}						      <
+.LBB0_4:                                // %b7		      <
+	{						      <
+		r0 = sxth(r8)				      <
+		r29 = add(r29,#16)			      <
+		r17:16 = memd(r29+#8)			      <
+		r19:18 = memd(r29+#0)			      <
+	}                                       // 8-byte Fol <
+	{						      <
+		jumpr r31				      <
+	}						      <
+.Ltmp0:                                 // Address of block t <
+.Lfunc_end0:						      <
+	.size	f0, .Lfunc_end0-f0			      <
+                                        // -- End function    <
+	.section	".note.GNU-stack","",@progbits	      <
