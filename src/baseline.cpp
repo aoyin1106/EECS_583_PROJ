@@ -2341,23 +2341,6 @@ void SwingSchedulerDAG::postprocessDAG() {
     M->apply(this);
 }
 
-bool sortCostVecAsap(const std::pair<int, int> &a, 
-                 const std::pair<int, int> &b)
-{
-  if (a.first != b.first)
-    return (a.first < b.first);
-  else
-    return (a.second < b.second);
-}
-
-bool sortCostVecAlap(const std::pair<int, int> &a,
-                     const std::pair<int, int> &b)
-{
-  if (a.first != b.first)
-    return (a.first < b.first);
-  else
-    return (a.second > b.second);
-}
 /// Try to schedule the node at the specified StartCycle and continue
 /// until the node is schedule or the EndCycle is reached.  This function
 /// returns true if the node is scheduled.  This routine may search either
@@ -2374,36 +2357,9 @@ bool SMSchedule::insert(SUnit *SU, int StartCycle, int EndCycle, int II) {
 
   // The terminating condition depends on the direction.
   int termCycle = forward ? EndCycle + 1 : EndCycle - 1;
-  // * Power-aware SMS Modification Start
-  SmallVector<std::pair <int, int>, 8> costVec; // a vaector of pairs of <cost, curCycle>
   for (int curCycle = StartCycle; curCycle != termCycle;
-      forward ? ++curCycle : --curCycle) {
-    int cost = 0;
-    // calculate power cost for curCycle
-    for (int checkCycle = FirstCycle + ((curCycle - FirstCycle) % II);
-         checkCycle <= LastCycle; checkCycle += II)
-    {
-      std::deque<SUnit *> &cycleInstrs = ScheduledInstrs[checkCycle];
+       forward ? ++curCycle : --curCycle) {
 
-      for (SUnit *CI : cycleInstrs)
-      {
-        if (!ST.getInstrInfo()->isZeroCost(CI->getInstr()->getOpcode()))
-          cost++; // * this is the simpliest version of cost evaluation: 
-                  // * each instruction modeled to have same power consumption, 
-                  // * and power is simply evaluated by the number of instructions
-      }
-    }
-    costVec.push_back(std::make_pair(cost, curCycle));
-  }
-  if (forward)
-    std::sort(costVec.begin(), costVec.end(), sortCostVecAsap); // sort the pairs by first element, the cost, in asending order
-  else
-    std::sort(costVec.begin(), costVec.end(), sortCostVecAlap);
-  // * End Power-aware SMS Modification 
-  
-  for (auto itr = costVec.begin(); itr != costVec.end(); itr++)
-  {
-    int curCycle = itr->second;
     // Add the already scheduled instructions at the specified cycle to the
     // DFA.
     ProcItinResources.clearResources();
