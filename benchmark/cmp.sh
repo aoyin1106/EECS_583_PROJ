@@ -18,4 +18,10 @@ for file in $DIR_0/*; do
     diff -y --suppress-common-lines -w -B -E $file_0 $file_1 > $DIR_DIFF/$case
 done
 
+# delete empty ones
 find $DIR_DIFF -type f -empty -print -delete
+
+# how many cases are different?
+cnt_case=$(ls -l $DIR_0 | wc -l)
+cnt_diff_case=$(ls -l $DIR_DIFF | wc -l)
+echo $cnt_case "cases are compared, " $cnt_diff_case "of them are different."
