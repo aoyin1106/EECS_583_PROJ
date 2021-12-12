@@ -1,0 +1,31 @@
+Unable to analyzeLoop, can NOT pipeline Loop
+
+!!! Can not pipeline loop.
+	.text
+	.file	"<stdin>"
+	.globl	f0                              // -- Begin function f0
+	.p2align	4
+	.type	f0,@function
+f0:                                     // @f0
+	.cfi_startproc
+// %bb.0:                               // %b0
+	{
+		if (p0) jumpr:nt r31
+	}
+	.p2align	4
+.LBB0_1:                                // %b1
+                                        // =>This Inner Loop Header: Depth=1
+	{
+		r1 = add(r1,#-1)
+		if (!cmp.eq(r1.new,#0)) jump:t .LBB0_1
+	}
+// %bb.2:
+	{
+		r0 = memuh(r0+#0)
+		jumpr r31
+	}
+.Lfunc_end0:
+	.size	f0, .Lfunc_end0-f0
+	.cfi_endproc
+                                        // -- End function
+	.section	".note.GNU-stack","",@progbits

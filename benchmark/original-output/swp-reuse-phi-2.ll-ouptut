@@ -1,0 +1,37 @@
+	.text
+	.file	"<stdin>"
+	.globl	f0                              // -- Begin function f0
+	.p2align	4
+	.type	f0,@function
+f0:                                     // @f0
+// %bb.0:                               // %b0
+	{
+		if (p0) jumpr:nt r31
+	}
+.LBB0_1:                                // %b1
+	{
+		v0 = vmem(r0+#0)
+	}
+	{
+		v0.h = vadd(v0.h,v0.h)
+		v2 = vxor(v2,v2)
+		vmem(r0+#1) = v2.new
+	}
+	{
+		v1 = vlalign(v0,v0,#2)
+		v0.h = vadd(v0.h,v0.h)
+	}
+	{
+		v0 = valign(v0,v0,#2)
+	}
+	{
+		v0.uh = vabsdiff(v1.h,v0.h)
+		vmem(r0+#0) = v0.new
+	}
+	{
+		jumpr r31
+	}
+.Lfunc_end0:
+	.size	f0, .Lfunc_end0-f0
+                                        // -- End function
+	.section	".note.GNU-stack","",@progbits

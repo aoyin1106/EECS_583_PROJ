@@ -1,0 +1,39 @@
+Unable to analyzeLoop, can NOT pipeline Loop
+
+!!! Can not pipeline loop.
+	.text
+	.file	"<stdin>"
+	.globl	f0                              // -- Begin function f0
+	.p2align	4
+	.type	f0,@function
+f0:                                     // @f0
+// %bb.0:                               // %b0
+	{
+		if (p0) jumpr:nt r31
+	}
+.LBB0_1:                                // %b1.preheader
+	{
+		r0 = add(r1,#12)
+		r1 = ##2143289344
+	}
+	{
+		r3 = r0
+	}
+	.p2align	4
+.LBB0_2:                                // %b3
+                                        // =>This Inner Loop Header: Depth=1
+	{
+		memw(r3++#4) = r1
+	}
+	{
+		p0 = cmp.gtu(r0,r3); if (p0.new) jump:t .LBB0_2
+	}
+// %bb.3:                               // %b4
+	{
+		jumpr r31
+		memw(r0+#0) = ##2143289344
+	}
+.Lfunc_end0:
+	.size	f0, .Lfunc_end0-f0
+                                        // -- End function
+	.section	".note.GNU-stack","",@progbits

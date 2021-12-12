@@ -1,0 +1,48 @@
+Unable to analyzeLoop, can NOT pipeline Loop
+
+!!! Can not pipeline loop.
+ExitSU:   ENDLOOP0 %bb.1, implicit-def $pc, implicit-def $lc0, implicit $sa0, implicit $lc0
+  # preds left       : 0
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 0
+calculateResMII:
+Return Res MII:1
+MII = 1 MAX_II = 11 (rec=0, res=1)
+Node order: 
+NodeOrder is empty! abort scheduling
+No schedule found, return
+	.text
+	.file	"<stdin>"
+	.globl	f0                              // -- Begin function f0
+	.p2align	4
+	.type	f0,@function
+f0:                                     // @f0
+// %bb.0:                               // %b0
+	{
+		if (p0) jumpr:nt r31
+	}
+.LBB0_1:
+	{
+		loop0(.LBB0_2,r0)
+	}
+	.p2align	4
+.Ltmp0:                                 // Block address taken
+.LBB0_2:                                // %b4
+                                        // =>This Inner Loop Header: Depth=1
+	{
+		nop
+		nop
+	} :endloop0
+	.p2align	4
+.LBB0_3:                                // %b9
+                                        // =>This Inner Loop Header: Depth=1
+	{
+		jump .LBB0_3
+	}
+.Lfunc_end0:
+	.size	f0, .Lfunc_end0-f0
+                                        // -- End function
+	.section	".note.GNU-stack","",@progbits

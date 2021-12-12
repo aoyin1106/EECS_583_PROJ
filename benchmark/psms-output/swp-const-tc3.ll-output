@@ -1,0 +1,565 @@
+SU(0):   %10:intregs = PHI %3:intregs, %bb.2, %20:intregs, %bb.3
+  # preds left       : 0
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 8
+  Successors:
+    SU(5): Data Latency=0 Reg=%10
+    SU(5): Anti Latency=1
+SU(1):   %11:intregs = PHI %2:intregs, %bb.2, %19:intregs, %bb.3
+  # preds left       : 0
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 7
+  Successors:
+    SU(9): Data Latency=0 Reg=%11
+    SU(9): Anti Latency=1
+SU(2):   %13:intregs = PHI %7:intregs, %bb.2, %14:intregs, %bb.3
+  # preds left       : 0
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 7
+  Successors:
+    SU(14): Data Latency=0 Reg=%13
+    SU(3): Ord  Latency=0 Barrier
+SU(3):   %14:intregs = PHI %9:intregs, %bb.2, %18:intregs, %bb.3
+  # preds left       : 1
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 7
+  Predecessors:
+    SU(2): Ord  Latency=0 Barrier
+  Successors:
+    SU(6): Data Latency=0 Reg=%14
+    SU(14): Anti Latency=1
+SU(4):   %15:intregs = PHI %8:intregs, %bb.2, %16:intregs, %bb.3
+  # preds left       : 0
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 1
+  Successors:
+    SU(13): Data Latency=0 Reg=%15
+    SU(13): Anti Latency=1
+SU(5):   %45:intregs, %20:intregs = L2_loadrh_pi %10:intregs(tied-def 1), 2 :: (load (s16) from %ir.lsr.iv4)
+  # preds left       : 2
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 7
+  Predecessors:
+    SU(0): Data Latency=0 Reg=%10
+    SU(0): Anti Latency=1
+  Successors:
+    SU(7): Data Latency=1 Reg=%45
+SU(6):   %46:intregs = L2_loadrh_io %14:intregs, 0 :: (load (s16) from %ir.v19)
+  # preds left       : 1
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 0
+  Height             : 7
+  Predecessors:
+    SU(3): Data Latency=0 Reg=%14
+  Successors:
+    SU(7): Data Latency=1 Reg=%46
+SU(7):   %47:intregs = A2_subh_l16_sat_ll %45:intregs, %46:intregs, implicit-def dead $usr_ovf
+  # preds left       : 2
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 2
+  Height             : 6
+  Predecessors:
+    SU(6): Data Latency=1 Reg=%46
+    SU(5): Data Latency=1 Reg=%45
+  Successors:
+    SU(8): Data Latency=1 Reg=%47
+SU(8):   %48:intregs = A2_sxth %47:intregs
+  # preds left       : 1
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 3
+  Height             : 5
+  Predecessors:
+    SU(7): Data Latency=1 Reg=%47
+  Successors:
+    SU(11): Data Latency=1 Reg=%48
+    SU(10): Data Latency=1 Reg=%48
+SU(9):   %49:intregs, %19:intregs = L2_loadrh_pi %11:intregs(tied-def 1), 2 :: (load (s16) from %ir.lsr.iv1)
+  # preds left       : 2
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 6
+  Predecessors:
+    SU(1): Data Latency=0 Reg=%11
+    SU(1): Anti Latency=1
+  Successors:
+    SU(10): Data Latency=2 Reg=%49
+SU(10):   %50:intregs = M2_mpy_sat_ll_s1 %48:intregs, %49:intregs, implicit-def dead $usr_ovf
+  # preds left       : 2
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 4
+  Height             : 4
+  Predecessors:
+    SU(9): Data Latency=2 Reg=%49
+    SU(8): Data Latency=1 Reg=%48
+  Successors:
+    SU(11): Data Latency=2 Reg=%50
+SU(11):   %51:intregs = M2_hmmpyl_s1 %50:intregs, %48:intregs, implicit-def dead $usr_ovf
+  # preds left       : 2
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 6
+  Height             : 2
+  Predecessors:
+    SU(10): Data Latency=2 Reg=%50
+    SU(8): Data Latency=1 Reg=%48
+  Successors:
+    SU(12): Data Latency=1 Reg=%51
+SU(12):   %53:intregs = S2_asr_r_r_sat %51:intregs, %44:intregs, implicit-def dead $usr_ovf
+  # preds left       : 1
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 7
+  Height             : 1
+  Predecessors:
+    SU(11): Data Latency=1 Reg=%51
+  Successors:
+    SU(13): Data Latency=1 Reg=%53
+SU(13):   %16:intregs = A2_addsat %15:intregs, %53:intregs, implicit-def dead $usr_ovf
+  # preds left       : 3
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 8
+  Height             : 0
+  Predecessors:
+    SU(12): Data Latency=1 Reg=%53
+    SU(4): Data Latency=0 Reg=%15
+    SU(4): Anti Latency=1
+SU(14):   %18:intregs = nuw A2_addi %13:intregs, 4
+  # preds left       : 2
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 0
+  Predecessors:
+    SU(2): Data Latency=0 Reg=%13
+    SU(3): Anti Latency=1
+ExitSU:   ENDLOOP0 %bb.3, implicit-def $pc, implicit-def $lc0, implicit $sa0, implicit $lc0
+  # preds left       : 0
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 0
+calculateResMII:
+Trying to reserve resource for 1 cycles for 
+  %45:intregs, %20:intregs = L2_loadrh_pi %10:intregs(tied-def 1), 2 :: (load (s16) from %ir.lsr.iv4)
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %47:intregs = A2_subh_l16_sat_ll %45:intregs, %46:intregs, implicit-def dead $usr_ovf
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %51:intregs = M2_hmmpyl_s1 %50:intregs, %48:intregs, implicit-def dead $usr_ovf
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %50:intregs = M2_mpy_sat_ll_s1 %48:intregs, %49:intregs, implicit-def dead $usr_ovf
+ReservedCycles:0, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %46:intregs = L2_loadrh_io %14:intregs, 0 :: (load (s16) from %ir.v19)
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %49:intregs, %19:intregs = L2_loadrh_pi %11:intregs(tied-def 1), 2 :: (load (s16) from %ir.lsr.iv1)
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %53:intregs = S2_asr_r_r_sat %51:intregs, %44:intregs, implicit-def dead $usr_ovf
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %18:intregs = nuw A2_addi %13:intregs, 4
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %16:intregs = A2_addsat %15:intregs, %53:intregs, implicit-def dead $usr_ovf
+ReservedCycles:0, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %48:intregs = A2_sxth %47:intregs
+ReservedCycles:1, NumCycles:1
+Return Res MII:3
+MII = 3 MAX_II = 13 (rec=1, res=3)
+SU(1):   %11:intregs = PHI %2:intregs, %bb.2, %19:intregs, %bb.3
+SU(9):   %49:intregs, %19:intregs = L2_loadrh_pi %11:intregs(tied-def 1), 2 :: (load (s16) from %ir.lsr.iv1)
+SU(2):   %13:intregs = PHI %7:intregs, %bb.2, %14:intregs, %bb.3
+SU(3):   %14:intregs = PHI %9:intregs, %bb.2, %18:intregs, %bb.3
+SU(6):   %46:intregs = L2_loadrh_io %14:intregs, 0 :: (load (s16) from %ir.v19)
+SU(0):   %10:intregs = PHI %3:intregs, %bb.2, %20:intregs, %bb.3
+SU(5):   %45:intregs, %20:intregs = L2_loadrh_pi %10:intregs(tied-def 1), 2 :: (load (s16) from %ir.lsr.iv4)
+SU(7):   %47:intregs = A2_subh_l16_sat_ll %45:intregs, %46:intregs, implicit-def dead $usr_ovf
+SU(8):   %48:intregs = A2_sxth %47:intregs
+SU(10):   %50:intregs = M2_mpy_sat_ll_s1 %48:intregs, %49:intregs, implicit-def dead $usr_ovf
+SU(11):   %51:intregs = M2_hmmpyl_s1 %50:intregs, %48:intregs, implicit-def dead $usr_ovf
+SU(12):   %53:intregs = S2_asr_r_r_sat %51:intregs, %44:intregs, implicit-def dead $usr_ovf
+SU(4):   %15:intregs = PHI %8:intregs, %bb.2, %16:intregs, %bb.3
+SU(13):   %16:intregs = A2_addsat %15:intregs, %53:intregs, implicit-def dead $usr_ovf
+SU(14):   %18:intregs = nuw A2_addi %13:intregs, 4
+	Node 0:
+	   ASAP = 0
+	   ALAP = 0
+	   MOV  = 0
+	   D    = 0
+	   H    = 8
+	   ZLD  = 0
+	   ZLH  = 1
+	Node 1:
+	   ASAP = 0
+	   ALAP = 1
+	   MOV  = 1
+	   D    = 0
+	   H    = 7
+	   ZLD  = 0
+	   ZLH  = 1
+	Node 2:
+	   ASAP = 0
+	   ALAP = 0
+	   MOV  = 0
+	   D    = 0
+	   H    = 7
+	   ZLD  = 0
+	   ZLH  = 2
+	Node 3:
+	   ASAP = 0
+	   ALAP = 0
+	   MOV  = 0
+	   D    = 0
+	   H    = 7
+	   ZLD  = 1
+	   ZLH  = 1
+	Node 4:
+	   ASAP = 0
+	   ALAP = 7
+	   MOV  = 7
+	   D    = 0
+	   H    = 1
+	   ZLD  = 0
+	   ZLH  = 1
+	Node 5:
+	   ASAP = 0
+	   ALAP = 0
+	   MOV  = 0
+	   D    = 1
+	   H    = 7
+	   ZLD  = 1
+	   ZLH  = 0
+	Node 6:
+	   ASAP = 0
+	   ALAP = 0
+	   MOV  = 0
+	   D    = 0
+	   H    = 7
+	   ZLD  = 2
+	   ZLH  = 0
+	Node 7:
+	   ASAP = 1
+	   ALAP = 1
+	   MOV  = 0
+	   D    = 2
+	   H    = 6
+	   ZLD  = 0
+	   ZLH  = 0
+	Node 8:
+	   ASAP = 2
+	   ALAP = 2
+	   MOV  = 0
+	   D    = 3
+	   H    = 5
+	   ZLD  = 0
+	   ZLH  = 0
+	Node 9:
+	   ASAP = 0
+	   ALAP = 1
+	   MOV  = 1
+	   D    = 1
+	   H    = 6
+	   ZLD  = 1
+	   ZLH  = 0
+	Node 10:
+	   ASAP = 3
+	   ALAP = 3
+	   MOV  = 0
+	   D    = 4
+	   H    = 4
+	   ZLD  = 0
+	   ZLH  = 0
+	Node 11:
+	   ASAP = 5
+	   ALAP = 5
+	   MOV  = 0
+	   D    = 6
+	   H    = 2
+	   ZLD  = 0
+	   ZLH  = 0
+	Node 12:
+	   ASAP = 6
+	   ALAP = 6
+	   MOV  = 0
+	   D    = 7
+	   H    = 1
+	   ZLD  = 0
+	   ZLH  = 0
+	Node 13:
+	   ASAP = 7
+	   ALAP = 7
+	   MOV  = 0
+	   D    = 8
+	   H    = 0
+	   ZLD  = 1
+	   ZLH  = 0
+	Node 14:
+	   ASAP = 0
+	   ALAP = 7
+	   MOV  = 7
+	   D    = 1
+	   H    = 0
+	   ZLD  = 1
+	   ZLH  = 0
+  Rec NodeSet Num nodes 2 rec 1 mov 0 depth 1 col 0
+   SU(0) %10:intregs = PHI %3:intregs, %bb.2, %20:intregs, %bb.3
+   SU(5) %45:intregs, %20:intregs = L2_loadrh_pi %10:intregs(tied-def 1), 2 :: (load (s16) from %ir.lsr.iv4)
+
+  Rec NodeSet Num nodes 2 rec 1 mov 1 depth 1 col 0
+   SU(1) %11:intregs = PHI %2:intregs, %bb.2, %19:intregs, %bb.3
+   SU(9) %49:intregs, %19:intregs = L2_loadrh_pi %11:intregs(tied-def 1), 2 :: (load (s16) from %ir.lsr.iv1)
+
+  Rec NodeSet Num nodes 2 rec 1 mov 7 depth 8 col 0
+   SU(4) %15:intregs = PHI %8:intregs, %bb.2, %16:intregs, %bb.3
+   SU(13) %16:intregs = A2_addsat %15:intregs, %53:intregs, implicit-def dead $usr_ovf
+
+  NodeSet Num nodes 2 rec 1 mov 0 depth 1 col 0
+   SU(0) %10:intregs = PHI %3:intregs, %bb.2, %20:intregs, %bb.3
+   SU(5) %45:intregs, %20:intregs = L2_loadrh_pi %10:intregs(tied-def 1), 2 :: (load (s16) from %ir.lsr.iv4)
+
+  NodeSet Num nodes 2 rec 1 mov 1 depth 1 col 0
+   SU(1) %11:intregs = PHI %2:intregs, %bb.2, %19:intregs, %bb.3
+   SU(9) %49:intregs, %19:intregs = L2_loadrh_pi %11:intregs(tied-def 1), 2 :: (load (s16) from %ir.lsr.iv1)
+
+  NodeSet Num nodes 7 rec 1 mov 7 depth 8 col 0
+   SU(4) %15:intregs = PHI %8:intregs, %bb.2, %16:intregs, %bb.3
+   SU(13) %16:intregs = A2_addsat %15:intregs, %53:intregs, implicit-def dead $usr_ovf
+   SU(12) %53:intregs = S2_asr_r_r_sat %51:intregs, %44:intregs, implicit-def dead $usr_ovf
+   SU(11) %51:intregs = M2_hmmpyl_s1 %50:intregs, %48:intregs, implicit-def dead $usr_ovf
+   SU(10) %50:intregs = M2_mpy_sat_ll_s1 %48:intregs, %49:intregs, implicit-def dead $usr_ovf
+   SU(8) %48:intregs = A2_sxth %47:intregs
+   SU(7) %47:intregs = A2_subh_l16_sat_ll %45:intregs, %46:intregs, implicit-def dead $usr_ovf
+
+  NodeSet Num nodes 4 rec 0 mov 0 depth 0 col 0
+   SU(6) %46:intregs = L2_loadrh_io %14:intregs, 0 :: (load (s16) from %ir.v19)
+   SU(3) %14:intregs = PHI %9:intregs, %bb.2, %18:intregs, %bb.3
+   SU(14) %18:intregs = nuw A2_addi %13:intregs, 4
+   SU(2) %13:intregs = PHI %7:intregs, %bb.2, %14:intregs, %bb.3
+
+NodeSet size 2
+  Bottom up (default) 5 0 
+   Switching order to top down 
+Done with Nodeset
+NodeSet size 2
+  Bottom up (default) 9 1 
+   Switching order to top down 
+Done with Nodeset
+NodeSet size 7
+  Top down (succs) 7 8 10 11 12 13 4 
+   Switching order to bottom up 
+Done with Nodeset
+NodeSet size 4
+  Bottom up (preds) 6 3 14 2 
+   Switching order to top down 
+Done with Nodeset
+Node order:  5  0  9  1  7  8  10  11  12  13  4  6  3  14  2 
+Try to schedule with 3
+
+Inst (5)   %45:intregs, %20:intregs = L2_loadrh_pi %10:intregs(tied-def 1), 2 :: (load (s16) from %ir.lsr.iv4)
+
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 0 and 2 II: 3
+	insert at cycle 0   %45:intregs, %20:intregs = L2_loadrh_pi %10:intregs(tied-def 1), 2 :: (load (s16) from %ir.lsr.iv4)
+
+Inst (0)   %10:intregs = PHI %3:intregs, %bb.2, %20:intregs, %bb.3
+
+	es: fffffffe ls:        0 me: 7fffffff ms: 80000000
+Trying to insert node between 0 and -2 II: 3
+	insert at cycle -1   %10:intregs = PHI %3:intregs, %bb.2, %20:intregs, %bb.3
+
+Inst (9)   %49:intregs, %19:intregs = L2_loadrh_pi %11:intregs(tied-def 1), 2 :: (load (s16) from %ir.lsr.iv1)
+
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between -1 and 1 II: 3
+	insert at cycle -1   %49:intregs, %19:intregs = L2_loadrh_pi %11:intregs(tied-def 1), 2 :: (load (s16) from %ir.lsr.iv1)
+
+Inst (1)   %11:intregs = PHI %2:intregs, %bb.2, %19:intregs, %bb.3
+
+	es: fffffffd ls: ffffffff me: 7fffffff ms: 80000000
+Trying to insert node between -1 and -3 II: 3
+	insert at cycle -2   %11:intregs = PHI %2:intregs, %bb.2, %19:intregs, %bb.3
+
+Inst (7)   %47:intregs = A2_subh_l16_sat_ll %45:intregs, %46:intregs, implicit-def dead $usr_ovf
+
+	es:        1 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 1 and 3 II: 3
+	insert at cycle 1   %47:intregs = A2_subh_l16_sat_ll %45:intregs, %46:intregs, implicit-def dead $usr_ovf
+
+Inst (8)   %48:intregs = A2_sxth %47:intregs
+
+	es:        2 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 2 and 4 II: 3
+	insert at cycle 2   %48:intregs = A2_sxth %47:intregs
+
+Inst (10)   %50:intregs = M2_mpy_sat_ll_s1 %48:intregs, %49:intregs, implicit-def dead $usr_ovf
+
+	es:        3 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 3 and 5 II: 3
+	insert at cycle 3   %50:intregs = M2_mpy_sat_ll_s1 %48:intregs, %49:intregs, implicit-def dead $usr_ovf
+
+Inst (11)   %51:intregs = M2_hmmpyl_s1 %50:intregs, %48:intregs, implicit-def dead $usr_ovf
+
+	es:        5 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 5 and 7 II: 3
+	insert at cycle 7   %51:intregs = M2_hmmpyl_s1 %50:intregs, %48:intregs, implicit-def dead $usr_ovf
+
+Inst (12)   %53:intregs = S2_asr_r_r_sat %51:intregs, %44:intregs, implicit-def dead $usr_ovf
+
+	es:        8 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 8 and 10 II: 3
+	insert at cycle 8   %53:intregs = S2_asr_r_r_sat %51:intregs, %44:intregs, implicit-def dead $usr_ovf
+
+Inst (13)   %16:intregs = A2_addsat %15:intregs, %53:intregs, implicit-def dead $usr_ovf
+
+	es:        9 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 9 and 11 II: 3
+	insert at cycle 9   %16:intregs = A2_addsat %15:intregs, %53:intregs, implicit-def dead $usr_ovf
+
+Inst (4)   %15:intregs = PHI %8:intregs, %bb.2, %16:intregs, %bb.3
+
+	es:        7 ls:        9 me: 7fffffff ms: 80000000
+Trying to insert node between 9 and 7 II: 3
+	insert at cycle 7   %15:intregs = PHI %8:intregs, %bb.2, %16:intregs, %bb.3
+
+Inst (6)   %46:intregs = L2_loadrh_io %14:intregs, 0 :: (load (s16) from %ir.v19)
+
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000
+Trying to insert node between 0 and -2 II: 3
+	insert at cycle -2   %46:intregs = L2_loadrh_io %14:intregs, 0 :: (load (s16) from %ir.v19)
+
+Inst (3)   %14:intregs = PHI %9:intregs, %bb.2, %18:intregs, %bb.3
+
+	es: 80000000 ls: fffffffe me: 7fffffff ms: 80000000
+Trying to insert node between -2 and -4 II: 3
+	insert at cycle -2   %14:intregs = PHI %9:intregs, %bb.2, %18:intregs, %bb.3
+
+Inst (14)   %18:intregs = nuw A2_addi %13:intregs, 4
+
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000
+Trying to insert node between 0 and -2 II: 3
+	insert at cycle 0   %18:intregs = nuw A2_addi %13:intregs, 4
+
+Inst (2)   %13:intregs = PHI %7:intregs, %bb.2, %14:intregs, %bb.3
+
+	es: 80000000 ls: fffffffe me: 7fffffff ms: 80000000
+Trying to insert node between -2 and -4 II: 3
+	insert at cycle -2   %13:intregs = PHI %7:intregs, %bb.2, %14:intregs, %bb.3
+Schedule Found? 1 (II=3)
+cycle -2 (3) (4) %15:intregs = PHI %8:intregs, %bb.2, %16:intregs, %bb.3
+
+cycle -2 (0) (1) %11:intregs = PHI %2:intregs, %bb.2, %19:intregs, %bb.3
+
+cycle -2 (0) (3) %14:intregs = PHI %9:intregs, %bb.2, %18:intregs, %bb.3
+
+cycle -2 (0) (2) %13:intregs = PHI %7:intregs, %bb.2, %14:intregs, %bb.3
+
+cycle -2 (3) (11) %51:intregs = M2_hmmpyl_s1 %50:intregs, %48:intregs, implicit-def dead $usr_ovf
+
+cycle -2 (1) (7) %47:intregs = A2_subh_l16_sat_ll %45:intregs, %46:intregs, implicit-def dead $usr_ovf
+
+cycle -2 (0) (6) %46:intregs = L2_loadrh_io %14:intregs, 0 :: (load (s16) from %ir.v19)
+
+cycle -1 (0) (0) %10:intregs = PHI %3:intregs, %bb.2, %20:intregs, %bb.3
+
+cycle -1 (3) (12) %53:intregs = S2_asr_r_r_sat %51:intregs, %44:intregs, implicit-def dead $usr_ovf
+
+cycle -1 (1) (8) %48:intregs = A2_sxth %47:intregs
+
+cycle -1 (0) (9) %49:intregs, %19:intregs = L2_loadrh_pi %11:intregs(tied-def 1), 2 :: (load (s16) from %ir.lsr.iv1)
+
+cycle 0 (3) (13) %16:intregs = A2_addsat %15:intregs, %53:intregs, implicit-def dead $usr_ovf
+
+cycle 0 (1) (10) %50:intregs = M2_mpy_sat_ll_s1 %48:intregs, %49:intregs, implicit-def dead $usr_ovf
+
+cycle 0 (0) (5) %45:intregs, %20:intregs = L2_loadrh_pi %10:intregs(tied-def 1), 2 :: (load (s16) from %ir.lsr.iv4)
+
+cycle 0 (0) (14) %18:intregs = nuw A2_addi %13:intregs, 4
+
+[stage 3 @-2c] %15:intregs = PHI %8:intregs, %bb.2, %16:intregs, %bb.3
+[stage 0 @-2c] %11:intregs = PHI %2:intregs, %bb.2, %19:intregs, %bb.3
+[stage 0 @-2c] %14:intregs = PHI %9:intregs, %bb.2, %18:intregs, %bb.3
+[stage 0 @-2c] %13:intregs = PHI %7:intregs, %bb.2, %14:intregs, %bb.3
+[stage 3 @-2c] %51:intregs = M2_hmmpyl_s1 %50:intregs, %48:intregs, implicit-def dead $usr_ovf
+[stage 1 @-2c] %47:intregs = A2_subh_l16_sat_ll %45:intregs, %46:intregs, implicit-def dead $usr_ovf
+[stage 0 @-2c] %46:intregs = L2_loadrh_io %14:intregs, 0 :: (load (s16) from %ir.v19)
+[stage 0 @-1c] %10:intregs = PHI %3:intregs, %bb.2, %20:intregs, %bb.3
+[stage 3 @-1c] %53:intregs = S2_asr_r_r_sat %51:intregs, %44:intregs, implicit-def dead $usr_ovf
+[stage 1 @-1c] %48:intregs = A2_sxth %47:intregs
+[stage 0 @-1c] %49:intregs, %19:intregs = L2_loadrh_pi %11:intregs(tied-def 1), 2 :: (load (s16) from %ir.lsr.iv1)
+[stage 3 @0c] %16:intregs = A2_addsat %15:intregs, %53:intregs, implicit-def dead $usr_ovf
+[stage 1 @0c] %50:intregs = M2_mpy_sat_ll_s1 %48:intregs, %49:intregs, implicit-def dead $usr_ovf
+[stage 0 @0c] %45:intregs, %20:intregs = L2_loadrh_pi %10:intregs(tied-def 1), 2 :: (load (s16) from %ir.lsr.iv4)
+[stage 0 @0c] %18:intregs = nuw A2_addi %13:intregs, 4
+llc: /mnt/f/My_Github/llvm-project/llvm/lib/CodeGen/ModuloSchedule.cpp:1687: llvm::Register llvm::PeelingModuloScheduleExpander::getPhiCanonicalReg(llvm::MachineInstr*, llvm::MachineInstr*): Assertion `CanonicalUse->isPHI()' failed.
+PLEASE submit a bug report to https://bugs.llvm.org/ and include the crash backtrace.
+Stack dump:
+0.	Program arguments: llc -march=hexagon -mcpu=hexagonv5 -enable-pipeliner -debug-only=pipeliner -pipeliner-experimental-cg=true
+1.	Running pass 'Function Pass Manager' on module '<stdin>'.
+2.	Running pass 'Modulo Software Pipelining' on function '@f0'
+ #0 0x000055ca6011312a llvm::sys::PrintStackTrace(llvm::raw_ostream&, int) /mnt/f/My_Github/llvm-project/llvm/lib/Support/Unix/Signals.inc:565:22
+ #1 0x000055ca601131e5 PrintStackTraceSignalHandler(void*) /mnt/f/My_Github/llvm-project/llvm/lib/Support/Unix/Signals.inc:632:1
+ #2 0x000055ca60110e4c llvm::sys::RunSignalHandlers() /mnt/f/My_Github/llvm-project/llvm/lib/Support/Signals.cpp:96:20
+ #3 0x000055ca60112a76 SignalHandler(int) /mnt/f/My_Github/llvm-project/llvm/lib/Support/Unix/Signals.inc:407:1
+ #4 0x00007ff115a7c3c0 __restore_rt (/lib/x86_64-linux-gnu/libpthread.so.0+0x153c0)
+ #5 0x00007ff11556a18b raise /build/glibc-eX1tMB/glibc-2.31/signal/../sysdeps/unix/sysv/linux/raise.c:51:1
+ #6 0x00007ff115549859 abort /build/glibc-eX1tMB/glibc-2.31/stdlib/abort.c:81:7
+ #7 0x00007ff115549729 get_sysdep_segment_value /build/glibc-eX1tMB/glibc-2.31/intl/loadmsgcat.c:509:8
+ #8 0x00007ff115549729 _nl_load_domain /build/glibc-eX1tMB/glibc-2.31/intl/loadmsgcat.c:970:34
+ #9 0x00007ff11555af36 (/lib/x86_64-linux-gnu/libc.so.6+0x36f36)
+#10 0x000055ca5f19300f llvm::PeelingModuloScheduleExpander::getPhiCanonicalReg(llvm::MachineInstr*, llvm::MachineInstr*) /mnt/f/My_Github/llvm-project/llvm/lib/CodeGen/ModuloSchedule.cpp:1688:5
+#11 0x000055ca5f19399f llvm::PeelingModuloScheduleExpander::peelPrologAndEpilogs() /mnt/f/My_Github/llvm-project/llvm/lib/CodeGen/ModuloSchedule.cpp:1779:53
+#12 0x000055ca5f195632 llvm::PeelingModuloScheduleExpander::expand() /mnt/f/My_Github/llvm-project/llvm/lib/CodeGen/ModuloSchedule.cpp:1970:16
+#13 0x000055ca5f095138 llvm::SwingSchedulerDAG::schedule() /mnt/f/My_Github/llvm-project/llvm/lib/CodeGen/MachinePipeliner.cpp:639:51
+#14 0x000055ca5f093635 llvm::MachinePipeliner::swingModuloScheduler(llvm::MachineLoop&) /mnt/f/My_Github/llvm-project/llvm/lib/CodeGen/MachinePipeliner.cpp:439:17
+#15 0x000055ca5f092364 llvm::MachinePipeliner::scheduleLoop(llvm::MachineLoop&) /mnt/f/My_Github/llvm-project/llvm/lib/CodeGen/MachinePipeliner.cpp:263:33
+#16 0x000055ca5f092244 llvm::MachinePipeliner::scheduleLoop(llvm::MachineLoop&) /mnt/f/My_Github/llvm-project/llvm/lib/CodeGen/MachinePipeliner.cpp:237:13
+#17 0x000055ca5f09203d llvm::MachinePipeliner::runOnMachineFunction(llvm::MachineFunction&) /mnt/f/My_Github/llvm-project/llvm/lib/CodeGen/MachinePipeliner.cpp:224:19
+#18 0x000055ca5f03acd3 llvm::MachineFunctionPass::runOnFunction(llvm::Function&) /mnt/f/My_Github/llvm-project/llvm/lib/CodeGen/MachineFunctionPass.cpp:72:33
+#19 0x000055ca5f6be6fa llvm::FPPassManager::runOnFunction(llvm::Function&) /mnt/f/My_Github/llvm-project/llvm/lib/IR/LegacyPassManager.cpp:1437:20
+#20 0x000055ca5f6be9c3 llvm::FPPassManager::runOnModule(llvm::Module&) /mnt/f/My_Github/llvm-project/llvm/lib/IR/LegacyPassManager.cpp:1483:13
+#21 0x000055ca5f6bee35 (anonymous namespace)::MPPassManager::runOnModule(llvm::Module&) /mnt/f/My_Github/llvm-project/llvm/lib/IR/LegacyPassManager.cpp:1552:20
+#22 0x000055ca5f6b9d6a llvm::legacy::PassManagerImpl::run(llvm::Module&) /mnt/f/My_Github/llvm-project/llvm/lib/IR/LegacyPassManager.cpp:542:13
+#23 0x000055ca5f6bf70b llvm::legacy::PassManager::run(llvm::Module&) /mnt/f/My_Github/llvm-project/llvm/lib/IR/LegacyPassManager.cpp:1680:1
+#24 0x000055ca5cc56c7e compileModule(char**, llvm::LLVMContext&) /mnt/f/My_Github/llvm-project/llvm/tools/llc/llc.cpp:719:66
+#25 0x000055ca5cc54921 main /mnt/f/My_Github/llvm-project/llvm/tools/llc/llc.cpp:417:35
+#26 0x00007ff11554b0b3 __libc_start_main /build/glibc-eX1tMB/glibc-2.31/csu/../csu/libc-start.c:342:3
+#27 0x000055ca5cc5375e _start (/usr/local/bin/llc+0x1cee75e)

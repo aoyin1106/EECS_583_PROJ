@@ -1,0 +1,28 @@
+Unable to analyzeLoop, can NOT pipeline Loop
+
+!!! Can not pipeline loop.
+	.text
+	.file	"<stdin>"
+	.globl	f0                              // -- Begin function f0
+	.p2align	4
+	.type	f0,@function
+f0:                                     // @f0
+// %bb.0:                               // %b0
+.Lfunc_end0:
+	.size	f0, .Lfunc_end0-f0
+                                        // -- End function
+	.globl	f1                              // -- Begin function f1
+	.p2align	4
+	.type	f1,@function
+f1:                                     // @f1
+// %bb.0:                               // %b0
+	.p2align	4
+.LBB1_1:                                // %b2
+                                        // =>This Inner Loop Header: Depth=1
+	{
+		jump .LBB1_1
+	}
+.Lfunc_end1:
+	.size	f1, .Lfunc_end1-f1
+                                        // -- End function
+	.section	".note.GNU-stack","",@progbits

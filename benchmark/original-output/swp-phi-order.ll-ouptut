@@ -1,0 +1,45 @@
+Unable to analyzeLoop, can NOT pipeline Loop
+
+!!! Can not pipeline loop.
+Unable to analyzeLoop, can NOT pipeline Loop
+
+!!! Can not pipeline loop.
+	.text
+	.file	"<stdin>"
+	.globl	f0                              // -- Begin function f0
+	.p2align	4
+	.type	f0,@function
+f0:                                     // @f0
+	.cfi_startproc
+// %bb.0:                               // %b0
+	{
+		if (p0) jump:nt .LBB0_3
+	}
+// %bb.1:                               // %b1.preheader
+	{
+		r0 = add(r0,#37)
+	}
+                                        // implicit-def: $r2
+	.p2align	4
+.LBB0_2:                                // %b1
+                                        // =>This Inner Loop Header: Depth=1
+	{
+		r2 = and(r2,#255)
+		r3 = memub(r0+#0)
+	}
+	{
+		jump .LBB0_2
+		r2 = add(r3,r2)
+		memb(r0++#1) = r2.new
+	}
+	.p2align	4
+.LBB0_3:                                // %b2
+                                        // =>This Inner Loop Header: Depth=1
+	{
+		jump .LBB0_3
+	}
+.Lfunc_end0:
+	.size	f0, .Lfunc_end0-f0
+	.cfi_endproc
+                                        // -- End function
+	.section	".note.GNU-stack","",@progbits

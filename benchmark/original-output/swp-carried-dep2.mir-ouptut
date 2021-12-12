@@ -1,0 +1,3 @@
+llc: error: llc: <stdin>:1:1: error: expected top-level entity
+# RUN: llc -mtriple=hexagon -run-pass pipeliner -debug-only=pipeliner %s -o /dev/null 2>&1 -pipeliner-experimental-cg=true | FileCheck %s
+^

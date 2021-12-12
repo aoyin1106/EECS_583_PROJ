@@ -1,0 +1,68 @@
+Unable to analyzeLoop, can NOT pipeline Loop
+
+!!! Can not pipeline loop.
+
+!!! Can not pipeline loop.
+	.text
+	.file	"<stdin>"
+	.globl	test                            // -- Begin function test
+	.p2align	4
+	.type	test,@function
+test:                                   // @test
+	.cfi_startproc
+// %bb.0:                               // %entry.split
+	{
+		if (p0) jumpr:nt r31
+	}
+.LBB0_1:
+	{
+		r0 = lsr(r1,#1)
+		r3 = add(r2,#8)
+		r1 = ##2143289344
+	}
+	{
+		jump .LBB0_2
+	}
+	.p2align	4
+.LBB0_4:                                // %while.end712
+                                        //   in Loop: Header=BB0_2 Depth=1
+	{
+		r2 = addasl(r2,r0,#2)
+		r3 = #0
+		memw(r3+#0) = ##2143289344
+	}
+	{
+		if (!p0) jump:nt .LBB0_5
+	}
+.LBB0_2:                                // %for.body
+                                        // =>This Loop Header: Depth=1
+                                        //     Child Loop BB0_3 Depth 2
+	{
+		r3 = add(r3,#4)
+	}
+	{
+		if (p0) jump:nt .LBB0_4
+		r4 = r3
+	}
+	.p2align	4
+.LBB0_3:                                // %while.body661.ur
+                                        //   Parent Loop BB0_2 Depth=1
+                                        // =>  This Inner Loop Header: Depth=2
+	{
+		memw(r4++#4) = r1
+	}
+	{
+		p0 = cmp.gtu(r2,r4); if (p0.new) jump:t .LBB0_3
+	}
+	{
+		jump .LBB0_4
+	}
+.LBB0_5:                                // %for.end
+	{
+		jumpr r31
+	}
+.Lfunc_end0:
+	.size	test, .Lfunc_end0-test
+	.cfi_endproc
+                                        // -- End function
+	.section	".note.GNU-stack","",@progbits

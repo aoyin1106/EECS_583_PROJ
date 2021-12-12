@@ -1,0 +1,43 @@
+
+!!! Can not pipeline loop.
+	.text
+	.file	"<stdin>"
+	.globl	f0                              // -- Begin function f0
+	.p2align	4
+	.type	f0,@function
+f0:                                     // @f0
+// %bb.0:                               // %b0
+	{
+		p0 = cmp.gt(r1,#1)
+		if (!p0.new) jumpr:nt r31
+	}
+.LBB0_1:                                // %b1
+	{
+		r3 = add(r1,#-1)
+		r2 = memw(r0++#4)
+	}
+	{
+		loop0(.LBB0_2,r3)
+		r1 = add(r2,#20)
+	}
+	.p2align	4
+.Ltmp0:                                 // Block address taken
+.LBB0_2:                                // %b2
+                                        // =>This Inner Loop Header: Depth=1
+	{
+		r2 = add(r1,#-10)
+		memw(r0+#-4) = r1
+	}
+	{
+		r0 = add(r0,#4)
+		r1 = add(r1,#10)
+		memw(r0+#0) = r2
+	} :endloop0
+// %bb.3:                               // %b4
+	{
+		jumpr r31
+	}
+.Lfunc_end0:
+	.size	f0, .Lfunc_end0-f0
+                                        // -- End function
+	.section	".note.GNU-stack","",@progbits

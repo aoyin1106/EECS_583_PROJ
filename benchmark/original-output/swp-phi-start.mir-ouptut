@@ -1,0 +1,3 @@
+llc: error: llc: <stdin>:1:1: error: expected top-level entity
+# RUN: llc < %s -x mir -march=hexagon -run-pass=modulo-schedule-test -pipeliner-experimental-cg=true | FileCheck %s
+^

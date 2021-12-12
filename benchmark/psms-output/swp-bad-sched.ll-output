@@ -1,0 +1,2689 @@
+SU(0):   %15:intregs = PHI %14:intregs, %bb.5, %22:intregs, %bb.6
+  # preds left       : 0
+  # succs left       : 6
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 3
+  Successors:
+    SU(13): Data Latency=0 Reg=%15
+    SU(8): Data Latency=0 Reg=%15
+    SU(6): Data Latency=0 Reg=%15
+    SU(4): Data Latency=0 Reg=%15
+    SU(3): Data Latency=0 Reg=%15
+    SU(13): Anti Latency=1
+SU(1):   %17:intregs = PHI %11:intregs, %bb.5, %20:intregs, %bb.6
+  # preds left       : 0
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 1
+  Successors:
+    SU(12): Data Latency=0 Reg=%17
+    SU(12): Anti Latency=1
+SU(2):   %18:intregs = PHI %12:intregs, %bb.5, %19:intregs, %bb.6
+  # preds left       : 0
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 1
+  Successors:
+    SU(10): Data Latency=0 Reg=%18
+    SU(10): Anti Latency=1
+SU(3):   %63:intregs = L2_loadri_io %15:intregs, 0 :: (load (s32) from %ir.lsr.iv24, !tbaa !0)
+  # preds left       : 1
+  # succs left       : 4
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 0
+  Height             : 3
+  Predecessors:
+    SU(0): Data Latency=0 Reg=%15
+  Successors:
+    SU(7): Data Latency=1 Reg=%63
+    SU(5): Data Latency=1 Reg=%63
+    SU(6): Ord  Latency=0 Memory
+    SU(8): Ord  Latency=1 Barrier
+SU(4):   %64:intregs = L2_loadri_io %15:intregs, 2304 :: (load (s32) from %ir.cgep27, !tbaa !0)
+  # preds left       : 1
+  # succs left       : 4
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 0
+  Height             : 3
+  Predecessors:
+    SU(0): Data Latency=0 Reg=%15
+  Successors:
+    SU(7): Data Latency=1 Reg=%64
+    SU(5): Data Latency=1 Reg=%64
+    SU(8): Ord  Latency=0 Memory
+    SU(6): Ord  Latency=1 Barrier
+SU(5):   %65:intregs = nsw A2_add %64:intregs, %63:intregs
+  # preds left       : 2
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 2
+  Predecessors:
+    SU(4): Data Latency=1 Reg=%64
+    SU(3): Data Latency=1 Reg=%63
+  Successors:
+    SU(9): Data Latency=1 Reg=%65
+    SU(6): Data Latency=0 Reg=%65
+SU(6):   S2_storeri_io %15:intregs, 0, %65:intregs :: (store (s32) into %ir.lsr.iv24, !tbaa !0)
+  # preds left       : 4
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 0
+  Predecessors:
+    SU(5): Data Latency=0 Reg=%65
+    SU(3): Ord  Latency=0 Memory
+    SU(0): Data Latency=0 Reg=%15
+    SU(4): Ord  Latency=1 Barrier
+SU(7):   %66:intregs = nsw A2_sub %63:intregs, %64:intregs
+  # preds left       : 2
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 2
+  Predecessors:
+    SU(4): Data Latency=1 Reg=%64
+    SU(3): Data Latency=1 Reg=%63
+  Successors:
+    SU(11): Data Latency=1 Reg=%66
+    SU(8): Data Latency=0 Reg=%66
+SU(8):   S2_storeri_io %15:intregs, 2304, %66:intregs :: (store (s32) into %ir.cgep27, !tbaa !0)
+  # preds left       : 4
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 0
+  Predecessors:
+    SU(7): Data Latency=0 Reg=%66
+    SU(4): Ord  Latency=0 Memory
+    SU(0): Data Latency=0 Reg=%15
+    SU(3): Ord  Latency=1 Barrier
+SU(9):   %67:intregs = A2_abs %65:intregs
+  # preds left       : 1
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 2
+  Height             : 1
+  Predecessors:
+    SU(5): Data Latency=1 Reg=%65
+  Successors:
+    SU(10): Data Latency=1 Reg=%67
+SU(10):   %19:intregs = A2_or %67:intregs, %18:intregs
+  # preds left       : 3
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 3
+  Height             : 0
+  Predecessors:
+    SU(9): Data Latency=1 Reg=%67
+    SU(2): Data Latency=0 Reg=%18
+    SU(2): Anti Latency=1
+SU(11):   %68:intregs = A2_abs %66:intregs
+  # preds left       : 1
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 2
+  Height             : 1
+  Predecessors:
+    SU(7): Data Latency=1 Reg=%66
+  Successors:
+    SU(12): Data Latency=1 Reg=%68
+SU(12):   %20:intregs = A2_or %68:intregs, %17:intregs
+  # preds left       : 3
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 3
+  Height             : 0
+  Predecessors:
+    SU(11): Data Latency=1 Reg=%68
+    SU(1): Data Latency=0 Reg=%17
+    SU(1): Anti Latency=1
+SU(13):   %22:intregs = A2_addi %15:intregs, 4
+  # preds left       : 2
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 0
+  Predecessors:
+    SU(0): Data Latency=0 Reg=%15
+    SU(0): Anti Latency=1
+ExitSU:   ENDLOOP0 %bb.6, implicit-def $pc, implicit-def $lc0, implicit $sa0, implicit $lc0
+  # preds left       : 0
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 0
+calculateResMII:
+Trying to reserve resource for 1 cycles for 
+  %63:intregs = L2_loadri_io %15:intregs, 0 :: (load (s32) from %ir.lsr.iv24, !tbaa !0)
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  S2_storeri_io %15:intregs, 2304, %66:intregs :: (store (s32) into %ir.cgep27, !tbaa !0)
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %67:intregs = A2_abs %65:intregs
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %64:intregs = L2_loadri_io %15:intregs, 2304 :: (load (s32) from %ir.cgep27, !tbaa !0)
+ReservedCycles:0, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  S2_storeri_io %15:intregs, 0, %65:intregs :: (store (s32) into %ir.lsr.iv24, !tbaa !0)
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %68:intregs = A2_abs %66:intregs
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %22:intregs = A2_addi %15:intregs, 4
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %65:intregs = nsw A2_add %64:intregs, %63:intregs
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %20:intregs = A2_or %68:intregs, %17:intregs
+ReservedCycles:0, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %66:intregs = nsw A2_sub %63:intregs, %64:intregs
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %19:intregs = A2_or %67:intregs, %18:intregs
+ReservedCycles:1, NumCycles:1
+Return Res MII:3
+MII = 3 MAX_II = 13 (rec=2, res=3)
+SU(0):   %15:intregs = PHI %14:intregs, %bb.5, %22:intregs, %bb.6
+SU(4):   %64:intregs = L2_loadri_io %15:intregs, 2304 :: (load (s32) from %ir.cgep27, !tbaa !0)
+SU(3):   %63:intregs = L2_loadri_io %15:intregs, 0 :: (load (s32) from %ir.lsr.iv24, !tbaa !0)
+SU(5):   %65:intregs = nsw A2_add %64:intregs, %63:intregs
+SU(6):   S2_storeri_io %15:intregs, 0, %65:intregs :: (store (s32) into %ir.lsr.iv24, !tbaa !0)
+SU(7):   %66:intregs = nsw A2_sub %63:intregs, %64:intregs
+SU(8):   S2_storeri_io %15:intregs, 2304, %66:intregs :: (store (s32) into %ir.cgep27, !tbaa !0)
+SU(9):   %67:intregs = A2_abs %65:intregs
+SU(2):   %18:intregs = PHI %12:intregs, %bb.5, %19:intregs, %bb.6
+SU(10):   %19:intregs = A2_or %67:intregs, %18:intregs
+SU(11):   %68:intregs = A2_abs %66:intregs
+SU(1):   %17:intregs = PHI %11:intregs, %bb.5, %20:intregs, %bb.6
+SU(12):   %20:intregs = A2_or %68:intregs, %17:intregs
+SU(13):   %22:intregs = A2_addi %15:intregs, 4
+	Node 0:
+	   ASAP = 0
+	   ALAP = 0
+	   MOV  = 0
+	   D    = 0
+	   H    = 3
+	   ZLD  = 0
+	   ZLH  = 2
+	Node 1:
+	   ASAP = 0
+	   ALAP = 3
+	   MOV  = 3
+	   D    = 0
+	   H    = 1
+	   ZLD  = 0
+	   ZLH  = 1
+	Node 2:
+	   ASAP = 0
+	   ALAP = 3
+	   MOV  = 3
+	   D    = 0
+	   H    = 1
+	   ZLD  = 0
+	   ZLH  = 1
+	Node 3:
+	   ASAP = 0
+	   ALAP = 0
+	   MOV  = 0
+	   D    = 0
+	   H    = 3
+	   ZLD  = 1
+	   ZLH  = 1
+	Node 4:
+	   ASAP = 0
+	   ALAP = 0
+	   MOV  = 0
+	   D    = 0
+	   H    = 3
+	   ZLD  = 1
+	   ZLH  = 1
+	Node 5:
+	   ASAP = 1
+	   ALAP = 1
+	   MOV  = 0
+	   D    = 1
+	   H    = 2
+	   ZLD  = 0
+	   ZLH  = 1
+	Node 6:
+	   ASAP = 1
+	   ALAP = 3
+	   MOV  = 2
+	   D    = 1
+	   H    = 0
+	   ZLD  = 2
+	   ZLH  = 0
+	Node 7:
+	   ASAP = 1
+	   ALAP = 1
+	   MOV  = 0
+	   D    = 1
+	   H    = 2
+	   ZLD  = 0
+	   ZLH  = 1
+	Node 8:
+	   ASAP = 1
+	   ALAP = 3
+	   MOV  = 2
+	   D    = 1
+	   H    = 0
+	   ZLD  = 2
+	   ZLH  = 0
+	Node 9:
+	   ASAP = 2
+	   ALAP = 2
+	   MOV  = 0
+	   D    = 2
+	   H    = 1
+	   ZLD  = 0
+	   ZLH  = 0
+	Node 10:
+	   ASAP = 3
+	   ALAP = 3
+	   MOV  = 0
+	   D    = 3
+	   H    = 0
+	   ZLD  = 1
+	   ZLH  = 0
+	Node 11:
+	   ASAP = 2
+	   ALAP = 2
+	   MOV  = 0
+	   D    = 2
+	   H    = 1
+	   ZLD  = 0
+	   ZLH  = 0
+	Node 12:
+	   ASAP = 3
+	   ALAP = 3
+	   MOV  = 0
+	   D    = 3
+	   H    = 0
+	   ZLD  = 1
+	   ZLH  = 0
+	Node 13:
+	   ASAP = 0
+	   ALAP = 3
+	   MOV  = 3
+	   D    = 1
+	   H    = 0
+	   ZLD  = 1
+	   ZLH  = 0
+  Rec NodeSet Num nodes 2 rec 1 mov 3 depth 1 col 0
+   SU(0) %15:intregs = PHI %14:intregs, %bb.5, %22:intregs, %bb.6
+   SU(13) %22:intregs = A2_addi %15:intregs, 4
+
+  Rec NodeSet Num nodes 2 rec 1 mov 3 depth 3 col 0
+   SU(1) %17:intregs = PHI %11:intregs, %bb.5, %20:intregs, %bb.6
+   SU(12) %20:intregs = A2_or %68:intregs, %17:intregs
+
+  Rec NodeSet Num nodes 2 rec 1 mov 3 depth 3 col 0
+   SU(2) %18:intregs = PHI %12:intregs, %bb.5, %19:intregs, %bb.6
+   SU(10) %19:intregs = A2_or %67:intregs, %18:intregs
+
+  Rec NodeSet Num nodes 3 rec 2 mov 2 depth 1 col 0
+   SU(3) %63:intregs = L2_loadri_io %15:intregs, 0 :: (load (s32) from %ir.lsr.iv24, !tbaa !0)
+   SU(7) %66:intregs = nsw A2_sub %63:intregs, %64:intregs
+   SU(8) S2_storeri_io %15:intregs, 2304, %66:intregs :: (store (s32) into %ir.cgep27, !tbaa !0)
+
+  NodeSet Num nodes 3 rec 2 mov 2 depth 1 col 0
+   SU(3) %63:intregs = L2_loadri_io %15:intregs, 0 :: (load (s32) from %ir.lsr.iv24, !tbaa !0)
+   SU(7) %66:intregs = nsw A2_sub %63:intregs, %64:intregs
+   SU(8) S2_storeri_io %15:intregs, 2304, %66:intregs :: (store (s32) into %ir.cgep27, !tbaa !0)
+
+  NodeSet Num nodes 3 rec 1 mov 3 depth 3 col 0
+   SU(1) %17:intregs = PHI %11:intregs, %bb.5, %20:intregs, %bb.6
+   SU(12) %20:intregs = A2_or %68:intregs, %17:intregs
+   SU(11) %68:intregs = A2_abs %66:intregs
+
+  NodeSet Num nodes 4 rec 1 mov 3 depth 3 col 0
+   SU(2) %18:intregs = PHI %12:intregs, %bb.5, %19:intregs, %bb.6
+   SU(10) %19:intregs = A2_or %67:intregs, %18:intregs
+   SU(9) %67:intregs = A2_abs %65:intregs
+   SU(5) %65:intregs = nsw A2_add %64:intregs, %63:intregs
+
+  NodeSet Num nodes 3 rec 1 mov 3 depth 1 col 0
+   SU(0) %15:intregs = PHI %14:intregs, %bb.5, %22:intregs, %bb.6
+   SU(13) %22:intregs = A2_addi %15:intregs, 4
+   SU(4) %64:intregs = L2_loadri_io %15:intregs, 2304 :: (load (s32) from %ir.cgep27, !tbaa !0)
+
+  NodeSet Num nodes 1 rec 0 mov 0 depth 0 col 0
+   SU(6) S2_storeri_io %15:intregs, 0, %65:intregs :: (store (s32) into %ir.lsr.iv24, !tbaa !0)
+
+NodeSet size 3
+  Bottom up (default) 8 7 3 
+   Switching order to top down 
+Done with Nodeset
+NodeSet size 3
+  Top down (intersect) 11 12 1 
+   Switching order to bottom up 
+Done with Nodeset
+NodeSet size 4
+  Top down (intersect) 5 9 10 2 
+   Switching order to bottom up 
+Done with Nodeset
+NodeSet size 3
+  Bottom up (preds) 4 0 13 
+   Switching order to top down 
+Done with Nodeset
+NodeSet size 1
+  Top down (succs) 6 
+   Switching order to bottom up 
+Done with Nodeset
+Node order:  8  7  3  11  12  1  5  9  10  2  4  0  13  6 
+Try to schedule with 3
+
+Inst (8)   S2_storeri_io %15:intregs, 2304, %66:intregs :: (store (s32) into %ir.cgep27, !tbaa !0)
+
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 1 and 3 II: 3
+	insert at cycle 1   S2_storeri_io %15:intregs, 2304, %66:intregs :: (store (s32) into %ir.cgep27, !tbaa !0)
+
+Inst (7)   %66:intregs = nsw A2_sub %63:intregs, %64:intregs
+
+	es: 80000000 ls:        1 me: 7fffffff ms: 80000000
+Trying to insert node between 1 and -1 II: 3
+	insert at cycle 0   %66:intregs = nsw A2_sub %63:intregs, %64:intregs
+
+Inst (3)   %63:intregs = L2_loadri_io %15:intregs, 0 :: (load (s32) from %ir.lsr.iv24, !tbaa !0)
+
+	es: 80000000 ls: ffffffff me: 7fffffff ms: ffffffff
+Trying to insert node between -1 and -1 II: 3
+	insert at cycle -1   %63:intregs = L2_loadri_io %15:intregs, 0 :: (load (s32) from %ir.lsr.iv24, !tbaa !0)
+
+Inst (11)   %68:intregs = A2_abs %66:intregs
+
+	es:        1 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 1 and 3 II: 3
+	insert at cycle 1   %68:intregs = A2_abs %66:intregs
+
+Inst (12)   %20:intregs = A2_or %68:intregs, %17:intregs
+
+	es:        2 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 2 and 4 II: 3
+	insert at cycle 2   %20:intregs = A2_or %68:intregs, %17:intregs
+
+Inst (1)   %17:intregs = PHI %11:intregs, %bb.5, %20:intregs, %bb.6
+
+	es:        0 ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between 2 and 0 II: 3
+	insert at cycle 0   %17:intregs = PHI %11:intregs, %bb.5, %20:intregs, %bb.6
+
+Inst (5)   %65:intregs = nsw A2_add %64:intregs, %63:intregs
+
+	es:        0 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 0 and 2 II: 3
+	insert at cycle 0   %65:intregs = nsw A2_add %64:intregs, %63:intregs
+
+Inst (9)   %67:intregs = A2_abs %65:intregs
+
+	es:        1 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 1 and 3 II: 3
+	insert at cycle 1   %67:intregs = A2_abs %65:intregs
+
+Inst (10)   %19:intregs = A2_or %67:intregs, %18:intregs
+
+	es:        2 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 2 and 4 II: 3
+	insert at cycle 2   %19:intregs = A2_or %67:intregs, %18:intregs
+
+Inst (2)   %18:intregs = PHI %12:intregs, %bb.5, %19:intregs, %bb.6
+
+	es:        0 ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between 2 and 0 II: 3
+	insert at cycle 0   %18:intregs = PHI %12:intregs, %bb.5, %19:intregs, %bb.6
+
+Inst (4)   %64:intregs = L2_loadri_io %15:intregs, 2304 :: (load (s32) from %ir.cgep27, !tbaa !0)
+
+	es: 80000000 ls: ffffffff me: 7fffffff ms: 80000000
+Trying to insert node between -1 and -3 II: 3
+	insert at cycle -3   %64:intregs = L2_loadri_io %15:intregs, 2304 :: (load (s32) from %ir.cgep27, !tbaa !0)
+
+Inst (0)   %15:intregs = PHI %14:intregs, %bb.5, %22:intregs, %bb.6
+
+	es: 80000000 ls: fffffffd me: 7fffffff ms: 80000000
+Trying to insert node between -3 and -5 II: 3
+	insert at cycle -3   %15:intregs = PHI %14:intregs, %bb.5, %22:intregs, %bb.6
+
+Inst (13)   %22:intregs = A2_addi %15:intregs, 4
+
+	es: fffffffd ls: ffffffff me: 7fffffff ms: 80000000
+Trying to insert node between -3 and -1 II: 3
+	insert at cycle -3   %22:intregs = A2_addi %15:intregs, 4
+
+Inst (6)   S2_storeri_io %15:intregs, 0, %65:intregs :: (store (s32) into %ir.lsr.iv24, !tbaa !0)
+
+	es:        0 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 0 and 2 II: 3
+	insert at cycle 1   S2_storeri_io %15:intregs, 0, %65:intregs :: (store (s32) into %ir.lsr.iv24, !tbaa !0)
+Schedule Found? 1 (II=3)
+cycle -3 (1) (1) %17:intregs = PHI %11:intregs, %bb.5, %20:intregs, %bb.6
+
+cycle -3 (1) (2) %18:intregs = PHI %12:intregs, %bb.5, %19:intregs, %bb.6
+
+cycle -3 (0) (0) %15:intregs = PHI %14:intregs, %bb.5, %22:intregs, %bb.6
+
+cycle -3 (1) (7) %66:intregs = nsw A2_sub %63:intregs, %64:intregs
+
+cycle -3 (1) (5) %65:intregs = nsw A2_add %64:intregs, %63:intregs
+
+cycle -3 (0) (4) %64:intregs = L2_loadri_io %15:intregs, 2304 :: (load (s32) from %ir.cgep27, !tbaa !0)
+
+cycle -3 (0) (13) %22:intregs = A2_addi %15:intregs, 4
+
+cycle -2 (1) (8) S2_storeri_io %15:intregs, 2304, %66:intregs :: (store (s32) into %ir.cgep27, !tbaa !0)
+
+cycle -2 (1) (11) %68:intregs = A2_abs %66:intregs
+
+cycle -2 (1) (9) %67:intregs = A2_abs %65:intregs
+
+cycle -2 (1) (6) S2_storeri_io %15:intregs, 0, %65:intregs :: (store (s32) into %ir.lsr.iv24, !tbaa !0)
+
+cycle -1 (1) (12) %20:intregs = A2_or %68:intregs, %17:intregs
+
+cycle -1 (1) (10) %19:intregs = A2_or %67:intregs, %18:intregs
+
+cycle -1 (0) (3) %63:intregs = L2_loadri_io %15:intregs, 0 :: (load (s32) from %ir.lsr.iv24, !tbaa !0)
+
+[stage 1 @-3c] %17:intregs = PHI %11:intregs, %bb.5, %20:intregs, %bb.6
+[stage 1 @-3c] %18:intregs = PHI %12:intregs, %bb.5, %19:intregs, %bb.6
+[stage 0 @-3c] %15:intregs = PHI %14:intregs, %bb.5, %22:intregs, %bb.6
+[stage 1 @-3c] %66:intregs = nsw A2_sub %63:intregs, %64:intregs
+[stage 1 @-3c] %65:intregs = nsw A2_add %64:intregs, %63:intregs
+[stage 0 @-3c] %64:intregs = L2_loadri_io %15:intregs, 2304 :: (load (s32) from %ir.cgep27, !tbaa !0)
+[stage 0 @-3c] %22:intregs = A2_addi %15:intregs, 4
+[stage 1 @-2c] S2_storeri_io %15:intregs, 2304, %66:intregs :: (store (s32) into %ir.cgep27, !tbaa !0)
+[stage 1 @-2c] %68:intregs = A2_abs %66:intregs
+[stage 1 @-2c] %67:intregs = A2_abs %65:intregs
+[stage 1 @-2c] S2_storeri_io %15:intregs, 0, %65:intregs :: (store (s32) into %ir.lsr.iv24, !tbaa !0)
+[stage 1 @-1c] %20:intregs = A2_or %68:intregs, %17:intregs
+[stage 1 @-1c] %19:intregs = A2_or %67:intregs, %18:intregs
+[stage 0 @-1c] %63:intregs = L2_loadri_io %15:intregs, 0 :: (load (s32) from %ir.lsr.iv24, !tbaa !0)
+ -- padding defaults array from 1 to 2
+ -- padding defaults array from 1 to 2
+Dynamic: TC > 1
+SU(0):   %2:intregs = PHI %1:intregs, %bb.2, %9:intregs, %bb.3
+  # preds left       : 0
+  # succs left       : 18
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 4
+  Successors:
+    SU(41): Data Latency=0 Reg=%2
+    SU(35): Data Latency=0 Reg=%2
+    SU(33): Data Latency=0 Reg=%2
+    SU(31): Data Latency=0 Reg=%2
+    SU(30): Data Latency=0 Reg=%2
+    SU(27): Data Latency=0 Reg=%2
+    SU(25): Data Latency=0 Reg=%2
+    SU(23): Data Latency=0 Reg=%2
+    SU(22): Data Latency=0 Reg=%2
+    SU(17): Data Latency=0 Reg=%2
+    SU(15): Data Latency=0 Reg=%2
+    SU(13): Data Latency=0 Reg=%2
+    SU(12): Data Latency=0 Reg=%2
+    SU(9): Data Latency=0 Reg=%2
+    SU(7): Data Latency=0 Reg=%2
+    SU(5): Data Latency=0 Reg=%2
+    SU(4): Data Latency=0 Reg=%2
+    SU(41): Anti Latency=1
+SU(1):   %3:intregs = PHI %34:intregs, %bb.2, %7:intregs, %bb.3
+  # preds left       : 0
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 1
+  Successors:
+    SU(21): Data Latency=0 Reg=%3
+    SU(39): Anti Latency=1
+SU(2):   %4:intregs = PHI %34:intregs, %bb.2, %6:intregs, %bb.3
+  # preds left       : 0
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 1
+  Successors:
+    SU(19): Data Latency=0 Reg=%4
+    SU(37): Anti Latency=1
+SU(3):   %5:intregs = PHI %34:intregs, %bb.2, %8:intregs, %bb.3
+  # preds left       : 0
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 1
+  Successors:
+    SU(40): Data Latency=0 Reg=%5
+    SU(40): Anti Latency=1
+SU(4):   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (load (s32) from %ir.cgep18, !tbaa !0)
+  # preds left       : 1
+  # succs left       : 10
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 0
+  Height             : 4
+  Predecessors:
+    SU(0): Data Latency=0 Reg=%2
+  Successors:
+    SU(8): Data Latency=1 Reg=%35
+    SU(6): Data Latency=1 Reg=%35
+    SU(7): Ord  Latency=0 Memory
+    SU(9): Ord  Latency=1 Barrier
+    SU(15): Ord  Latency=1 Barrier
+    SU(17): Ord  Latency=1 Barrier
+    SU(25): Ord  Latency=1 Barrier
+    SU(27): Ord  Latency=1 Barrier
+    SU(33): Ord  Latency=1 Barrier
+    SU(35): Ord  Latency=1 Barrier
+SU(5):   %36:intregs = L2_loadri_io %2:intregs, -12 :: (load (s32) from %ir.cgep19, !tbaa !0)
+  # preds left       : 1
+  # succs left       : 10
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 0
+  Height             : 4
+  Predecessors:
+    SU(0): Data Latency=0 Reg=%2
+  Successors:
+    SU(8): Data Latency=1 Reg=%36
+    SU(6): Data Latency=1 Reg=%36
+    SU(9): Ord  Latency=0 Memory
+    SU(7): Ord  Latency=1 Barrier
+    SU(15): Ord  Latency=1 Barrier
+    SU(17): Ord  Latency=1 Barrier
+    SU(25): Ord  Latency=1 Barrier
+    SU(27): Ord  Latency=1 Barrier
+    SU(33): Ord  Latency=1 Barrier
+    SU(35): Ord  Latency=1 Barrier
+SU(6):   %37:intregs = nsw A2_add %36:intregs, %35:intregs
+  # preds left       : 2
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 3
+  Predecessors:
+    SU(5): Data Latency=1 Reg=%36
+    SU(4): Data Latency=1 Reg=%35
+  Successors:
+    SU(10): Data Latency=1 Reg=%37
+    SU(7): Data Latency=0 Reg=%37
+SU(7):   S2_storeri_io %2:intregs, -2316, %37:intregs :: (store (s32) into %ir.cgep18, !tbaa !0)
+  # preds left       : 4
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 0
+  Predecessors:
+    SU(6): Data Latency=0 Reg=%37
+    SU(4): Ord  Latency=0 Memory
+    SU(0): Data Latency=0 Reg=%2
+    SU(5): Ord  Latency=1 Barrier
+SU(8):   %38:intregs = nsw A2_sub %35:intregs, %36:intregs
+  # preds left       : 2
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 3
+  Predecessors:
+    SU(5): Data Latency=1 Reg=%36
+    SU(4): Data Latency=1 Reg=%35
+  Successors:
+    SU(11): Data Latency=1 Reg=%38
+    SU(9): Data Latency=0 Reg=%38
+SU(9):   S2_storeri_io %2:intregs, -12, %38:intregs :: (store (s32) into %ir.cgep19, !tbaa !0)
+  # preds left       : 4
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 0
+  Predecessors:
+    SU(8): Data Latency=0 Reg=%38
+    SU(5): Ord  Latency=0 Memory
+    SU(0): Data Latency=0 Reg=%2
+    SU(4): Ord  Latency=1 Barrier
+SU(10):   %39:intregs = A2_abs %37:intregs
+  # preds left       : 1
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 2
+  Height             : 2
+  Predecessors:
+    SU(6): Data Latency=1 Reg=%37
+  Successors:
+    SU(19): Data Latency=1 Reg=%39
+SU(11):   %40:intregs = A2_abs %38:intregs
+  # preds left       : 1
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 2
+  Height             : 2
+  Predecessors:
+    SU(8): Data Latency=1 Reg=%38
+  Successors:
+    SU(21): Data Latency=1 Reg=%40
+SU(12):   %41:intregs = L2_loadri_io %2:intregs, -2312 :: (load (s32) from %ir.cgep20, !tbaa !0)
+  # preds left       : 1
+  # succs left       : 8
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 0
+  Height             : 4
+  Predecessors:
+    SU(0): Data Latency=0 Reg=%2
+  Successors:
+    SU(16): Data Latency=1 Reg=%41
+    SU(14): Data Latency=1 Reg=%41
+    SU(15): Ord  Latency=0 Memory
+    SU(17): Ord  Latency=1 Barrier
+    SU(25): Ord  Latency=1 Barrier
+    SU(27): Ord  Latency=1 Barrier
+    SU(33): Ord  Latency=1 Barrier
+    SU(35): Ord  Latency=1 Barrier
+SU(13):   %42:intregs = L2_loadri_io %2:intregs, -8 :: (load (s32) from %ir.cgep21, !tbaa !0)
+  # preds left       : 1
+  # succs left       : 8
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 0
+  Height             : 4
+  Predecessors:
+    SU(0): Data Latency=0 Reg=%2
+  Successors:
+    SU(16): Data Latency=1 Reg=%42
+    SU(14): Data Latency=1 Reg=%42
+    SU(17): Ord  Latency=0 Memory
+    SU(15): Ord  Latency=1 Barrier
+    SU(25): Ord  Latency=1 Barrier
+    SU(27): Ord  Latency=1 Barrier
+    SU(33): Ord  Latency=1 Barrier
+    SU(35): Ord  Latency=1 Barrier
+SU(14):   %43:intregs = nsw A2_add %42:intregs, %41:intregs
+  # preds left       : 2
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 3
+  Predecessors:
+    SU(13): Data Latency=1 Reg=%42
+    SU(12): Data Latency=1 Reg=%41
+  Successors:
+    SU(18): Data Latency=1 Reg=%43
+    SU(15): Data Latency=0 Reg=%43
+SU(15):   S2_storeri_io %2:intregs, -2312, %43:intregs :: (store (s32) into %ir.cgep20, !tbaa !0)
+  # preds left       : 6
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 0
+  Predecessors:
+    SU(14): Data Latency=0 Reg=%43
+    SU(12): Ord  Latency=0 Memory
+    SU(0): Data Latency=0 Reg=%2
+    SU(4): Ord  Latency=1 Barrier
+    SU(5): Ord  Latency=1 Barrier
+    SU(13): Ord  Latency=1 Barrier
+SU(16):   %44:intregs = nsw A2_sub %41:intregs, %42:intregs
+  # preds left       : 2
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 3
+  Predecessors:
+    SU(13): Data Latency=1 Reg=%42
+    SU(12): Data Latency=1 Reg=%41
+  Successors:
+    SU(20): Data Latency=1 Reg=%44
+    SU(17): Data Latency=0 Reg=%44
+SU(17):   S2_storeri_io %2:intregs, -8, %44:intregs :: (store (s32) into %ir.cgep21, !tbaa !0)
+  # preds left       : 6
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 0
+  Predecessors:
+    SU(16): Data Latency=0 Reg=%44
+    SU(13): Ord  Latency=0 Memory
+    SU(0): Data Latency=0 Reg=%2
+    SU(4): Ord  Latency=1 Barrier
+    SU(5): Ord  Latency=1 Barrier
+    SU(12): Ord  Latency=1 Barrier
+SU(18):   %45:intregs = A2_abs %43:intregs
+  # preds left       : 1
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 2
+  Height             : 2
+  Predecessors:
+    SU(14): Data Latency=1 Reg=%43
+  Successors:
+    SU(19): Data Latency=1 Reg=%45
+SU(19):   %46:intregs = M4_or_or %45:intregs(tied-def 0), %39:intregs, %4:intregs
+  # preds left       : 3
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 3
+  Height             : 1
+  Predecessors:
+    SU(18): Data Latency=1 Reg=%45
+    SU(10): Data Latency=1 Reg=%39
+    SU(2): Data Latency=0 Reg=%4
+  Successors:
+    SU(37): Data Latency=1 Reg=%46
+SU(20):   %47:intregs = A2_abs %44:intregs
+  # preds left       : 1
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 2
+  Height             : 2
+  Predecessors:
+    SU(16): Data Latency=1 Reg=%44
+  Successors:
+    SU(21): Data Latency=1 Reg=%47
+SU(21):   %48:intregs = M4_or_or %47:intregs(tied-def 0), %40:intregs, %3:intregs
+  # preds left       : 3
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 3
+  Height             : 1
+  Predecessors:
+    SU(20): Data Latency=1 Reg=%47
+    SU(11): Data Latency=1 Reg=%40
+    SU(1): Data Latency=0 Reg=%3
+  Successors:
+    SU(39): Data Latency=1 Reg=%48
+SU(22):   %49:intregs = L2_loadri_io %2:intregs, -2308 :: (load (s32) from %ir.cgep22, !tbaa !0)
+  # preds left       : 1
+  # succs left       : 6
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 0
+  Height             : 3
+  Predecessors:
+    SU(0): Data Latency=0 Reg=%2
+  Successors:
+    SU(26): Data Latency=1 Reg=%49
+    SU(24): Data Latency=1 Reg=%49
+    SU(25): Ord  Latency=0 Memory
+    SU(27): Ord  Latency=1 Barrier
+    SU(33): Ord  Latency=1 Barrier
+    SU(35): Ord  Latency=1 Barrier
+SU(23):   %50:intregs = L2_loadri_io %2:intregs, -4 :: (load (s32) from %ir.cgep23, !tbaa !0)
+  # preds left       : 1
+  # succs left       : 6
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 0
+  Height             : 3
+  Predecessors:
+    SU(0): Data Latency=0 Reg=%2
+  Successors:
+    SU(26): Data Latency=1 Reg=%50
+    SU(24): Data Latency=1 Reg=%50
+    SU(27): Ord  Latency=0 Memory
+    SU(25): Ord  Latency=1 Barrier
+    SU(33): Ord  Latency=1 Barrier
+    SU(35): Ord  Latency=1 Barrier
+SU(24):   %51:intregs = nsw A2_add %50:intregs, %49:intregs
+  # preds left       : 2
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 2
+  Predecessors:
+    SU(23): Data Latency=1 Reg=%50
+    SU(22): Data Latency=1 Reg=%49
+  Successors:
+    SU(28): Data Latency=1 Reg=%51
+    SU(25): Data Latency=0 Reg=%51
+SU(25):   S2_storeri_io %2:intregs, -2308, %51:intregs :: (store (s32) into %ir.cgep22, !tbaa !0)
+  # preds left       : 8
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 0
+  Predecessors:
+    SU(24): Data Latency=0 Reg=%51
+    SU(22): Ord  Latency=0 Memory
+    SU(0): Data Latency=0 Reg=%2
+    SU(4): Ord  Latency=1 Barrier
+    SU(5): Ord  Latency=1 Barrier
+    SU(12): Ord  Latency=1 Barrier
+    SU(13): Ord  Latency=1 Barrier
+    SU(23): Ord  Latency=1 Barrier
+SU(26):   %52:intregs = nsw A2_sub %49:intregs, %50:intregs
+  # preds left       : 2
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 2
+  Predecessors:
+    SU(23): Data Latency=1 Reg=%50
+    SU(22): Data Latency=1 Reg=%49
+  Successors:
+    SU(29): Data Latency=1 Reg=%52
+    SU(27): Data Latency=0 Reg=%52
+SU(27):   S2_storeri_io %2:intregs, -4, %52:intregs :: (store (s32) into %ir.cgep23, !tbaa !0)
+  # preds left       : 8
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 0
+  Predecessors:
+    SU(26): Data Latency=0 Reg=%52
+    SU(23): Ord  Latency=0 Memory
+    SU(0): Data Latency=0 Reg=%2
+    SU(4): Ord  Latency=1 Barrier
+    SU(5): Ord  Latency=1 Barrier
+    SU(12): Ord  Latency=1 Barrier
+    SU(13): Ord  Latency=1 Barrier
+    SU(22): Ord  Latency=1 Barrier
+SU(28):   %53:intregs = A2_abs %51:intregs
+  # preds left       : 1
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 2
+  Height             : 1
+  Predecessors:
+    SU(24): Data Latency=1 Reg=%51
+  Successors:
+    SU(37): Data Latency=1 Reg=%53
+SU(29):   %54:intregs = A2_abs %52:intregs
+  # preds left       : 1
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 2
+  Height             : 1
+  Predecessors:
+    SU(26): Data Latency=1 Reg=%52
+  Successors:
+    SU(39): Data Latency=1 Reg=%54
+SU(30):   %55:intregs = L2_loadri_io %2:intregs, -2304 :: (load (s32) from %ir.cgep24, !tbaa !0)
+  # preds left       : 1
+  # succs left       : 4
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 0
+  Height             : 3
+  Predecessors:
+    SU(0): Data Latency=0 Reg=%2
+  Successors:
+    SU(34): Data Latency=1 Reg=%55
+    SU(32): Data Latency=1 Reg=%55
+    SU(33): Ord  Latency=0 Memory
+    SU(35): Ord  Latency=1 Barrier
+SU(31):   %56:intregs = L2_loadri_io %2:intregs, 0 :: (load (s32) from %ir.lsr.iv810, !tbaa !0)
+  # preds left       : 1
+  # succs left       : 4
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 0
+  Height             : 3
+  Predecessors:
+    SU(0): Data Latency=0 Reg=%2
+  Successors:
+    SU(34): Data Latency=1 Reg=%56
+    SU(32): Data Latency=1 Reg=%56
+    SU(35): Ord  Latency=0 Memory
+    SU(33): Ord  Latency=1 Barrier
+SU(32):   %57:intregs = nsw A2_add %56:intregs, %55:intregs
+  # preds left       : 2
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 2
+  Predecessors:
+    SU(31): Data Latency=1 Reg=%56
+    SU(30): Data Latency=1 Reg=%55
+  Successors:
+    SU(36): Data Latency=1 Reg=%57
+    SU(33): Data Latency=0 Reg=%57
+SU(33):   S2_storeri_io %2:intregs, -2304, %57:intregs :: (store (s32) into %ir.cgep24, !tbaa !0)
+  # preds left       : 10
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 0
+  Predecessors:
+    SU(32): Data Latency=0 Reg=%57
+    SU(30): Ord  Latency=0 Memory
+    SU(0): Data Latency=0 Reg=%2
+    SU(4): Ord  Latency=1 Barrier
+    SU(5): Ord  Latency=1 Barrier
+    SU(12): Ord  Latency=1 Barrier
+    SU(13): Ord  Latency=1 Barrier
+    SU(22): Ord  Latency=1 Barrier
+    SU(23): Ord  Latency=1 Barrier
+    SU(31): Ord  Latency=1 Barrier
+SU(34):   %58:intregs = nsw A2_sub %55:intregs, %56:intregs
+  # preds left       : 2
+  # succs left       : 2
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 2
+  Predecessors:
+    SU(31): Data Latency=1 Reg=%56
+    SU(30): Data Latency=1 Reg=%55
+  Successors:
+    SU(38): Data Latency=1 Reg=%58
+    SU(35): Data Latency=0 Reg=%58
+SU(35):   S2_storeri_io %2:intregs, 0, %58:intregs :: (store (s32) into %ir.lsr.iv810, !tbaa !0)
+  # preds left       : 10
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 0
+  Predecessors:
+    SU(34): Data Latency=0 Reg=%58
+    SU(31): Ord  Latency=0 Memory
+    SU(0): Data Latency=0 Reg=%2
+    SU(4): Ord  Latency=1 Barrier
+    SU(5): Ord  Latency=1 Barrier
+    SU(12): Ord  Latency=1 Barrier
+    SU(13): Ord  Latency=1 Barrier
+    SU(22): Ord  Latency=1 Barrier
+    SU(23): Ord  Latency=1 Barrier
+    SU(30): Ord  Latency=1 Barrier
+SU(36):   %59:intregs = A2_abs %57:intregs
+  # preds left       : 1
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 2
+  Height             : 1
+  Predecessors:
+    SU(32): Data Latency=1 Reg=%57
+  Successors:
+    SU(37): Data Latency=1 Reg=%59
+SU(37):   %6:intregs = M4_or_or %59:intregs(tied-def 0), %53:intregs, %46:intregs
+  # preds left       : 4
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 4
+  Height             : 0
+  Predecessors:
+    SU(36): Data Latency=1 Reg=%59
+    SU(28): Data Latency=1 Reg=%53
+    SU(19): Data Latency=1 Reg=%46
+    SU(2): Anti Latency=1
+SU(38):   %60:intregs = A2_abs %58:intregs
+  # preds left       : 1
+  # succs left       : 1
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 2
+  Height             : 1
+  Predecessors:
+    SU(34): Data Latency=1 Reg=%58
+  Successors:
+    SU(39): Data Latency=1 Reg=%60
+SU(39):   %7:intregs = M4_or_or %60:intregs(tied-def 0), %54:intregs, %48:intregs
+  # preds left       : 4
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 4
+  Height             : 0
+  Predecessors:
+    SU(38): Data Latency=1 Reg=%60
+    SU(29): Data Latency=1 Reg=%54
+    SU(21): Data Latency=1 Reg=%48
+    SU(1): Anti Latency=1
+SU(40):   %8:intregs = nsw A2_addi %5:intregs, 4
+  # preds left       : 2
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 0
+  Predecessors:
+    SU(3): Data Latency=0 Reg=%5
+    SU(3): Anti Latency=1
+SU(41):   %9:intregs = A2_addi %2:intregs, 16
+  # preds left       : 2
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 1
+  Depth              : 1
+  Height             : 0
+  Predecessors:
+    SU(0): Data Latency=0 Reg=%2
+    SU(0): Anti Latency=1
+ExitSU:   ENDLOOP0 %bb.3, implicit-def $pc, implicit-def $lc0, implicit $sa0, implicit $lc0
+  # preds left       : 0
+  # succs left       : 0
+  # rdefs left       : 0
+  Latency            : 0
+  Depth              : 0
+  Height             : 0
+calculateResMII:
+Trying to reserve resource for 1 cycles for 
+  %35:intregs = L2_loadri_io %2:intregs, -2316 :: (load (s32) from %ir.cgep18, !tbaa !0)
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  S2_storeri_io %2:intregs, -12, %38:intregs :: (store (s32) into %ir.cgep19, !tbaa !0)
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %39:intregs = A2_abs %37:intregs
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %45:intregs = A2_abs %43:intregs
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  S2_storeri_io %2:intregs, -2304, %57:intregs :: (store (s32) into %ir.cgep24, !tbaa !0)
+ReservedCycles:0, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  S2_storeri_io %2:intregs, -8, %44:intregs :: (store (s32) into %ir.cgep21, !tbaa !0)
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %56:intregs = L2_loadri_io %2:intregs, 0 :: (load (s32) from %ir.lsr.iv810, !tbaa !0)
+ReservedCycles:0, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %7:intregs = M4_or_or %60:intregs(tied-def 0), %54:intregs, %48:intregs
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %60:intregs = A2_abs %58:intregs
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %6:intregs = M4_or_or %59:intregs(tied-def 0), %53:intregs, %46:intregs
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %59:intregs = A2_abs %57:intregs
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  S2_storeri_io %2:intregs, 0, %58:intregs :: (store (s32) into %ir.lsr.iv810, !tbaa !0)
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  S2_storeri_io %2:intregs, -2312, %43:intregs :: (store (s32) into %ir.cgep20, !tbaa !0)
+ReservedCycles:0, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %54:intregs = A2_abs %52:intregs
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %55:intregs = L2_loadri_io %2:intregs, -2304 :: (load (s32) from %ir.cgep24, !tbaa !0)
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  S2_storeri_io %2:intregs, -4, %52:intregs :: (store (s32) into %ir.cgep23, !tbaa !0)
+ReservedCycles:0, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %53:intregs = A2_abs %51:intregs
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %36:intregs = L2_loadri_io %2:intregs, -12 :: (load (s32) from %ir.cgep19, !tbaa !0)
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %42:intregs = L2_loadri_io %2:intregs, -8 :: (load (s32) from %ir.cgep21, !tbaa !0)
+ReservedCycles:0, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  S2_storeri_io %2:intregs, -2308, %51:intregs :: (store (s32) into %ir.cgep22, !tbaa !0)
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %50:intregs = L2_loadri_io %2:intregs, -4 :: (load (s32) from %ir.cgep23, !tbaa !0)
+ReservedCycles:0, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  S2_storeri_io %2:intregs, -2316, %37:intregs :: (store (s32) into %ir.cgep18, !tbaa !0)
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %41:intregs = L2_loadri_io %2:intregs, -2312 :: (load (s32) from %ir.cgep20, !tbaa !0)
+ReservedCycles:0, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %48:intregs = M4_or_or %47:intregs(tied-def 0), %40:intregs, %3:intregs
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %49:intregs = L2_loadri_io %2:intregs, -2308 :: (load (s32) from %ir.cgep22, !tbaa !0)
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %47:intregs = A2_abs %44:intregs
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %46:intregs = M4_or_or %45:intregs(tied-def 0), %39:intregs, %4:intregs
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %40:intregs = A2_abs %38:intregs
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %58:intregs = nsw A2_sub %55:intregs, %56:intregs
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %9:intregs = A2_addi %2:intregs, 16
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %37:intregs = nsw A2_add %36:intregs, %35:intregs
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %38:intregs = nsw A2_sub %35:intregs, %36:intregs
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %8:intregs = nsw A2_addi %5:intregs, 4
+ReservedCycles:0, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %44:intregs = nsw A2_sub %41:intregs, %42:intregs
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %57:intregs = nsw A2_add %56:intregs, %55:intregs
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %51:intregs = nsw A2_add %50:intregs, %49:intregs
+ReservedCycles:1, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %43:intregs = nsw A2_add %42:intregs, %41:intregs
+ReservedCycles:0, NumCycles:1
+Trying to reserve resource for 1 cycles for 
+  %52:intregs = nsw A2_sub %49:intregs, %50:intregs
+ReservedCycles:1, NumCycles:1
+Return Res MII:10
+MII = 10 MAX_II = 20 (rec=2, res=10)
+SU(0):   %2:intregs = PHI %1:intregs, %bb.2, %9:intregs, %bb.3
+SU(5):   %36:intregs = L2_loadri_io %2:intregs, -12 :: (load (s32) from %ir.cgep19, !tbaa !0)
+SU(4):   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (load (s32) from %ir.cgep18, !tbaa !0)
+SU(6):   %37:intregs = nsw A2_add %36:intregs, %35:intregs
+SU(7):   S2_storeri_io %2:intregs, -2316, %37:intregs :: (store (s32) into %ir.cgep18, !tbaa !0)
+SU(8):   %38:intregs = nsw A2_sub %35:intregs, %36:intregs
+SU(9):   S2_storeri_io %2:intregs, -12, %38:intregs :: (store (s32) into %ir.cgep19, !tbaa !0)
+SU(13):   %42:intregs = L2_loadri_io %2:intregs, -8 :: (load (s32) from %ir.cgep21, !tbaa !0)
+SU(12):   %41:intregs = L2_loadri_io %2:intregs, -2312 :: (load (s32) from %ir.cgep20, !tbaa !0)
+SU(14):   %43:intregs = nsw A2_add %42:intregs, %41:intregs
+SU(15):   S2_storeri_io %2:intregs, -2312, %43:intregs :: (store (s32) into %ir.cgep20, !tbaa !0)
+SU(16):   %44:intregs = nsw A2_sub %41:intregs, %42:intregs
+SU(17):   S2_storeri_io %2:intregs, -8, %44:intregs :: (store (s32) into %ir.cgep21, !tbaa !0)
+SU(23):   %50:intregs = L2_loadri_io %2:intregs, -4 :: (load (s32) from %ir.cgep23, !tbaa !0)
+SU(22):   %49:intregs = L2_loadri_io %2:intregs, -2308 :: (load (s32) from %ir.cgep22, !tbaa !0)
+SU(24):   %51:intregs = nsw A2_add %50:intregs, %49:intregs
+SU(25):   S2_storeri_io %2:intregs, -2308, %51:intregs :: (store (s32) into %ir.cgep22, !tbaa !0)
+SU(26):   %52:intregs = nsw A2_sub %49:intregs, %50:intregs
+SU(27):   S2_storeri_io %2:intregs, -4, %52:intregs :: (store (s32) into %ir.cgep23, !tbaa !0)
+SU(31):   %56:intregs = L2_loadri_io %2:intregs, 0 :: (load (s32) from %ir.lsr.iv810, !tbaa !0)
+SU(30):   %55:intregs = L2_loadri_io %2:intregs, -2304 :: (load (s32) from %ir.cgep24, !tbaa !0)
+SU(32):   %57:intregs = nsw A2_add %56:intregs, %55:intregs
+SU(33):   S2_storeri_io %2:intregs, -2304, %57:intregs :: (store (s32) into %ir.cgep24, !tbaa !0)
+SU(34):   %58:intregs = nsw A2_sub %55:intregs, %56:intregs
+SU(35):   S2_storeri_io %2:intregs, 0, %58:intregs :: (store (s32) into %ir.lsr.iv810, !tbaa !0)
+SU(36):   %59:intregs = A2_abs %57:intregs
+SU(28):   %53:intregs = A2_abs %51:intregs
+SU(18):   %45:intregs = A2_abs %43:intregs
+SU(10):   %39:intregs = A2_abs %37:intregs
+SU(2):   %4:intregs = PHI %34:intregs, %bb.2, %6:intregs, %bb.3
+SU(19):   %46:intregs = M4_or_or %45:intregs(tied-def 0), %39:intregs, %4:intregs
+SU(37):   %6:intregs = M4_or_or %59:intregs(tied-def 0), %53:intregs, %46:intregs
+SU(38):   %60:intregs = A2_abs %58:intregs
+SU(29):   %54:intregs = A2_abs %52:intregs
+SU(20):   %47:intregs = A2_abs %44:intregs
+SU(11):   %40:intregs = A2_abs %38:intregs
+SU(1):   %3:intregs = PHI %34:intregs, %bb.2, %7:intregs, %bb.3
+SU(21):   %48:intregs = M4_or_or %47:intregs(tied-def 0), %40:intregs, %3:intregs
+SU(39):   %7:intregs = M4_or_or %60:intregs(tied-def 0), %54:intregs, %48:intregs
+SU(3):   %5:intregs = PHI %34:intregs, %bb.2, %8:intregs, %bb.3
+SU(40):   %8:intregs = nsw A2_addi %5:intregs, 4
+SU(41):   %9:intregs = A2_addi %2:intregs, 16
+	Node 0:
+	   ASAP = 0
+	   ALAP = 0
+	   MOV  = 0
+	   D    = 0
+	   H    = 4
+	   ZLD  = 0
+	   ZLH  = 2
+	Node 1:
+	   ASAP = 0
+	   ALAP = 3
+	   MOV  = 3
+	   D    = 0
+	   H    = 1
+	   ZLD  = 0
+	   ZLH  = 1
+	Node 2:
+	   ASAP = 0
+	   ALAP = 3
+	   MOV  = 3
+	   D    = 0
+	   H    = 1
+	   ZLD  = 0
+	   ZLH  = 1
+	Node 3:
+	   ASAP = 0
+	   ALAP = 4
+	   MOV  = 4
+	   D    = 0
+	   H    = 1
+	   ZLD  = 0
+	   ZLH  = 1
+	Node 4:
+	   ASAP = 0
+	   ALAP = 0
+	   MOV  = 0
+	   D    = 0
+	   H    = 4
+	   ZLD  = 1
+	   ZLH  = 1
+	Node 5:
+	   ASAP = 0
+	   ALAP = 0
+	   MOV  = 0
+	   D    = 0
+	   H    = 4
+	   ZLD  = 1
+	   ZLH  = 1
+	Node 6:
+	   ASAP = 1
+	   ALAP = 1
+	   MOV  = 0
+	   D    = 1
+	   H    = 3
+	   ZLD  = 0
+	   ZLH  = 1
+	Node 7:
+	   ASAP = 1
+	   ALAP = 4
+	   MOV  = 3
+	   D    = 1
+	   H    = 0
+	   ZLD  = 2
+	   ZLH  = 0
+	Node 8:
+	   ASAP = 1
+	   ALAP = 1
+	   MOV  = 0
+	   D    = 1
+	   H    = 3
+	   ZLD  = 0
+	   ZLH  = 1
+	Node 9:
+	   ASAP = 1
+	   ALAP = 4
+	   MOV  = 3
+	   D    = 1
+	   H    = 0
+	   ZLD  = 2
+	   ZLH  = 0
+	Node 10:
+	   ASAP = 2
+	   ALAP = 2
+	   MOV  = 0
+	   D    = 2
+	   H    = 2
+	   ZLD  = 0
+	   ZLH  = 0
+	Node 11:
+	   ASAP = 2
+	   ALAP = 2
+	   MOV  = 0
+	   D    = 2
+	   H    = 2
+	   ZLD  = 0
+	   ZLH  = 0
+	Node 12:
+	   ASAP = 0
+	   ALAP = 0
+	   MOV  = 0
+	   D    = 0
+	   H    = 4
+	   ZLD  = 1
+	   ZLH  = 1
+	Node 13:
+	   ASAP = 0
+	   ALAP = 0
+	   MOV  = 0
+	   D    = 0
+	   H    = 4
+	   ZLD  = 1
+	   ZLH  = 1
+	Node 14:
+	   ASAP = 1
+	   ALAP = 1
+	   MOV  = 0
+	   D    = 1
+	   H    = 3
+	   ZLD  = 0
+	   ZLH  = 1
+	Node 15:
+	   ASAP = 1
+	   ALAP = 4
+	   MOV  = 3
+	   D    = 1
+	   H    = 0
+	   ZLD  = 2
+	   ZLH  = 0
+	Node 16:
+	   ASAP = 1
+	   ALAP = 1
+	   MOV  = 0
+	   D    = 1
+	   H    = 3
+	   ZLD  = 0
+	   ZLH  = 1
+	Node 17:
+	   ASAP = 1
+	   ALAP = 4
+	   MOV  = 3
+	   D    = 1
+	   H    = 0
+	   ZLD  = 2
+	   ZLH  = 0
+	Node 18:
+	   ASAP = 2
+	   ALAP = 2
+	   MOV  = 0
+	   D    = 2
+	   H    = 2
+	   ZLD  = 0
+	   ZLH  = 0
+	Node 19:
+	   ASAP = 3
+	   ALAP = 3
+	   MOV  = 0
+	   D    = 3
+	   H    = 1
+	   ZLD  = 1
+	   ZLH  = 0
+	Node 20:
+	   ASAP = 2
+	   ALAP = 2
+	   MOV  = 0
+	   D    = 2
+	   H    = 2
+	   ZLD  = 0
+	   ZLH  = 0
+	Node 21:
+	   ASAP = 3
+	   ALAP = 3
+	   MOV  = 0
+	   D    = 3
+	   H    = 1
+	   ZLD  = 1
+	   ZLH  = 0
+	Node 22:
+	   ASAP = 0
+	   ALAP = 1
+	   MOV  = 1
+	   D    = 0
+	   H    = 3
+	   ZLD  = 1
+	   ZLH  = 1
+	Node 23:
+	   ASAP = 0
+	   ALAP = 1
+	   MOV  = 1
+	   D    = 0
+	   H    = 3
+	   ZLD  = 1
+	   ZLH  = 1
+	Node 24:
+	   ASAP = 1
+	   ALAP = 2
+	   MOV  = 1
+	   D    = 1
+	   H    = 2
+	   ZLD  = 0
+	   ZLH  = 1
+	Node 25:
+	   ASAP = 1
+	   ALAP = 4
+	   MOV  = 3
+	   D    = 1
+	   H    = 0
+	   ZLD  = 2
+	   ZLH  = 0
+	Node 26:
+	   ASAP = 1
+	   ALAP = 2
+	   MOV  = 1
+	   D    = 1
+	   H    = 2
+	   ZLD  = 0
+	   ZLH  = 1
+	Node 27:
+	   ASAP = 1
+	   ALAP = 4
+	   MOV  = 3
+	   D    = 1
+	   H    = 0
+	   ZLD  = 2
+	   ZLH  = 0
+	Node 28:
+	   ASAP = 2
+	   ALAP = 3
+	   MOV  = 1
+	   D    = 2
+	   H    = 1
+	   ZLD  = 0
+	   ZLH  = 0
+	Node 29:
+	   ASAP = 2
+	   ALAP = 3
+	   MOV  = 1
+	   D    = 2
+	   H    = 1
+	   ZLD  = 0
+	   ZLH  = 0
+	Node 30:
+	   ASAP = 0
+	   ALAP = 1
+	   MOV  = 1
+	   D    = 0
+	   H    = 3
+	   ZLD  = 1
+	   ZLH  = 1
+	Node 31:
+	   ASAP = 0
+	   ALAP = 1
+	   MOV  = 1
+	   D    = 0
+	   H    = 3
+	   ZLD  = 1
+	   ZLH  = 1
+	Node 32:
+	   ASAP = 1
+	   ALAP = 2
+	   MOV  = 1
+	   D    = 1
+	   H    = 2
+	   ZLD  = 0
+	   ZLH  = 1
+	Node 33:
+	   ASAP = 1
+	   ALAP = 4
+	   MOV  = 3
+	   D    = 1
+	   H    = 0
+	   ZLD  = 2
+	   ZLH  = 0
+	Node 34:
+	   ASAP = 1
+	   ALAP = 2
+	   MOV  = 1
+	   D    = 1
+	   H    = 2
+	   ZLD  = 0
+	   ZLH  = 1
+	Node 35:
+	   ASAP = 1
+	   ALAP = 4
+	   MOV  = 3
+	   D    = 1
+	   H    = 0
+	   ZLD  = 2
+	   ZLH  = 0
+	Node 36:
+	   ASAP = 2
+	   ALAP = 3
+	   MOV  = 1
+	   D    = 2
+	   H    = 1
+	   ZLD  = 0
+	   ZLH  = 0
+	Node 37:
+	   ASAP = 4
+	   ALAP = 4
+	   MOV  = 0
+	   D    = 4
+	   H    = 0
+	   ZLD  = 0
+	   ZLH  = 0
+	Node 38:
+	   ASAP = 2
+	   ALAP = 3
+	   MOV  = 1
+	   D    = 2
+	   H    = 1
+	   ZLD  = 0
+	   ZLH  = 0
+	Node 39:
+	   ASAP = 4
+	   ALAP = 4
+	   MOV  = 0
+	   D    = 4
+	   H    = 0
+	   ZLD  = 0
+	   ZLH  = 0
+	Node 40:
+	   ASAP = 0
+	   ALAP = 4
+	   MOV  = 4
+	   D    = 1
+	   H    = 0
+	   ZLD  = 1
+	   ZLH  = 0
+	Node 41:
+	   ASAP = 0
+	   ALAP = 4
+	   MOV  = 4
+	   D    = 1
+	   H    = 0
+	   ZLD  = 1
+	   ZLH  = 0
+  Rec NodeSet Num nodes 2 rec 1 mov 4 depth 1 col 0
+   SU(0) %2:intregs = PHI %1:intregs, %bb.2, %9:intregs, %bb.3
+   SU(41) %9:intregs = A2_addi %2:intregs, 16
+
+  Rec NodeSet Num nodes 3 rec 2 mov 3 depth 4 col 0
+   SU(1) %3:intregs = PHI %34:intregs, %bb.2, %7:intregs, %bb.3
+   SU(21) %48:intregs = M4_or_or %47:intregs(tied-def 0), %40:intregs, %3:intregs
+   SU(39) %7:intregs = M4_or_or %60:intregs(tied-def 0), %54:intregs, %48:intregs
+
+  Rec NodeSet Num nodes 3 rec 2 mov 3 depth 4 col 0
+   SU(2) %4:intregs = PHI %34:intregs, %bb.2, %6:intregs, %bb.3
+   SU(19) %46:intregs = M4_or_or %45:intregs(tied-def 0), %39:intregs, %4:intregs
+   SU(37) %6:intregs = M4_or_or %59:intregs(tied-def 0), %53:intregs, %46:intregs
+
+  Rec NodeSet Num nodes 2 rec 1 mov 4 depth 1 col 0
+   SU(3) %5:intregs = PHI %34:intregs, %bb.2, %8:intregs, %bb.3
+   SU(40) %8:intregs = nsw A2_addi %5:intregs, 4
+
+  Rec NodeSet Num nodes 7 rec 2 mov 3 depth 1 col 0
+   SU(4) %35:intregs = L2_loadri_io %2:intregs, -2316 :: (load (s32) from %ir.cgep18, !tbaa !0)
+   SU(8) %38:intregs = nsw A2_sub %35:intregs, %36:intregs
+   SU(9) S2_storeri_io %2:intregs, -12, %38:intregs :: (store (s32) into %ir.cgep19, !tbaa !0)
+   SU(15) S2_storeri_io %2:intregs, -2312, %43:intregs :: (store (s32) into %ir.cgep20, !tbaa !0)
+   SU(17) S2_storeri_io %2:intregs, -8, %44:intregs :: (store (s32) into %ir.cgep21, !tbaa !0)
+   SU(25) S2_storeri_io %2:intregs, -2308, %51:intregs :: (store (s32) into %ir.cgep22, !tbaa !0)
+   SU(27) S2_storeri_io %2:intregs, -4, %52:intregs :: (store (s32) into %ir.cgep23, !tbaa !0)
+
+  Rec NodeSet Num nodes 2 rec 1 mov 3 depth 1 col 0
+   SU(5) %36:intregs = L2_loadri_io %2:intregs, -12 :: (load (s32) from %ir.cgep19, !tbaa !0)
+   SU(17) S2_storeri_io %2:intregs, -8, %44:intregs :: (store (s32) into %ir.cgep21, !tbaa !0)
+
+  Rec NodeSet Num nodes 7 rec 2 mov 3 depth 1 col 0
+   SU(12) %41:intregs = L2_loadri_io %2:intregs, -2312 :: (load (s32) from %ir.cgep20, !tbaa !0)
+   SU(16) %44:intregs = nsw A2_sub %41:intregs, %42:intregs
+   SU(17) S2_storeri_io %2:intregs, -8, %44:intregs :: (store (s32) into %ir.cgep21, !tbaa !0)
+   SU(25) S2_storeri_io %2:intregs, -2308, %51:intregs :: (store (s32) into %ir.cgep22, !tbaa !0)
+   SU(27) S2_storeri_io %2:intregs, -4, %52:intregs :: (store (s32) into %ir.cgep23, !tbaa !0)
+   SU(33) S2_storeri_io %2:intregs, -2304, %57:intregs :: (store (s32) into %ir.cgep24, !tbaa !0)
+   SU(35) S2_storeri_io %2:intregs, 0, %58:intregs :: (store (s32) into %ir.lsr.iv810, !tbaa !0)
+
+  Rec NodeSet Num nodes 3 rec 1 mov 3 depth 1 col 0
+   SU(13) %42:intregs = L2_loadri_io %2:intregs, -8 :: (load (s32) from %ir.cgep21, !tbaa !0)
+   SU(27) S2_storeri_io %2:intregs, -4, %52:intregs :: (store (s32) into %ir.cgep23, !tbaa !0)
+   SU(35) S2_storeri_io %2:intregs, 0, %58:intregs :: (store (s32) into %ir.lsr.iv810, !tbaa !0)
+
+  Rec NodeSet Num nodes 5 rec 2 mov 3 depth 1 col 0
+   SU(22) %49:intregs = L2_loadri_io %2:intregs, -2308 :: (load (s32) from %ir.cgep22, !tbaa !0)
+   SU(26) %52:intregs = nsw A2_sub %49:intregs, %50:intregs
+   SU(27) S2_storeri_io %2:intregs, -4, %52:intregs :: (store (s32) into %ir.cgep23, !tbaa !0)
+   SU(33) S2_storeri_io %2:intregs, -2304, %57:intregs :: (store (s32) into %ir.cgep24, !tbaa !0)
+   SU(35) S2_storeri_io %2:intregs, 0, %58:intregs :: (store (s32) into %ir.lsr.iv810, !tbaa !0)
+
+  Rec NodeSet Num nodes 2 rec 1 mov 3 depth 1 col 0
+   SU(23) %50:intregs = L2_loadri_io %2:intregs, -4 :: (load (s32) from %ir.cgep23, !tbaa !0)
+   SU(35) S2_storeri_io %2:intregs, 0, %58:intregs :: (store (s32) into %ir.lsr.iv810, !tbaa !0)
+
+  Rec NodeSet Num nodes 3 rec 2 mov 3 depth 1 col 0
+   SU(30) %55:intregs = L2_loadri_io %2:intregs, -2304 :: (load (s32) from %ir.cgep24, !tbaa !0)
+   SU(34) %58:intregs = nsw A2_sub %55:intregs, %56:intregs
+   SU(35) S2_storeri_io %2:intregs, 0, %58:intregs :: (store (s32) into %ir.lsr.iv810, !tbaa !0)
+
+  NodeSet Num nodes 3 rec 2 mov 3 depth 4 col 0
+   SU(1) %3:intregs = PHI %34:intregs, %bb.2, %7:intregs, %bb.3
+   SU(21) %48:intregs = M4_or_or %47:intregs(tied-def 0), %40:intregs, %3:intregs
+   SU(39) %7:intregs = M4_or_or %60:intregs(tied-def 0), %54:intregs, %48:intregs
+
+  NodeSet Num nodes 3 rec 2 mov 3 depth 4 col 0
+   SU(2) %4:intregs = PHI %34:intregs, %bb.2, %6:intregs, %bb.3
+   SU(19) %46:intregs = M4_or_or %45:intregs(tied-def 0), %39:intregs, %4:intregs
+   SU(37) %6:intregs = M4_or_or %59:intregs(tied-def 0), %53:intregs, %46:intregs
+
+  NodeSet Num nodes 10 rec 2 mov 3 depth 1 col 0
+   SU(4) %35:intregs = L2_loadri_io %2:intregs, -2316 :: (load (s32) from %ir.cgep18, !tbaa !0)
+   SU(8) %38:intregs = nsw A2_sub %35:intregs, %36:intregs
+   SU(9) S2_storeri_io %2:intregs, -12, %38:intregs :: (store (s32) into %ir.cgep19, !tbaa !0)
+   SU(15) S2_storeri_io %2:intregs, -2312, %43:intregs :: (store (s32) into %ir.cgep20, !tbaa !0)
+   SU(17) S2_storeri_io %2:intregs, -8, %44:intregs :: (store (s32) into %ir.cgep21, !tbaa !0)
+   SU(25) S2_storeri_io %2:intregs, -2308, %51:intregs :: (store (s32) into %ir.cgep22, !tbaa !0)
+   SU(27) S2_storeri_io %2:intregs, -4, %52:intregs :: (store (s32) into %ir.cgep23, !tbaa !0)
+   SU(10) %39:intregs = A2_abs %37:intregs
+   SU(6) %37:intregs = nsw A2_add %36:intregs, %35:intregs
+   SU(11) %40:intregs = A2_abs %38:intregs
+
+  NodeSet Num nodes 7 rec 2 mov 3 depth 1 col 0
+   SU(12) %41:intregs = L2_loadri_io %2:intregs, -2312 :: (load (s32) from %ir.cgep20, !tbaa !0)
+   SU(16) %44:intregs = nsw A2_sub %41:intregs, %42:intregs
+   SU(33) S2_storeri_io %2:intregs, -2304, %57:intregs :: (store (s32) into %ir.cgep24, !tbaa !0)
+   SU(35) S2_storeri_io %2:intregs, 0, %58:intregs :: (store (s32) into %ir.lsr.iv810, !tbaa !0)
+   SU(18) %45:intregs = A2_abs %43:intregs
+   SU(14) %43:intregs = nsw A2_add %42:intregs, %41:intregs
+   SU(20) %47:intregs = A2_abs %44:intregs
+
+  NodeSet Num nodes 5 rec 2 mov 3 depth 1 col 0
+   SU(22) %49:intregs = L2_loadri_io %2:intregs, -2308 :: (load (s32) from %ir.cgep22, !tbaa !0)
+   SU(26) %52:intregs = nsw A2_sub %49:intregs, %50:intregs
+   SU(28) %53:intregs = A2_abs %51:intregs
+   SU(24) %51:intregs = nsw A2_add %50:intregs, %49:intregs
+   SU(29) %54:intregs = A2_abs %52:intregs
+
+  NodeSet Num nodes 5 rec 2 mov 3 depth 1 col 0
+   SU(30) %55:intregs = L2_loadri_io %2:intregs, -2304 :: (load (s32) from %ir.cgep24, !tbaa !0)
+   SU(34) %58:intregs = nsw A2_sub %55:intregs, %56:intregs
+   SU(36) %59:intregs = A2_abs %57:intregs
+   SU(32) %57:intregs = nsw A2_add %56:intregs, %55:intregs
+   SU(38) %60:intregs = A2_abs %58:intregs
+
+  NodeSet Num nodes 1 rec 1 mov 3 depth 1 col 0
+   SU(5) %36:intregs = L2_loadri_io %2:intregs, -12 :: (load (s32) from %ir.cgep19, !tbaa !0)
+
+  NodeSet Num nodes 1 rec 1 mov 3 depth 1 col 0
+   SU(13) %42:intregs = L2_loadri_io %2:intregs, -8 :: (load (s32) from %ir.cgep21, !tbaa !0)
+
+  NodeSet Num nodes 1 rec 1 mov 3 depth 1 col 0
+   SU(23) %50:intregs = L2_loadri_io %2:intregs, -4 :: (load (s32) from %ir.cgep23, !tbaa !0)
+
+  NodeSet Num nodes 3 rec 1 mov 4 depth 1 col 0
+   SU(0) %2:intregs = PHI %1:intregs, %bb.2, %9:intregs, %bb.3
+   SU(41) %9:intregs = A2_addi %2:intregs, 16
+   SU(31) %56:intregs = L2_loadri_io %2:intregs, 0 :: (load (s32) from %ir.lsr.iv810, !tbaa !0)
+
+  NodeSet Num nodes 2 rec 1 mov 4 depth 1 col 0
+   SU(3) %5:intregs = PHI %34:intregs, %bb.2, %8:intregs, %bb.3
+   SU(40) %8:intregs = nsw A2_addi %5:intregs, 4
+
+  NodeSet Num nodes 1 rec 0 mov 0 depth 0 col 0
+   SU(7) S2_storeri_io %2:intregs, -2316, %37:intregs :: (store (s32) into %ir.cgep18, !tbaa !0)
+
+NodeSet size 3
+  Bottom up (default) 39 21 1 
+   Switching order to top down 
+Done with Nodeset
+NodeSet size 3
+  Bottom up (default) 37 19 2 
+   Switching order to top down 
+Done with Nodeset
+NodeSet size 10
+  Bottom up (default) 11 8 4 
+   Switching order to top down 6 10 9 15 17 25 27 
+   Switching order to bottom up 
+Done with Nodeset
+NodeSet size 7
+  Top down (intersect) 33 35 
+   Switching order to bottom up 20 18 14 16 12 
+   Switching order to top down 
+Done with Nodeset
+NodeSet size 5
+  Bottom up (default) 29 26 22 
+   Switching order to top down 24 28 
+   Switching order to bottom up 
+Done with Nodeset
+NodeSet size 5
+  Bottom up (default) 38 34 30 
+   Switching order to top down 32 36 
+   Switching order to bottom up 
+Done with Nodeset
+NodeSet size 1
+  Bottom up (default) 5 
+   Switching order to top down 
+Done with Nodeset
+NodeSet size 1
+  Bottom up (default) 13 
+   Switching order to top down 
+Done with Nodeset
+NodeSet size 1
+  Bottom up (default) 23 
+   Switching order to top down 
+Done with Nodeset
+NodeSet size 3
+  Bottom up (preds) 31 0 41 
+   Switching order to top down 
+Done with Nodeset
+NodeSet size 2
+  Bottom up (default) 40 3 
+   Switching order to top down 
+Done with Nodeset
+NodeSet size 1
+  Top down (succs) 7 
+   Switching order to bottom up 
+Done with Nodeset
+Node order:  39  21  1  37  19  2  11  8  4  6  10  9  15  17  25  27  33  35  20  18  14  16  12  29  26  22  24  28  38  34  30  32  36  5  13  23  31  0  41  40  3  7 
+Predecessor 6 and successor 19 are scheduled before node 10
+Predecessor 22 and successor 25 are scheduled before node 24
+Predecessor 24 and successor 37 are scheduled before node 28
+Predecessor 30 and successor 33 are scheduled before node 32
+Predecessor 32 and successor 37 are scheduled before node 36
+Invalid node order found!
+Try to schedule with 10
+
+Inst (39)   %7:intregs = M4_or_or %60:intregs(tied-def 0), %54:intregs, %48:intregs
+
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 4 and 13 II: 10
+	insert at cycle 4   %7:intregs = M4_or_or %60:intregs(tied-def 0), %54:intregs, %48:intregs
+
+Inst (21)   %48:intregs = M4_or_or %47:intregs(tied-def 0), %40:intregs, %3:intregs
+
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -6 II: 10
+	insert at cycle 3   %48:intregs = M4_or_or %47:intregs(tied-def 0), %40:intregs, %3:intregs
+
+Inst (1)   %3:intregs = PHI %34:intregs, %bb.2, %7:intregs, %bb.3
+
+	es: fffffffb ls:        3 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -5 II: 10
+	insert at cycle 2   %3:intregs = PHI %34:intregs, %bb.2, %7:intregs, %bb.3
+
+Inst (37)   %6:intregs = M4_or_or %59:intregs(tied-def 0), %53:intregs, %46:intregs
+
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 4 and 13 II: 10
+	insert at cycle 5   %6:intregs = M4_or_or %59:intregs(tied-def 0), %53:intregs, %46:intregs
+
+Inst (19)   %46:intregs = M4_or_or %45:intregs(tied-def 0), %39:intregs, %4:intregs
+
+	es: 80000000 ls:        4 me: 7fffffff ms: 80000000
+Trying to insert node between 4 and -5 II: 10
+	insert at cycle 2   %46:intregs = M4_or_or %45:intregs(tied-def 0), %39:intregs, %4:intregs
+
+Inst (2)   %4:intregs = PHI %34:intregs, %bb.2, %6:intregs, %bb.3
+
+	es: fffffffc ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between 2 and -4 II: 10
+	insert at cycle 1   %4:intregs = PHI %34:intregs, %bb.2, %6:intregs, %bb.3
+
+Inst (11)   %40:intregs = A2_abs %38:intregs
+
+	es: 80000000 ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between 2 and -7 II: 10
+	insert at cycle 1   %40:intregs = A2_abs %38:intregs
+
+Inst (8)   %38:intregs = nsw A2_sub %35:intregs, %36:intregs
+
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000
+Trying to insert node between 0 and -9 II: 10
+	insert at cycle 0   %38:intregs = nsw A2_sub %35:intregs, %36:intregs
+
+Inst (4)   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (load (s32) from %ir.cgep18, !tbaa !0)
+
+	es: 80000000 ls: ffffffff me: 7fffffff ms: 80000000
+Trying to insert node between -1 and -10 II: 10
+	insert at cycle -1   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (load (s32) from %ir.cgep18, !tbaa !0)
+
+Inst (6)   %37:intregs = nsw A2_add %36:intregs, %35:intregs
+
+	es:        0 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 0 and 9 II: 10
+	insert at cycle 6   %37:intregs = nsw A2_add %36:intregs, %35:intregs
+
+Inst (10)   %39:intregs = A2_abs %37:intregs
+
+	es:        7 ls:        1 me: 7fffffff ms: 80000000
+	Can't schedule
+Try to schedule with 11
+
+Inst (39)   %7:intregs = M4_or_or %60:intregs(tied-def 0), %54:intregs, %48:intregs
+
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 4 and 14 II: 11
+	insert at cycle 4   %7:intregs = M4_or_or %60:intregs(tied-def 0), %54:intregs, %48:intregs
+
+Inst (21)   %48:intregs = M4_or_or %47:intregs(tied-def 0), %40:intregs, %3:intregs
+
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -7 II: 11
+	insert at cycle 3   %48:intregs = M4_or_or %47:intregs(tied-def 0), %40:intregs, %3:intregs
+
+Inst (1)   %3:intregs = PHI %34:intregs, %bb.2, %7:intregs, %bb.3
+
+	es: fffffffa ls:        3 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -6 II: 11
+	insert at cycle 2   %3:intregs = PHI %34:intregs, %bb.2, %7:intregs, %bb.3
+
+Inst (37)   %6:intregs = M4_or_or %59:intregs(tied-def 0), %53:intregs, %46:intregs
+
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 4 and 14 II: 11
+	insert at cycle 5   %6:intregs = M4_or_or %59:intregs(tied-def 0), %53:intregs, %46:intregs
+
+Inst (19)   %46:intregs = M4_or_or %45:intregs(tied-def 0), %39:intregs, %4:intregs
+
+	es: 80000000 ls:        4 me: 7fffffff ms: 80000000
+Trying to insert node between 4 and -6 II: 11
+	insert at cycle 2   %46:intregs = M4_or_or %45:intregs(tied-def 0), %39:intregs, %4:intregs
+
+Inst (2)   %4:intregs = PHI %34:intregs, %bb.2, %6:intregs, %bb.3
+
+	es: fffffffb ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between 2 and -5 II: 11
+	insert at cycle 1   %4:intregs = PHI %34:intregs, %bb.2, %6:intregs, %bb.3
+
+Inst (11)   %40:intregs = A2_abs %38:intregs
+
+	es: 80000000 ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between 2 and -8 II: 11
+	insert at cycle 1   %40:intregs = A2_abs %38:intregs
+
+Inst (8)   %38:intregs = nsw A2_sub %35:intregs, %36:intregs
+
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000
+Trying to insert node between 0 and -10 II: 11
+	insert at cycle 0   %38:intregs = nsw A2_sub %35:intregs, %36:intregs
+
+Inst (4)   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (load (s32) from %ir.cgep18, !tbaa !0)
+
+	es: 80000000 ls: ffffffff me: 7fffffff ms: 80000000
+Trying to insert node between -1 and -11 II: 11
+	insert at cycle -1   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (load (s32) from %ir.cgep18, !tbaa !0)
+
+Inst (6)   %37:intregs = nsw A2_add %36:intregs, %35:intregs
+
+	es:        0 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 0 and 10 II: 11
+	insert at cycle 6   %37:intregs = nsw A2_add %36:intregs, %35:intregs
+
+Inst (10)   %39:intregs = A2_abs %37:intregs
+
+	es:        7 ls:        1 me: 7fffffff ms: 80000000
+	Can't schedule
+Try to schedule with 12
+
+Inst (39)   %7:intregs = M4_or_or %60:intregs(tied-def 0), %54:intregs, %48:intregs
+
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 4 and 15 II: 12
+	insert at cycle 4   %7:intregs = M4_or_or %60:intregs(tied-def 0), %54:intregs, %48:intregs
+
+Inst (21)   %48:intregs = M4_or_or %47:intregs(tied-def 0), %40:intregs, %3:intregs
+
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -8 II: 12
+	insert at cycle 3   %48:intregs = M4_or_or %47:intregs(tied-def 0), %40:intregs, %3:intregs
+
+Inst (1)   %3:intregs = PHI %34:intregs, %bb.2, %7:intregs, %bb.3
+
+	es: fffffff9 ls:        3 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -7 II: 12
+	insert at cycle 2   %3:intregs = PHI %34:intregs, %bb.2, %7:intregs, %bb.3
+
+Inst (37)   %6:intregs = M4_or_or %59:intregs(tied-def 0), %53:intregs, %46:intregs
+
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 4 and 15 II: 12
+	insert at cycle 5   %6:intregs = M4_or_or %59:intregs(tied-def 0), %53:intregs, %46:intregs
+
+Inst (19)   %46:intregs = M4_or_or %45:intregs(tied-def 0), %39:intregs, %4:intregs
+
+	es: 80000000 ls:        4 me: 7fffffff ms: 80000000
+Trying to insert node between 4 and -7 II: 12
+	insert at cycle 2   %46:intregs = M4_or_or %45:intregs(tied-def 0), %39:intregs, %4:intregs
+
+Inst (2)   %4:intregs = PHI %34:intregs, %bb.2, %6:intregs, %bb.3
+
+	es: fffffffa ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between 2 and -6 II: 12
+	insert at cycle 1   %4:intregs = PHI %34:intregs, %bb.2, %6:intregs, %bb.3
+
+Inst (11)   %40:intregs = A2_abs %38:intregs
+
+	es: 80000000 ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between 2 and -9 II: 12
+	insert at cycle 1   %40:intregs = A2_abs %38:intregs
+
+Inst (8)   %38:intregs = nsw A2_sub %35:intregs, %36:intregs
+
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000
+Trying to insert node between 0 and -11 II: 12
+	insert at cycle 0   %38:intregs = nsw A2_sub %35:intregs, %36:intregs
+
+Inst (4)   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (load (s32) from %ir.cgep18, !tbaa !0)
+
+	es: 80000000 ls: ffffffff me: 7fffffff ms: 80000000
+Trying to insert node between -1 and -12 II: 12
+	insert at cycle -1   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (load (s32) from %ir.cgep18, !tbaa !0)
+
+Inst (6)   %37:intregs = nsw A2_add %36:intregs, %35:intregs
+
+	es:        0 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 0 and 11 II: 12
+	insert at cycle 6   %37:intregs = nsw A2_add %36:intregs, %35:intregs
+
+Inst (10)   %39:intregs = A2_abs %37:intregs
+
+	es:        7 ls:        1 me: 7fffffff ms: 80000000
+	Can't schedule
+Try to schedule with 13
+
+Inst (39)   %7:intregs = M4_or_or %60:intregs(tied-def 0), %54:intregs, %48:intregs
+
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 4 and 16 II: 13
+	insert at cycle 4   %7:intregs = M4_or_or %60:intregs(tied-def 0), %54:intregs, %48:intregs
+
+Inst (21)   %48:intregs = M4_or_or %47:intregs(tied-def 0), %40:intregs, %3:intregs
+
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -9 II: 13
+	insert at cycle 3   %48:intregs = M4_or_or %47:intregs(tied-def 0), %40:intregs, %3:intregs
+
+Inst (1)   %3:intregs = PHI %34:intregs, %bb.2, %7:intregs, %bb.3
+
+	es: fffffff8 ls:        3 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -8 II: 13
+	insert at cycle 2   %3:intregs = PHI %34:intregs, %bb.2, %7:intregs, %bb.3
+
+Inst (37)   %6:intregs = M4_or_or %59:intregs(tied-def 0), %53:intregs, %46:intregs
+
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 4 and 16 II: 13
+	insert at cycle 5   %6:intregs = M4_or_or %59:intregs(tied-def 0), %53:intregs, %46:intregs
+
+Inst (19)   %46:intregs = M4_or_or %45:intregs(tied-def 0), %39:intregs, %4:intregs
+
+	es: 80000000 ls:        4 me: 7fffffff ms: 80000000
+Trying to insert node between 4 and -8 II: 13
+	insert at cycle 2   %46:intregs = M4_or_or %45:intregs(tied-def 0), %39:intregs, %4:intregs
+
+Inst (2)   %4:intregs = PHI %34:intregs, %bb.2, %6:intregs, %bb.3
+
+	es: fffffff9 ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between 2 and -7 II: 13
+	insert at cycle 1   %4:intregs = PHI %34:intregs, %bb.2, %6:intregs, %bb.3
+
+Inst (11)   %40:intregs = A2_abs %38:intregs
+
+	es: 80000000 ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between 2 and -10 II: 13
+	insert at cycle 1   %40:intregs = A2_abs %38:intregs
+
+Inst (8)   %38:intregs = nsw A2_sub %35:intregs, %36:intregs
+
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000
+Trying to insert node between 0 and -12 II: 13
+	insert at cycle 0   %38:intregs = nsw A2_sub %35:intregs, %36:intregs
+
+Inst (4)   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (load (s32) from %ir.cgep18, !tbaa !0)
+
+	es: 80000000 ls: ffffffff me: 7fffffff ms: 80000000
+Trying to insert node between -1 and -13 II: 13
+	insert at cycle -1   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (load (s32) from %ir.cgep18, !tbaa !0)
+
+Inst (6)   %37:intregs = nsw A2_add %36:intregs, %35:intregs
+
+	es:        0 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 0 and 12 II: 13
+	insert at cycle 6   %37:intregs = nsw A2_add %36:intregs, %35:intregs
+
+Inst (10)   %39:intregs = A2_abs %37:intregs
+
+	es:        7 ls:        1 me: 7fffffff ms: 80000000
+	Can't schedule
+Try to schedule with 14
+
+Inst (39)   %7:intregs = M4_or_or %60:intregs(tied-def 0), %54:intregs, %48:intregs
+
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 4 and 17 II: 14
+	insert at cycle 4   %7:intregs = M4_or_or %60:intregs(tied-def 0), %54:intregs, %48:intregs
+
+Inst (21)   %48:intregs = M4_or_or %47:intregs(tied-def 0), %40:intregs, %3:intregs
+
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -10 II: 14
+	insert at cycle 3   %48:intregs = M4_or_or %47:intregs(tied-def 0), %40:intregs, %3:intregs
+
+Inst (1)   %3:intregs = PHI %34:intregs, %bb.2, %7:intregs, %bb.3
+
+	es: fffffff7 ls:        3 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -9 II: 14
+	insert at cycle 2   %3:intregs = PHI %34:intregs, %bb.2, %7:intregs, %bb.3
+
+Inst (37)   %6:intregs = M4_or_or %59:intregs(tied-def 0), %53:intregs, %46:intregs
+
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 4 and 17 II: 14
+	insert at cycle 5   %6:intregs = M4_or_or %59:intregs(tied-def 0), %53:intregs, %46:intregs
+
+Inst (19)   %46:intregs = M4_or_or %45:intregs(tied-def 0), %39:intregs, %4:intregs
+
+	es: 80000000 ls:        4 me: 7fffffff ms: 80000000
+Trying to insert node between 4 and -9 II: 14
+	insert at cycle 2   %46:intregs = M4_or_or %45:intregs(tied-def 0), %39:intregs, %4:intregs
+
+Inst (2)   %4:intregs = PHI %34:intregs, %bb.2, %6:intregs, %bb.3
+
+	es: fffffff8 ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between 2 and -8 II: 14
+	insert at cycle 1   %4:intregs = PHI %34:intregs, %bb.2, %6:intregs, %bb.3
+
+Inst (11)   %40:intregs = A2_abs %38:intregs
+
+	es: 80000000 ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between 2 and -11 II: 14
+	insert at cycle 1   %40:intregs = A2_abs %38:intregs
+
+Inst (8)   %38:intregs = nsw A2_sub %35:intregs, %36:intregs
+
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000
+Trying to insert node between 0 and -13 II: 14
+	insert at cycle 0   %38:intregs = nsw A2_sub %35:intregs, %36:intregs
+
+Inst (4)   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (load (s32) from %ir.cgep18, !tbaa !0)
+
+	es: 80000000 ls: ffffffff me: 7fffffff ms: 80000000
+Trying to insert node between -1 and -14 II: 14
+	insert at cycle -1   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (load (s32) from %ir.cgep18, !tbaa !0)
+
+Inst (6)   %37:intregs = nsw A2_add %36:intregs, %35:intregs
+
+	es:        0 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 0 and 13 II: 14
+	insert at cycle 6   %37:intregs = nsw A2_add %36:intregs, %35:intregs
+
+Inst (10)   %39:intregs = A2_abs %37:intregs
+
+	es:        7 ls:        1 me: 7fffffff ms: 80000000
+	Can't schedule
+Try to schedule with 15
+
+Inst (39)   %7:intregs = M4_or_or %60:intregs(tied-def 0), %54:intregs, %48:intregs
+
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 4 and 18 II: 15
+	insert at cycle 4   %7:intregs = M4_or_or %60:intregs(tied-def 0), %54:intregs, %48:intregs
+
+Inst (21)   %48:intregs = M4_or_or %47:intregs(tied-def 0), %40:intregs, %3:intregs
+
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -11 II: 15
+	insert at cycle 3   %48:intregs = M4_or_or %47:intregs(tied-def 0), %40:intregs, %3:intregs
+
+Inst (1)   %3:intregs = PHI %34:intregs, %bb.2, %7:intregs, %bb.3
+
+	es: fffffff6 ls:        3 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -10 II: 15
+	insert at cycle 2   %3:intregs = PHI %34:intregs, %bb.2, %7:intregs, %bb.3
+
+Inst (37)   %6:intregs = M4_or_or %59:intregs(tied-def 0), %53:intregs, %46:intregs
+
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 4 and 18 II: 15
+	insert at cycle 5   %6:intregs = M4_or_or %59:intregs(tied-def 0), %53:intregs, %46:intregs
+
+Inst (19)   %46:intregs = M4_or_or %45:intregs(tied-def 0), %39:intregs, %4:intregs
+
+	es: 80000000 ls:        4 me: 7fffffff ms: 80000000
+Trying to insert node between 4 and -10 II: 15
+	insert at cycle 2   %46:intregs = M4_or_or %45:intregs(tied-def 0), %39:intregs, %4:intregs
+
+Inst (2)   %4:intregs = PHI %34:intregs, %bb.2, %6:intregs, %bb.3
+
+	es: fffffff7 ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between 2 and -9 II: 15
+	insert at cycle 1   %4:intregs = PHI %34:intregs, %bb.2, %6:intregs, %bb.3
+
+Inst (11)   %40:intregs = A2_abs %38:intregs
+
+	es: 80000000 ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between 2 and -12 II: 15
+	insert at cycle 1   %40:intregs = A2_abs %38:intregs
+
+Inst (8)   %38:intregs = nsw A2_sub %35:intregs, %36:intregs
+
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000
+Trying to insert node between 0 and -14 II: 15
+	insert at cycle 0   %38:intregs = nsw A2_sub %35:intregs, %36:intregs
+
+Inst (4)   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (load (s32) from %ir.cgep18, !tbaa !0)
+
+	es: 80000000 ls: ffffffff me: 7fffffff ms: 80000000
+Trying to insert node between -1 and -15 II: 15
+	insert at cycle -1   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (load (s32) from %ir.cgep18, !tbaa !0)
+
+Inst (6)   %37:intregs = nsw A2_add %36:intregs, %35:intregs
+
+	es:        0 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 0 and 14 II: 15
+	insert at cycle 6   %37:intregs = nsw A2_add %36:intregs, %35:intregs
+
+Inst (10)   %39:intregs = A2_abs %37:intregs
+
+	es:        7 ls:        1 me: 7fffffff ms: 80000000
+	Can't schedule
+Try to schedule with 16
+
+Inst (39)   %7:intregs = M4_or_or %60:intregs(tied-def 0), %54:intregs, %48:intregs
+
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 4 and 19 II: 16
+	insert at cycle 4   %7:intregs = M4_or_or %60:intregs(tied-def 0), %54:intregs, %48:intregs
+
+Inst (21)   %48:intregs = M4_or_or %47:intregs(tied-def 0), %40:intregs, %3:intregs
+
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -12 II: 16
+	insert at cycle 3   %48:intregs = M4_or_or %47:intregs(tied-def 0), %40:intregs, %3:intregs
+
+Inst (1)   %3:intregs = PHI %34:intregs, %bb.2, %7:intregs, %bb.3
+
+	es: fffffff5 ls:        3 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -11 II: 16
+	insert at cycle 2   %3:intregs = PHI %34:intregs, %bb.2, %7:intregs, %bb.3
+
+Inst (37)   %6:intregs = M4_or_or %59:intregs(tied-def 0), %53:intregs, %46:intregs
+
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 4 and 19 II: 16
+	insert at cycle 5   %6:intregs = M4_or_or %59:intregs(tied-def 0), %53:intregs, %46:intregs
+
+Inst (19)   %46:intregs = M4_or_or %45:intregs(tied-def 0), %39:intregs, %4:intregs
+
+	es: 80000000 ls:        4 me: 7fffffff ms: 80000000
+Trying to insert node between 4 and -11 II: 16
+	insert at cycle 2   %46:intregs = M4_or_or %45:intregs(tied-def 0), %39:intregs, %4:intregs
+
+Inst (2)   %4:intregs = PHI %34:intregs, %bb.2, %6:intregs, %bb.3
+
+	es: fffffff6 ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between 2 and -10 II: 16
+	insert at cycle 1   %4:intregs = PHI %34:intregs, %bb.2, %6:intregs, %bb.3
+
+Inst (11)   %40:intregs = A2_abs %38:intregs
+
+	es: 80000000 ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between 2 and -13 II: 16
+	insert at cycle 1   %40:intregs = A2_abs %38:intregs
+
+Inst (8)   %38:intregs = nsw A2_sub %35:intregs, %36:intregs
+
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000
+Trying to insert node between 0 and -15 II: 16
+	insert at cycle 0   %38:intregs = nsw A2_sub %35:intregs, %36:intregs
+
+Inst (4)   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (load (s32) from %ir.cgep18, !tbaa !0)
+
+	es: 80000000 ls: ffffffff me: 7fffffff ms: 80000000
+Trying to insert node between -1 and -16 II: 16
+	insert at cycle -1   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (load (s32) from %ir.cgep18, !tbaa !0)
+
+Inst (6)   %37:intregs = nsw A2_add %36:intregs, %35:intregs
+
+	es:        0 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 0 and 15 II: 16
+	insert at cycle 6   %37:intregs = nsw A2_add %36:intregs, %35:intregs
+
+Inst (10)   %39:intregs = A2_abs %37:intregs
+
+	es:        7 ls:        1 me: 7fffffff ms: 80000000
+	Can't schedule
+Try to schedule with 17
+
+Inst (39)   %7:intregs = M4_or_or %60:intregs(tied-def 0), %54:intregs, %48:intregs
+
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 4 and 20 II: 17
+	insert at cycle 4   %7:intregs = M4_or_or %60:intregs(tied-def 0), %54:intregs, %48:intregs
+
+Inst (21)   %48:intregs = M4_or_or %47:intregs(tied-def 0), %40:intregs, %3:intregs
+
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -13 II: 17
+	insert at cycle 3   %48:intregs = M4_or_or %47:intregs(tied-def 0), %40:intregs, %3:intregs
+
+Inst (1)   %3:intregs = PHI %34:intregs, %bb.2, %7:intregs, %bb.3
+
+	es: fffffff4 ls:        3 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -12 II: 17
+	insert at cycle 2   %3:intregs = PHI %34:intregs, %bb.2, %7:intregs, %bb.3
+
+Inst (37)   %6:intregs = M4_or_or %59:intregs(tied-def 0), %53:intregs, %46:intregs
+
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 4 and 20 II: 17
+	insert at cycle 5   %6:intregs = M4_or_or %59:intregs(tied-def 0), %53:intregs, %46:intregs
+
+Inst (19)   %46:intregs = M4_or_or %45:intregs(tied-def 0), %39:intregs, %4:intregs
+
+	es: 80000000 ls:        4 me: 7fffffff ms: 80000000
+Trying to insert node between 4 and -12 II: 17
+	insert at cycle 2   %46:intregs = M4_or_or %45:intregs(tied-def 0), %39:intregs, %4:intregs
+
+Inst (2)   %4:intregs = PHI %34:intregs, %bb.2, %6:intregs, %bb.3
+
+	es: fffffff5 ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between 2 and -11 II: 17
+	insert at cycle 1   %4:intregs = PHI %34:intregs, %bb.2, %6:intregs, %bb.3
+
+Inst (11)   %40:intregs = A2_abs %38:intregs
+
+	es: 80000000 ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between 2 and -14 II: 17
+	insert at cycle 1   %40:intregs = A2_abs %38:intregs
+
+Inst (8)   %38:intregs = nsw A2_sub %35:intregs, %36:intregs
+
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000
+Trying to insert node between 0 and -16 II: 17
+	insert at cycle 0   %38:intregs = nsw A2_sub %35:intregs, %36:intregs
+
+Inst (4)   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (load (s32) from %ir.cgep18, !tbaa !0)
+
+	es: 80000000 ls: ffffffff me: 7fffffff ms: 80000000
+Trying to insert node between -1 and -17 II: 17
+	insert at cycle -1   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (load (s32) from %ir.cgep18, !tbaa !0)
+
+Inst (6)   %37:intregs = nsw A2_add %36:intregs, %35:intregs
+
+	es:        0 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 0 and 16 II: 17
+	insert at cycle 6   %37:intregs = nsw A2_add %36:intregs, %35:intregs
+
+Inst (10)   %39:intregs = A2_abs %37:intregs
+
+	es:        7 ls:        1 me: 7fffffff ms: 80000000
+	Can't schedule
+Try to schedule with 18
+
+Inst (39)   %7:intregs = M4_or_or %60:intregs(tied-def 0), %54:intregs, %48:intregs
+
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 4 and 21 II: 18
+	insert at cycle 4   %7:intregs = M4_or_or %60:intregs(tied-def 0), %54:intregs, %48:intregs
+
+Inst (21)   %48:intregs = M4_or_or %47:intregs(tied-def 0), %40:intregs, %3:intregs
+
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -14 II: 18
+	insert at cycle 3   %48:intregs = M4_or_or %47:intregs(tied-def 0), %40:intregs, %3:intregs
+
+Inst (1)   %3:intregs = PHI %34:intregs, %bb.2, %7:intregs, %bb.3
+
+	es: fffffff3 ls:        3 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -13 II: 18
+	insert at cycle 2   %3:intregs = PHI %34:intregs, %bb.2, %7:intregs, %bb.3
+
+Inst (37)   %6:intregs = M4_or_or %59:intregs(tied-def 0), %53:intregs, %46:intregs
+
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 4 and 21 II: 18
+	insert at cycle 5   %6:intregs = M4_or_or %59:intregs(tied-def 0), %53:intregs, %46:intregs
+
+Inst (19)   %46:intregs = M4_or_or %45:intregs(tied-def 0), %39:intregs, %4:intregs
+
+	es: 80000000 ls:        4 me: 7fffffff ms: 80000000
+Trying to insert node between 4 and -13 II: 18
+	insert at cycle 2   %46:intregs = M4_or_or %45:intregs(tied-def 0), %39:intregs, %4:intregs
+
+Inst (2)   %4:intregs = PHI %34:intregs, %bb.2, %6:intregs, %bb.3
+
+	es: fffffff4 ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between 2 and -12 II: 18
+	insert at cycle 1   %4:intregs = PHI %34:intregs, %bb.2, %6:intregs, %bb.3
+
+Inst (11)   %40:intregs = A2_abs %38:intregs
+
+	es: 80000000 ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between 2 and -15 II: 18
+	insert at cycle 1   %40:intregs = A2_abs %38:intregs
+
+Inst (8)   %38:intregs = nsw A2_sub %35:intregs, %36:intregs
+
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000
+Trying to insert node between 0 and -17 II: 18
+	insert at cycle 0   %38:intregs = nsw A2_sub %35:intregs, %36:intregs
+
+Inst (4)   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (load (s32) from %ir.cgep18, !tbaa !0)
+
+	es: 80000000 ls: ffffffff me: 7fffffff ms: 80000000
+Trying to insert node between -1 and -18 II: 18
+	insert at cycle -1   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (load (s32) from %ir.cgep18, !tbaa !0)
+
+Inst (6)   %37:intregs = nsw A2_add %36:intregs, %35:intregs
+
+	es:        0 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 0 and 17 II: 18
+	insert at cycle 6   %37:intregs = nsw A2_add %36:intregs, %35:intregs
+
+Inst (10)   %39:intregs = A2_abs %37:intregs
+
+	es:        7 ls:        1 me: 7fffffff ms: 80000000
+	Can't schedule
+Try to schedule with 19
+
+Inst (39)   %7:intregs = M4_or_or %60:intregs(tied-def 0), %54:intregs, %48:intregs
+
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 4 and 22 II: 19
+	insert at cycle 4   %7:intregs = M4_or_or %60:intregs(tied-def 0), %54:intregs, %48:intregs
+
+Inst (21)   %48:intregs = M4_or_or %47:intregs(tied-def 0), %40:intregs, %3:intregs
+
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -15 II: 19
+	insert at cycle 3   %48:intregs = M4_or_or %47:intregs(tied-def 0), %40:intregs, %3:intregs
+
+Inst (1)   %3:intregs = PHI %34:intregs, %bb.2, %7:intregs, %bb.3
+
+	es: fffffff2 ls:        3 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -14 II: 19
+	insert at cycle 2   %3:intregs = PHI %34:intregs, %bb.2, %7:intregs, %bb.3
+
+Inst (37)   %6:intregs = M4_or_or %59:intregs(tied-def 0), %53:intregs, %46:intregs
+
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 4 and 22 II: 19
+	insert at cycle 5   %6:intregs = M4_or_or %59:intregs(tied-def 0), %53:intregs, %46:intregs
+
+Inst (19)   %46:intregs = M4_or_or %45:intregs(tied-def 0), %39:intregs, %4:intregs
+
+	es: 80000000 ls:        4 me: 7fffffff ms: 80000000
+Trying to insert node between 4 and -14 II: 19
+	insert at cycle 2   %46:intregs = M4_or_or %45:intregs(tied-def 0), %39:intregs, %4:intregs
+
+Inst (2)   %4:intregs = PHI %34:intregs, %bb.2, %6:intregs, %bb.3
+
+	es: fffffff3 ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between 2 and -13 II: 19
+	insert at cycle 1   %4:intregs = PHI %34:intregs, %bb.2, %6:intregs, %bb.3
+
+Inst (11)   %40:intregs = A2_abs %38:intregs
+
+	es: 80000000 ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between 2 and -16 II: 19
+	insert at cycle 1   %40:intregs = A2_abs %38:intregs
+
+Inst (8)   %38:intregs = nsw A2_sub %35:intregs, %36:intregs
+
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000
+Trying to insert node between 0 and -18 II: 19
+	insert at cycle 0   %38:intregs = nsw A2_sub %35:intregs, %36:intregs
+
+Inst (4)   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (load (s32) from %ir.cgep18, !tbaa !0)
+
+	es: 80000000 ls: ffffffff me: 7fffffff ms: 80000000
+Trying to insert node between -1 and -19 II: 19
+	insert at cycle -1   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (load (s32) from %ir.cgep18, !tbaa !0)
+
+Inst (6)   %37:intregs = nsw A2_add %36:intregs, %35:intregs
+
+	es:        0 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 0 and 18 II: 19
+	insert at cycle 6   %37:intregs = nsw A2_add %36:intregs, %35:intregs
+
+Inst (10)   %39:intregs = A2_abs %37:intregs
+
+	es:        7 ls:        1 me: 7fffffff ms: 80000000
+	Can't schedule
+Try to schedule with 20
+
+Inst (39)   %7:intregs = M4_or_or %60:intregs(tied-def 0), %54:intregs, %48:intregs
+
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 4 and 23 II: 20
+	insert at cycle 4   %7:intregs = M4_or_or %60:intregs(tied-def 0), %54:intregs, %48:intregs
+
+Inst (21)   %48:intregs = M4_or_or %47:intregs(tied-def 0), %40:intregs, %3:intregs
+
+	es: 80000000 ls:        3 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -16 II: 20
+	insert at cycle 3   %48:intregs = M4_or_or %47:intregs(tied-def 0), %40:intregs, %3:intregs
+
+Inst (1)   %3:intregs = PHI %34:intregs, %bb.2, %7:intregs, %bb.3
+
+	es: fffffff1 ls:        3 me: 7fffffff ms: 80000000
+Trying to insert node between 3 and -15 II: 20
+	insert at cycle 2   %3:intregs = PHI %34:intregs, %bb.2, %7:intregs, %bb.3
+
+Inst (37)   %6:intregs = M4_or_or %59:intregs(tied-def 0), %53:intregs, %46:intregs
+
+	es: 80000000 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 4 and 23 II: 20
+	insert at cycle 5   %6:intregs = M4_or_or %59:intregs(tied-def 0), %53:intregs, %46:intregs
+
+Inst (19)   %46:intregs = M4_or_or %45:intregs(tied-def 0), %39:intregs, %4:intregs
+
+	es: 80000000 ls:        4 me: 7fffffff ms: 80000000
+Trying to insert node between 4 and -15 II: 20
+	insert at cycle 2   %46:intregs = M4_or_or %45:intregs(tied-def 0), %39:intregs, %4:intregs
+
+Inst (2)   %4:intregs = PHI %34:intregs, %bb.2, %6:intregs, %bb.3
+
+	es: fffffff2 ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between 2 and -14 II: 20
+	insert at cycle 1   %4:intregs = PHI %34:intregs, %bb.2, %6:intregs, %bb.3
+
+Inst (11)   %40:intregs = A2_abs %38:intregs
+
+	es: 80000000 ls:        2 me: 7fffffff ms: 80000000
+Trying to insert node between 2 and -17 II: 20
+	insert at cycle 1   %40:intregs = A2_abs %38:intregs
+
+Inst (8)   %38:intregs = nsw A2_sub %35:intregs, %36:intregs
+
+	es: 80000000 ls:        0 me: 7fffffff ms: 80000000
+Trying to insert node between 0 and -19 II: 20
+	insert at cycle 0   %38:intregs = nsw A2_sub %35:intregs, %36:intregs
+
+Inst (4)   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (load (s32) from %ir.cgep18, !tbaa !0)
+
+	es: 80000000 ls: ffffffff me: 7fffffff ms: 80000000
+Trying to insert node between -1 and -20 II: 20
+	insert at cycle -1   %35:intregs = L2_loadri_io %2:intregs, -2316 :: (load (s32) from %ir.cgep18, !tbaa !0)
+
+Inst (6)   %37:intregs = nsw A2_add %36:intregs, %35:intregs
+
+	es:        0 ls: 7fffffff me: 7fffffff ms: 80000000
+Trying to insert node between 0 and 19 II: 20
+	insert at cycle 6   %37:intregs = nsw A2_add %36:intregs, %35:intregs
+
+Inst (10)   %39:intregs = A2_abs %37:intregs
+
+	es:        7 ls:        1 me: 7fffffff ms: 80000000
+	Can't schedule
+Schedule Found? 0 (II=20)
+No schedule found, return
+	.text
+	.file	"<stdin>"
+	.globl	f0                              // -- Begin function f0
+	.p2align	4
+	.type	f0,@function
+f0:                                     // @f0
+// %bb.0:                               // %b0
+	{
+		p0 = cmp.gt(r1,#0); if (!p0.new) jump:nt .LBB0_1
+	}
+// %bb.2:                               // %b1
+	{
+		p0 = cmp.gtu(r1,#3); if (!p0.new) jump:t .LBB0_5
+		r3 = #0
+		r5:4 = combine(#0,#0)
+	}
+// %bb.3:                               // %b2
+	{
+		r5 = lsr(r1,#2)
+		r6 = add(r0,#2316)
+		r3 = #0
+	}
+	{
+		loop0(.LBB0_4,r5)
+		r5:4 = combine(#0,#0)
+	}
+	.p2align	4
+.Ltmp0:                                 // Block address taken
+.LBB0_4:                                // %b3
+                                        // =>This Inner Loop Header: Depth=1
+	{
+		r5 = add(r5,#4)
+		r7 = memw(r6+#-2316)
+		r9 = memw(r6+#-2312)
+	}
+	{
+		r12 = memw(r6+#-8)
+		r8 = memw(r6+#-12)
+	}
+	{
+		r15 = add(r12,r9)
+		r10 = add(r8,r7)
+		r9 = sub(r9,r12)
+		r13 = memw(r6+#-2308)
+	}
+	{
+		r12 = abs(r10)
+		r15 = abs(r15)
+		r14 = memw(r6+#-4)
+		memw(r6+#-2312) = r15
+	}
+	{
+		r15 |= or(r12,r4)
+		r7 = sub(r7,r8)
+		r11 = add(r14,r13)
+		r28 = memw(r6+#-2304)
+	}
+	{
+		r8 = abs(r11)
+		r12 = sub(r13,r14)
+		r4 = memw(r6+#0)
+		memw(r6+#-2316) = r10
+	}
+	{
+		r7 = abs(r7)
+		r10 = add(r4,r28)
+		memw(r6+#-12) = r7
+		memw(r6+#-8) = r9
+	}
+	{
+		r9 = abs(r9)
+		r4 = abs(r10)
+		r11 = sub(r28,r4)
+		memw(r6+#-2308) = r11
+	}
+	{
+		r9 |= or(r7,r3)
+		r7 = abs(r12)
+		memw(r6+#-4) = r12
+		memw(r6+#-2304) = r10
+	}
+	{
+		r3 = abs(r11)
+		r4 |= or(r8,r15)
+		r6 = add(r6,#16)
+		memw(r6+#0) = r11
+	}
+	{
+		r3 |= or(r7,r9)
+		nop
+	} :endloop0
+.LBB0_5:                                // %b5
+	{
+		p0 = cmp.eq(r5,r1); if (p0.new) jump:t .LBB0_9
+	}
+// %bb.6:                               // %b6
+	{
+		r0 = addasl(r0,r5,#2)
+		r1 = sub(r1,r5)
+	}
+	{
+		r6 = add(r1,#-1)
+		p0 = cmp.gtu(r1,#1)
+		r5 = add(r0,#4)
+		r1 = memw(r0+#2304)
+	}
+	{
+		loop0(.LBB0_7,r6)
+		if (!p0) jump:nt .LBB0_8
+		r6 = r0
+		r7 = memw(r0+#0)
+	}
+	.p2align	4
+.Ltmp1:                                 // Block address taken
+.LBB0_7:                                // %b7
+                                        // =>This Inner Loop Header: Depth=1
+	{
+		r8 = add(r1,r7)
+		r7 = sub(r7,r1)
+		r6 = r5
+		memw(r0+#0) = r8.new
+	}
+	{
+		r9 = abs(r7)
+		r8 = abs(r8)
+		r1 = memw(r6+#2304)
+		memw(r0+#2304) = r7
+	}
+	{
+		r0 = r6
+		r3 = or(r9,r3)
+		r5 = add(r5,#4)
+		r7 = memw(r6+#0)
+	}
+	{
+		r4 = or(r8,r4)
+		nop
+	} :endloop0
+.LBB0_8:                                // %b7
+	{
+		r0 = sub(r7,r1)
+		r7 = add(r1,r7)
+		memw(r6+#2304) = r0.new
+	}
+	{
+		r0 = abs(r0)
+		r1 = abs(r7)
+		memw(r6+#0) = r7
+	}
+	{
+		jump .LBB0_9
+		r3 = or(r0,r3)
+		r4 = or(r1,r4)
+	}
+.LBB0_1:
+	{
+		r3 = #0
+		r4 = #0
+	}
+.LBB0_9:                                // %b9
+	{
+		memw(r2+#0) |= r4
+	}
+	{
+		jumpr r31
+		memw(r2+#4) |= r3
+	}
+.Lfunc_end0:
+	.size	f0, .Lfunc_end0-f0
+                                        // -- End function
+	.section	".note.GNU-stack","",@progbits
